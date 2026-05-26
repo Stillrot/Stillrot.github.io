@@ -176,7 +176,7 @@
     "venue_short": "SIGGRAPH Asia 2024",
     "year": 2024,
     "month": "December",
-    "note": "Poster",
+    "note": "",
     "authors": ["Dongsik Yoon", "Jongeun Kim", "Seonggeun Song", "Yejin Lee", "Gunhee Lee"],
     "affiliation": "HDC LABS",
     "abstract": "Estimating room layouts from 360° panoramic images is an essential task in computer vision, enhancing 3D scene understanding from 2D images. To achieve and handle high-quality panoramas necessitates a Super-Resolution (SR) technique that is both light and capable of arbitrary-scale SR, optimized for efficient inference. In this study, we propose a simple model that employs a modular arbitrary-scale technique. Additionally, our model incorporates quantization to maximize efficiency during user inference, making it well-suited for processing high-quality panoramic images.",
