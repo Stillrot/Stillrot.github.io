@@ -1,0 +1,198 @@
+{
+  "journals": [
+    {
+      "idx": 3,
+      "category": "SCI-E",
+      "authors": "Yuanming Li, Dongsik Yoon, Bonwha Ku, Hanseok Ko",
+      "title": "ConSeisGen: Controllable Synthetic Seismic Waveform Generation",
+      "venue": "IEEE Geoscience and Remote Sensing Letters (GRSL)",
+      "year": 2023,
+      "month": 12,
+      "note": "IF=4.8",
+      "link": "https://ieeexplore.ieee.org/document/10339272",
+      "link_type": "ieee",
+      "paper_slug": null
+    },
+    {
+      "idx": 2,
+      "category": "SCI-E",
+      "authors": "Dongsik Yoon, Jineui Kim, Vincent Lorant, Sungku Kang",
+      "title": "Manipulation of Age Variation using StyleGAN inversion and fine-tuning",
+      "venue": "IEEE Access",
+      "year": 2023,
+      "month": 11,
+      "note": "IF=3.9",
+      "link": "./papers/access2023/",
+      "link_type": "internal",
+      "paper_slug": "access2023"
+    },
+    {
+      "idx": 1,
+      "category": "SCI-E",
+      "authors": "Dongsik Yoon, Yuanming Li, Bonwha Ku, Hanseok Ko",
+      "title": "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN",
+      "venue": "IEEE Geoscience and Remote Sensing Letters (GRSL)",
+      "year": 2023,
+      "month": 1,
+      "note": "IF=5.3",
+      "link": "./papers/grsl2023/",
+      "link_type": "internal",
+      "paper_slug": "grsl2023"
+    }
+  ],
+  "conferences": [
+    {
+      "idx": 13,
+      "authors": "Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon",
+      "title": "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",
+      "venue": "arXiv",
+      "year": 2026,
+      "note": "preprint",
+      "link": null,
+      "link_type": null,
+      "paper_slug": null
+    },
+    {
+      "idx": 12,
+      "authors": "Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang",
+      "title": "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition",
+      "venue": "Under review",
+      "year": 2026,
+      "note": "",
+      "link": "./papers/ntu60-audio/",
+      "link_type": "project_page",
+      "paper_slug": "ntu60-audio"
+    },
+    {
+      "idx": 11,
+      "authors": "Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*",
+      "title": "Resource-Efficient RGB-Only Action Recognition for Edge Deployment",
+      "venue": "Under review",
+      "year": 2026,
+      "note": "",
+      "link": "https://arxiv.org/abs/2602.10818",
+      "link_type": "arxiv",
+      "paper_slug": null
+    },
+    {
+      "idx": 10,
+      "authors": "Dongsik Yoon, Jongeun Kim",
+      "title": "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
+      "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW)",
+      "year": 2026,
+      "month": 3,
+      "note": "Oral",
+      "link": "./papers/wacvw2026/",
+      "link_type": "internal",
+      "paper_slug": "wacvw2026"
+    },
+    {
+      "idx": 9,
+      "authors": "Dongsik Yoon, Jongeun Kim",
+      "title": "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios",
+      "venue": "International Conference on Computer Vision Workshop (ICCVW)",
+      "year": 2025,
+      "month": 10,
+      "note": "",
+      "link": "./papers/iccvw2025/",
+      "link_type": "internal",
+      "paper_slug": "iccvw2025"
+    },
+    {
+      "idx": 8,
+      "authors": "Jongeun Kim*, Yejin Lee*, Dongsik Yoon*, Chansung Jung, Gunhee Lee",
+      "title": "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments",
+      "venue": "International Conference on Learning Representations Workshop (ICLRW)",
+      "year": 2025,
+      "month": 4,
+      "note": "",
+      "link": "./papers/iclrw2025/",
+      "link_type": "internal",
+      "paper_slug": "iclrw2025"
+    },
+    {
+      "idx": 7,
+      "authors": "Dongsik Yoon, Jongeun Kim, Seonggeun Song, Yejin Lee, Gunhee Lee",
+      "title": "OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360 Panoramic Images",
+      "venue": "SIGGRAPH Asia Posters",
+      "year": 2024,
+      "month": 12,
+      "note": "",
+      "link": "./papers/siggraph2024/",
+      "link_type": "internal",
+      "paper_slug": "siggraph2024"
+    },
+    {
+      "idx": 6,
+      "authors": "Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, Donghyeon Kim, Hanseok Ko",
+      "title": "Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis",
+      "venue": "European Conference on Computer Vision (ECCV)",
+      "year": 2022,
+      "month": 10,
+      "note": "",
+      "link": "https://jgkwak95.github.io/surfgan/",
+      "link_type": "project_page",
+      "paper_slug": null
+    },
+    {
+      "idx": 5,
+      "authors": "Dongsik Yoon, Jeong-gi Kwak, Yuanming Li, David Han, Hanseok Ko",
+      "title": "DIFAI: Diverse Facial Inpainting using StyleGAN Inversion",
+      "venue": "IEEE International Conference on Image Processing (ICIP)",
+      "year": 2022,
+      "month": 10,
+      "note": "",
+      "link": "./papers/icip2022/",
+      "link_type": "internal",
+      "paper_slug": "icip2022"
+    },
+    {
+      "idx": 4,
+      "authors": "Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, David Han, Hanseok Ko",
+      "title": "Generate and Edit Your Own Character in a Canonical View",
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (CVPRW)",
+      "year": 2022,
+      "month": 6,
+      "note": "",
+      "link": "https://arxiv.org/abs/2205.02974",
+      "link_type": "arxiv",
+      "paper_slug": null
+    },
+    {
+      "idx": 3,
+      "authors": "Dongsik Yoon, Jeong-gi Kwak, Yuanming Li, Youngsaeng Jin, David Han, Hanseok Ko",
+      "title": "Reference Guided Image Inpainting using Facial Attributes",
+      "venue": "British Machine Vision Conference (BMVC)",
+      "year": 2021,
+      "month": 11,
+      "note": "",
+      "link": "./papers/bmvc2021/",
+      "link_type": "internal",
+      "paper_slug": "bmvc2021"
+    },
+    {
+      "idx": 2,
+      "authors": "Jeong-gi Kwak, Youngsaeng Jin, Yuanming Li, Dongsik Yoon, Donghyeon Kim, Hanseok Ko",
+      "title": "Adverse Weather Image Translation with Asymmetric and Uncertainty-aware GAN",
+      "venue": "British Machine Vision Conference (BMVC)",
+      "year": 2021,
+      "month": 11,
+      "note": "",
+      "link": "https://arxiv.org/abs/2112.04283",
+      "link_type": "arxiv",
+      "paper_slug": null
+    },
+    {
+      "idx": 1,
+      "authors": "Yuanming Li, Youngsaeng Jin, Jeong-gi Kwak, Dongsik Yoon, David Han, Hanseok Ko",
+      "title": "Adaptive Content Feature Enhancement GAN for Multimodal Selfie to Anime Translation",
+      "venue": "British Machine Vision Conference (BMVC)",
+      "year": 2021,
+      "month": 11,
+      "note": "",
+      "link": "https://pure.korea.ac.kr/en/publications/adaptive-content-feature-enhancement-gan-for-multimodal-selfie-to/",
+      "link_type": "external",
+      "paper_slug": null
+    }
+  ]
+}

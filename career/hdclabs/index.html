@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>HDC LABS · Dongsik Yoon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-root="../../" style="--accent:#c8102e;--accent-soft:#fcecef;">
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../../">Dongsik Yoon</a>
+    <nav class="primary">
+      <a href="../../">HOME</a>
+      <a href="../../#career" class="active">CAREER</a>
+      <a href="../../#publications">PUBLICATIONS</a>
+      <a href="../../news/">NEWS</a>
+      <a href="../../papers/">RESEARCH</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="block career-detail" style="border-top:0">
+    <div class="container">
+      <div class="career-hero" style="--hero-from:#fff1f0; --hero-to:#fff7ed; --hero-accent:#fecaca80;">
+        <div class="logo-wrap">
+          <img src="../../assets/img/ci/ci1.jpg" alt="HDC LABS">
+        </div>
+        <div class="head">
+          <h1>HDC LABS</h1>
+          <p class="meta">R&D Center · AI LAB · Computer Vision Part · 2024.05 ~ (재직중)</p>
+          <div class="badge-row">
+            <span class="role-badge">Computer Vision</span>
+            <span class="role-badge">Edge Deployment</span>
+            <span class="role-badge">Synthetic Data</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Task</h2>
+      <div class="task-grid">
+        <a class="task-card" href="#proj-fire">
+          <div class="name">지하주차장 화재 탐지</div>
+          <ul>
+            <li>YOLO 및 VLM 통합 구조 기반의 화재 탐지 솔루션 개발</li>
+            <li>관련 논문 게재 및 신축 아이파크 단지에 해당 솔루션 적용</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-elv">
+          <div class="name">엘리베이터 내부 상황 분석 시스템</div>
+          <ul>
+            <li>AI 기반의 승강기 내부 특정 상황 모니터링 솔루션 개발</li>
+            <li>현대 3사 MOU 체결을 위한 PoC 검증</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-ip">
+          <div class="name">지적재산권 확보</div>
+          <ul>
+            <li>AI 관련 기술 특허 출원 및 등록</li>
+            <li>엣지 디바이스 타겟 모델 경량화 및 관련 논문 게재</li>
+          </ul>
+        </a>
+      </div>
+
+      <h2>Projects</h2>
+
+      <div class="project" id="proj-fire">
+        <h3>지하주차장 화재 감지 보조 시스템</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>연구 필요성</h4>
+            <ul>
+              <li>잇따른 지하주차장 전기차 화재사건 발생에 따라, 전용 화재 감지 시스템 요망</li>
+              <li>이상온도 조기감지 및 자동 알림이 가능한 화재 감지 보조시스템 구축 필요</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>지하주차장 CCTV 환경 특화 합성 데이터 생성 프로세스 설계 및 구축</li>
+              <li>합성 데이터 기반 화재/연기 탐지 YOLO 모델 재학습 및 성능 검증</li>
+              <li>PoC에서 현장 배포까지 단계별 프레임워크 연구 및 재설계</li>
+              <li>외부 포팅 업체·내부 시스템 연계 조직과 협업하여 모니터링/알람 서비스 연결 지원</li>
+            </ul>
+            <h4>업무 성과</h4>
+            <ul>
+              <li>YOLOv8s + VLM(Florence2) 기반 화재/연기 탐지 PoC 설계 및 논문 발표</li>
+              <li>합성 데이터 활용 효과를 정량 검증하여 내부 평가 F1-score 향상</li>
+              <li>도메인 특화 데이터 생성 파이프라인 구축 경험을 후속 연구로 확장</li>
+              <li>YOLOv8n + CLIP 기반 경량 구조로 전환, Hailo 듀얼 칩 기반 실행 구조 확정</li>
+              <li>광명 센트럴 아이파크 전기차 충전구역 화재감지 보조 시스템 시연/적용</li>
+            </ul>
+            <h4>관련 연구</h4>
+            <div class="related-groups">
+              <div class="related-group">
+                <div class="group-label">PoC Validation</div>
+                <ul>
+                  <li><a href="../../papers/iclrw2025/">화재 감지 PoC 검증 (ICLRW 2025)</a></li>
+                </ul>
+              </div>
+              <div class="related-group">
+                <div class="group-label">Technical Exploration</div>
+                <ul>
+                  <li><a href="../../papers/iccvw2025/">경량 초해상화 기술 검토 (ICCVW 2025)</a></li>
+                </ul>
+              </div>
+              <div class="related-group">
+                <div class="group-label">Dataset Generation</div>
+                <ul>
+                  <li><a href="../../papers/wacvw2026/">합성 데이터 생성 자동화 (WACVW 2026)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6872715b1841454b4af36ae2_fire.png" alt="Fire detection framework" loading="lazy">
+              <figcaption>ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크</figcaption>
+            </figure>
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/69a46bb0f758066d492f0af1_%EC%8B%9C%EC%97%B02.png" alt="현장 적용 예시" loading="lazy">
+              <figcaption>광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황</figcaption>
+            </figure>
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/69a46bb04463d68671b5c7b6_%EC%8B%9C%EC%97%B0.png" alt="감지 시 팝업 알림" loading="lazy">
+              <figcaption>AI CCTV 감시 공간 내 불꽃·연기 감지 시 팝업 알림 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="project mint" id="proj-elv">
+        <h3>엘리베이터 내부 상황 분석 시스템</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>업무 목표</h4>
+            <ul>
+              <li>AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발</li>
+              <li>이상행동·반려견 동반 탑승 등 특이상황 자동 탐지 및 대응</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>기술 제휴 MOU 검토를 위한 엘리베이터 내부 상황 분석 PoC 설계 및 성능 검증</li>
+              <li>실서비스 적용을 위한 배포형 모델 구조 최적화 및 운영 시나리오에 맞춘 검출·판단 로직 정교화</li>
+              <li>엘리베이터 특수 시점 대응을 위한 합성 데이터 생성 및 실데이터 수집·라벨링 체계 구축</li>
+              <li>모델 및 코드 변경사항을 반영할 수 있도록 배포 자동화 환경 구축</li>
+            </ul>
+            <h4>업무 성과</h4>
+            <ul>
+              <li>반려견 검출과 점유율 추정이 가능한 엘리베이터 내부 상황 분석 PoC 설계·검증</li>
+              <li>PoC 결과를 바탕으로 HDC랩스·HDC현대산업개발·현대엘리베이터 3사 기술 제휴 MOU 체결</li>
+              <li>운영 시나리오 중심의 검출·판단 로직 최적화를 통해 제품화 가능성 제고</li>
+              <li>도메인 특화 합성 데이터 생성 체계 및 배포 자동화 환경 구축</li>
+            </ul>
+            <h4>관련 연구</h4>
+            <div class="related-groups">
+              <div class="related-group">
+                <div class="group-label">Dataset Generation</div>
+                <ul>
+                  <li><a href="../../papers/wacvw2026/">도메인 특화 데이터 생성 자동화 (WACVW 2026)</a></li>
+                </ul>
+              </div>
+              <div class="related-group">
+                <div class="group-label">Technical Exploration</div>
+                <ul>
+                  <li><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">엣지 배포용 경량 RGB-only 행동 인식 (Under review, arXiv)</a></li>
+                  <li><a href="../../papers/ntu60-audio/">음성을 활용한 행동 인식 및 데이터셋 구축 (Under review)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/69a5a916b0eae75bd0cad956_ChatGPT%20Image%202026%EB%85%84%203%EC%9B%94%203%EC%9D%BC%20%EC%98%A4%EC%A0%84%2012_13_02.png" alt="엘리베이터 내부 PoC" loading="lazy">
+              <figcaption>HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시</figcaption>
+            </figure>
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/69a5a57197e87f91e7ec2371_elv.png" alt="PoC 아키텍처" loading="lazy">
+              <figcaption>기술 검증용 PoC 아키텍처 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="project lemon" id="proj-ip">
+        <h3>지적재산권 확보</h3>
+        <ul>
+          <li>화재 감지·엘리베이터 내부 상황·도메인 특화 데이터 생성·개인화 객체 추적 등 다수의 KR 특허 등록</li>
+          <li>전체 목록은 <a href="../../#patents">Patents 섹션</a> 참고</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
+</footer>
+</body>
+</html>

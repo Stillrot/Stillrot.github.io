@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Baekseok University · Dongsik Yoon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-root="../../" style="--accent:#003a70;--accent-soft:#e6edf6;">
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../../">Dongsik Yoon</a>
+    <nav class="primary">
+      <a href="../../">HOME</a>
+      <a href="../../#career" class="active">CAREER</a>
+      <a href="../../#publications">PUBLICATIONS</a>
+      <a href="../../news/">NEWS</a>
+      <a href="../../papers/">RESEARCH</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="block career-detail" style="border-top:0">
+    <div class="container">
+      <div class="career-hero" style="--hero-from:#dbeafe; --hero-to:#eef2ff; --hero-accent:#93c5fd80;">
+        <div class="logo-wrap">
+          <img src="../../assets/img/ci/ci4.jpg" alt="Baekseok University">
+        </div>
+        <div class="head">
+          <h1>Baekseok University</h1>
+          <p class="meta">ICT학부 멀티미디어학전공 학사 · IPCG Lab · 2015.03 ~ 2021.02 · 4.36/4.5 (130 학점)</p>
+          <div class="badge-row">
+            <span class="role-badge">CNN / GAN</span>
+            <span class="role-badge">Mask R-CNN</span>
+            <span class="role-badge">Image Generation</span>
+            <span class="role-badge">학부 연구실장</span>
+          </div>
+        </div>
+      </div>
+      <div class="meta">
+        ICT학부 멀티미디어학전공 학사과정 · 2015.03 ~ 2021.02
+      </div>
+      <ul>
+        <li>전체평점: 4.36 / 4.5 (총 130 학점)</li>
+        <li>전공평점: 4.49 / 4.5 (총 79 학점)</li>
+      </ul>
+      <p>IPCG: Image Processing and Computer Graphics Laboratory · 2018.03 ~ 2020.10 · 지도교수 곽노윤</p>
+
+      <h2>Experience</h2>
+      <ul>
+        <li>2020년도 IPCG 연구실장</li>
+        <li>매일 오전 7:30 Computer Vision 관련 세미나 진행</li>
+      </ul>
+
+      <h2>Research Tasks</h2>
+      <div class="task-grid">
+        <a class="task-card" href="#proj-gan">
+          <div class="name">GAN 기반 이미지 생성 및 변환 연구</div>
+          <ul>
+            <li>Conditional GAN 기반 데이터셋 생성</li>
+            <li>손실 함수 개선을 통한 pix2pix 성능 개선</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-mrcnn">
+          <div class="name">Mask R-CNN 기반 객체 분할</div>
+          <ul>
+            <li>객체 인식을 통한 의미론적 분할 연구</li>
+            <li>객체 인식 기반 데이터셋 증강</li>
+          </ul>
+        </a>
+      </div>
+
+      <h2>Projects</h2>
+
+      <div class="project" id="proj-gan">
+        <h3>RAPGAN과 RRDB를 이용한 Image-to-Image Translation 성능 개선</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>연구 목표</h4>
+            <ul>
+              <li>pix2pix 한계(저해상도, 품질 저하) 보완</li>
+              <li>Relativistic Average Patch GAN + RRDB 기반 새로운 구조 제안</li>
+              <li>안정적이고 고품질의 Image-to-Image 변환</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>RRDB 적층 Generator 설계 및 적용</li>
+              <li>RAPGAN 기반 손실함수 설계</li>
+              <li>Generator 사전 학습을 통한 초기 학습 불안정 해결</li>
+            </ul>
+            <h4>연구 성과</h4>
+            <ul>
+              <li>기존 pix2pix 대비 평균 FID 13% 이상 성능 향상</li>
+              <li>다양한 데이터셋에서 시각적으로 우수한 결과 확인</li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68b2f4531bf1694d6de22e8e_Picture1.png" alt="Facades 데이터셋 비교" loading="lazy">
+              <figcaption>Facades 데이터셋 기반의 기존 pix2pix와 제안된 방법 비교</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="project cream" id="proj-mrcnn">
+        <h3>ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>연구 목표</h4>
+            <ul>
+              <li>Mask R-CNN 분할 성능 보완</li>
+              <li>소형 객체 분할 성능 향상 기법 개발</li>
+              <li>초해상화 + Semantic Soft Segmentation(SSS) 기반 파이프라인 제안</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>객체 검출 및 초해상화 알고리즘 적용</li>
+              <li>SSS와 워터쉐드 기반 분할 보정</li>
+              <li>제안 기법 성능 검증 및 기존 방식 비교</li>
+            </ul>
+            <h4>연구 성과</h4>
+            <ul>
+              <li>소형 객체 분할 성능 향상 (Mask R-CNN 대비 개선)</li>
+              <li>반자동 데이터셋 생성 및 고품질 영상 편집 활용 가능성 확인</li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68b2f1b2e98db8a09760757c_22.png" alt="블록 다이어그램" loading="lazy">
+              <figcaption>제안한 방법의 블록 다이어그램</figcaption>
+            </figure>
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68b2f1e5b35144efa921db91_zzzz4.png" alt="소형 객체 분할 결과" loading="lazy">
+              <figcaption>소형 객체 분할 성능 향상 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <h2>Publications (Domestic)</h2>
+      <h3 class="sub-h">Domestic Journal</h3>
+      <ul class="pub-list">
+        <li>
+          [2] <span class="badge">KCI</span>
+          <span class="me">윤동식</span>, 곽노윤,
+          <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002935586" target="_blank" rel="noopener"><em>"ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할"</em></a>,
+          <span class="venue">사물인터넷융복합논문지 Vol. 9, No. 1, pp. 97-104</span>, 2023.02
+        </li>
+        <li>
+          [1] <span class="badge">KCI</span>
+          <span class="me">윤동식</span>, 곽노윤,
+          <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002935590" target="_blank" rel="noopener"><em>"RAPGAN와 RRDB를 이용한 Image-to-Image Translation의 성능 개선"</em></a>,
+          <span class="venue">사물인터넷융복합논문지 Vol. 9, No. 1, pp. 131-138</span>, 2023.02
+        </li>
+      </ul>
+
+      <h3 class="sub-h">Domestic Conference</h3>
+      <ul class="pub-list">
+        <li>[10] 김주은, 김준오, <span class="me">윤동식</span>, 곽노윤, <em>"Mask R-CNN과 Image-to-Image Translation을 이용한 카툰 이미지 생성"</em>, 한국멀티미디어학회 하계학술발표대회, 2020.08 <span class="link-tag">우수논문발표상</span></li>
+        <li>[9] <span class="me">윤동식</span>, 곽노윤, <em>"Relativistic Average Patch GAN과 Residual in Residual Dense Block을 이용한 개선된 Image-to-Image Translation"</em>, KCC 2020, 2020.07</li>
+        <li>[8] <span class="me">윤동식</span>, 곽노윤, <em>"ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할의 성능 개선"</em>, 한국정보처리학회 춘계학술발표대회, 2020.05</li>
+        <li>[7] <span class="me">윤동식</span>, 곽노윤, <em>"Mask R-CNN과 Semantic Soft Segmentation을 이용한 객체 분할"</em>, 한국통신학회 동계종합학술발표회, 2020.02</li>
+        <li>[6] <span class="me">윤동식</span>, 곽노윤, <em>"Mask R-CNN과 Image-to-Image Translation을 이용한 카툰 스케치 이미지의 자동 채색"</em>, 한국디지털콘텐츠·정보기술학회 공동학술대회, 2019.11 <span class="link-tag">우수논문상</span></li>
+        <li>[5] <span class="me">윤동식</span>, 곽노윤, <em>"Conditional GAN과 Mask R-CNN 기반의 Image-to-Image Translation을 이용한 차량 이미지 생성"</em>, 한국통신학회 추계종합학술발표회, 2019.11</li>
+        <li>[4] <span class="me">윤동식</span>, 신서연, 곽노윤, <em>"Mask R-CNN과 Conditional GAN 기반의 Image-to-Image Translation을 이용한 얼굴 이미지 생성"</em>, 제29회 신호처리합동학술대회, 2019.09</li>
+        <li>[3] <span class="me">윤동식</span>, 최상욱, 곽노윤, <em>"Mask R-CNN을 이용한 다중 뉴럴 스타일 전이 방법"</em>, 한국통신학회 하계종합학술발표회, 2019.06</li>
+        <li>[2] 최상욱, <span class="me">윤동식</span>, 곽노윤, <em>"VGG Net과 Saliency Map을 이용한 다중 뉴럴 스타일 전이 방법"</em>, 한국정보기술·디지털콘텐츠학회 하계공동학술대회, 2019.06 <span class="link-tag">금상</span></li>
+        <li>[1] <span class="me">윤동식</span>, 최상욱, 노성혁, 곽노윤, <em>"Convolutional Neural Networks와 GrabCut을 이용한 다중 스타일 전이 방법"</em>, 한국통신학회 동계종합학술발표회, 2019.01 <span class="link-tag">장려상</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
+</footer>
+</body>
+</html>

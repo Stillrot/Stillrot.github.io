@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Metaverse Entertainment · Dongsik Yoon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-root="../../" style="--accent:#6d28d9;--accent-soft:#ede4ff;">
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../../">Dongsik Yoon</a>
+    <nav class="primary">
+      <a href="../../">HOME</a>
+      <a href="../../#career" class="active">CAREER</a>
+      <a href="../../#publications">PUBLICATIONS</a>
+      <a href="../../news/">NEWS</a>
+      <a href="../../papers/">RESEARCH</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="block career-detail" style="border-top:0">
+    <div class="container">
+      <div class="career-hero meta" style="--hero-from:#ede9fe; --hero-to:#fdf2f8; --hero-accent:#c4b5fd80;">
+        <div class="logo-wrap">
+          <img src="../../assets/img/ci/ci2.jpg" alt="Metaverse Entertainment">
+        </div>
+        <div class="head">
+          <h1>Metaverse Entertainment</h1>
+          <p class="meta">Technical Design Department · Technical Development Team · AI Part · 2023.01 ~ 2024.05</p>
+          <div class="badge-row">
+            <span class="role-badge">Generative AI</span>
+            <span class="role-badge">StyleGAN</span>
+            <span class="role-badge">TTS / Voice</span>
+            <span class="role-badge">LLM Chatbot</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Task</h2>
+      <div class="task-grid">
+        <a class="task-card" href="#proj-img">
+          <div class="name">사용자 맞춤형 이미지 생성</div>
+          <ul>
+            <li>Stable Diffusion 기반 생성 모델 구축 및 사내 배포</li>
+            <li>StyleGAN 기반 연령 변환 기술 연구</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-tts">
+          <div class="name">화자 변환 음성 AI 연구</div>
+          <ul>
+            <li>AutoEncoder 기반의 다중 언어 TTS 기술 연구</li>
+            <li>음성 변환 모델 미세조정 및 사내 배포</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-chat">
+          <div class="name">페르소나 AI Chatbot 개발</div>
+          <ul>
+            <li>RAG 기반 LLM(LLaMA2, GPT-4) 챗봇 구축 및 데모</li>
+          </ul>
+        </a>
+      </div>
+
+      <h2>Projects</h2>
+
+      <div class="project" id="proj-img">
+        <h3>인플루언서 맞춤 이미지 생성</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>업무 목표</h4>
+            <ul>
+              <li>디자이너의 버추얼 인플루언서 SNS 이미지 편집 속도 개선</li>
+              <li>특정 인물의 의상 착의, 구도 확인 등을 위한 이미지 생성 모델 구축</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>Stable Diffusion 모델 선정 및 LoRA finetuning</li>
+              <li>고품질 이미지 생성을 위한 ComfyUI workflow 개선</li>
+              <li>디자이너 편의를 위한 Gradio 기반 webui 사내 배포</li>
+            </ul>
+            <h4>업무 성과</h4>
+            <ul>
+              <li>인플루언서 인스타그램(rina.8k) 포스트 제작</li>
+              <li>유튜브 썸네일 및 컨텐츠 이미지 제작</li>
+            </ul>
+            <ul class="icon-link-list">
+              <li>
+                <a class="brand-link yt" href="https://www.youtube.com/@mave_official/videos" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+                  MAVE: YouTube
+                </a>
+              </li>
+              <li>
+                <a class="brand-link ig" href="https://www.instagram.com/rina.8k/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07c-1.27.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                  rina.8k Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/686c7f5c398b6b0a7520f262_Picture2.png" alt="Faceswap 예시" loading="lazy">
+              <figcaption>대역 모델 → 특정 인플루언서 face-swap 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h3 style="margin-top:32px">Face Re-Aging 기술 개발</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>업무 목표</h4>
+            <ul>
+              <li>디자이너의 인물 연령 리터칭 작업 속도 개선</li>
+              <li>AI 기술 기반의 가이드 이미지 제공</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>StyleGAN 기반의 나이 변환 기술 연구 및 논문 작성</li>
+              <li>연령 변환을 위해 두 단계로 구성된 새로운 프레임워크 제안</li>
+            </ul>
+            <h4>업무 성과</h4>
+            <ul class="icon-link-list">
+              <li><a href="../../papers/access2023/">IEEE Access 1저자 논문 게재 (IF=3.9)</a></li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/686d15aee958ad66e63cc269_GA.jpg" alt="연령 변환 결과" loading="lazy">
+              <figcaption>연령 변환 가이드 이미지 생성 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="project cream" id="proj-tts">
+        <h3>화자 변환 음성 AI 연구</h3>
+        <h4>담당 업무</h4>
+        <ul>
+          <li>촬영 비용 절감을 위한 특정 캐릭터 성우 전용 음성 변환 모델 미세조정 및 사내 배포</li>
+          <li>캐릭터 음성 서비스를 위한 AutoEncoder 기반의 다중 언어 TTS 기술 개발</li>
+        </ul>
+        <h4>업무 성과</h4>
+        <ul>
+          <li>관련 유튜브 컨텐츠 제작 및 성우 섭외 비용 절감</li>
+        </ul>
+        <ul class="icon-link-list">
+          <li>
+            <a class="brand-link yt" href="https://www.youtube.com/watch?v=UoWzaH7a8C0" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+              [MAVE: April Fool's Day] 만우절 장난 특집
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="project lemon" id="proj-chat">
+        <h3>페르소나 AI Chatbot 개발</h3>
+        <h4>담당 업무</h4>
+        <ul>
+          <li>RAG 기반 Open LLM(LLaMA2, GPT-4)을 활용한 챗봇 데모 구축 및 사내 테스트</li>
+          <li>특정 아티스트의 정체성으로 학습된 LLM 모델을 사용한 1:1 대화 서비스 제공</li>
+          <li>라이브 컨텐츠에 사용될 LLM 기반 챗봇 시스템 개발 및 Unreal Engine과 연동</li>
+          <li>챗봇 시스템 전문 업체 미팅 및 관련 회의 참석</li>
+        </ul>
+        <h4>관련 기사</h4>
+        <ul class="icon-link-list">
+          <li><a href="https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4221&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8" target="_blank" rel="noopener">메타버스엔터테인먼트, 업스테이지와 '페르소나AI' 공동 개발 위한 전략적 협업</a></li>
+          <li><a href="https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4559&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8" target="_blank" rel="noopener">메타버스엔터테인먼트, 페르소나 AI 적용한 채팅 서비스 '챗 시우' 오픈</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
+</footer>
+</body>
+</html>

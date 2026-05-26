@@ -1,0 +1,402 @@
+[
+  {
+    "slug": "ntu60-audio",
+    "title": "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition",
+    "short_title": "NTU60-AUDIO",
+    "venue": "Interspeech",
+    "venue_short": "Interspeech 2026",
+    "year": 2026,
+    "month": "Anonymous submission",
+    "note": "Under review · Project page",
+    "authors": ["Dongsik Yoon", "Jongeun Kim", "Bogyung Park", "Sukyung Kim", "Suntae Hwang"],
+    "affiliation": "HDC LABS",
+    "links": [],
+    "external": true
+  },
+  {
+    "slug": "wacvw2026",
+    "title": "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
+    "short_title": "From Prompts to Deployment",
+    "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW)",
+    "venue_short": "WACVW 2026",
+    "year": 2026,
+    "month": "March",
+    "note": "Oral",
+    "authors": ["Dongsik Yoon", "Jongeun Kim"],
+    "affiliation": "HDC LABS",
+    "abstract": "In this paper, we present an automated pipeline for generating domain-specific synthetic datasets with diffusion models, addressing the distribution shift between pre-trained models and real-world deployment environments. Our three-stage framework first synthesizes target objects within domain-specific backgrounds through controlled inpainting. The generated outputs are then validated via a multi-modal assessment that integrates object detection, aesthetic scoring, and vision-language alignment. Finally, a user-preference classifier is employed to capture subjective selection criteria. This pipeline enables the efficient construction of high-quality, deployable datasets while reducing reliance on extensive real-world data collection.",
+    "video_id": "Z2OQIBj17bM",
+    "video_title": "[SAFE @ WACV 2026 Oral] Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6967a74701de1eca43eb3233_fig1_4.png",
+    "thumbnail_caption": "Overview of the proposed three-stage, diffusion-based dataset generation and auto-curation pipeline.",
+    "links": [
+      { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2601.08095", "type": "arxiv" }
+    ],
+    "sections": [
+      {
+        "title": "Proposed Methods",
+        "intro": "Our automated dataset generation pipeline has two prerequisites:",
+        "bullets": [
+          "Domain-specific background images: scenes that are intrinsically difficult to collect or tied to a specific site (e.g., underground parking lots, elevator CCTV views, home security camera footage). Because these images constitute the backgrounds in which the model will operate in real-world settings, the number of obtainable images may be limited.",
+          "Target object: the object to be synthesized within the given domain context. We focus on natural object–scene combinations that are scarce in publicly available datasets (e.g., underground parking lot with a fire, elevator CCTV viewpoint with a dog, robot vacuum cleaners in home security footage)."
+        ],
+        "figures": []
+      },
+      {
+        "title": "Accepted samples",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6967a91653488b0c12747628_fig4_2.png",
+            "caption": "Success image that passes all three stages, demonstrating target object synthesis within a domain-specific background."
+          }
+        ]
+      },
+      {
+        "title": "Rejected samples",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6967a76ff35a235d94428751_fig2_2.png",
+            "caption": "Rejected @ Stage 1 — Instance detection & aesthetic filtering. Negative images that failed object synthesis due to low detection and aesthetics scores."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6967a8eab2e29e5976f538f1_fig3_2.png",
+            "caption": "Rejected @ Stage 2 — Preference score filtering. Discarded images rejected in Stage 2 due to poor viewpoint/pose from annotators despite successful object synthesis."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@inproceedings{yoon2026fromprompts,\n  title     = {From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models},\n  author    = {Yoon, Dongsik and Kim, Jongeun},\n  booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW)},\n  year      = {2026}\n}"
+  },
+  {
+    "slug": "iccvw2025",
+    "title": "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios",
+    "short_title": "Your Super Resolution Model is not Enough",
+    "venue": "International Conference on Computer Vision Workshop (ICCVW)",
+    "venue_short": "ICCVW 2025",
+    "year": 2025,
+    "month": "October",
+    "note": "",
+    "authors": ["Dongsik Yoon", "Jongeun Kim"],
+    "affiliation": "HDC LABS",
+    "abstract": "Despite remarkable progress in Single Image Super-Resolution (SISR), traditional models often struggle to generalize across varying scale factors, limiting their real-world applicability. To address this, we propose a plugin Scale-Aware Attention Module (SAAM) designed to retrofit modern fixed-scale SR models with the ability to perform arbitrary-scale SR. SAAM employs lightweight, scale-adaptive feature extraction and upsampling, incorporating the Simple parameter-free Attention Module (SimAM) for efficient guidance and gradient variance loss to enhance sharpness in image details. Our method integrates seamlessly into multiple state-of-the-art SR backbones (e.g., SCNet, HiT-SR, OverNet), delivering competitive or superior performance across a wide range of integer and non-integer scale factors. Extensive experiments on benchmark datasets demonstrate that our approach enables robust multi-scale upscaling with minimal computational overhead, offering a practical solution for real-world scenarios.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687f0956472aac22b4b599df_fig2_4.png",
+    "thumbnail_caption": "Comparison between the existing feature adaptation block and the proposed SAAM block.",
+    "links": [
+      { "label": "Paper (CVF Open Access)", "url": "https://openaccess.thecvf.com/content/ICCV2025W/ECLR/html/Yoon_Your_Super_Resolution_Model_is_not_Enough_for_Tackling_Real-World_ICCVW_2025_paper.html", "type": "cvf_openaccess" }
+    ],
+    "sections": [
+      {
+        "title": "Quantitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687f09e6a6134c58e34f2880_tb1.PNG",
+            "caption": "Baseline models are each trained on data that match a single output scale; as a result, most cannot infer images at unseen scales. Our unified model, with only a lightweight plug-in, delivers comparable or superior results across many scales."
+          }
+        ]
+      },
+      {
+        "title": "Qualitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687f095db7975d70c6e3ef00_fig3.png",
+            "caption": "Qualitative comparison by integrating our method into the baseline model on BSD100 and Urban100."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@inproceedings{yoon2025yoursr,\n  title     = {Your Super Resolution Model is not Enough for Tackling Real-World Scenarios},\n  author    = {Yoon, Dongsik and Kim, Jongeun},\n  booktitle = {International Conference on Computer Vision Workshops (ICCVW)},\n  year      = {2025}\n}"
+  },
+  {
+    "slug": "iclrw2025",
+    "title": "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments",
+    "short_title": "Integrated YOLO and VLM Fire Detection",
+    "venue": "International Conference on Learning Representations Workshop (ICLRW)",
+    "venue_short": "ICLRW 2025",
+    "year": 2025,
+    "month": "April",
+    "note": "Equal contribution (Jongeun Kim, Yejin Lee, Dongsik Yoon)",
+    "authors": ["Jongeun Kim*", "Yejin Lee*", "Dongsik Yoon*", "Chansung Jung", "Gunhee Lee"],
+    "affiliation": "HDC LABS",
+    "abstract": "While YOLO models show promise in car fire detection, they remain insufficient for real-world deployment in underground and indoor car parks due to dataset limitations, evaluation gaps, and deployment constraints. We first fine-tune YOLO on fire/smoke-augmented dataset, but analysis reveals that it struggles with ambiguous fire-smoke boundaries, leading to false predictions. To address this, we propose a real-time end-to-end framework integrating YOLOv8s with Florence2 VLM, combining object detection with contextual reasoning. While YOLOv8s with VLM improves detection reliability, challenges are still ongoing. Our findings highlight YOLO's limitations in fire detection and the need for a more adaptive, environment-aware approach.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68738cf93f954fe802db4a24_zzxc.webp",
+    "thumbnail_caption": "Qualitative results on real-world fire comparing VLM only, YOLO only, and our proposed approach of VLM+YOLO integration.",
+    "links": [
+      { "label": "Paper (PMLR)", "url": "https://proceedings.mlr.press/v296/kim25a.html", "type": "mlr" }
+    ],
+    "sections": [
+      {
+        "title": "Proposed Methods",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6872715b1841454b4af36ae2_fire.png",
+            "caption": "An end-to-end fire detection framework designed for detecting car fire/smoke events in real-time CCTV footage of confined environments. The framework consists of four main stages: data augmentation, training, real-time inference, and alerting security."
+          }
+        ]
+      },
+      {
+        "title": "Quantitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687db97be07bbbdecb0d8b44_tb1.PNG",
+            "caption": "Automatic evaluation of YOLO models with and without the VLM integration on test set."
+          }
+        ]
+      },
+      {
+        "title": "Ablation Study",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687dbc02a292c37c81a9fd07_tb2.PNG",
+            "caption": "Ablation study on the impact of confidence threshold adjustments and the exclusion of synthetic data."
+          }
+        ]
+      },
+      {
+        "title": "Fire / Smoke Dataset Augmentation",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687dba4a8a0a65f3934b1b97_Picture1_2.png",
+            "caption": "Fire/Smoke Dataset Generation Workflow for Underground Parking Scenarios. The process breaks down to three stages: Location and mask preparation, fire/smoke object generation, and image refinement."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687dba4aff3efd85b1b7cba4_fig4_2.png",
+            "caption": "Examples of synthetically generated fire and smoke images."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@inproceedings{kim2025yolovlm,\n  title     = {An Integrated {YOLO} and {VLM} System for Fire Detection in Enclosed Environments},\n  author    = {Kim, Jongeun and Lee, Yejin and Yoon, Dongsik and Jung, Chansung and Lee, Gunhee},\n  booktitle = {ICLR Workshops},\n  year      = {2025}\n}"
+  },
+  {
+    "slug": "siggraph2024",
+    "title": "OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360° Panoramic Images",
+    "short_title": "OverallNet",
+    "venue": "SIGGRAPH Asia Posters",
+    "venue_short": "SIGGRAPH Asia 2024",
+    "year": 2024,
+    "month": "December",
+    "note": "Poster",
+    "authors": ["Dongsik Yoon", "Jongeun Kim", "Seonggeun Song", "Yejin Lee", "Gunhee Lee"],
+    "affiliation": "HDC LABS",
+    "abstract": "Estimating room layouts from 360° panoramic images is an essential task in computer vision, enhancing 3D scene understanding from 2D images. To achieve and handle high-quality panoramas necessitates a Super-Resolution (SR) technique that is both light and capable of arbitrary-scale SR, optimized for efficient inference. In this study, we propose a simple model that employs a modular arbitrary-scale technique. Additionally, our model incorporates quantization to maximize efficiency during user inference, making it well-suited for processing high-quality panoramic images.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687bc27386c3d9d7043935da_app_1_2.png",
+    "thumbnail_caption": "A summary of the method for processing panoramics with the SR technique.",
+    "links": [
+      { "label": "Paper (ACM DL)", "url": "https://dl.acm.org/doi/10.1145/3681756.3697939", "type": "acm" }
+    ],
+    "sections": [
+      {
+        "title": "Proposed Methods",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687bc25783fa35cf717ec286_fig1_7.png",
+            "caption": "We propose a novel architecture that incorporates the scale-aware module of ArbSR. To further enhance SR sharpness and realism, we introduce a feature extractor built with a block called the scale-aware dense group (SADG). Unlike OSM, our architecture includes a scale-aware upsampling layer, facilitating scale-arbitrary SR at various factors. We replace activation functions in the SADG block with SiLU layers."
+          }
+        ]
+      },
+      {
+        "title": "Qualitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687bc2580017efd81270d449_app_2_2.png",
+            "caption": "We compare SR quality with the existing OverNet method, each trained on three different scale types. Validations are conducted on the Set14 dataset. OverNet shows considerable degradation when applied to scales not covered in its training dataset."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@inproceedings{yoon2024overallnet,\n  title     = {OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360° Panoramic Images},\n  author    = {Yoon, Dongsik and Kim, Jongeun and Song, Seonggeun and Lee, Yejin and Lee, Gunhee},\n  booktitle = {SIGGRAPH Asia Posters},\n  year      = {2024},\n  doi       = {10.1145/3681756.3697939}\n}"
+  },
+  {
+    "slug": "access2023",
+    "title": "Manipulation of Age Variation Using StyleGAN Inversion and Fine-Tuning",
+    "short_title": "Age Variation via StyleGAN Inversion",
+    "venue": "IEEE Access",
+    "venue_short": "IEEE Access 2023",
+    "year": 2023,
+    "month": "November",
+    "note": "SCI-E, IF=3.9",
+    "authors": ["Dongsik Yoon", "Jineui Kim", "Vincent Lorant", "Sungku Kang"],
+    "affiliation": "Metaverse Entertainment",
+    "abstract": "Recent advancements in deep learning have yielded significant developments in age manipulation techniques in the field of computer vision. To handle this task, recent approaches using generative adversarial networks latent space transformation or image-to-image based techniques have been developed. However, such methods are limited in terms of preserving the facial identity of the subject and recovering background details during lifelong age variation. To address these limitations, this paper presents a novel framework to manipulate the age of subjects in photos. The proposed framework involves two main steps, i.e., age manipulation and StyleGAN fine-tuning. In the first step, the iterative ReStyle StyleGAN inversion technique discovers a latent vector that is most similar to the input image, and which is used to train an age manipulation encoder. In the second step, a StyleGAN fine-tuning process is used to reconstruct the details lost in the images synthesized using the StyleGAN generator during the age manipulation. Compared with state-of-the-art methods, the proposed framework achieves reasonable manipulation and variation of the target age for real-world input images.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/686d15aee958ad66e63cc269_GA.jpg",
+    "thumbnail_caption": "Graphical Abstract — overview of the proposed age-variation framework.",
+    "links": [
+      { "label": "Paper (IEEE Xplore)", "url": "https://ieeexplore.ieee.org/document/10328572", "type": "ieee" }
+    ],
+    "sections": [
+      {
+        "title": "Proposed Methods",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687babef52ed25c696d954e5_fig1_2.png",
+            "caption": "Summary of our proposed framework. The black line represents the forward pass and the red dotted line represents the fine-tuning loss functions. A color-filled box indicates a pretrained network and a box with border only represents a trainable model during each step. The ReStyle-pSp architecture retrieves the latent vector wt+1 that generates the most similar output with the input image x. The SAM encoder is trained to produce an output y_age representing x with a targeted age. Next, the trained SAM encoder weights are frozen, and the StyleGAN generator undergoes fine-tuning using x, y_age, and associated masks to reconstruct lost details."
+          }
+        ]
+      },
+      {
+        "title": "Qualitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687bae4fab9d8bec914da7fc_a_fig3.PNG",
+            "caption": "Results obtained by the proposed framework and existing methods. The existing im2im-based age manipulation method (HRFAE) struggles to manipulate lifelong age stages, especially during infancy and old age. The proposed framework realizes remarkable quality in terms of preserving both the identity and background of the original image."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687bae4fc50580ddb2b3f3d0_a_fig2.PNG",
+            "caption": "Image results manipulated by LATS, SAM, and the proposed framework. Our framework effectively preserves background details, enabling age manipulation without requiring additional editing (such as re-combining the input's background with the output's face)."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687babefe5d377536233105b_fig6_2_2.png",
+            "caption": "Additional results of the proposed framework, trained using a custom Asian dataset synthesized by StyleGAN."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@article{yoon2023agevariation,\n  title   = {Manipulation of Age Variation Using StyleGAN Inversion and Fine-Tuning},\n  author  = {Yoon, Dongsik and Kim, Jineui and Lorant, Vincent and Kang, Sungku},\n  journal = {IEEE Access},\n  year    = {2023},\n  doi     = {10.1109/ACCESS.2023.3336204}\n}"
+  },
+  {
+    "slug": "grsl2023",
+    "title": "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN",
+    "short_title": "Magnitude / Epicentral Distance via Deeper CRNN",
+    "venue": "IEEE Geoscience and Remote Sensing Letters (GRSL)",
+    "venue_short": "IEEE GRSL 2023",
+    "year": 2023,
+    "month": "January",
+    "note": "SCI-E, IF=5.3",
+    "authors": ["Dongsik Yoon", "Yuanming Li", "Bonhwa Ku", "Hanseok Ko"],
+    "affiliation": "Korea University",
+    "abstract": "Estimating earthquake parameters is an essential process for an earthquake analysis system. In particular, the magnitude and epicentral distance of an earthquake are the most basic parameters in earthquake analysis. To estimate these, existing approaches require long waveform data from multiple stations. In this paper, we propose a novel estimation method based on multi-tasking deep learning and a convolutional recurrent neural network using only a single station. We also use the stream maximum of the input waveform to accurately estimate the earthquake magnitude. Based on evaluation using the Stanford Earthquake dataset (STEAD) and the Kiban Kyoshin Network (KiK-net) dataset, we verify the high performance of the proposed method.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687ba1d30549094775d21dfe_Fig1_2.png",
+    "thumbnail_caption": "Summary of the proposed architecture. The architecture is divided into three parts: CRNN-based feature extractor, 4-layer MLP embedding network, and estimator.",
+    "links": [
+      { "label": "Paper (IEEE Xplore)", "url": "https://ieeexplore.ieee.org/document/10006800", "type": "ieee" }
+    ],
+    "sections": [
+      {
+        "title": "Experimental Results",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687ba1d4e543a3fdda1d47d7_Fig2_new_2.png",
+            "caption": "Estimation results of the proposed architecture using the test datasets. Columns 1 and 3 show ground truth vs. predicted values for epicentral distance and magnitude — the dotted line represents the ideal result. The coefficient of determination (R²) is provided. Columns 2 and 4 present histograms of the error distribution; the error follows a Gaussian distribution with mean (m) and standard deviation (σ) shown."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687ba29bcb080c80224a5474_grsl%20fig3.PNG",
+            "caption": "Comparison with existing methods in terms of the mean absolute error (MAE). Best results in each column are bold-faced."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@article{yoon2023seismic,\n  title   = {Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN},\n  author  = {Yoon, Dongsik and Li, Yuanming and Ku, Bonhwa and Ko, Hanseok},\n  journal = {IEEE Geoscience and Remote Sensing Letters},\n  year    = {2023}\n}"
+  },
+  {
+    "slug": "eccv2022",
+    "title": "Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis",
+    "short_title": "SurfGAN",
+    "venue": "European Conference on Computer Vision (ECCV)",
+    "venue_short": "ECCV 2022",
+    "year": 2022,
+    "month": "October",
+    "note": "Project page",
+    "authors": ["Jeong-gi Kwak", "Yuanming Li", "Dongsik Yoon", "Donghyeon Kim", "Hanseok Ko"],
+    "affiliation": "Korea University",
+    "external_url": "https://jgkwak95.github.io/surfgan/"
+  },
+  {
+    "slug": "icip2022",
+    "title": "DIFAI: Diverse Facial Inpainting using StyleGAN Inversion",
+    "short_title": "DIFAI",
+    "venue": "IEEE International Conference on Image Processing (ICIP)",
+    "venue_short": "ICIP 2022",
+    "year": 2022,
+    "month": "October",
+    "note": "",
+    "authors": ["Dongsik Yoon", "Jeong-gi Kwak", "Yuanming Li", "David K Han", "Hanseok Ko"],
+    "affiliation": "Korea University; Drexel University",
+    "abstract": "Image inpainting is an old problem in computer vision that restores occluded regions and completes damaged images. In the case of facial image inpainting, most of the methods generate only one result for each masked image, even though there are other reasonable possibilities. To prevent any potential biases and unnatural constraints stemming from generating only one image, we propose a novel framework for diverse facial inpainting exploiting the embedding space of StyleGAN. Our framework employs pSp encoder and SeFa algorithm to identify semantic components of the StyleGAN embeddings and feed them into our proposed SPARN decoder that adopts region normalization for plausible inpainting. We demonstrate that our proposed method outperforms several state-of-the-art methods.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68671f1f8a6d8ce541f8cb77_fig6.png",
+    "thumbnail_caption": "Overview of proposed diverse facial inpainting using StyleGAN inversion.",
+    "links": [
+      { "label": "Paper (IEEE Xplore)", "url": "https://ieeexplore.ieee.org/document/9898012", "type": "ieee" }
+    ],
+    "sections": [
+      {
+        "title": "Proposed Methods",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687a4abdaf0a194d46207fc9_Fig1_7.png",
+            "caption": "Summary of the proposed framework. I_style' and M are the input of the SPARN decoder. In SPARN, each region normalization layer uses I_style' and M to modulate layer activations."
+          }
+        ]
+      },
+      {
+        "title": "Qualitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687b86819d155619af99c10a_Picture1.png",
+            "caption": "Images generated by the proposed method vs. other methods. Our model is superior in image quality and plausibility."
+          }
+        ]
+      },
+      {
+        "title": "Continuous Inpainting",
+        "layout": "row",
+        "intro_after": "Illustration of continuous inpainting results using SeFa, which gradually adjusts delta. By simply altering this parameter, our model generates a series of smoothly varying in-painted images following relevant directions defined in the latent space of StyleGAN.",
+        "figures": [
+          { "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687b888c9f7cd719d388a88d_Picture1.jpg", "caption": "Input" },
+          { "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687a6152566d5d4e57fef90d_8.gif", "caption": "Ours₁" },
+          { "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687a615253ac6244062b8527_12.gif", "caption": "Ours₂" },
+          { "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687a6152159004e9fba301e8_9.gif", "caption": "Ours₃" },
+          { "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/687a6152a32f1a6e1f221bd7_10.gif", "caption": "Ours₄" }
+        ]
+      }
+    ],
+    "bibtex": "@inproceedings{yoon2022difai,\n  title     = {DIFAI: Diverse Facial Inpainting using StyleGAN Inversion},\n  author    = {Yoon, Dongsik and Kwak, Jeong-gi and Li, Yuanming and Han, David K. and Ko, Hanseok},\n  booktitle = {IEEE International Conference on Image Processing (ICIP)},\n  year      = {2022}\n}"
+  },
+  {
+    "slug": "bmvc2021",
+    "title": "Reference Guided Image Inpainting using Facial Attributes",
+    "short_title": "Reference Guided Image Inpainting",
+    "venue": "British Machine Vision Conference (BMVC)",
+    "venue_short": "BMVC 2021",
+    "year": 2021,
+    "month": "November",
+    "note": "",
+    "authors": ["Dongsik Yoon", "Jeong-gi Kwak", "Yuanming Li", "Youngsaeng Jin", "David K Han", "Hanseok Ko"],
+    "affiliation": "Korea University; Drexel University",
+    "abstract": "Image inpainting is a technique of completing missing pixels such as occluded region restoration, distracting objects removal, and facial completion. Among these inpainting tasks, facial completion algorithm performs face inpainting according to the user direction. Existing approaches require delicate and well controlled input by the user, thus it is difficult for an average user to provide the guidance sufficiently accurate for the algorithm to generate desired results. To overcome this limitation, we propose an alternative user-guided inpainting architecture that manipulates facial attributes using a single reference image as the guide. Our end-to-end model consists of attribute extractors for accurate reference image attribute transfer and an inpainting model to map the attributes realistically and accurately to generated images. We customize MS-SSIM loss and learnable bidirectional attention maps in which importance structures remain intact even with irregular shaped masks. Based on our evaluation using the publicly available dataset CelebA-HQ, we demonstrate that the proposed method delivers superior performance compared to some state-of-the-art methods specialized in inpainting tasks.",
+    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68799d362dbc95948814e76c_Picture1.png",
+    "thumbnail_caption": "Overview of proposed reference-guided facial image inpainting.",
+    "links": [
+      { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2301.08044", "type": "arxiv" },
+      { "label": "Code (GitHub)", "url": "https://github.com/Stillrot/RGINP", "type": "code" }
+    ],
+    "sections": [
+      {
+        "title": "Proposed Methods",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6878440facb6ee910be8a21c_fig2.png",
+            "caption": "Our architecture consists of four models: a generator, a discriminator, an attribute extractor, and an auxiliary extractor. I_masked and M are the inputs of G (M omitted in this figure for clarity). For the test stage (red line), the user extracts desired attributes via the attribute extractor from a reference image."
+          }
+        ]
+      },
+      {
+        "title": "Quantitative Comparison",
+        "figures": [
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6879d25fb18096ed20d698f5_%EC%BA%A1%EC%B2%98_2.png",
+            "caption": "Images generated by the proposed method vs. other methods. Our model performs better than all the others in terms of image quality and plausibility, even with large irregular holes."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6879d20e940099e172536818_%EC%BA%A1%EC%B2%982_2.png",
+            "caption": "Pluralistic qualitative comparison with state-of-the-art methods including PIC and PDGAN."
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6879c8c9f9c3c9ad67247917_fig3.png",
+            "caption": "Images generated by manipulating each attribute from positive to negative extremes. Our method delivers plausible images according to given mask shapes and varying attribute degrees."
+          }
+        ]
+      }
+    ],
+    "bibtex": "@inproceedings{yoon2021rginp,\n  title     = {Reference Guided Image Inpainting using Facial Attributes},\n  author    = {Yoon, Dongsik and Kwak, Jeong-gi and Li, Yuanming and Jin, Youngsaeng and Han, David K. and Ko, Hanseok},\n  booktitle = {British Machine Vision Conference (BMVC)},\n  year      = {2021}\n}"
+  }
+]

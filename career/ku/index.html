@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Korea University · Dongsik Yoon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-root="../../" style="--accent:#8b0029;--accent-soft:#f8ecef;">
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../../">Dongsik Yoon</a>
+    <nav class="primary">
+      <a href="../../">HOME</a>
+      <a href="../../#career" class="active">CAREER</a>
+      <a href="../../#publications">PUBLICATIONS</a>
+      <a href="../../news/">NEWS</a>
+      <a href="../../papers/">RESEARCH</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="block career-detail" style="border-top:0">
+    <div class="container">
+      <div class="career-hero" style="--hero-from:#fde0e6; --hero-to:#fff5f7; --hero-accent:#fda4af80;">
+        <div class="logo-wrap">
+          <img src="../../assets/img/ci/ci3.jpg" alt="Korea University">
+        </div>
+        <div class="head">
+          <h1>Korea University</h1>
+          <p class="meta">전기전자공학과 석사 · ISPL · 2021.03 ~ 2023.02 · 4.13/4.5 (24 학점)</p>
+          <div class="badge-row">
+            <span class="role-badge">Signal Processing</span>
+            <span class="role-badge">GAN</span>
+            <span class="role-badge">TTS</span>
+            <span class="role-badge">Computer Vision</span>
+          </div>
+        </div>
+      </div>
+      <p>
+        졸업 논문: <em>Deep Learning Framework Design via Condition Guided Learning</em>
+        (<a href="https://dcollection.korea.ac.kr/srch/srchDetail/000000270183" target="_blank" rel="noopener">Paper</a>)
+      </p>
+      <p>
+        ISPL: Intelligent Signal Processing Laboratory · 2020.11 ~ 2022.12 · 지도교수 고한석
+      </p>
+
+      <h2>Research</h2>
+      <div class="task-grid">
+        <a class="task-card" href="#proj-eq">
+          <div class="name">1차원 신호처리</div>
+          <ul>
+            <li>GAN 기반 가상 중규모 지진파 생성 알고리즘 개발</li>
+            <li>가상 지진 시나리오 소프트웨어 개발</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-tts">
+          <div class="name">음성 합성 (TTS)</div>
+          <ul>
+            <li>낭독체 및 대화체 음성 합성 모델 개발</li>
+            <li>다중 화자·감정 음성 DB 구축</li>
+          </ul>
+        </a>
+        <a class="task-card" href="#proj-img">
+          <div class="name">이미지 처리</div>
+          <ul>
+            <li>조건부 얼굴 이미지 복원 모델 개발</li>
+            <li>StyleGAN 및 NeRF-GAN을 활용한 이미지 편집</li>
+          </ul>
+        </a>
+      </div>
+
+      <h2>Projects</h2>
+
+      <div class="project" id="proj-eq">
+        <h3>인공지능 기술을 활용한 가상의 한반도 지진 시나리오 생성 기법 연구 (기상청 연구용역, 2021)</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>연구 필요성</h4>
+            <ul>
+              <li>2000년 이후 한반도 내 규모 5.0 이상 지진 발생, 추가 가능성 경고</li>
+              <li>국내 규모 3.0 이상 지진 빈도가 낮아 분석 시스템 검증 한계</li>
+            </ul>
+            <h4>연구 목표</h4>
+            <ul>
+              <li>GAN 기반 규모 3.0 이상의 지진 데이터 생성 기술 개발</li>
+              <li>메타데이터를 이용한 가상 지진 시나리오 소프트웨어 개발</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>생성 모델 학습을 위한 지진 데이터셋 구축</li>
+              <li>생성된 지진파 검증 알고리즘 구현</li>
+              <li>지진 시나리오 소프트웨어 제작 및 유지보수</li>
+            </ul>
+            <h4>연구 성과</h4>
+            <ul>
+              <li>지진 시나리오 소프트웨어 기상청 배포 및 유지보수</li>
+            </ul>
+            <ul class="icon-link-list">
+              <li><a href="../../papers/grsl2023/">IEEE GRSL 1저자 게재 (IF=5.3)</a></li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6865e540c970833ab36e1786_image.png" alt="가상 지진 시나리오" loading="lazy">
+              <figcaption>가상 지진 시나리오 소프트웨어 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="project cream" id="proj-tts">
+        <h3>낭독체 및 대화체 음성 합성 모델 개발 연구 (Deep Machine LAB, 2022)</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>연구 목표</h4>
+            <ul>
+              <li>빠른 추론이 가능한 음성 합성(Text-to-Speech) 알고리즘 설계</li>
+              <li>다중 화자 음성 합성을 위한 모델 구조 연구</li>
+              <li>운율 및 감정 제어 TTS 모델 연구</li>
+              <li>발화 시간 및 피치 조절 인코더 연구</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>화자·감정별 음성 데이터셋 구축 및 전처리 파이프라인 개발</li>
+              <li>참조 오디오 기반의 감정 제어 음성 합성 모델 제안</li>
+            </ul>
+            <h4>연구 성과</h4>
+            <ul>
+              <li>낭독·대화체 통합 TTS 프로토타입 구현</li>
+              <li>MOS +5%, Similarity-MOS +11% (n = 30)</li>
+            </ul>
+            <ul class="icon-link-list">
+              <li><a href="https://sites.google.com/view/silhouetts-samples/%ED%99%88" target="_blank" rel="noopener">데모 페이지</a></li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68662ebccc64d8f20685e001_fig1_2.png" alt="TTS 모델 구조" loading="lazy">
+              <figcaption>제안한 참조 스타일 기반의 음성 합성 모델 구조</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="project lemon" id="proj-img">
+        <h3>이미지 처리 연구</h3>
+        <div class="project-row">
+          <div class="project-text">
+            <h4>연구 목표</h4>
+            <ul>
+              <li>사용자 의도를 반영할 수 있는 참조 이미지 얼굴 속성 기반 이미지 복원 모델 제안</li>
+              <li>StyleGAN 기반의 이미지 복원 및 편집 모델 제안</li>
+              <li>비지도학습 기반의 3D aware GAN 구조 제안</li>
+            </ul>
+            <h4>담당 업무</h4>
+            <ul>
+              <li>박사 과정 연구생들과의 CV 논문 세미나 준비</li>
+              <li>구체적인 연구 코드 및 결과를 보며 실험 과정 및 방향성 공유</li>
+            </ul>
+            <h4>연구 성과</h4>
+            <ul class="icon-link-list">
+              <li><a href="../../papers/bmvc2021/">BMVC 2021 1저자 게재</a></li>
+              <li><a href="../../papers/icip2022/">ICIP 2022 1저자 게재</a></li>
+              <li><a href="https://jgkwak95.github.io/surfgan/" target="_blank" rel="noopener">ECCV 2022 3저자 게재</a></li>
+            </ul>
+          </div>
+          <div class="project-images">
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68799d362dbc95948814e76c_Picture1.png" alt="BMVC2021 결과" loading="lazy">
+              <figcaption>BMVC 2021 발표 논문 결과 예시</figcaption>
+            </figure>
+            <figure class="project-figure">
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68672af5c4ab03f18e602a51_eccv2022_thumb.png" alt="ECCV2022 결과" loading="lazy">
+              <figcaption>ECCV 2022 발표 논문 결과 예시</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
+</footer>
+</body>
+</html>

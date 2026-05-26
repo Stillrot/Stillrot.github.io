@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.claude/
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node (if you later add tooling)
+node_modules/
+npm-debug.log
+
+# Local dev / temp
+*.log
+*.tmp

@@ -1,0 +1,120 @@
+{
+  "granted": [
+    {
+      "idx": 1,
+      "title": "전자 장치 및 전자 장치의 디스플레이에 대응하는 이미지를 획득하는 방법",
+      "country": "KR",
+      "patent_no": "10-2809119",
+      "application_no": "10-2024-0167042",
+      "granted_date": "2025-05-13"
+    },
+    {
+      "idx": 2,
+      "title": "인공지능 모델 기반 실내 건축 공사의 하자를 검출하기 위한 전자 장치 및 그 구동 방법",
+      "country": "KR",
+      "patent_no": "10-2793868",
+      "application_no": "10-2024-0183119",
+      "granted_date": "2025-04-04"
+    },
+    {
+      "idx": 3,
+      "title": "인공신경망 기반의 복합모델을 이용한 주차장 화재 탐지 방법 및 시스템",
+      "country": "KR",
+      "patent_no": "10-2857163",
+      "application_no": "10-2024-0177540",
+      "granted_date": "2025-09-04"
+    },
+    {
+      "idx": 4,
+      "title": "사용자로그를 고려한 엘리베이터 내부의 반려동물 유무 탐지방법 및 시스템",
+      "country": "KR",
+      "patent_no": "10-2876730",
+      "application_no": "10-2025-0066321",
+      "granted_date": "2025-10-22"
+    },
+    {
+      "idx": 5,
+      "title": "인공신경망을 이용한 건설현장에서의 충돌위험 탐지방법 및 시스템",
+      "country": "KR",
+      "patent_no": "10-2910653",
+      "application_no": "10-2025-0060698",
+      "granted_date": "2026-01-06"
+    },
+    {
+      "idx": 6,
+      "title": "개인화된 DB의 조회를 이용한 홈에이전트 서비스 제공방법 및 시스템",
+      "country": "KR",
+      "patent_no": "10-2942432",
+      "application_no": "10-2025-0182169",
+      "granted_date": "2026-03-18"
+    },
+    {
+      "idx": 7,
+      "title": "사용자별 시계열루틴데이터를 학습한 AI에이전트를 포함하는 홈IoT시스템 및 상기 사용자별 시계열루틴데이터에 따른 사용자별 맞춤정보 생성방법",
+      "country": "KR",
+      "patent_no": "10-2942432",
+      "application_no": "10-2025-0098512",
+      "granted_date": "2026-03-18"
+    },
+    {
+      "idx": 8,
+      "title": "건축물의 인테리어 평면도를 자동 생성하는 방법",
+      "country": "KR",
+      "patent_no": "10-2956420",
+      "application_no": "10-2025-0182185",
+      "granted_date": "2026-04-20"
+    },
+    {
+      "idx": 9,
+      "title": "인공신경망을 이용한 공간의 점유율 추정방법 및 시스템",
+      "country": "KR",
+      "patent_no": "10-2958364",
+      "application_no": "10-2025-0066324",
+      "granted_date": "2026-04-23"
+    },
+    {
+      "idx": 10,
+      "title": "사용자가 원하는 객체가 포함된 도메인 특화데이터 생성방법 및 이를 수행하는 컴퓨팅시스템",
+      "country": "KR",
+      "patent_no": "10-2963796",
+      "application_no": "10-2025-0098510",
+      "granted_date": "2026-05-07"
+    },
+    {
+      "idx": 11,
+      "title": "개인화된 사전 DB를 이용한 개인화된 객체 추적 방법 및 시스템",
+      "country": "KR",
+      "patent_no": "10-2963799",
+      "application_no": "10-2025-0182181",
+      "granted_date": "2026-05-07"
+    }
+  ],
+  "application": [
+    {
+      "idx": 1,
+      "title": "Systems and methods for diverse image inpainting",
+      "country": "US",
+      "application_no": "18/625,052",
+      "publication_no": "US20240338802A1",
+      "published_date": "2024-10-10"
+    },
+    {
+      "idx": 2,
+      "title": "객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체",
+      "country": "KR",
+      "application_no": "10-2025-0098513"
+    },
+    {
+      "idx": 3,
+      "title": "행동인식을 기반으로 한 IoT 가전기기 제어방법 및 시스템",
+      "country": "KR",
+      "application_no": "10-2025-0182191"
+    },
+    {
+      "idx": 4,
+      "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
+      "country": "KR",
+      "application_no": "10-2026-0008565"
+    }
+  ]
+}
