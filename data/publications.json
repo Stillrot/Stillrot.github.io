@@ -47,9 +47,9 @@
       "title": "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",
       "venue": "arXiv",
       "year": 2026,
-      "note": "preprint",
-      "link": null,
-      "link_type": null,
+      "note": "",
+      "link": "https://arxiv.org/abs/2604.15802",
+      "link_type": "arxiv",
       "paper_slug": null
     },
     {

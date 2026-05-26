@@ -63,13 +63,15 @@
 
   function renderPubItem(p) {
     const li = el('li', { class: p.link ? 'has-link' : '' });
+    // If the front badge already shows the note (e.g. "Oral"), don't repeat it as a trailing tag.
+    const noteInBadge = p.note === 'Oral';
     const inner = `
       <span class="idx">[${p.idx}]</span>
       ${venueBadge(p)}
       <span class="authors">${highlightAuthors(p.authors)}</span>,
       <em class="title">${escapeHtml(p.title)}</em>,
       <span class="venue">${escapeHtml(p.venue)}</span>${p.year ? `, ${p.year}${p.month ? '.' + String(p.month).padStart(2,'0') : ''}` : ''}
-      ${p.note ? `<span class="link-tag">${escapeHtml(p.note)}</span>` : ''}
+      ${p.note && !noteInBadge ? `<span class="link-tag">${escapeHtml(p.note)}</span>` : ''}
       ${p.link ? `<span class="link-tag">${linkTag(p.link_type)}</span>` : ''}
     `;
     if (p.link) {
@@ -235,25 +237,33 @@
 
   function renderPaperList(target, papers) {
     target.innerHTML = '';
-    const ul = el('ul', { class: 'pub-list' });
+    const grid = el('div', { class: 'paper-card-grid' });
     // Use the order as it appears in papers.json (curator-controlled).
     papers.forEach((p) => {
-      const li = el('li', { class: 'has-link' });
       const isExternal = !!p.external_url;
       const href = p.external_url || `./${p.slug}/`;
+      const thumb = p.list_thumb || p.thumbnail_external || '';
       const a = el('a', {
-        class: 'pub-row',
+        class: 'paper-card',
         href,
         ...(isExternal ? { target: '_blank', rel: 'noopener' } : {}),
       });
       a.innerHTML = `
-        <em class="title">${escapeHtml(p.title)}</em>
-        <div><span class="venue">${escapeHtml(p.venue_short)}</span>${p.note ? ` · ${escapeHtml(p.note)}` : ''}</div>
-        <div>${highlightAuthors(p.authors.join(', '))}</div>`;
-      li.appendChild(a);
-      ul.appendChild(li);
+        <div class="paper-card-thumb">
+          ${thumb ? `<img src="${thumb}" alt="${escapeHtml(p.short_title || p.title)}" loading="lazy">` : '<span class="paper-card-placeholder">📄</span>'}
+        </div>
+        <div class="paper-card-info">
+          <div class="paper-card-venue">
+            <span class="venue-pill">${escapeHtml(p.venue_short)}</span>
+            ${p.note ? `<span class="venue-note">${escapeHtml(p.note)}</span>` : ''}
+          </div>
+          <div class="paper-card-title">${escapeHtml(p.title)}</div>
+          <div class="paper-card-authors">${highlightAuthors(p.authors.join(', '))}</div>
+          ${p.affiliation ? `<div class="paper-card-affiliation">${escapeHtml(p.affiliation)}</div>` : ''}
+        </div>`;
+      grid.appendChild(a);
     });
-    target.appendChild(ul);
+    target.appendChild(grid);
   }
 
   function escapeHtml(s) {
