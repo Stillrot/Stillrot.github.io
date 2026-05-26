@@ -323,6 +323,13 @@
       console.error(e);
       if (pubBox) pubBox.textContent = '데이터를 불러오지 못했습니다.';
     }
+    // Data is async — once it lands, the page layout shifts. If the URL had a hash,
+    // re-anchor so the user lands at the right place (not where the empty placeholder was).
+    if (window.location.hash) {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ block: 'start' });
+    }
     initScrollSpy();
   }
   async function bootNews() {
