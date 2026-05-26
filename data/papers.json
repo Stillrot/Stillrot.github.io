@@ -7,11 +7,12 @@
     "venue_short": "Interspeech 2026",
     "year": 2026,
     "month": "Anonymous submission",
-    "note": "Under review · Project page",
+    "note": "Under review",
     "authors": ["Dongsik Yoon", "Jongeun Kim", "Bogyung Park", "Sukyung Kim", "Suntae Hwang"],
     "affiliation": "HDC LABS",
     "links": [],
-    "external": true
+    "external": true,
+    "list_thumb": "https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel5_regeneration.png"
   },
   {
     "slug": "wacvw2026",
@@ -114,7 +115,7 @@
     "venue_short": "ICLRW 2025",
     "year": 2025,
     "month": "April",
-    "note": "Equal contribution (Jongeun Kim, Yejin Lee, Dongsik Yoon)",
+    "note": "",
     "authors": ["Jongeun Kim*", "Yejin Lee*", "Dongsik Yoon*", "Chansung Jung", "Gunhee Lee"],
     "affiliation": "HDC LABS",
     "abstract": "While YOLO models show promise in car fire detection, they remain insufficient for real-world deployment in underground and indoor car parks due to dataset limitations, evaluation gaps, and deployment constraints. We first fine-tune YOLO on fire/smoke-augmented dataset, but analysis reveals that it struggles with ambiguous fire-smoke boundaries, leading to false predictions. To address this, we propose a real-time end-to-end framework integrating YOLOv8s with Florence2 VLM, combining object detection with contextual reasoning. While YOLOv8s with VLM improves detection reliability, challenges are still ongoing. Our findings highlight YOLO's limitations in fire detection and the need for a more adaptive, environment-aware approach.",
@@ -295,10 +296,11 @@
     "venue_short": "ECCV 2022",
     "year": 2022,
     "month": "October",
-    "note": "Project page",
+    "note": "",
     "authors": ["Jeong-gi Kwak", "Yuanming Li", "Dongsik Yoon", "Donghyeon Kim", "Hanseok Ko"],
     "affiliation": "Korea University",
-    "external_url": "https://jgkwak95.github.io/surfgan/"
+    "external_url": "https://jgkwak95.github.io/surfgan/",
+    "list_thumb": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68672af5c4ab03f18e602a51_eccv2022_thumb.png"
   },
   {
     "slug": "icip2022",
