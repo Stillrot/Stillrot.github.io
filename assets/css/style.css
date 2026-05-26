@@ -297,14 +297,23 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 
 /* YouTube presentation embed shown at the top of paper detail pages. */
 .paper-video {
-  margin: 24px 0 12px;
+  margin: 12px auto 18px;
   border: 1px solid var(--border); border-radius: var(--radius);
   overflow: hidden;
   position: relative;
   aspect-ratio: 16 / 9;
   background: #000;
+  max-width: 680px;
 }
 .paper-video iframe { width: 100%; height: 100%; display: block; border: 0; }
+.paper-section-heading {
+  margin: 28px 0 6px;
+  font-size: 20px;
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+}
 
 .paper-thumb {
   margin: 24px 0 12px; border: 1px solid var(--border); border-radius: var(--radius);

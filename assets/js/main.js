@@ -193,7 +193,15 @@
       </section>
 
       <section class="container">
+        ${paper.thumbnail_external ? `
+        <h2 class="paper-section-heading">Overview</h2>
+        <figure class="paper-thumb">
+          <img src="${paper.thumbnail_external}" alt="${escapeHtml(paper.short_title || paper.title)}" loading="lazy">
+          ${paper.thumbnail_caption ? `<figcaption>${escapeHtml(paper.thumbnail_caption)}</figcaption>` : ''}
+        </figure>` : ''}
+
         ${paper.video_id ? `
+        <h2 class="paper-section-heading">${escapeHtml(paper.video_heading || 'Presentation')}</h2>
         <div class="paper-video">
           <iframe src="https://www.youtube.com/embed/${encodeURIComponent(paper.video_id)}?rel=0&controls=1"
                   frameborder="0"
@@ -201,12 +209,6 @@
                   allowfullscreen
                   title="${escapeHtml(paper.video_title || paper.short_title || paper.title)}"></iframe>
         </div>` : ''}
-
-        ${paper.thumbnail_external ? `
-        <figure class="paper-thumb">
-          <img src="${paper.thumbnail_external}" alt="${escapeHtml(paper.short_title || paper.title)}" loading="lazy">
-          ${paper.thumbnail_caption ? `<figcaption>${escapeHtml(paper.thumbnail_caption)}</figcaption>` : ''}
-        </figure>` : ''}
 
         <div class="paper-body">
           <h2>Abstract</h2>
