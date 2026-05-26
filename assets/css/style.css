@@ -76,15 +76,29 @@ section.hero { padding: 56px 0 32px; }
   background: var(--bg-soft); object-fit: cover;
   border: 1px solid var(--border);
 }
-.social-row { display: flex; gap: 10px; margin-top: 18px; }
+.social-row { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
 .social-row a {
-  width: 36px; height: 36px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
+  display: inline-flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 4px;
+  min-width: 60px;
+  padding: 8px 6px;
+  border-radius: 10px;
   background: var(--bg-soft); border: 1px solid var(--border);
   color: var(--fg);
+  text-decoration: none;
+  transition: background 120ms, border-color 120ms, transform 120ms;
 }
-.social-row a:hover { background: var(--accent-soft); border-color: var(--accent); text-decoration: none; }
-.social-row svg { width: 18px; height: 18px; }
+.social-row a:hover {
+  background: var(--accent-soft); border-color: var(--accent);
+  text-decoration: none; transform: translateY(-1px);
+}
+.social-row svg { width: 20px; height: 20px; flex-shrink: 0; }
+.social-row .social-label {
+  font-size: 10px; font-weight: 600; color: var(--fg-muted);
+  letter-spacing: 0.2px;
+}
+.social-row a:hover .social-label { color: var(--accent); }
 
 /* ----- Section ----- */
 section.block { padding: 40px 0; }
