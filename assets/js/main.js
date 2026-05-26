@@ -194,7 +194,6 @@
 
       <section class="container">
         ${paper.thumbnail_external ? `
-        <h2 class="paper-section-heading">Overview</h2>
         <figure class="paper-thumb">
           <img src="${paper.thumbnail_external}" alt="${escapeHtml(paper.short_title || paper.title)}" loading="lazy">
           ${paper.thumbnail_caption ? `<figcaption>${escapeHtml(paper.thumbnail_caption)}</figcaption>` : ''}
