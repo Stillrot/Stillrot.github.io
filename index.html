@@ -21,8 +21,8 @@
       <a href="./" class="active">HOME</a>
       <a href="#career">CAREER</a>
       <a href="#publications">PUBLICATIONS</a>
-      <a href="./news/">NEWS</a>
-      <a href="./papers/">RESEARCH</a>
+      <a href="#news">NEWS</a>
+      <a href="#research">RESEARCH</a>
     </nav>
   </div>
 </header>
@@ -101,12 +101,27 @@
     </div>
   </section>
 
-  <section class="block" id="publications">
+  <section class="block" id="content">
     <div class="container">
-      <h2>Publications</h2>
-      <div id="publications-root">Loading…</div>
-      <h2 id="patents" style="margin-top:36px;">Patents</h2>
-      <div id="patents-root">Loading…</div>
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" data-tab="publications" role="tab" aria-selected="true">Publications</button>
+        <button class="tab-btn" data-tab="patents" role="tab" aria-selected="false">Patents</button>
+        <button class="tab-btn" data-tab="news" role="tab" aria-selected="false">News</button>
+        <button class="tab-btn" data-tab="research" role="tab" aria-selected="false">Research</button>
+      </div>
+
+      <div class="tab-panel active" data-panel="publications" id="publications" role="tabpanel">
+        <div id="publications-root">Loading…</div>
+      </div>
+      <div class="tab-panel" data-panel="patents" id="patents" role="tabpanel">
+        <div id="patents-root">Loading…</div>
+      </div>
+      <div class="tab-panel" data-panel="news" id="news" role="tabpanel">
+        <div id="news-root">Loading…</div>
+      </div>
+      <div class="tab-panel" data-panel="research" id="research" role="tabpanel">
+        <div id="paper-list-root">Loading…</div>
+      </div>
     </div>
   </section>
 </main>

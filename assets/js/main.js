@@ -277,7 +277,8 @@
   // Simple approach: pick whichever section's top is closest to (and above) the
   // sticky header bottom. Works whether the user scrolls or clicks an anchor.
   function initScrollSpy() {
-    const sectionIds = ['hero', 'career', 'publications'];
+    // hero / career are scroll-spied; #content (the tabbed area) reflects whichever tab is active.
+    const sectionIds = ['hero', 'career', 'content'];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -285,17 +286,20 @@
     const navLinks = [...document.querySelectorAll('nav.primary a')];
 
     function activate(id) {
+      // If we're in the tabbed content section, mirror the active tab onto the nav.
+      const activeTab = document.querySelector('.tab-btn.active')?.dataset.tab;
+      const navTarget = id === 'content' && activeTab ? activeTab : id;
       navLinks.forEach((a) => {
         const h = a.getAttribute('href');
         const matches =
-          (id === 'hero' && (h === './' || h === '/' || h === '#')) ||
-          (id !== 'hero' && h === '#' + id);
+          (navTarget === 'hero' && (h === './' || h === '/' || h === '#')) ||
+          (navTarget !== 'hero' && h === '#' + navTarget);
         a.classList.toggle('active', matches);
       });
     }
 
     function update() {
-      const offset = 90;  // a bit past the sticky header
+      const offset = 90;
       let current = sections[0];
       for (const s of sections) {
         if (s.getBoundingClientRect().top - offset <= 0) current = s;
@@ -309,27 +313,81 @@
       raf = requestAnimationFrame(() => { raf = null; update(); });
     }, { passive: true });
     window.addEventListener('resize', update);
+    // Re-run when tab changes (so nav active syncs)
+    document.querySelectorAll('.tab-btn').forEach((b) => b.addEventListener('click', update));
     update();
   }
 
   // Page bootstraps
+  const TAB_NAMES = ['publications', 'patents', 'news', 'research'];
+
+  function activateTab(name) {
+    if (!TAB_NAMES.includes(name)) return;
+    document.querySelectorAll('.tab-btn').forEach((b) => {
+      const on = b.dataset.tab === name;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.tab-panel').forEach((p) => {
+      p.classList.toggle('active', p.dataset.panel === name);
+    });
+  }
+
+  function initTabs() {
+    const buttons = document.querySelectorAll('.tab-btn');
+    if (!buttons.length) return;
+    buttons.forEach((b) => {
+      b.addEventListener('click', () => {
+        const name = b.dataset.tab;
+        activateTab(name);
+        // Update URL hash without triggering scroll
+        history.replaceState(null, '', `#${name}`);
+      });
+    });
+    // Initial activation from URL hash
+    const initialHash = decodeURIComponent(location.hash.slice(1));
+    if (TAB_NAMES.includes(initialHash)) activateTab(initialHash);
+    // Sync on later hash changes (e.g. user clicks a nav link)
+    window.addEventListener('hashchange', () => {
+      const h = decodeURIComponent(location.hash.slice(1));
+      if (TAB_NAMES.includes(h)) {
+        activateTab(h);
+        document.getElementById('content')?.scrollIntoView({ block: 'start' });
+      }
+    });
+  }
+
   async function bootHome() {
     const pubBox = document.getElementById('publications-root');
     const patBox = document.getElementById('patents-root');
+    const newsBox = document.getElementById('news-root');
+    const paperBox = document.getElementById('paper-list-root');
     try {
-      const [pubs, pats] = await Promise.all([loadJSON('publications'), loadJSON('patents')]);
+      const [pubs, pats, news, papers] = await Promise.all([
+        loadJSON('publications'),
+        loadJSON('patents'),
+        loadJSON('news'),
+        loadJSON('papers'),
+      ]);
       if (pubBox) renderPublications(pubBox, pubs);
       if (patBox) renderPatents(patBox, pats);
+      if (newsBox) renderNews(newsBox, news);
+      if (paperBox) renderPaperList(paperBox, papers);
     } catch (e) {
       console.error(e);
       if (pubBox) pubBox.textContent = '데이터를 불러오지 못했습니다.';
     }
-    // Data is async — once it lands, the page layout shifts. If the URL had a hash,
-    // re-anchor so the user lands at the right place (not where the empty placeholder was).
+    initTabs();
+    // After async render, re-anchor + activate tab if URL had hash
     if (window.location.hash) {
       const id = decodeURIComponent(window.location.hash.slice(1));
-      const target = document.getElementById(id);
-      if (target) target.scrollIntoView({ block: 'start' });
+      if (TAB_NAMES.includes(id)) {
+        activateTab(id);
+        document.getElementById('content')?.scrollIntoView({ block: 'start' });
+      } else {
+        const target = document.getElementById(id);
+        if (target) target.scrollIntoView({ block: 'start' });
+      }
     }
     initScrollSpy();
   }
