@@ -242,7 +242,8 @@
     // Use the order as it appears in papers.json (curator-controlled).
     papers.forEach((p) => {
       const isExternal = !!p.external_url;
-      const href = p.external_url || `./${p.slug}/`;
+      // Build href via data-root so the same renderer works from / (home tab) and /papers/.
+      const href = p.external_url || `${root()}papers/${p.slug}/`;
       const thumb = p.list_thumb || p.thumbnail_external || '';
       const a = el('a', {
         class: 'paper-card',
