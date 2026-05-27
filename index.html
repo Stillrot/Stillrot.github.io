@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="./assets/css/style.css?v=20260527">
+<link rel="stylesheet" href="./assets/css/style.css?v=20260527c">
 </head>
 <body data-root="./">
 
@@ -23,6 +23,10 @@
       <a href="#publications">PUBLICATIONS</a>
       <a href="#news">NEWS</a>
       <a href="#research">RESEARCH</a>
+      <div class="lang-toggle" role="tablist" aria-label="Language">
+        <button type="button" data-lang="ko" aria-label="Korean">KR</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -31,11 +35,16 @@
   <section class="hero" id="hero">
     <div class="container hero-grid">
       <div>
-        <h1>윤동식 · AI Researcher</h1>
-        <ul class="bullets">
+        <h1><span class="ko-only">윤동식 · AI Researcher</span><span class="en-only">Dongsik Yoon · AI Researcher</span></h1>
+        <ul class="bullets ko-only">
           <li>AI 기반 영상처리에 관심을 가지고 있는 개발자</li>
           <li>다년간의 연구실 경력으로 문제 해결을 위한 아이디어 제시 및 팀원과 협업할 수 있는 개발자</li>
           <li>항상 새로운 것을 공부하여 개발에 필요한 기술 리서치가 가능한 개발자</li>
+        </ul>
+        <ul class="bullets en-only">
+          <li>Researcher focused on AI-driven image and video processing.</li>
+          <li>Years of lab experience proposing solutions and collaborating with team members to solve real problems.</li>
+          <li>Continuously studying new technologies and conducting research needed for development.</li>
         </ul>
         <div class="social-row">
           <a href="https://github.com/Stillrot/RGINP" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
@@ -75,8 +84,8 @@
       <div class="career-grid">
         <a class="career-card hdc" href="./career/hdclabs/">
           <div class="ci-row">
-            <div class="ci-mark-wrap"><img src="./assets/img/ci/ci1.jpg" alt="HDC LABS"></div>
-            <span class="ci-name">HDC LABS</span>
+            <div class="ci-mark-wrap"><img src="./assets/img/ci/ci1.jpg" alt="HDC Labs"></div>
+            <span class="ci-name">HDC Labs</span>
           </div>
           <div class="role">R&D Center · AI LAB</div>
           <div class="period">2024.05 ~ Present</div>
@@ -138,7 +147,7 @@
   <div class="container">© Dongsik Yoon</div>
 </footer>
 
-<script src="./assets/js/main.js?v=20260527"></script>
+<script src="./assets/js/main.js?v=20260527c"></script>
 <script>Portfolio.bootHome();</script>
 </body>
 </html>

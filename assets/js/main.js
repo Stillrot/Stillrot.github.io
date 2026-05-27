@@ -107,10 +107,11 @@
     const body = el('tbody');
     rows.forEach((r) => {
       const tr = el('tr');
+      const title = pickLang(r, 'title');
       if (granted) {
         tr.innerHTML = `
           <td class="num">[${r.idx}]</td>
-          <td>${escapeHtml(r.title)}</td>
+          <td>${escapeHtml(title)}</td>
           <td class="num">${escapeHtml(r.country)} ${escapeHtml(r.patent_no)}</td>
           <td class="num">${escapeHtml(r.application_no)}</td>
           <td class="num">${escapeHtml(r.granted_date)}</td>`;
@@ -120,7 +121,7 @@
           : `${escapeHtml(r.country)} ${escapeHtml(r.application_no)}`;
         tr.innerHTML = `
           <td class="num">[${r.idx}]</td>
-          <td>${escapeHtml(r.title)}</td>
+          <td>${escapeHtml(title)}</td>
           <td class="num">${num}</td>
           <td class="num">${escapeHtml(r.published_date || '-')}</td>`;
       }
@@ -135,12 +136,15 @@
     const grid = el('div', { class: 'news-grid' });
     items.forEach((n) => {
       const a = el('a', { class: 'news-card', href: n.link, target: '_blank', rel: 'noopener' });
+      const title = pickLang(n, 'title');
+      const summary = pickLang(n, 'summary');
+      const source = pickLang(n, 'source');
       a.innerHTML = `
         <div class="thumb">${n.thumbnail_external ? `<img src="${n.thumbnail_external}" alt="" loading="lazy">` : ''}</div>
         <div class="body">
-          <div class="date">${escapeHtml(n.date)} · ${escapeHtml(n.source || '')}</div>
-          <div class="title">${escapeHtml(n.title)}</div>
-          <div class="summary">${escapeHtml(n.summary)}</div>
+          <div class="date">${escapeHtml(n.date)} · ${escapeHtml(source || '')}</div>
+          <div class="title">${escapeHtml(title)}</div>
+          <div class="summary">${escapeHtml(summary)}</div>
         </div>`;
       grid.appendChild(a);
     });
@@ -274,6 +278,38 @@
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
+  // Language toggle (KR / EN) — controls visibility of .ko-only / .en-only blocks
+  // across every page. Persists choice in localStorage.
+  function initLanguageToggle() {
+    function set(lang) {
+      document.documentElement.classList.remove('lang-ko', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('siteLang', lang); } catch (e) {}
+      document.querySelectorAll('.lang-toggle button').forEach((b) => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+      });
+      // Re-render data-driven views so they pick the right localized fields.
+      if (window.__rerenderForLang) window.__rerenderForLang(lang);
+    }
+    let initial = 'ko';
+    try { initial = localStorage.getItem('siteLang') || 'ko'; } catch (e) {}
+    set(initial);
+    document.querySelectorAll('.lang-toggle button').forEach((b) => {
+      b.addEventListener('click', () => set(b.dataset.lang));
+    });
+  }
+
+  function currentLang() {
+    return document.documentElement.classList.contains('lang-en') ? 'en' : 'ko';
+  }
+
+  // Pick the localized field of a JSON object: prefer `<field>_<lang>`, fall back to `<field>`.
+  function pickLang(obj, field) {
+    const lang = currentLang();
+    return obj[`${field}_${lang}`] || obj[field] || '';
+  }
+
   // Highlights the matching nav link as the user scrolls past each section.
   // Simple approach: pick whichever section's top is closest to (and above) the
   // sticky header bottom. Works whether the user scrolls or clicks an anchor.
@@ -376,7 +412,7 @@
       if (paperBox) renderPaperList(paperBox, papers);
     } catch (e) {
       console.error(e);
-      if (pubBox) pubBox.textContent = '데이터를 불러오지 못했습니다.';
+      if (pubBox) pubBox.textContent = (currentLang() === 'ko' ? '데이터를 불러오지 못했습니다.' : 'Failed to load data.');
     }
     initTabs();
     // After async render, re-anchor + activate tab if URL had hash
@@ -391,6 +427,19 @@
       }
     }
     initScrollSpy();
+    // Hook: rerender data views when language switches.
+    // The toggle UI is wired by autoInitLanguageToggle on DOMContentLoaded.
+    window.__rerenderForLang = async () => {
+      try {
+        const [pubs, pats, news, papers] = await Promise.all([
+          loadJSON('publications'), loadJSON('patents'), loadJSON('news'), loadJSON('papers'),
+        ]);
+        if (pubBox) renderPublications(pubBox, pubs);
+        if (patBox) renderPatents(patBox, pats);
+        if (newsBox) renderNews(newsBox, news);
+        if (paperBox) renderPaperList(paperBox, papers);
+      } catch (e) {}
+    };
   }
   async function bootNews() {
     const box = document.getElementById('news-root');
@@ -398,7 +447,8 @@
     try {
       const items = await loadJSON('news');
       renderNews(box, items);
-    } catch (e) { box.textContent = '데이터를 불러오지 못했습니다.'; }
+      window.__rerenderForLang = () => renderNews(box, items);
+    } catch (e) { box.textContent = (currentLang() === 'ko' ? '데이터를 불러오지 못했습니다.' : 'Failed to load data.'); }
   }
   async function bootPaperList() {
     const box = document.getElementById('paper-list-root');
@@ -406,7 +456,8 @@
     try {
       const papers = await loadJSON('papers');
       renderPaperList(box, papers);
-    } catch (e) { box.textContent = '데이터를 불러오지 못했습니다.'; }
+      window.__rerenderForLang = () => renderPaperList(box, papers);
+    } catch (e) { box.textContent = (currentLang() === 'ko' ? '데이터를 불러오지 못했습니다.' : 'Failed to load data.'); }
   }
   async function bootPaper() {
     const box = document.getElementById('paper-root');
@@ -417,8 +468,23 @@
       const p = papers.find((x) => x.slug === slug);
       if (!p) { box.textContent = `Paper "${slug}" not found.`; return; }
       renderPaper(box, p);
-    } catch (e) { box.textContent = '데이터를 불러오지 못했습니다.'; }
+    } catch (e) { box.textContent = (currentLang() === 'ko' ? '데이터를 불러오지 못했습니다.' : 'Failed to load data.'); }
   }
 
-  window.Portfolio = { bootHome, bootNews, bootPaperList, bootPaper };
+  window.Portfolio = { bootHome, bootNews, bootPaperList, bootPaper, initLanguageToggle, currentLang, pickLang };
+
+  // Auto-init the language toggle on any page that includes the UI but doesn't
+  // call one of the boot functions (e.g. static career detail pages).
+  function autoInitLanguageToggle() {
+    if (!document.querySelector('.lang-toggle')) return;
+    // If a boot function already wired things up, the active class will already be set.
+    const alreadyInit = document.querySelector('.lang-toggle button.active');
+    if (alreadyInit) return;
+    initLanguageToggle();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', autoInitLanguageToggle);
+  } else {
+    autoInitLanguageToggle();
+  }
 })();

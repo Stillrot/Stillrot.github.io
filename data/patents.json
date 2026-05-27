@@ -3,6 +3,7 @@
     {
       "idx": 1,
       "title": "전자 장치 및 전자 장치의 디스플레이에 대응하는 이미지를 획득하는 방법",
+      "title_en": "Electronic device and method of acquiring an image corresponding to its display",
       "country": "KR",
       "patent_no": "10-2809119",
       "application_no": "10-2024-0167042",
@@ -11,6 +12,7 @@
     {
       "idx": 2,
       "title": "인공지능 모델 기반 실내 건축 공사의 하자를 검출하기 위한 전자 장치 및 그 구동 방법",
+      "title_en": "AI-based electronic device for detecting defects in indoor construction work, and its operating method",
       "country": "KR",
       "patent_no": "10-2793868",
       "application_no": "10-2024-0183119",
@@ -19,6 +21,7 @@
     {
       "idx": 3,
       "title": "인공신경망 기반의 복합모델을 이용한 주차장 화재 탐지 방법 및 시스템",
+      "title_en": "Parking-lot fire detection method and system using a neural-network-based composite model",
       "country": "KR",
       "patent_no": "10-2857163",
       "application_no": "10-2024-0177540",
@@ -27,6 +30,7 @@
     {
       "idx": 4,
       "title": "사용자로그를 고려한 엘리베이터 내부의 반려동물 유무 탐지방법 및 시스템",
+      "title_en": "Method and system for detecting pets inside an elevator, accounting for user logs",
       "country": "KR",
       "patent_no": "10-2876730",
       "application_no": "10-2025-0066321",
@@ -35,6 +39,7 @@
     {
       "idx": 5,
       "title": "인공신경망을 이용한 건설현장에서의 충돌위험 탐지방법 및 시스템",
+      "title_en": "Neural-network-based method and system for detecting collision risks at construction sites",
       "country": "KR",
       "patent_no": "10-2910653",
       "application_no": "10-2025-0060698",
@@ -43,6 +48,7 @@
     {
       "idx": 6,
       "title": "개인화된 DB의 조회를 이용한 홈에이전트 서비스 제공방법 및 시스템",
+      "title_en": "Home-agent service method and system using lookups against a personalized DB",
       "country": "KR",
       "patent_no": "10-2942432",
       "application_no": "10-2025-0182169",
@@ -51,6 +57,7 @@
     {
       "idx": 7,
       "title": "사용자별 시계열루틴데이터를 학습한 AI에이전트를 포함하는 홈IoT시스템 및 상기 사용자별 시계열루틴데이터에 따른 사용자별 맞춤정보 생성방법",
+      "title_en": "Home-IoT system with an AI agent trained on per-user time-series routine data, and a method for generating per-user personalized information from that data",
       "country": "KR",
       "patent_no": "10-2942432",
       "application_no": "10-2025-0098512",
@@ -59,6 +66,7 @@
     {
       "idx": 8,
       "title": "건축물의 인테리어 평면도를 자동 생성하는 방법",
+      "title_en": "Method for automatically generating interior floor plans of buildings",
       "country": "KR",
       "patent_no": "10-2956420",
       "application_no": "10-2025-0182185",
@@ -67,6 +75,7 @@
     {
       "idx": 9,
       "title": "인공신경망을 이용한 공간의 점유율 추정방법 및 시스템",
+      "title_en": "Neural-network-based method and system for estimating spatial occupancy",
       "country": "KR",
       "patent_no": "10-2958364",
       "application_no": "10-2025-0066324",
@@ -75,6 +84,7 @@
     {
       "idx": 10,
       "title": "사용자가 원하는 객체가 포함된 도메인 특화데이터 생성방법 및 이를 수행하는 컴퓨팅시스템",
+      "title_en": "Method for generating domain-specific data containing user-specified objects, and the computing system that performs it",
       "country": "KR",
       "patent_no": "10-2963796",
       "application_no": "10-2025-0098510",
@@ -83,6 +93,7 @@
     {
       "idx": 11,
       "title": "개인화된 사전 DB를 이용한 개인화된 객체 추적 방법 및 시스템",
+      "title_en": "Personalized object-tracking method and system using a personalized prior database",
       "country": "KR",
       "patent_no": "10-2963799",
       "application_no": "10-2025-0182181",
@@ -93,6 +104,7 @@
     {
       "idx": 1,
       "title": "Systems and methods for diverse image inpainting",
+      "title_en": "Systems and methods for diverse image inpainting",
       "country": "US",
       "application_no": "18/625,052",
       "publication_no": "US20240338802A1",
@@ -101,18 +113,21 @@
     {
       "idx": 2,
       "title": "객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체",
+      "title_en": "Behavior-prediction method, system, and computer-readable medium that leverages topology data produced via per-object action recognition and behavior-pattern normalization",
       "country": "KR",
       "application_no": "10-2025-0098513"
     },
     {
       "idx": 3,
       "title": "행동인식을 기반으로 한 IoT 가전기기 제어방법 및 시스템",
+      "title_en": "Action-recognition-based method and system for controlling IoT home appliances",
       "country": "KR",
       "application_no": "10-2025-0182191"
     },
     {
       "idx": 4,
       "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
+      "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
       "country": "KR",
       "application_no": "10-2026-0008565"
     }

@@ -23,6 +23,40 @@ html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 /* Sticky header is ~64px tall — add scroll-margin so anchor targets aren't hidden behind it. */
 section[id], h2[id], h3[id], div[id^="proj"] { scroll-margin-top: 80px; }
+
+/* Language toggle (top-right of nav) */
+.lang-toggle {
+  display: inline-flex;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  margin-left: 12px;
+  gap: 2px;
+}
+.lang-toggle button {
+  background: transparent;
+  border: 0;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--fg-muted);
+  cursor: pointer;
+  border-radius: 999px;
+  font-family: inherit;
+}
+.lang-toggle button:hover { color: var(--fg); }
+.lang-toggle button.active {
+  background: var(--accent);
+  color: white;
+}
+.lang-toggle button.active:hover { color: white; }
+
+/* Show/hide per language. Default KR. */
+html.lang-ko .en-only { display: none; }
+html.lang-en .ko-only { display: none; }
 body {
   font-family: var(--font);
   color: var(--fg);

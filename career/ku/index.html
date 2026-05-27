@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20260527">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260527c">
 </head>
 <body data-root="../../" style="--accent:#8b0029;--accent-soft:#f8ecef;">
 
@@ -20,6 +20,10 @@
       <a href="../../#publications">PUBLICATIONS</a>
       <a href="../../#news">NEWS</a>
       <a href="../../#research">RESEARCH</a>
+      <div class="lang-toggle" role="tablist" aria-label="Language">
+        <button type="button" data-lang="ko" aria-label="Korean">KR</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -33,7 +37,10 @@
         </div>
         <div class="head">
           <h1>Korea University</h1>
-          <p class="meta">전기전자공학과 석사 · ISPL · 2021.03 ~ 2023.02</p>
+          <p class="meta">
+            <span class="ko-only">전기전자공학과 석사 · ISPL · 2021.03 ~ 2023.02</span>
+            <span class="en-only">M.S. in Electrical Engineering · ISPL · 2021.03 ~ 2023.02</span>
+          </p>
           <div class="badge-row">
             <span class="role-badge">Signal Processing</span>
             <span class="role-badge">GAN</span>
@@ -44,38 +51,68 @@
       </div>
       <h2>Education</h2>
       <div class="meta">
-        전기전자공학과 석사과정 · 2021.03 ~ 2023.02
+        <span class="ko-only">전기전자공학과 석사과정 · 2021.03 ~ 2023.02</span>
+        <span class="en-only">M.S. program, Department of Electrical Engineering · 2021.03 ~ 2023.02</span>
       </div>
-      <ul>
+      <ul class="ko-only">
         <li>전체평점: 4.13 / 4.5 (총 24 학점)</li>
       </ul>
-      <p>ISPL: Intelligent Signal Processing Laboratory · 2020.11 ~ 2022.12 · 지도교수 고한석</p>
+      <ul class="en-only">
+        <li>Overall GPA: 4.13 / 4.5 (24 credits total)</li>
+      </ul>
       <p>
-        졸업 논문: <em>Deep Learning Framework Design via Condition Guided Learning</em>
-        (<a href="https://dcollection.korea.ac.kr/srch/srchDetail/000000270183" target="_blank" rel="noopener">Paper</a>)
+        <span class="ko-only">ISPL: Intelligent Signal Processing Laboratory · 2020.11 ~ 2022.12 · 지도교수 고한석</span>
+        <span class="en-only">ISPL: Intelligent Signal Processing Laboratory · 2020.11 ~ 2022.12 · Advisor: Prof. Hanseok Ko</span>
+      </p>
+      <p>
+        <span class="ko-only">졸업 논문: <em>Deep Learning Framework Design via Condition Guided Learning</em>
+        (<a href="https://dcollection.korea.ac.kr/srch/srchDetail/000000270183" target="_blank" rel="noopener">Paper</a>)</span>
+        <span class="en-only">M.S. thesis: <em>Deep Learning Framework Design via Condition Guided Learning</em>
+        (<a href="https://dcollection.korea.ac.kr/srch/srchDetail/000000270183" target="_blank" rel="noopener">Paper</a>)</span>
       </p>
 
       <h2>Research</h2>
       <div class="task-grid">
         <a class="task-card" href="#proj-eq">
-          <div class="name">1차원 신호처리</div>
-          <ul>
+          <div class="name">
+            <span class="ko-only">1차원 신호처리</span>
+            <span class="en-only">1D Signal Processing</span>
+          </div>
+          <ul class="ko-only">
             <li>GAN 기반 가상 중규모 지진파 생성 알고리즘 개발</li>
             <li>가상 지진 시나리오 소프트웨어 개발</li>
           </ul>
+          <ul class="en-only">
+            <li>Developed a GAN-based algorithm for generating moderate-magnitude synthetic seismic signals.</li>
+            <li>Built software for simulating virtual earthquake scenarios.</li>
+          </ul>
         </a>
         <a class="task-card" href="#proj-tts">
-          <div class="name">음성 합성 (TTS)</div>
-          <ul>
+          <div class="name">
+            <span class="ko-only">음성 합성 (TTS)</span>
+            <span class="en-only">Text-to-Speech (TTS)</span>
+          </div>
+          <ul class="ko-only">
             <li>낭독체 및 대화체 음성 합성 모델 개발</li>
             <li>다중 화자·감정 음성 DB 구축</li>
           </ul>
+          <ul class="en-only">
+            <li>Developed TTS models for both narration and dialogue styles.</li>
+            <li>Built a multi-speaker, multi-emotion speech database.</li>
+          </ul>
         </a>
         <a class="task-card" href="#proj-img">
-          <div class="name">이미지 처리</div>
-          <ul>
+          <div class="name">
+            <span class="ko-only">이미지 처리</span>
+            <span class="en-only">Image Processing</span>
+          </div>
+          <ul class="ko-only">
             <li>조건부 얼굴 이미지 복원 모델 개발</li>
             <li>StyleGAN 및 NeRF-GAN을 활용한 이미지 편집</li>
+          </ul>
+          <ul class="en-only">
+            <li>Developed a conditional face image inpainting model.</li>
+            <li>Image editing using StyleGAN and NeRF-GAN.</li>
           </ul>
         </a>
       </div>
@@ -83,106 +120,166 @@
       <h2>Projects</h2>
 
       <div class="project" id="proj-eq">
-        <h3>인공지능 기술을 활용한 가상의 한반도 지진 시나리오 생성 기법 연구 (기상청 연구용역, 2021)</h3>
+        <h3>
+          <span class="ko-only">인공지능 기술을 활용한 가상의 한반도 지진 시나리오 생성 기법 연구 (기상청 연구용역, 2021)</span>
+          <span class="en-only">AI-based Generation of Virtual Earthquake Scenarios on the Korean Peninsula (Research project commissioned by the Korea Meteorological Administration (KMA), 2021)</span>
+        </h3>
         <div class="project-row">
           <div class="project-text">
-            <h4>연구 필요성</h4>
-            <ul>
+            <h4><span class="ko-only">연구 필요성</span><span class="en-only">Motivation</span></h4>
+            <ul class="ko-only">
               <li>2000년 이후 한반도 내 규모 5.0 이상 지진 발생, 추가 가능성 경고</li>
               <li>국내 규모 3.0 이상 지진 빈도가 낮아 분석 시스템 검증 한계</li>
             </ul>
-            <h4>연구 목표</h4>
-            <ul>
+            <ul class="en-only">
+              <li>Since 2000, magnitude 5.0+ earthquakes have occurred on the Korean Peninsula, with warnings of further events.</li>
+              <li>Low frequency of M3.0+ events in Korea limits validation of analysis systems.</li>
+            </ul>
+            <h4><span class="ko-only">연구 목표</span><span class="en-only">Objectives</span></h4>
+            <ul class="ko-only">
               <li>GAN 기반 규모 3.0 이상의 지진 데이터 생성 기술 개발</li>
               <li>메타데이터를 이용한 가상 지진 시나리오 소프트웨어 개발</li>
             </ul>
-            <h4>담당 업무</h4>
-            <ul>
+            <ul class="en-only">
+              <li>Develop GAN-based generation of M3.0+ synthetic earthquake data.</li>
+              <li>Develop software that uses metadata to compose virtual earthquake scenarios.</li>
+            </ul>
+            <h4><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></h4>
+            <ul class="ko-only">
               <li>생성 모델 학습을 위한 지진 데이터셋 구축</li>
               <li>생성된 지진파 검증 알고리즘 구현</li>
               <li>지진 시나리오 소프트웨어 제작 및 유지보수</li>
             </ul>
-            <h4>연구 성과</h4>
-            <ul>
+            <ul class="en-only">
+              <li>Built the earthquake dataset used to train the generative model.</li>
+              <li>Implemented an algorithm for validating generated waveforms.</li>
+              <li>Developed and maintained the earthquake-scenario software.</li>
+            </ul>
+            <h4><span class="ko-only">연구 성과</span><span class="en-only">Results</span></h4>
+            <ul class="ko-only">
               <li>지진 시나리오 소프트웨어 기상청 배포 및 유지보수</li>
             </ul>
+            <ul class="en-only">
+              <li>Delivered and maintained the earthquake-scenario software for the Korea Meteorological Administration.</li>
+            </ul>
             <ul class="icon-link-list">
-              <li><a href="../../papers/grsl2023/">IEEE GRSL 1저자 게재 (IF=5.3)</a></li>
+              <li><a href="../../papers/grsl2023/"><span class="ko-only">IEEE GRSL 1저자 게재 (IF=5.3)</span><span class="en-only">First-author paper in IEEE GRSL (IF=5.3)</span></a></li>
             </ul>
           </div>
           <div class="project-images">
             <figure class="project-figure">
-              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6865e540c970833ab36e1786_image.png" alt="가상 지진 시나리오" loading="lazy">
-              <figcaption>가상 지진 시나리오 소프트웨어 예시</figcaption>
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6865e540c970833ab36e1786_image.png" alt="Virtual earthquake scenario" loading="lazy">
+              <figcaption>
+                <span class="ko-only">가상 지진 시나리오 소프트웨어 예시</span>
+                <span class="en-only">Example screen from the virtual earthquake-scenario software.</span>
+              </figcaption>
             </figure>
           </div>
         </div>
       </div>
 
       <div class="project cream" id="proj-tts">
-        <h3>낭독체 및 대화체 음성 합성 모델 개발 연구 (Deep Machine LAB, 2022)</h3>
+        <h3>
+          <span class="ko-only">낭독체 및 대화체 음성 합성 모델 개발 연구 (Deep Machine LAB, 2022)</span>
+          <span class="en-only">Reading- and Conversational-Style TTS Model Development (Deep Machine LAB, 2022)</span>
+        </h3>
         <div class="project-row">
           <div class="project-text">
-            <h4>연구 목표</h4>
-            <ul>
+            <h4><span class="ko-only">연구 목표</span><span class="en-only">Objectives</span></h4>
+            <ul class="ko-only">
               <li>빠른 추론이 가능한 음성 합성(Text-to-Speech) 알고리즘 설계</li>
               <li>다중 화자 음성 합성을 위한 모델 구조 연구</li>
               <li>운율 및 감정 제어 TTS 모델 연구</li>
               <li>발화 시간 및 피치 조절 인코더 연구</li>
             </ul>
-            <h4>담당 업무</h4>
-            <ul>
+            <ul class="en-only">
+              <li>Design a fast-inference text-to-speech algorithm.</li>
+              <li>Study model architectures for multi-speaker synthesis.</li>
+              <li>Investigate TTS models with prosody and emotion control.</li>
+              <li>Investigate duration and pitch control encoders.</li>
+            </ul>
+            <h4><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></h4>
+            <ul class="ko-only">
               <li>화자·감정별 음성 데이터셋 구축 및 전처리 파이프라인 개발</li>
               <li>참조 오디오 기반의 감정 제어 음성 합성 모델 제안</li>
             </ul>
-            <h4>연구 성과</h4>
-            <ul>
+            <ul class="en-only">
+              <li>Built the speaker- and emotion-labelled speech dataset and the preprocessing pipeline.</li>
+              <li>Proposed a reference-audio-based TTS model with emotion control.</li>
+            </ul>
+            <h4><span class="ko-only">연구 성과</span><span class="en-only">Results</span></h4>
+            <ul class="ko-only">
               <li>낭독·대화체 통합 TTS 프로토타입 구현</li>
               <li>MOS +5%, Similarity-MOS +11% (n = 30)</li>
             </ul>
+            <ul class="en-only">
+              <li>Implemented a unified TTS prototype covering narration and dialogue styles.</li>
+              <li>MOS +5%, Similarity-MOS +11% (n = 30).</li>
+            </ul>
             <ul class="icon-link-list">
-              <li><a href="https://sites.google.com/view/silhouetts-samples/%ED%99%88" target="_blank" rel="noopener">데모 페이지</a></li>
+              <li><a href="https://sites.google.com/view/silhouetts-samples/%ED%99%88" target="_blank" rel="noopener"><span class="ko-only">데모 페이지</span><span class="en-only">Demo page</span></a></li>
             </ul>
           </div>
           <div class="project-images">
             <figure class="project-figure">
-              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68662ebccc64d8f20685e001_fig1_2.png" alt="TTS 모델 구조" loading="lazy">
-              <figcaption>제안한 참조 스타일 기반의 음성 합성 모델 구조</figcaption>
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68662ebccc64d8f20685e001_fig1_2.png" alt="TTS model architecture" loading="lazy">
+              <figcaption>
+                <span class="ko-only">제안한 참조 스타일 기반의 음성 합성 모델 구조</span>
+                <span class="en-only">Architecture of the proposed reference-style TTS model.</span>
+              </figcaption>
             </figure>
           </div>
         </div>
       </div>
 
       <div class="project lemon" id="proj-img">
-        <h3>이미지 처리 연구</h3>
+        <h3>
+          <span class="ko-only">이미지 처리 연구</span>
+          <span class="en-only">Image Processing Research</span>
+        </h3>
         <div class="project-row">
           <div class="project-text">
-            <h4>연구 목표</h4>
-            <ul>
+            <h4><span class="ko-only">연구 목표</span><span class="en-only">Objectives</span></h4>
+            <ul class="ko-only">
               <li>사용자 의도를 반영할 수 있는 참조 이미지 얼굴 속성 기반 이미지 복원 모델 제안</li>
               <li>StyleGAN 기반의 이미지 복원 및 편집 모델 제안</li>
               <li>비지도학습 기반의 3D aware GAN 구조 제안</li>
             </ul>
-            <h4>담당 업무</h4>
-            <ul>
+            <ul class="en-only">
+              <li>Propose a reference-image, attribute-aware face inpainting model that reflects user intent.</li>
+              <li>Propose StyleGAN-based image inpainting and editing models.</li>
+              <li>Propose an unsupervised 3D-aware GAN architecture.</li>
+            </ul>
+            <h4><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></h4>
+            <ul class="ko-only">
               <li>박사 과정 연구생들과의 CV 논문 세미나 준비</li>
               <li>구체적인 연구 코드 및 결과를 보며 실험 과정 및 방향성 공유</li>
             </ul>
-            <h4>연구 성과</h4>
+            <ul class="en-only">
+              <li>Co-organized computer-vision paper seminars with PhD students.</li>
+              <li>Walked through concrete code and results, sharing experimental procedures and directions.</li>
+            </ul>
+            <h4><span class="ko-only">연구 성과</span><span class="en-only">Results</span></h4>
             <ul class="icon-link-list">
-              <li><a href="../../papers/bmvc2021/">BMVC 2021 1저자 게재</a></li>
-              <li><a href="../../papers/icip2022/">ICIP 2022 1저자 게재</a></li>
-              <li><a href="https://jgkwak95.github.io/surfgan/" target="_blank" rel="noopener">ECCV 2022 3저자 게재</a></li>
+              <li><a href="../../papers/bmvc2021/"><span class="ko-only">BMVC 2021 1저자 게재</span><span class="en-only">First-author paper at BMVC 2021</span></a></li>
+              <li><a href="../../papers/icip2022/"><span class="ko-only">ICIP 2022 1저자 게재</span><span class="en-only">First-author paper at ICIP 2022</span></a></li>
+              <li><a href="https://jgkwak95.github.io/surfgan/" target="_blank" rel="noopener"><span class="ko-only">ECCV 2022 3저자 게재</span><span class="en-only">Third-author paper at ECCV 2022</span></a></li>
             </ul>
           </div>
           <div class="project-images">
             <figure class="project-figure">
-              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68799d362dbc95948814e76c_Picture1.png" alt="BMVC2021 결과" loading="lazy">
-              <figcaption>BMVC 2021 발표 논문 결과 예시</figcaption>
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68799d362dbc95948814e76c_Picture1.png" alt="BMVC2021 result" loading="lazy">
+              <figcaption>
+                <span class="ko-only">BMVC 2021 발표 논문 결과 예시</span>
+                <span class="en-only">Example results from the BMVC 2021 paper.</span>
+              </figcaption>
             </figure>
             <figure class="project-figure">
-              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68672af5c4ab03f18e602a51_eccv2022_thumb.png" alt="ECCV2022 결과" loading="lazy">
-              <figcaption>ECCV 2022 발표 논문 결과 예시</figcaption>
+              <img src="https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68672af5c4ab03f18e602a51_eccv2022_thumb.png" alt="ECCV2022 result" loading="lazy">
+              <figcaption>
+                <span class="ko-only">ECCV 2022 발표 논문 결과 예시</span>
+                <span class="en-only">Example results from the ECCV 2022 paper.</span>
+              </figcaption>
             </figure>
           </div>
         </div>
@@ -194,5 +291,7 @@
 <footer class="site-footer">
   <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
 </footer>
+
+<script src="../../assets/js/main.js?v=20260527c"></script>
 </body>
 </html>
