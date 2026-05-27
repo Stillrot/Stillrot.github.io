@@ -37,16 +37,15 @@
   a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  /* Header — rigid sans-serif name */
+  /* Header — softer serif name (between italic and uppercase) */
   .cv-name {
-    font-family: var(--sans);
+    font-family: var(--serif);
     font-style: normal;
-    font-size: 24pt;
-    font-weight: 800;
+    font-size: 26pt;
+    font-weight: 700;
     text-align: center;
     margin: 0 0 14px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    letter-spacing: -0.5px;
   }
   .cv-header {
     display: grid;
@@ -129,7 +128,6 @@
   .pub-note {
     font-style: italic;
     font-weight: 700;
-    margin-top: 2px;
     color: #444;
   }
 
@@ -309,8 +307,7 @@
     <div class="pub">
       <span class="me">D. Yoon</span>, J. Kim,
       "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
-      <span class="venue">IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW)</span>, 2026
-      <div class="pub-note">Oral</div>
+      <span class="venue">IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW)</span>, 2026 <span class="pub-note">(Oral)</span>
     </div>
 
     <div class="pub">
@@ -394,27 +391,19 @@
   <div class="content">
     <div class="proj">
       <div class="proj-head">
-        <div class="title">AI fire / smoke detection for underground parking lots</div>
-        <div class="date">May 2024 - Present</div>
-      </div>
-      <div class="desc">Designed a synthetic-data pipeline for CCTV-specific fire scenes; trained YOLOv8s + Florence2 VLM detector and migrated to a YOLOv8n + CLIP edge variant for Hailo dual-chip deployment. Demonstrated at Gwangmyeong Central IPARK.</div>
-      <div class="funding">Affiliation: HDC LABS</div>
-    </div>
-    <div class="proj">
-      <div class="proj-head">
         <div class="title">In-elevator situational awareness</div>
-        <div class="date">May 2024 - Present</div>
+        <div class="date">Jan. 2025 - Feb. 2026</div>
       </div>
       <div class="desc">Built a PoC for in-cab anomaly detection (pet detection, occupancy estimation) that triggered a HDC LABS / HDC Hyundai Industrial Development / Hyundai Elevator three-party MOU. Constructed a domain-specific synthetic + real labelling pipeline and a deployment-automation environment.</div>
       <div class="funding">Affiliation: HDC LABS</div>
     </div>
     <div class="proj">
       <div class="proj-head">
-        <div class="title">Intellectual-property portfolio for in-house algorithms</div>
-        <div class="date">May 2024 - Present</div>
+        <div class="title">AI fire / smoke detection for underground parking lots</div>
+        <div class="date">May 2024 - Oct. 2025</div>
       </div>
-      <div class="desc">Drafted claims for fire detection, elevator analytics, and domain-specific data generation. Prepared technical evidence for expedited examination filings.</div>
-      <div class="funding">Outcome: 11 KR patents granted, 3 KR applications in progress</div>
+      <div class="desc">Designed a synthetic-data pipeline for CCTV-specific fire scenes; trained YOLOv8s + Florence2 VLM detector and migrated to a YOLOv8n + CLIP edge variant for Hailo dual-chip deployment. Demonstrated at Gwangmyeong Central IPARK.</div>
+      <div class="funding">Affiliation: HDC LABS</div>
     </div>
     <div class="proj">
       <div class="proj-head">
