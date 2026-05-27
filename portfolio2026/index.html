@@ -132,27 +132,13 @@
   .footer-brand {
     position: absolute;
     right: 64px;
-    bottom: 48px;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    color: #111;
+    top: 68px;
+    height: 44px;
     display: flex;
     align-items: center;
-    gap: 6px;
   }
-  .footer-brand .red { color: var(--hdc-red); }
-  .footer-brand .meta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #111;
-  }
-  .footer-brand .meta-swatch {
-    width: 24px;
-    height: 14px;
-    background: linear-gradient(135deg, #111 0 50%, #c5b3ff 50% 100%);
-    border-radius: 2px;
-  }
+  .footer-brand img { display: block; height: 23px; width: auto; }
+  .footer-brand.metaverse img { height: 44px; }
 
   .tag-row { display: flex; flex-wrap: wrap; gap: 12px; }
   .tag {
@@ -185,107 +171,123 @@
     background: #fafaf9;
     height: 100%;
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 64px 110px;
+    grid-template-columns: 5fr 6fr;
+    align-items: center;
+    gap: 80px;
+    padding: 64px 100px;
   }
-  .cover .topbar {
+  .cover .left {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #6b7280;
-    font-size: 13px;
-    letter-spacing: 0.18em;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .cover .topbar .right { color: #9ca3af; }
-  .cover .topbar .right a { color: inherit; text-decoration: none; margin-left: 22px; }
-
-  .cover .center {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 64px;
-    align-items: center;
-    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-left: 64px;
   }
   .cover .photo {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     overflow: hidden;
     background: #e5e7eb;
   }
   .cover .photo img { width: 100%; height: 100%; object-fit: cover; }
 
-  .cover .intro h1 {
+  .cover .name-block .name {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #111827;
+    line-height: 1.15;
+  }
+  .cover .name-block .title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #374151;
+    margin-top: 4px;
+    letter-spacing: -0.01em;
+  }
+  .cover .name-block .role {
+    font-size: 18px;
+    color: #6b7280;
+    margin-top: 10px;
+    letter-spacing: 0.01em;
+  }
+
+  .cover .social-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .cover .social-row a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 70px;
+    padding: 12px 8px;
+    border-radius: 12px;
+    background: #f4f4f3;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+    text-decoration: none;
+    transition: background .12s, border-color .12s, transform .12s;
+  }
+  .cover .social-row a:hover {
+    background: #fff;
+    border-color: #b9b3a7;
+    transform: translateY(-1px);
+  }
+  .cover .social-row svg { width: 22px; height: 22px; }
+  .cover .social-row .label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+    letter-spacing: 0.04em;
+  }
+  .cover .social-row a { min-width: 78px; padding: 13px 10px; }
+  .cover .social-row svg { width: 24px; height: 24px; }
+  .cover .social-row a:hover .label { color: #111827; }
+
+  .cover .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cover .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    color: #6b7280;
+    font-weight: 700;
+    margin: 0 0 22px;
+    text-transform: uppercase;
+  }
+  .cover h1 {
     margin: 0;
     font-size: 54px;
-    line-height: 1.25;
+    line-height: 1.3;
     font-weight: 500;
     letter-spacing: -0.02em;
     color: #1f2937;
   }
-  .cover .intro h1 .accent {
+  .cover h1 .accent {
     color: #111827;
     font-weight: 800;
   }
-  .cover .intro .sub {
-    margin-top: 20px;
-    font-size: 17px;
+  .cover .lead {
+    margin: 28px 0 0;
+    font-size: 24px;
     color: #6b7280;
     letter-spacing: 0.01em;
   }
-  .cover .intro .meta {
-    margin-top: 28px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: #374151;
-  }
-  .cover .intro .meta .name {
-    font-size: 18px;
-    font-weight: 700;
-    color: #111827;
-  }
-  .cover .intro .meta .sep {
-    width: 4px; height: 4px; border-radius: 50%; background: #cbd5e1;
-  }
-  .cover .intro .meta .role {
-    font-size: 14px;
+  .cover .keywords {
+    margin: 46px 0 0;
+    font-size: 20px;
     color: #6b7280;
-    letter-spacing: 0.04em;
-  }
-
-  .cover .footrow {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 24px;
-    border-top: 1px solid #e5e7eb;
-  }
-  .cover .footrow .keywords {
-    color: #6b7280;
-    font-size: 14px;
     letter-spacing: 0.02em;
+    line-height: 1.7;
   }
-  .cover .footrow .keywords span { color: #111827; font-weight: 600; }
-  .cover .links-quiet {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    color: #6b7280;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-  }
-  .cover .links-quiet a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #374151;
-    text-decoration: none;
-  }
-  .cover .links-quiet a:hover { color: #111827; }
-  .cover .links-quiet svg { color: #6b7280; }
+  .cover .keywords span { color: #111827; font-weight: 600; }
 
   /* ===== Slide 2 · Profile ===== */
   .profile-grid {
@@ -346,6 +348,13 @@
   /* ===== Project detail slide ===== */
   .project-header { display: flex; justify-content: space-between; align-items: flex-end; }
   .project-header .h2 { font-size: 38px; letter-spacing: -0.02em; }
+  .h2 .h2-sub {
+    font-weight: 500;
+    color: var(--muted);
+    margin-left: 16px;
+    font-size: 0.7em;
+    letter-spacing: -0.01em;
+  }
   .project-header .meta { color: var(--muted); font-size: 15px; margin-top: 10px; letter-spacing: 0.02em; }
   .project-header-row {
     padding-bottom: 18px;
@@ -595,48 +604,42 @@
   .thanks .stack { margin-top: 220px; color: var(--muted); font-size: 18px; }
 
   /* ===== UI Controls ===== */
-  .controls {
+  .pdf-btn-top {
     position: fixed;
-    inset: auto 0 0 0;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    z-index: 20;
-    pointer-events: none;
-  }
-  .controls .group {
-    pointer-events: auto;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    top: 18px;
+    right: 24px;
+    z-index: 30;
     background: rgba(20, 22, 26, 0.85);
     color: #fff;
-    padding: 8px 12px;
+    border: 0;
+    padding: 8px 16px;
     border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+  .pdf-btn-top:hover { background: rgba(20, 22, 26, 1); }
+  .pdf-btn-top svg { display: block; }
+
+  .page-indicator {
     font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    font-weight: 500;
   }
-  .controls button {
-    background: transparent;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    padding: 6px 8px;
-    border-radius: 999px;
-    display: inline-grid;
-    place-items: center;
+  .page-indicator .total { color: var(--muted-2); }
+  /* Standalone — slide has no footer-brand */
+  .slide > .page-indicator {
+    position: absolute;
+    bottom: 48px;
+    right: 64px;
+    z-index: 5;
   }
-  .controls button:hover { background: rgba(255, 255, 255, 0.12); }
-  .controls .counter { padding: 0 6px; color: #d6dadf; }
-  .controls .pdf-btn {
-    background: #fff;
-    color: #111;
-    font-weight: 600;
-    padding: 6px 14px;
-  }
-  .controls .pdf-btn:hover { background: #eee; }
 
   .dots {
     position: fixed;
@@ -666,7 +669,7 @@
   }
   @media print {
     html, body { background: #fff !important; }
-    .controls, .dots { display: none !important; }
+    .pdf-btn-top, .dots { display: none !important; }
     .deck { display: block !important; }
     .stage {
       width: 1440px !important;
@@ -704,6 +707,8 @@
       <path d="M12 1L1 7.5 12 14l9-5.32V15h2V7.5L12 1zm-6.5 9.42v3.5L12 17.5l6.5-3.58v-3.5L12 14 5.5 10.42z"/>
     </symbol>
     <symbol id="i-pdf" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5L14 3.5z"/></symbol>
+    <symbol id="i-portfolio" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v12h16V6H4z"/><path d="M6 8h12v1.5H6zm0 3.5h9V13H6zm0 3.5h7V16.5H6z"/></symbol>
+    <symbol id="i-cv" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8zm0 3h8v1.5H8zm0 3h5v1.5H8z"/></symbol>
     <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5A3 3 0 0 0 2.4 7.2C1.9 9.1 1.9 12 1.9 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM10 15.3V8.7l5.7 3.3L10 15.3z"/></symbol>
     <symbol id="i-ig" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.1-1-.3-2.1-.3C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-2.1a1.1 1.1 0 1 1 0 2.3 1.1 1.1 0 0 1 0-2.3z"/></symbol>
     <symbol id="i-arrow-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></symbol>
@@ -722,42 +727,44 @@
   <!-- Slide 1: Cover -->
   <section class="stage" data-slide="1">
     <div class="slide cover">
-      <header class="topbar">
-        <div>Portfolio · 2026</div>
-        <div class="right">
-          <a href="https://dongsik-yoon.webflow.io" target="_blank" rel="noopener">Webflow</a>
-          <a href="https://github.com/Stillrot" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">Scholar</a>
-        </div>
-      </header>
-
-      <div class="center">
+      <div class="left">
         <div class="photo"><img src="assets/img/profile.png" alt="윤동식 프로필 사진"/></div>
-        <div class="intro">
-          <h1>
-            실서비스 조건에서 동작하는<br/>
-            <span class="accent">Vision AI 시스템</span>을<br/>
-            설계하고 배포합니다.
-          </h1>
-          <p class="sub">PoC to Deployment for Real-World Vision Systems</p>
-          <div class="meta">
-            <span class="name">윤동식</span>
-            <span class="sep"></span>
-            <span class="role">AI RESEARCHER · COMPUTER VISION / EDGE AI</span>
-          </div>
+        <div class="name-block">
+          <div class="name">윤동식</div>
+          <div class="title">AI Researcher</div>
+          <div class="role">Computer Vision / Edge AI</div>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/Stillrot" target="_blank" rel="noopener" title="GitHub">
+            <svg><use href="#i-github"/></svg>
+            <span class="label">GitHub</span>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="LinkedIn">
+            <svg><use href="#i-linkedin"/></svg>
+            <span class="label">LinkedIn</span>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="Google Scholar">
+            <svg><use href="#i-scholar"/></svg>
+            <span class="label">Scholar</span>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="CV">
+            <svg><use href="#i-cv"/></svg>
+            <span class="label">CV</span>
+          </a>
         </div>
       </div>
 
-      <footer class="footrow">
-        <div class="keywords">
-          <span>화재 감지</span> &nbsp;·&nbsp; <span>엘리베이터 내부 분석</span> &nbsp;·&nbsp; <span>이상행동 인식</span> &nbsp;·&nbsp; <span>생성형 AI</span>
-        </div>
-        <div class="links-quiet">
-          <a href="https://github.com/Stillrot" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-github"/></svg>Stillrot</a>
-          <a href="#" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-scholar"/></svg>Scholar</a>
-          <a href="#" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-linkedin"/></svg>LinkedIn</a>
-        </div>
-      </footer>
+      <div class="right">
+        <h1>
+          실서비스 조건에서 동작하는<br/>
+          <span class="accent">Vision AI 시스템</span>을<br/>
+          설계하고 배포합니다.
+        </h1>
+        <p class="lead">PoC to Deployment for Real-World Vision Systems</p>
+        <p class="keywords">
+          <span>화재 감지</span>　<span>엘리베이터 내부 분석</span>　<span>이상행동 인식</span>　<span>생성형 AI</span>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -846,7 +853,7 @@
           <span class="tag">Bitbucket</span>
           <span class="tag">CI/CD</span>
         </div>
-        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
       </div>
     </div>
   </section>
@@ -910,7 +917,7 @@
           </div>
         </div>
 
-        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
       </div>
     </div>
   </section>
@@ -920,7 +927,7 @@
     <div class="slide">
       <div class="pad">
         <div class="project-header-row">
-          <h2 class="h2">엘리베이터 내부 상황 분석 시스템 · 주요 성과</h2>
+          <h2 class="h2">엘리베이터 내부 상황 분석 시스템 <span class="h2-sub">주요 성과</span></h2>
         </div>
 
         <div class="outcomes">
@@ -964,7 +971,7 @@
           </div>
         </div>
 
-        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
       </div>
     </div>
   </section>
@@ -984,7 +991,7 @@
           <span class="tag">StableDiffusion</span>
           <span class="tag">Hailo</span>
         </div>
-        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
       </div>
     </div>
   </section>
@@ -1047,7 +1054,7 @@
           </div>
         </div>
 
-        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
       </div>
     </div>
   </section>
@@ -1057,7 +1064,7 @@
     <div class="slide">
       <div class="pad">
         <div class="project-header-row">
-          <h2 class="h2">지하주차장 화재 감지 보조 시스템 · 주요 성과</h2>
+          <h2 class="h2">지하주차장 화재 감지 보조 시스템 <span class="h2-sub">주요 성과</span></h2>
         </div>
 
         <div class="outcomes">
@@ -1103,7 +1110,7 @@
           </div>
         </div>
 
-        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
       </div>
     </div>
   </section>
@@ -1123,12 +1130,7 @@
           <span class="tag">ComfyUI</span>
           <span class="tag">Gradio</span>
         </div>
-        <div class="footer-brand">
-          <span class="meta">
-            <span class="meta-swatch"></span>
-            <span>METAVERSE</span>
-          </span>
-        </div>
+        <div class="footer-brand metaverse"><img src="assets/img/footer-metaverse.png" alt="METAVERSE Entertainment"/></div>
       </div>
     </div>
   </section>
@@ -1184,12 +1186,7 @@
           </div>
         </div>
 
-        <div class="footer-brand">
-          <span class="meta">
-            <span class="meta-swatch"></span>
-            <span>METAVERSE</span>
-          </span>
-        </div>
+        <div class="footer-brand metaverse"><img src="assets/img/footer-metaverse.png" alt="METAVERSE Entertainment"/></div>
       </div>
     </div>
   </section>
@@ -1266,24 +1263,14 @@
 <!-- Controls -->
 <div class="dots" id="dots"></div>
 
-<nav class="controls" aria-label="slide controls">
-  <div class="group">
-    <button id="prev" aria-label="이전"><svg width="18" height="18"><use href="#i-arrow-l"/></svg></button>
-    <span class="counter"><span id="cur">1</span> / <span id="total">12</span></span>
-    <button id="next" aria-label="다음"><svg width="18" height="18"><use href="#i-arrow-r"/></svg></button>
-  </div>
-  <div class="group">
-    <button class="pdf-btn" id="exportPdf" title="PDF로 저장 (Cmd/Ctrl+P)">
-      <svg width="16" height="16" style="vertical-align:-3px;margin-right:6px;"><use href="#i-download"/></svg>PDF 저장
-    </button>
-  </div>
-</nav>
+<button class="pdf-btn-top" id="exportPdf" title="PDF로 저장 (Cmd/Ctrl+P)">
+  <svg width="14" height="14"><use href="#i-download"/></svg>PDF 저장
+</button>
 
 <script>
 (() => {
   const stages = Array.from(document.querySelectorAll('.stage'));
   const total = stages.length;
-  document.getElementById('total').textContent = total;
   let index = 0;
 
   // Build side dots
@@ -1293,6 +1280,15 @@
     b.setAttribute('aria-label', `슬라이드 ${i+1}로 이동`);
     b.addEventListener('click', () => go(i));
     dotsEl.appendChild(b);
+  });
+
+  // Inject page indicator at bottom-right of each slide
+  stages.forEach((stage, i) => {
+    const slide = stage.querySelector('.slide');
+    const ind = document.createElement('div');
+    ind.className = 'page-indicator';
+    ind.innerHTML = `${i + 1} <span class="total">/ ${total}</span>`;
+    slide.appendChild(ind);
   });
 
   function fit() {
@@ -1307,7 +1303,6 @@
 
   function render() {
     stages.forEach((s, i) => s.style.display = (i === index) ? 'grid' : 'none');
-    document.getElementById('cur').textContent = index + 1;
     Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('active', i === index));
     fit();
   }
@@ -1317,11 +1312,8 @@
     render();
   }
 
-  document.getElementById('prev').addEventListener('click', () => go(index - 1));
-  document.getElementById('next').addEventListener('click', () => go(index + 1));
-
   // Click-half-of-page to navigate
-  const isInteractive = (target) => !!target.closest('a, button, .controls, .dots, input, textarea, select');
+  const isInteractive = (target) => !!target.closest('a, button, .pdf-btn-top, .dots, input, textarea, select');
 
   document.addEventListener('click', (e) => {
     if (isInteractive(e.target)) return;
