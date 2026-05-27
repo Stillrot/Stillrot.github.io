@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>윤동식 · Portfolio 2026</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"
+/>
+<style>
+  :root {
+    --slide-w: 1440px;
+    --slide-h: 810px;
+    --ink: #1f2937;
+    --ink-2: #374151;
+    --muted: #6b7280;
+    --muted-2: #9ca3af;
+    --line: #e5e7eb;
+    --bg: #ffffff;
+    --bg-soft: #f9fafb;
+    --accent: #111827;
+    --side: #6b6f76;
+    --hdc-red: #e10600;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #2a2d31;
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+      'Segoe UI', system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ===== Deck on-screen ===== */
+  .deck {
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  .stage {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  body.cursor-left {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23111' fill-opacity='0.6'/%3E%3Cpath d='M14 7 L8 12 L14 17' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 12 12, w-resize;
+  }
+  body.cursor-right {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23111' fill-opacity='0.6'/%3E%3Cpath d='M10 7 L16 12 L10 17' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 12 12, e-resize;
+  }
+
+  .slide {
+    width: var(--slide-w);
+    height: var(--slide-h);
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    transform-origin: center center;
+    flex-shrink: 0;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Scale slide to fit viewport on screen */
+  .stage .slide {
+    transform: scale(var(--scale, 1));
+  }
+
+  /* ===== Common slide chrome ===== */
+  .pad {
+    padding: 64px 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eyebrow {
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .h1 {
+    font-size: 64px;
+    line-height: 1.18;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0;
+  }
+  .h2 {
+    font-size: 36px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0;
+  }
+  .h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0;
+  }
+  .lead {
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: 0;
+  }
+  .body {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .small {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .footer-brand {
+    position: absolute;
+    right: 64px;
+    bottom: 48px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .footer-brand .red { color: var(--hdc-red); }
+  .footer-brand .meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #111;
+  }
+  .footer-brand .meta-swatch {
+    width: 24px;
+    height: 14px;
+    background: linear-gradient(135deg, #111 0 50%, #c5b3ff 50% 100%);
+    border-radius: 2px;
+  }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+    padding: 0 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    font-size: 17px;
+    color: var(--ink-2);
+    background: #fff;
+  }
+
+  /* ===== Slide 1 · Cover (quiet) ===== */
+  .card .logo img.full { width: 100%; height: 100%; object-fit: contain; }
+  .visual img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    display: block;
+  }
+  .visual.cover-img img { object-fit: cover; }
+
+  .cover {
+    background: #fafaf9;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 64px 110px;
+  }
+  .cover .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6b7280;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .cover .topbar .right { color: #9ca3af; }
+  .cover .topbar .right a { color: inherit; text-decoration: none; margin-left: 22px; }
+
+  .cover .center {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+    align-items: center;
+    padding: 24px 0;
+  }
+  .cover .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #e5e7eb;
+  }
+  .cover .photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  .cover .intro h1 {
+    margin: 0;
+    font-size: 54px;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #1f2937;
+  }
+  .cover .intro h1 .accent {
+    color: #111827;
+    font-weight: 800;
+  }
+  .cover .intro .sub {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #6b7280;
+    letter-spacing: 0.01em;
+  }
+  .cover .intro .meta {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #374151;
+  }
+  .cover .intro .meta .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+  }
+  .cover .intro .meta .sep {
+    width: 4px; height: 4px; border-radius: 50%; background: #cbd5e1;
+  }
+  .cover .intro .meta .role {
+    font-size: 14px;
+    color: #6b7280;
+    letter-spacing: 0.04em;
+  }
+
+  .cover .footrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+  }
+  .cover .footrow .keywords {
+    color: #6b7280;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  .cover .footrow .keywords span { color: #111827; font-weight: 600; }
+  .cover .links-quiet {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #6b7280;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  .cover .links-quiet a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151;
+    text-decoration: none;
+  }
+  .cover .links-quiet a:hover { color: #111827; }
+  .cover .links-quiet svg { color: #6b7280; }
+
+  /* ===== Slide 2 · Profile ===== */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    flex: 1;
+  }
+  .section-label {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 18px;
+  }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 24px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .card + .card { margin-top: 12px; }
+  .card .text { flex: 1; }
+  .card .title { font-size: 18px; font-weight: 700; color: var(--ink); }
+  .card .desc { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+  .card .meta { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .card .logo {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+  }
+  .card .logo img { max-width: 100%; max-height: 100%; }
+
+  .point {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    background: #fff;
+  }
+  .point + .point { margin-top: 10px; }
+  .point .title { font-size: 17px; font-weight: 700; color: var(--ink); }
+  .point .desc { font-size: 14px; color: var(--muted); margin-top: 6px; }
+
+  /* ===== Project title slide ===== */
+  .project-title { justify-content: center; padding-left: 120px; }
+  .project-title .eyebrow { font-size: 24px; }
+  .project-title .h1 {
+    margin-top: 32px;
+    font-size: 72px;
+  }
+  .project-title .lead { margin-top: 36px; max-width: 980px; font-size: 24px; }
+  .project-title .meta-line { margin-top: 60px; color: var(--ink-2); font-size: 18px; font-weight: 600; letter-spacing: 0.02em; }
+  .project-title .tag-row { margin-top: 28px; }
+
+  /* ===== Project detail slide ===== */
+  .project-header { display: flex; justify-content: space-between; align-items: flex-end; }
+  .project-header .h2 { font-size: 38px; letter-spacing: -0.02em; }
+  .project-header .meta { color: var(--muted); font-size: 15px; margin-top: 10px; letter-spacing: 0.02em; }
+  .project-header-row {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .project-detail-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    flex: 1;
+    align-items: start;
+  }
+  .project-detail-grid > .visual { align-self: start; }
+  .project-detail-grid > .visual img { max-height: 460px; }
+  .outcomes > .visual img { max-height: 460px; }
+
+  /* Tab-style section heading + indented content block */
+  .tab-section { margin-bottom: 26px; }
+  .tab-section:last-child { margin-bottom: 0; }
+  .tab-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    color: #111827;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+  .tab-head .num {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--muted-2);
+    letter-spacing: 0.04em;
+  }
+  .tab-body { padding-left: 40px; }
+  .tab-section.flush .tab-body { padding-left: 0; }
+  .tab-body .line {
+    font-size: 17px;
+    color: var(--ink-2);
+    line-height: 1.65;
+    margin: 6px 0;
+  }
+  .tab-body .sub {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 4px 0 4px 20px;
+    padding-left: 14px;
+    border-left: 2px solid #e5e7eb;
+  }
+
+  .visual {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    overflow: visible;
+  }
+  .visual .placeholder {
+    color: var(--muted-2);
+    font-size: 14px;
+    margin: auto;
+  }
+  .visual .caption {
+    text-align: center;
+    font-size: 15px;
+    color: var(--ink-2);
+    font-weight: 500;
+    padding: 12px 8px 0;
+    flex: 0 0 auto;
+  }
+
+  .ref-row {
+    display: grid;
+    grid-template-columns: 180px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 14px;
+    background: var(--bg-soft);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--ink-2);
+  }
+  .ref-row + .ref-row { margin-top: 8px; }
+  .ref-row .kind {
+    background: #eef2f7;
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-2);
+  }
+  .ref-row .links { display: flex; gap: 6px; }
+  .ref-row .links span {
+    width: 18px; height: 18px;
+    display: inline-grid; place-items: center;
+    color: var(--muted);
+  }
+
+  /* ===== Outcomes slide ===== */
+  .outcomes {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    flex: 1;
+    align-items: start;
+  }
+  .outcomes > .visual { align-self: start; }
+
+  .stacked-visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-self: start;
+  }
+
+  /* ===== Project 03 detail (no visual on right) ===== */
+  .triple-block {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+  }
+  .triple-block .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 28px;
+    background: #fff;
+  }
+  .triple-block .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .triple-block .stack {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .triple-block .desc {
+    font-size: 16px;
+    color: var(--ink-2);
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+  .triple-block .impact {
+    font-size: 16px;
+    color: var(--ink-2);
+    line-height: 1.9;
+  }
+
+  /* ===== Slide 11 · Publications ===== */
+  .pub-header {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .stat-row {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .stat {
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .stat .num {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .stat .label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .pub-list { margin-top: 40px; }
+  .pub-list .head {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .pub-row {
+    display: grid;
+    grid-template-columns: 280px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    font-size: 17px;
+    color: var(--ink-2);
+  }
+  .pub-row:first-of-type { border-top: 0; }
+  .pub-row .kw {
+    background: #eef2f7;
+    border-radius: 6px;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 15px;
+    color: var(--ink-2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .pub-row .title { line-height: 1.5; font-size: 17px; }
+  .pub-row .icons { display: flex; gap: 6px; color: var(--muted-2); }
+
+  /* ===== Slide 12 · Thank You ===== */
+  .thanks {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .thanks .h1 {
+    font-size: 120px;
+    font-weight: 600;
+    color: #444;
+    letter-spacing: -0.02em;
+  }
+  .thanks .who { font-size: 26px; color: var(--muted); margin-top: 4px; }
+  .thanks .stack { margin-top: 220px; color: var(--muted); font-size: 18px; }
+
+  /* ===== UI Controls ===== */
+  .controls {
+    position: fixed;
+    inset: auto 0 0 0;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 20;
+    pointer-events: none;
+  }
+  .controls .group {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(20, 22, 26, 0.85);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+  }
+  .controls button {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+  }
+  .controls button:hover { background: rgba(255, 255, 255, 0.12); }
+  .controls .counter { padding: 0 6px; color: #d6dadf; }
+  .controls .pdf-btn {
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    padding: 6px 14px;
+  }
+  .controls .pdf-btn:hover { background: #eee; }
+
+  .dots {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 20;
+  }
+  .dots button {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: 0; padding: 0; cursor: pointer;
+    transition: transform .15s ease, background .15s ease;
+  }
+  .dots button.active {
+    background: #fff;
+    transform: scale(1.4);
+  }
+
+  /* ===== Print / PDF export ===== */
+  @page {
+    size: 1440px 810px;
+    margin: 0;
+  }
+  @media print {
+    html, body { background: #fff !important; }
+    .controls, .dots { display: none !important; }
+    .deck { display: block !important; }
+    .stage {
+      width: 1440px !important;
+      height: 810px !important;
+      display: block !important;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .stage:last-child { page-break-after: auto; }
+    .slide {
+      transform: none !important;
+      box-shadow: none !important;
+      width: 1440px !important;
+      height: 810px !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ICONS (defs) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.9 5.9 3.9 9s-1.4 6.3-3.9 9c-2.5-2.7-3.9-5.9-3.9-9S9.5 5.7 12 3z"/>
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .5C5.7.5.6 5.6.6 12c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.8C23.4 5.6 18.3.5 12 .5z"/>
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.65-1.85 3.39-1.85 3.62 0 4.29 2.39 4.29 5.49v6.25zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+    </symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 1L1 7.5 12 14l9-5.32V15h2V7.5L12 1zm-6.5 9.42v3.5L12 17.5l6.5-3.58v-3.5L12 14 5.5 10.42z"/>
+    </symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5L14 3.5z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5A3 3 0 0 0 2.4 7.2C1.9 9.1 1.9 12 1.9 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM10 15.3V8.7l5.7 3.3L10 15.3z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.1-1-.3-2.1-.3C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-2.1a1.1 1.1 0 1 1 0 2.3 1.1 1.1 0 0 1 0-2.3z"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-avatar" viewBox="0 0 220 220">
+      <rect width="220" height="220" fill="#cfd2d6"/>
+      <circle cx="110" cy="92" r="38" fill="#9aa0a6"/>
+      <path d="M40 196c10-36 38-56 70-56s60 20 70 56v24H40v-24z" fill="#9aa0a6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="deck" id="deck">
+
+  <!-- Slide 1: Cover -->
+  <section class="stage" data-slide="1">
+    <div class="slide cover">
+      <header class="topbar">
+        <div>Portfolio · 2026</div>
+        <div class="right">
+          <a href="https://dongsik-yoon.webflow.io" target="_blank" rel="noopener">Webflow</a>
+          <a href="https://github.com/Stillrot" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">Scholar</a>
+        </div>
+      </header>
+
+      <div class="center">
+        <div class="photo"><img src="assets/img/profile.png" alt="윤동식 프로필 사진"/></div>
+        <div class="intro">
+          <h1>
+            실서비스 조건에서 동작하는<br/>
+            <span class="accent">Vision AI 시스템</span>을<br/>
+            설계하고 배포합니다.
+          </h1>
+          <p class="sub">PoC to Deployment for Real-World Vision Systems</p>
+          <div class="meta">
+            <span class="name">윤동식</span>
+            <span class="sep"></span>
+            <span class="role">AI RESEARCHER · COMPUTER VISION / EDGE AI</span>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footrow">
+        <div class="keywords">
+          <span>화재 감지</span> &nbsp;·&nbsp; <span>엘리베이터 내부 분석</span> &nbsp;·&nbsp; <span>이상행동 인식</span> &nbsp;·&nbsp; <span>생성형 AI</span>
+        </div>
+        <div class="links-quiet">
+          <a href="https://github.com/Stillrot" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-github"/></svg>Stillrot</a>
+          <a href="#" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-scholar"/></svg>Scholar</a>
+          <a href="#" target="_blank" rel="noopener"><svg width="14" height="14"><use href="#i-linkedin"/></svg>LinkedIn</a>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Slide 2: Profile -->
+  <section class="stage" data-slide="2">
+    <div class="slide">
+      <div class="pad">
+        <p class="eyebrow">PROFILE</p>
+        <h2 class="h1" style="font-size:56px;margin-top:8px;">인적 사항</h2>
+
+        <div class="profile-grid" style="margin-top:36px;">
+          <div>
+            <p class="section-label">학력</p>
+            <div class="card">
+              <div class="text">
+                <div class="title">고려대학교 석사</div>
+                <div class="desc">전기전자공학과</div>
+                <div class="meta">2021.03 – 2023.02 · GPA 4.13 / 4.5</div>
+              </div>
+              <div class="logo"><img class="full" src="assets/img/logo-ku.jpg" alt="Korea University"/></div>
+            </div>
+            <div class="card">
+              <div class="text">
+                <div class="title">백석대학교 학사</div>
+                <div class="desc">ICT학부 멀티미디어공학</div>
+                <div class="meta">2015.03 – 2021.02 · GPA 4.36 / 4.5</div>
+              </div>
+              <div class="logo"><img class="full" src="assets/img/logo-bu.jpg" alt="백석대학교"/></div>
+            </div>
+
+            <p class="section-label" style="margin-top:28px;">경력</p>
+            <div class="card">
+              <div class="text">
+                <div class="title">HDC LABS</div>
+                <div class="desc">R&amp;D Center · AI LAB, Computer Vision Part</div>
+                <div class="meta">2024.05 – 현재</div>
+              </div>
+              <div class="logo" style="width:88px;"><img class="full" src="assets/img/logo-hdc.jpg" alt="HDC LABS"/></div>
+            </div>
+            <div class="card">
+              <div class="text">
+                <div class="title">Metaverse Entertainment</div>
+                <div class="desc">Technical Development Team, AI Part</div>
+                <div class="meta">2023.01 – 2024.05</div>
+              </div>
+              <div class="logo" style="width:96px;"><img class="full" src="assets/img/logo-metaverse.jpg" alt="Metaverse Entertainment"/></div>
+            </div>
+          </div>
+
+          <div>
+            <p class="section-label">핵심 강점</p>
+            <div class="point">
+              <div class="title">현장 배포를 전제로 한 Vision PoC 설계 및 검증 경험</div>
+              <div class="desc">실험용 PoC를 배포 가능한 구조로 전환해 현장 적용까지 수행</div>
+            </div>
+            <div class="point">
+              <div class="title">도메인 특화 합성데이터 파이프라인 구축</div>
+              <div class="desc">실데이터와 합성데이터를 연계한 데이터 구축 체계 설계</div>
+            </div>
+            <div class="point">
+              <div class="title">엣지 디바이스 기준 파이프라인 재설계</div>
+              <div class="desc">경량화 모델 기반 구조 설계 및 배포 자동화 환경 구축</div>
+            </div>
+            <div class="point">
+              <div class="title">논문 및 특허로 이어지는 연구 성과 확장</div>
+              <div class="desc">연구 산출물의 지적 재산화로 회사 기술 자산 축적</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3: Project 01 Title -->
+  <section class="stage" data-slide="3">
+    <div class="slide">
+      <div class="pad project-title">
+        <p class="eyebrow">PROJECT 01</p>
+        <h1 class="h1">엘리베이터 내부 상황 분석 시스템</h1>
+        <p class="lead">엘리베이터 현장 적용을 목표로 데이터 구축부터 모델 검증, 배포 자동화까지 수행</p>
+        <p class="meta-line">HDC LABS · 2025.01 – 진행 중</p>
+        <div class="tag-row">
+          <span class="tag">YOLO</span>
+          <span class="tag">FLUX</span>
+          <span class="tag">Jetson</span>
+          <span class="tag">Bitbucket</span>
+          <span class="tag">CI/CD</span>
+        </div>
+        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 4: Project 01 Detail -->
+  <section class="stage" data-slide="4">
+    <div class="slide">
+      <div class="pad">
+        <div class="project-header project-header-row">
+          <div>
+            <h2 class="h2">엘리베이터 내부 상황 분석 시스템</h2>
+            <p class="meta">HDC LABS · 2025.01 – 진행 중</p>
+          </div>
+        </div>
+
+        <div class="project-detail-grid">
+          <div>
+            <div class="tab-section">
+              <div class="tab-head">업무 목표</div>
+              <div class="tab-body">
+                <p class="line">AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발</p>
+                <p class="line">엘리베이터 내부 점유 상태, 반려견 합승 등 실시간 상황 분석</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head">담당 업무</div>
+              <div class="tab-body">
+                <p class="line">기술 제휴 MOU 검토를 위한 엘리베이터 내부 상황 분석 PoC 설계 및 성능 검증</p>
+                <p class="line">실서비스 적용을 위한 배포형 모델 구조 최적화 및 검출, 판단 로직 정교화</p>
+                <p class="line">엘리베이터 특수 시점 대응 합성 데이터 생성 및 실데이터 수집, 라벨링 체계 구축</p>
+                <p class="line">모델, 코드 변경사항 반영을 위한 배포 자동화(CI/CD) 환경 구축</p>
+              </div>
+            </div>
+
+            <div class="tab-section flush">
+              <div class="tab-head">관련 연구</div>
+              <div class="tab-body">
+                <div class="ref-row">
+                  <div class="kind">Technical Exploration</div>
+                  <div>엣지 배포형 RGB-only 행동 인식 (Under Review)</div>
+                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                </div>
+                <div class="ref-row">
+                  <div class="kind">Technical Exploration</div>
+                  <div>행동 인식 전용 음성 데이터셋 구축 (Under Review)</div>
+                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                </div>
+                <div class="ref-row">
+                  <div class="kind">Dataset Generation</div>
+                  <div>합성 데이터 생성 자동화 (WACVW 2026, Oral)</div>
+                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-yt"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual cover-img">
+            <img src="assets/img/elevator-poc.png" alt="엘리베이터 내부 PoC 영상 예시"/>
+            <div class="caption">HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시</div>
+          </div>
+        </div>
+
+        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 5: Project 01 Outcomes -->
+  <section class="stage" data-slide="5">
+    <div class="slide">
+      <div class="pad">
+        <div class="project-header-row">
+          <h2 class="h2">엘리베이터 내부 상황 분석 시스템 · 주요 성과</h2>
+        </div>
+
+        <div class="outcomes">
+          <div>
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">01</span>기술 PoC 검증</div>
+              <div class="tab-body">
+                <p class="line">반려견 검출과 점유율 추정이 가능한 상황 분석 PoC 설계 및 검증</p>
+                <p class="line">HDC현대산업개발, HDC랩스, 현대엘리베이터 기술 제휴 MOU 체결</p>
+                <p class="sub">PoC 검증 결과를 3사 기술 제휴 검토의 기술적 근거로 활용</p>
+                <p class="sub">기술 제휴 이후 관련 특허 2건 발명자로 등재</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">02</span>엣지 환경 재설계와 데이터 전략</div>
+              <div class="tab-body">
+                <p class="line">10Hz 상태 송신 요구 대응을 위한 배포형 구조 전환 방향 수립</p>
+                <p class="sub">초기 구조를 정량 측정으로 재검증, 단일 모델 파이프라인으로 재설계</p>
+                <p class="line">운영 시나리오 중심 검증 및 판단 로직 최적화로 제품화 가능성 제고</p>
+                <p class="sub">top-view 차폐, door status 기반 상황과 CAN payload 출력 구조 검증</p>
+                <p class="sub">사내 엘리베이터 실연동 및 보드 제어 동작 확인</p>
+                <p class="line">도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제</p>
+                <p class="sub">반려견 검출 mAP50-95 0.47 → 0.79 개선</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">03</span>배포 준비와 연구 확장</div>
+              <div class="tab-body">
+                <p class="line">배포 자동화 환경(CI/CD) 구축으로 모델 변경의 안정적 반영</p>
+                <p class="sub">USB 수동 업데이트에서 Docker 기반 pull 배포 구조로 정립</p>
+                <p class="line">이상행동 탐지용 경량화 연구로 확장 가능한 기반 마련</p>
+                <p class="sub">관련 논문 2편 제출</p>
+              </div>
+            </div>
+          </div>
+          <div class="visual">
+            <img src="assets/img/elevator-arch.png" alt="기술 검증용 PoC 아키텍처 예시"/>
+            <div class="caption">기술 검증용 PoC 아키텍처 예시</div>
+          </div>
+        </div>
+
+        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 6: Project 02 Title -->
+  <section class="stage" data-slide="6">
+    <div class="slide">
+      <div class="pad project-title">
+        <p class="eyebrow">PROJECT 02</p>
+        <h1 class="h1">지하주차장 화재 감지 보조 시스템</h1>
+        <p class="lead">지하주차장 CCTV 환경에 맞춰 PoC 설계부터 현장 배포까지 전 과정 수행</p>
+        <p class="meta-line">HDC LABS · 2024.05 – 2025.10</p>
+        <div class="tag-row">
+          <span class="tag">YOLO</span>
+          <span class="tag">Florence2</span>
+          <span class="tag">CLIP</span>
+          <span class="tag">StableDiffusion</span>
+          <span class="tag">Hailo</span>
+        </div>
+        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 7: Project 02 Detail -->
+  <section class="stage" data-slide="7">
+    <div class="slide">
+      <div class="pad">
+        <div class="project-header project-header-row">
+          <div>
+            <h2 class="h2">지하주차장 화재 감지 보조 시스템</h2>
+            <p class="meta">HDC LABS · 2024.05 – 2025.10 · Deployed</p>
+          </div>
+        </div>
+
+        <div class="project-detail-grid">
+          <div>
+            <div class="tab-section">
+              <div class="tab-head">연구 필요성</div>
+              <div class="tab-body">
+                <p class="line">잇따른 지하주차장 전기차 화재 사건 발생으로 전용 감지 시스템 요청</p>
+                <p class="line">이상 온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head">담당 업무</div>
+              <div class="tab-body">
+                <p class="line">지하주차장 CCTV 환경 특화 합성 데이터 생성 프로세스 설계 및 구축</p>
+                <p class="line">합성 데이터 기반 화재, 연기 탐지 YOLO 모델 재학습 및 성능 검증</p>
+                <p class="line">PoC에서 현장 배포까지 단계별 프레임워크 연구 및 재설계</p>
+                <p class="line">외부 포팅 업체 및 내부 연계 조직과 협업하여 알림 서비스 연결</p>
+              </div>
+            </div>
+
+            <div class="tab-section flush">
+              <div class="tab-head">관련 연구</div>
+              <div class="tab-body">
+                <div class="ref-row">
+                  <div class="kind">PoC Validation</div>
+                  <div>화재 감지 PoC 검증 (ICLRW 2025)</div>
+                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                </div>
+                <div class="ref-row">
+                  <div class="kind">Technical Exploration</div>
+                  <div>경량 초해상화 기술 검증 (ICCVW 2025)</div>
+                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                </div>
+                <div class="ref-row">
+                  <div class="kind">Dataset Generation</div>
+                  <div>합성 데이터 생성 자동화 (WACVW 2026, Oral)</div>
+                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-yt"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="visual">
+            <img src="assets/img/fire-cctv.png" alt="AI CCTV 화재 감지 팝업 알림"/>
+            <div class="caption">AI CCTV 감시 공간 내 불꽃, 연기 감지 시 화재 감지 팝업 알림 예시</div>
+          </div>
+        </div>
+
+        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 8: Project 02 Outcomes -->
+  <section class="stage" data-slide="8">
+    <div class="slide">
+      <div class="pad">
+        <div class="project-header-row">
+          <h2 class="h2">지하주차장 화재 감지 보조 시스템 · 주요 성과</h2>
+        </div>
+
+        <div class="outcomes">
+          <div>
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">01</span>연구 결과</div>
+              <div class="tab-body">
+                <p class="line">YOLOv8s + VLM(Florence2) 기반 화재, 연기 탐지 PoC 설계 및 논문 발표</p>
+                <p class="line">합성 데이터 활용으로 화재, 연기 탐지 정량적 성능 향상</p>
+                <p class="sub">F1 0.82 → 0.86, 연기 recall 0.70 → 0.83</p>
+                <p class="line">도메인 특화 데이터 생성 파이프라인 구축으로 후속 연구로 확장</p>
+                <p class="sub">추가 연구를 통한 논문 게재 및 특허 출원</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">02</span>배포 구조 전환</div>
+              <div class="tab-body">
+                <p class="line">초기 VLM 중심 PoC 구조에서 엣지 디바이스 제약으로 현장 적용 한계 확인</p>
+                <p class="line">YOLOv8n + CLIP 경량 구조로 전환, Hailo 듀얼 칩 기반 실행 구조 확정</p>
+                <p class="sub">단순 모델 교체가 아닌 판단 구조 자체를 사후 검증 방식으로 재설계</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">03</span>현장 적용</div>
+              <div class="tab-body">
+                <p class="line">광명센트럴아이파크 전기차 충전구역 화재 감지 보조 시스템 시연 및 적용</p>
+                <p class="line">현장 운영 중 모델 오탐 이슈에 대한 원인 분석과 재학습 대응 수행</p>
+                <p class="sub">반복 오탐 유형을 학습 데이터로 재반영, 기존 검증 성능 유지하며 오탐 감소 확인</p>
+              </div>
+            </div>
+          </div>
+          <div class="stacked-visuals">
+            <div class="visual">
+              <img src="assets/img/fire-framework.png" alt="YOLO + VLM 화재 감지 프레임워크" style="max-height:220px;"/>
+              <div class="caption">ICLRW에 게재된 YOLO 및 VLM이 결합된 화재 감지 프레임워크</div>
+            </div>
+            <div class="visual">
+              <img src="assets/img/fire-deployment.png" alt="광명센트럴아이파크 적용 현황" style="max-height:220px;"/>
+              <div class="caption">광명센트럴아이파크 AI 화재 감지 보조 시스템 적용 현황</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-brand"><span>HDC</span><span class="red">LABS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 9: Project 03 Title -->
+  <section class="stage" data-slide="9">
+    <div class="slide">
+      <div class="pad project-title">
+        <p class="eyebrow">PROJECT 03</p>
+        <h1 class="h1">콘텐츠 제작을 위한 생성형 AI 기능 개발</h1>
+        <p class="lead">버추얼 인플루언서 이미지 생성, Face Re-Aging, 화자 변환 음성 AI</p>
+        <p class="meta-line">METAVERSE ENTERTAINMENT · 2023.01 – 2024.05</p>
+        <div class="tag-row">
+          <span class="tag">StableDiffusion</span>
+          <span class="tag">LoRA</span>
+          <span class="tag">StyleGAN</span>
+          <span class="tag">ComfyUI</span>
+          <span class="tag">Gradio</span>
+        </div>
+        <div class="footer-brand">
+          <span class="meta">
+            <span class="meta-swatch"></span>
+            <span>METAVERSE</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 10: Project 03 Detail -->
+  <section class="stage" data-slide="10">
+    <div class="slide">
+      <div class="pad">
+        <div class="project-header">
+          <div>
+            <h2 class="h2">콘텐츠 제작을 위한 생성형 AI 기능 개발</h2>
+            <p class="meta">METAVERSE ENTERTAINMENT · 2023.01 – 2024.05</p>
+          </div>
+        </div>
+
+        <div class="triple-block">
+          <div class="row">
+            <div>
+              <div class="title">인플루언서 맞춤 이미지 생성</div>
+              <div class="stack">Stable Diffusion, LoRA, ComfyUI workflow, Gradio WebUI</div>
+              <div class="desc">특정 인물 맞춤 이미지 생성 모델과 내부 툴을 구축하여 버추얼 인플루언서 콘텐츠 제작</div>
+            </div>
+            <div class="impact">
+              Instagram 포스트 및 YouTube 썸네일 제작에 실제 적용<br/>
+              디자이너가 직접 활용 가능한 내부 WebUI로 배포<br/>
+              반복 편집 공수 절감 및 콘텐츠 제작 효율 향상
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="title">Face Re-Aging 기술 개발</div>
+              <div class="stack">StyleGAN, GAN Inversion, Gradio WebUI</div>
+              <div class="desc">디자이너의 인물 연령 리터칭 효율 개선을 위해 2단계 연령 변환 프레임워크를 설계하고 연구 성과로 확장</div>
+            </div>
+            <div class="impact">
+              연령 리터칭 자동화를 위한 AI 기반 대안 기술 제시<br/>
+              IEEE Access (SCI-E, IF=3.9) 1저자 논문 게재
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="title">화자 변환 음성 AI 연구</div>
+              <div class="stack">Retrieval-based VC, VITS, Gradio WebUI</div>
+              <div class="desc">콘텐츠 제작 비용 절감을 위해 캐릭터 특화 음성 모델과 다국어 TTS 기능을 개발하여 콘텐츠 서비스에 활용</div>
+            </div>
+            <div class="impact">
+              관련 YouTube 콘텐츠 제작에 실제 활용<br/>
+              버추얼 휴먼 전용 VC 모델 미세조정 및 다국어 TTS 사내 배포<br/>
+              성우 섭외 비용 절감 및 제작 효율 향상
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-brand">
+          <span class="meta">
+            <span class="meta-swatch"></span>
+            <span>METAVERSE</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 11: Publications & Patents -->
+  <section class="stage" data-slide="11">
+    <div class="slide">
+      <div class="pad">
+        <p class="pub-header">PUBLICATIONS &amp; PATENTS</p>
+
+        <div class="stat-row">
+          <div class="stat"><div class="num">3</div><div class="label">International Journals</div></div>
+          <div class="stat"><div class="num">12</div><div class="label">International Conferences</div></div>
+          <div class="stat"><div class="num">11</div><div class="label">특허 등록</div></div>
+          <div class="stat"><div class="num">3</div><div class="label">특허 출원</div></div>
+          <div class="stat"><div class="num">1</div><div class="label">US Patent App.</div></div>
+        </div>
+
+        <div class="pub-list">
+          <div class="head">직무 연관 주요 연구</div>
+          <div class="pub-row">
+            <div class="kw">행동인식을 위한 합성 데이터셋 증강</div>
+            <div class="title">Synthesized Audio Dataset Augmentation for Multimodal Action Recognition (Under Review, 2026) · 1st Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+          </div>
+          <div class="pub-row">
+            <div class="kw">엣지 배포용 경량 RGB 행동인식</div>
+            <div class="title">Resource-Efficient RGB-Only Action Recognition for Edge Deployment (Under Review, 2026) · 1st Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+          </div>
+          <div class="pub-row">
+            <div class="kw">합성 데이터 생성 자동화</div>
+            <div class="title">Auto-Curated Domain-Specific Dataset Generation via Diffusion Models (WACVW 2026, Oral) · 1st Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-yt"/></svg><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+          </div>
+          <div class="pub-row">
+            <div class="kw">실환경 대응 경량 초해상도 성능 개선</div>
+            <div class="title">Your Super Resolution Model is not Enough for Tackling Real-World Scenarios (ICCVW, 2025) · 1st Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+          </div>
+          <div class="pub-row">
+            <div class="kw">YOLO-VLM 기반 실내 화재 감지</div>
+            <div class="title">An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments (ICLRW, 2025) · 1st Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+          </div>
+          <div class="pub-row">
+            <div class="kw">3D 인식 기반 인물 이미지 생성·편집</div>
+            <div class="title">Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN (ECCV, 2022) · 3rd Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-github"/></svg></div>
+          </div>
+          <div class="pub-row">
+            <div class="kw">속성 가이드 기반 얼굴 이미지 복원</div>
+            <div class="title">Reference Guided Image Inpainting using Facial Attributes (BMVC, 2021) · 1st Author</div>
+            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-github"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 12: Thank You -->
+  <section class="stage" data-slide="12">
+    <div class="slide">
+      <div class="thanks">
+        <div class="h1">Thank You</div>
+        <div class="who">윤동식 · AI Researcher</div>
+        <div class="stack">Computer Vision · Edge AI · Real-World Deployment</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Controls -->
+<div class="dots" id="dots"></div>
+
+<nav class="controls" aria-label="slide controls">
+  <div class="group">
+    <button id="prev" aria-label="이전"><svg width="18" height="18"><use href="#i-arrow-l"/></svg></button>
+    <span class="counter"><span id="cur">1</span> / <span id="total">12</span></span>
+    <button id="next" aria-label="다음"><svg width="18" height="18"><use href="#i-arrow-r"/></svg></button>
+  </div>
+  <div class="group">
+    <button class="pdf-btn" id="exportPdf" title="PDF로 저장 (Cmd/Ctrl+P)">
+      <svg width="16" height="16" style="vertical-align:-3px;margin-right:6px;"><use href="#i-download"/></svg>PDF 저장
+    </button>
+  </div>
+</nav>
+
+<script>
+(() => {
+  const stages = Array.from(document.querySelectorAll('.stage'));
+  const total = stages.length;
+  document.getElementById('total').textContent = total;
+  let index = 0;
+
+  // Build side dots
+  const dotsEl = document.getElementById('dots');
+  stages.forEach((_, i) => {
+    const b = document.createElement('button');
+    b.setAttribute('aria-label', `슬라이드 ${i+1}로 이동`);
+    b.addEventListener('click', () => go(i));
+    dotsEl.appendChild(b);
+  });
+
+  function fit() {
+    const ratio = 1440 / 810;
+    stages.forEach(stage => {
+      const slide = stage.querySelector('.slide');
+      const vw = stage.clientWidth, vh = stage.clientHeight;
+      const scale = Math.min(vw / 1440, vh / 810);
+      slide.style.setProperty('--scale', scale);
+    });
+  }
+
+  function render() {
+    stages.forEach((s, i) => s.style.display = (i === index) ? 'grid' : 'none');
+    document.getElementById('cur').textContent = index + 1;
+    Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('active', i === index));
+    fit();
+  }
+
+  function go(i) {
+    index = Math.max(0, Math.min(total - 1, i));
+    render();
+  }
+
+  document.getElementById('prev').addEventListener('click', () => go(index - 1));
+  document.getElementById('next').addEventListener('click', () => go(index + 1));
+
+  // Click-half-of-page to navigate
+  const isInteractive = (target) => !!target.closest('a, button, .controls, .dots, input, textarea, select');
+
+  document.addEventListener('click', (e) => {
+    if (isInteractive(e.target)) return;
+    const x = e.clientX;
+    const w = window.innerWidth;
+    if (x < w / 2) go(index - 1);
+    else go(index + 1);
+  });
+
+  // Directional cursor on hover
+  let lastSide = null;
+  document.addEventListener('mousemove', (e) => {
+    if (isInteractive(e.target)) {
+      if (lastSide !== 'none') {
+        document.body.classList.remove('cursor-left', 'cursor-right');
+        lastSide = 'none';
+      }
+      return;
+    }
+    const side = e.clientX < window.innerWidth / 2 ? 'left' : 'right';
+    if (side !== lastSide) {
+      document.body.classList.remove('cursor-left', 'cursor-right');
+      document.body.classList.add('cursor-' + side);
+      lastSide = side;
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(index + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(index - 1); }
+    else if (e.key === 'Home') { go(0); }
+    else if (e.key === 'End') { go(total - 1); }
+    else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'p') {
+      // let browser handle, but ensure all slides visible
+      stages.forEach(s => s.style.display = 'grid');
+    }
+  });
+
+  // Before printing, reveal all slides; after printing, restore
+  window.addEventListener('beforeprint', () => {
+    stages.forEach(s => s.style.display = 'grid');
+  });
+  window.addEventListener('afterprint', () => {
+    render();
+  });
+
+  document.getElementById('exportPdf').addEventListener('click', () => {
+    stages.forEach(s => s.style.display = 'grid');
+    // Allow browser to lay out before invoking print
+    requestAnimationFrame(() => requestAnimationFrame(() => window.print()));
+  });
+
+  window.addEventListener('resize', fit);
+  render();
+})();
+</script>
+</body>
+</html>
