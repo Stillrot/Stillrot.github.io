@@ -601,6 +601,18 @@
   }
   .triple-block .impact .brand-link:hover { transform: translateY(-1px); }
   .triple-block .impact .brand-link.brand-yt { color: #FF0000; }
+  .triple-block .impact .paper-link {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+    vertical-align: -6px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .12s ease, transform .12s ease;
+  }
+  .triple-block .impact .paper-link:hover { color: var(--ink); transform: translateY(-1px); }
 
   /* Icon links inside reference rows + publication rows */
   .ref-row .links a,
@@ -1378,7 +1390,7 @@
             </div>
             <div class="impact">
               연령 리터칭 자동화를 위한 AI 기반 대안 기술 제시<br/>
-              IEEE Access (SCI-E, IF=3.9) 1저자 논문 게재
+              IEEE Access (SCI-E, IF=3.9) 1저자 논문 게재 <a href="https://ieeexplore.ieee.org/document/10328572" target="_blank" rel="noopener" class="paper-link" title="Paper (IEEE Xplore)"><svg width="22" height="22"><use href="#i-pdf"/></svg></a><a href="https://stillrot.github.io/papers/access2023/" target="_blank" rel="noopener" class="paper-link" title="Project Page"><svg width="22" height="22"><use href="#i-globe"/></svg></a>
             </div>
           </div>
 
