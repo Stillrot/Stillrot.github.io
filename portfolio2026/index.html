@@ -519,6 +519,21 @@
     line-height: 1.9;
   }
 
+
+  /* Icon links inside reference rows + publication rows */
+  .ref-row .links a,
+  .pub-row .icons a {
+    width: 18px; height: 18px;
+    display: inline-grid; place-items: center;
+    color: inherit;
+    text-decoration: none;
+    transition: color .12s ease, transform .12s ease;
+  }
+  .ref-row .links a:hover,
+  .pub-row .icons a:hover {
+    color: #111827;
+    transform: translateY(-1px);
+  }
   /* ===== Slide 11 · Publications ===== */
   .pub-header {
     font-size: 18px;
@@ -895,17 +910,17 @@
                 <div class="ref-row">
                   <div class="kind">Technical Exploration</div>
                   <div>엣지 배포형 RGB-only 행동 인식 (Under Review)</div>
-                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                  <div class="links"><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
                 </div>
                 <div class="ref-row">
                   <div class="kind">Technical Exploration</div>
                   <div>행동 인식 전용 음성 데이터셋 구축 (Under Review)</div>
-                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                  <div class="links"><a href="https://stillrot.github.io/papers/ntu60-audio/" target="_blank" rel="noopener" title="Paper (Project Page)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://stillrot.github.io/papers/ntu60-audio/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
                 </div>
                 <div class="ref-row">
                   <div class="kind">Dataset Generation</div>
                   <div>합성 데이터 생성 자동화 (WACVW 2026, Oral)</div>
-                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-yt"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                  <div class="links"><a href="https://arxiv.org/abs/2601.08095" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://www.youtube.com/watch?v=Z2OQIBj17bM" target="_blank" rel="noopener" title="YouTube"><svg width="16" height="16"><use href="#i-yt"/></svg></a><a href="https://stillrot.github.io/papers/wacvw2026/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
                 </div>
               </div>
             </div>
@@ -1033,17 +1048,17 @@
                 <div class="ref-row">
                   <div class="kind">PoC Validation</div>
                   <div>화재 감지 PoC 검증 (ICLRW 2025)</div>
-                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                  <div class="links"><a href="https://proceedings.mlr.press/v296/kim25a.html" target="_blank" rel="noopener" title="Paper (PMLR)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://stillrot.github.io/papers/iclrw2025/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
                 </div>
                 <div class="ref-row">
                   <div class="kind">Technical Exploration</div>
                   <div>경량 초해상화 기술 검증 (ICCVW 2025)</div>
-                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                  <div class="links"><a href="https://openaccess.thecvf.com/content/ICCV2025W/ECLR/html/Yoon_Your_Super_Resolution_Model_is_not_Enough_for_Tackling_Real-World_ICCVW_2025_paper.html" target="_blank" rel="noopener" title="Paper (CVF Open Access)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://stillrot.github.io/papers/iccvw2025/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
                 </div>
                 <div class="ref-row">
                   <div class="kind">Dataset Generation</div>
                   <div>합성 데이터 생성 자동화 (WACVW 2026, Oral)</div>
-                  <div class="links"><span><svg width="16" height="16"><use href="#i-pdf"/></svg></span><span><svg width="16" height="16"><use href="#i-yt"/></svg></span><span><svg width="16" height="16"><use href="#i-globe"/></svg></span></div>
+                  <div class="links"><a href="https://arxiv.org/abs/2601.08095" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://www.youtube.com/watch?v=Z2OQIBj17bM" target="_blank" rel="noopener" title="YouTube"><svg width="16" height="16"><use href="#i-yt"/></svg></a><a href="https://stillrot.github.io/papers/wacvw2026/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
                 </div>
               </div>
             </div>
@@ -1210,37 +1225,37 @@
           <div class="pub-row">
             <div class="kw">행동인식을 위한 합성 데이터셋 증강</div>
             <div class="title">Synthesized Audio Dataset Augmentation for Multimodal Action Recognition (Under Review, 2026) · 1st Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+            <div class="icons"><a href="https://stillrot.github.io/papers/ntu60-audio/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
           </div>
           <div class="pub-row">
             <div class="kw">엣지 배포용 경량 RGB 행동인식</div>
             <div class="title">Resource-Efficient RGB-Only Action Recognition for Edge Deployment (Under Review, 2026) · 1st Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+            <div class="icons"><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener" title="Project Page (arXiv)"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
           </div>
           <div class="pub-row">
             <div class="kw">합성 데이터 생성 자동화</div>
             <div class="title">Auto-Curated Domain-Specific Dataset Generation via Diffusion Models (WACVW 2026, Oral) · 1st Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-yt"/></svg><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+            <div class="icons"><a href="https://arxiv.org/abs/2601.08095" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://www.youtube.com/watch?v=Z2OQIBj17bM" target="_blank" rel="noopener" title="YouTube"><svg width="16" height="16"><use href="#i-yt"/></svg></a><a href="https://stillrot.github.io/papers/wacvw2026/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
           </div>
           <div class="pub-row">
             <div class="kw">실환경 대응 경량 초해상도 성능 개선</div>
             <div class="title">Your Super Resolution Model is not Enough for Tackling Real-World Scenarios (ICCVW, 2025) · 1st Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+            <div class="icons"><a href="https://openaccess.thecvf.com/content/ICCV2025W/ECLR/html/Yoon_Your_Super_Resolution_Model_is_not_Enough_for_Tackling_Real-World_ICCVW_2025_paper.html" target="_blank" rel="noopener" title="Paper (CVF Open Access)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://stillrot.github.io/papers/iccvw2025/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
           </div>
           <div class="pub-row">
             <div class="kw">YOLO-VLM 기반 실내 화재 감지</div>
             <div class="title">An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments (ICLRW, 2025) · 1st Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-globe"/></svg></div>
+            <div class="icons"><a href="https://proceedings.mlr.press/v296/kim25a.html" target="_blank" rel="noopener" title="Paper (PMLR)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://stillrot.github.io/papers/iclrw2025/" target="_blank" rel="noopener" title="Project Page"><svg width="16" height="16"><use href="#i-globe"/></svg></a></div>
           </div>
           <div class="pub-row">
             <div class="kw">3D 인식 기반 인물 이미지 생성·편집</div>
             <div class="title">Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN (ECCV, 2022) · 3rd Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-github"/></svg></div>
+            <div class="icons"><a href="https://jgkwak95.github.io/surfgan/" target="_blank" rel="noopener" title="Paper (Project Page)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://github.com/jgkwak95/SurfGAN" target="_blank" rel="noopener" title="GitHub Code"><svg width="16" height="16"><use href="#i-github"/></svg></a></div>
           </div>
           <div class="pub-row">
             <div class="kw">속성 가이드 기반 얼굴 이미지 복원</div>
             <div class="title">Reference Guided Image Inpainting using Facial Attributes (BMVC, 2021) · 1st Author</div>
-            <div class="icons"><svg width="16" height="16"><use href="#i-pdf"/></svg><svg width="16" height="16"><use href="#i-github"/></svg></div>
+            <div class="icons"><a href="https://arxiv.org/abs/2301.08044" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="16" height="16"><use href="#i-pdf"/></svg></a><a href="https://github.com/Stillrot/RGINP" target="_blank" rel="noopener" title="GitHub Code"><svg width="16" height="16"><use href="#i-github"/></svg></a></div>
           </div>
         </div>
       </div>
@@ -1283,7 +1298,9 @@
   });
 
   // Inject page indicator at bottom-right of each slide
+  // (Slide 11 — Publications & Patents — intentionally omits the indicator.)
   stages.forEach((stage, i) => {
+    if (stage.dataset.slide === '11') return;
     const slide = stage.querySelector('.slide');
     const ind = document.createElement('div');
     ind.className = 'page-indicator';
