@@ -138,6 +138,7 @@
     align-items: center;
   }
   .footer-brand img { display: block; height: 23px; width: auto; }
+  .footer-brand.metaverse { right: 40px; }
   .footer-brand.metaverse img { height: 44px; }
 
   .tag-row { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -519,6 +520,22 @@
     line-height: 1.9;
   }
 
+
+  /* Brand icon links inside Project 03 impact column (page 10) */
+  .triple-block .impact .brand-link {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+    vertical-align: -6px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform .12s ease;
+  }
+  .triple-block .impact .brand-link:hover { transform: translateY(-1px); }
+  .triple-block .impact .brand-link.brand-yt { color: #FF0000; }
+  .triple-block .impact .brand-link.brand-ig { color: #E1306C; }
 
   /* Icon links inside reference rows + publication rows */
   .ref-row .links a,
@@ -919,7 +936,7 @@
                 </div>
                 <div class="ref-row">
                   <div class="kind">Dataset Generation</div>
-                  <div>합성 데이터 생성 자동화 (WACVW 2026, Oral)</div>
+                  <div>합성 데이터 생성 자동화 (WACVW 2026)</div>
                   <div class="links"><a href="https://arxiv.org/abs/2601.08095" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="22" height="22"><use href="#i-pdf"/></svg></a><a href="https://www.youtube.com/watch?v=Z2OQIBj17bM" target="_blank" rel="noopener" title="YouTube"><svg width="22" height="22"><use href="#i-yt"/></svg></a><a href="https://stillrot.github.io/papers/wacvw2026/" target="_blank" rel="noopener" title="Project Page"><svg width="22" height="22"><use href="#i-globe"/></svg></a></div>
                 </div>
               </div>
@@ -1057,7 +1074,7 @@
                 </div>
                 <div class="ref-row">
                   <div class="kind">Dataset Generation</div>
-                  <div>합성 데이터 생성 자동화 (WACVW 2026, Oral)</div>
+                  <div>합성 데이터 생성 자동화 (WACVW 2026)</div>
                   <div class="links"><a href="https://arxiv.org/abs/2601.08095" target="_blank" rel="noopener" title="Paper (arXiv)"><svg width="22" height="22"><use href="#i-pdf"/></svg></a><a href="https://www.youtube.com/watch?v=Z2OQIBj17bM" target="_blank" rel="noopener" title="YouTube"><svg width="22" height="22"><use href="#i-yt"/></svg></a><a href="https://stillrot.github.io/papers/wacvw2026/" target="_blank" rel="noopener" title="Project Page"><svg width="22" height="22"><use href="#i-globe"/></svg></a></div>
                 </div>
               </div>
@@ -1166,10 +1183,10 @@
             <div>
               <div class="title">인플루언서 맞춤 이미지 생성</div>
               <div class="stack">Stable Diffusion, LoRA, ComfyUI workflow, Gradio WebUI</div>
-              <div class="desc">특정 인물 맞춤 이미지 생성 모델과 내부 툴을 구축하여 버추얼 인플루언서 콘텐츠 제작</div>
+              <div class="desc">특정 인물 맞춤 이미지 생성 모델과 내부 툴을 구축하여<br/>버추얼 인플루언서 콘텐츠 제작</div>
             </div>
             <div class="impact">
-              Instagram 포스트 및 YouTube 썸네일 제작에 실제 적용<br/>
+              Instagram 포스트 및 YouTube 썸네일 제작에 실제 적용 <a href="https://www.instagram.com/rina.8k/" target="_blank" rel="noopener" class="brand-link brand-ig" title="rina.8k Instagram"><svg width="22" height="22"><use href="#i-ig"/></svg></a><a href="https://www.youtube.com/@mave_official/videos" target="_blank" rel="noopener" class="brand-link brand-yt" title="MAVE: YouTube"><svg width="22" height="22"><use href="#i-yt"/></svg></a><br/>
               디자이너가 직접 활용 가능한 내부 WebUI로 배포<br/>
               반복 편집 공수 절감 및 콘텐츠 제작 효율 향상
             </div>
@@ -1179,7 +1196,7 @@
             <div>
               <div class="title">Face Re-Aging 기술 개발</div>
               <div class="stack">StyleGAN, GAN Inversion, Gradio WebUI</div>
-              <div class="desc">디자이너의 인물 연령 리터칭 효율 개선을 위해 2단계 연령 변환 프레임워크를 설계하고 연구 성과로 확장</div>
+              <div class="desc">디자이너의 인물 연령 리터칭 효율 개선을 위해<br/>2단계 연령 변환 프레임워크를 설계하고 연구 성과로 확장</div>
             </div>
             <div class="impact">
               연령 리터칭 자동화를 위한 AI 기반 대안 기술 제시<br/>
@@ -1191,10 +1208,10 @@
             <div>
               <div class="title">화자 변환 음성 AI 연구</div>
               <div class="stack">Retrieval-based VC, VITS, Gradio WebUI</div>
-              <div class="desc">콘텐츠 제작 비용 절감을 위해 캐릭터 특화 음성 모델과 다국어 TTS 기능을 개발하여 콘텐츠 서비스에 활용</div>
+              <div class="desc">콘텐츠 제작 비용 절감을 위해 캐릭터 특화 음성 모델과<br/>다국어 TTS 기능을 개발하여 콘텐츠 서비스에 활용</div>
             </div>
             <div class="impact">
-              관련 YouTube 콘텐츠 제작에 실제 활용<br/>
+              관련 YouTube 콘텐츠 제작에 실제 활용 <a href="https://www.youtube.com/watch?v=UoWzaH7a8C0" target="_blank" rel="noopener" class="brand-link brand-yt" title="MAVE: April Fool YouTube"><svg width="22" height="22"><use href="#i-yt"/></svg></a><br/>
               버추얼 휴먼 전용 VC 모델 미세조정 및 다국어 TTS 사내 배포<br/>
               성우 섭외 비용 절감 및 제작 효율 향상
             </div>
