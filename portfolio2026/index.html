@@ -592,10 +592,8 @@
   }
   /* ===== Contribution banner (under image on slides 4 + 7) ===== */
   .contrib-banner {
-    align-self: center;        /* horizontally align with the centered image */
+    align-self: stretch;       /* match column width for a wide banner */
     margin-top: auto;          /* push to bottom of the visual flex column */
-    width: fit-content;        /* shrink to content — kills inner-right whitespace */
-    max-width: 100%;
     display: grid;
     grid-template-columns: 62px 1fr;
     align-items: center;
@@ -1055,13 +1053,13 @@
             <img src="assets/img/elevator-poc.png" alt="엘리베이터 내부 PoC 영상 예시" style="max-height:380px;"/>
             <div class="caption">HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시</div>
             <div class="contrib-banner">
-              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="251.33" stroke-dashoffset="100.53" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">60%</text></svg></div>
+              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="251.33" stroke-dashoffset="62.83" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">75%</text></svg></div>
               <div class="contrib-text">
                 <div class="contrib-eyebrow">기여도</div>
                 <div class="contrib-title">AI 시스템 개발 주도</div>
                 <div class="contrib-desc">합성/실 데이터, 검출·점유율 모델, 판단 로직, Jetson 최적화, CI/CD</div>
                 <hr class="contrib-divider"/>
-                <div class="contrib-collab"><strong>협업</strong>하드웨어 (팀 엔지니어 1명),&nbsp; E/V 제어 (현대엘리베이터)</div>
+                <div class="contrib-collab"><strong>협업</strong>하드웨어 (팀 엔지니어 1명, 내부 IoT팀),&nbsp; E/V 제어 (현대엘리베이터)</div>
               </div>
             </div>
           </div>
@@ -1202,7 +1200,7 @@
             <img src="assets/img/fire-cctv.png" alt="AI CCTV 화재 감지 팝업 알림" style="max-height:320px;"/>
             <div class="caption">AI CCTV 감시 공간 내 불꽃, 연기 감지 시 화재 감지 팝업 알림 예시</div>
             <div class="contrib-banner">
-              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="251.33" stroke-dashoffset="62.83" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">75%</text></svg></div>
+              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="251.33" stroke-dashoffset="100.53" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">60%</text></svg></div>
               <div class="contrib-text">
                 <div class="contrib-eyebrow">기여도</div>
                 <div class="contrib-title">AI 시스템 개발 주도</div>
