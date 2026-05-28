@@ -587,6 +587,62 @@
     color: #111827;
     transform: translateY(-1px);
   }
+  /* ===== Contribution banner (under image on slides 4 + 7) ===== */
+  .contrib-banner {
+    align-self: stretch;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 22px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .contrib-banner .contrib-donut-wrap { width: 110px; height: 110px; display: block; }
+  .contrib-banner .donut-mini { width: 100%; height: 100%; display: block; }
+  .contrib-banner .contrib-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+  .contrib-banner .contrib-eyebrow {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .contrib-banner .contrib-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .contrib-banner .contrib-desc {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+  .contrib-banner .contrib-divider {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 10px 0 8px;
+    width: 100%;
+  }
+  .contrib-banner .contrib-collab {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .contrib-banner .contrib-collab strong {
+    color: var(--ink-2);
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
   /* ===== Slide 11 · Publications ===== */
   .pub-header {
     font-size: 18px;
@@ -991,8 +1047,18 @@
           </div>
 
           <div class="visual cover-img">
-            <img src="assets/img/elevator-poc.png" alt="엘리베이터 내부 PoC 영상 예시"/>
+            <img src="assets/img/elevator-poc.png" alt="엘리베이터 내부 PoC 영상 예시" style="max-height:320px;"/>
             <div class="caption">HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시</div>
+            <div class="contrib-banner">
+              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="251.33" stroke-dashoffset="100.53" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">60%</text></svg></div>
+              <div class="contrib-text">
+                <div class="contrib-eyebrow">기여도</div>
+                <div class="contrib-title">AI 시스템 개발 주도</div>
+                <div class="contrib-desc">합성/실 데이터, 검출·점유율 모델, 판단 로직, Jetson 최적화, CI/CD</div>
+                <hr class="contrib-divider"/>
+                <div class="contrib-collab"><strong>협업</strong>하드웨어 (팀 엔지니어 1명),&nbsp; E/V 제어 (현대엘리베이터)</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1128,8 +1194,18 @@
             </div>
           </div>
           <div class="visual">
-            <img src="assets/img/fire-cctv.png" alt="AI CCTV 화재 감지 팝업 알림"/>
+            <img src="assets/img/fire-cctv.png" alt="AI CCTV 화재 감지 팝업 알림" style="max-height:320px;"/>
             <div class="caption">AI CCTV 감시 공간 내 불꽃, 연기 감지 시 화재 감지 팝업 알림 예시</div>
+            <div class="contrib-banner">
+              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="251.33" stroke-dashoffset="62.83" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">75%</text></svg></div>
+              <div class="contrib-text">
+                <div class="contrib-eyebrow">기여도</div>
+                <div class="contrib-title">AI 시스템 개발 주도</div>
+                <div class="contrib-desc">합성 데이터 파이프라인, YOLO + VLM/CLIP 모델, 판단 구조 재설계, Hailo 최적화</div>
+                <hr class="contrib-divider"/>
+                <div class="contrib-collab"><strong>협업</strong>하드웨어 (팀 엔지니어 1명),&nbsp; 현장 포팅 (수호이미지),&nbsp; 플랫폼/알람 (내부 플랫폼팀)</div>
+              </div>
+            </div>
           </div>
         </div>
 
