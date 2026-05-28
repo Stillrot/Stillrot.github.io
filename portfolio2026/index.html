@@ -370,7 +370,10 @@
     flex: 1;
     align-items: stretch;
   }
-  .project-detail-grid > .visual { align-self: start; }
+  .project-detail-grid > .visual {
+    align-self: stretch;
+    height: 100%;
+  }
   .project-detail-grid > .visual img { max-height: 460px; }
   .outcomes > .visual img { max-height: 460px; }
 
@@ -589,7 +592,7 @@
   }
   /* ===== Contribution banner (under image on slides 4 + 7) ===== */
   .contrib-banner {
-    align-self: flex-end;      /* right-align inside .visual flex column */
+    align-self: center;        /* horizontally align with the centered image */
     margin-top: auto;          /* push to bottom of the visual flex column */
     width: fit-content;        /* shrink to content — kills inner-right whitespace */
     max-width: 100%;
