@@ -514,6 +514,11 @@
     margin-top: 14px;
     line-height: 1.6;
   }
+  .triple-block .desc .indent {
+    display: inline-block;
+    padding-left: 20px;
+    margin-top: 2px;
+  }
   .triple-block .impact {
     font-size: 16px;
     color: var(--ink-2);
@@ -535,7 +540,6 @@
   }
   .triple-block .impact .brand-link:hover { transform: translateY(-1px); }
   .triple-block .impact .brand-link.brand-yt { color: #FF0000; }
-  .triple-block .impact .brand-link.brand-ig { color: #E1306C; }
 
   /* Icon links inside reference rows + publication rows */
   .ref-row .links a,
@@ -726,6 +730,13 @@
 <!-- ICONS (defs) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
+    <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+      <stop offset="0" stop-color="#fdf497"/>
+      <stop offset="0.05" stop-color="#fdf497"/>
+      <stop offset="0.45" stop-color="#fd5949"/>
+      <stop offset="0.6" stop-color="#d6249f"/>
+      <stop offset="0.9" stop-color="#285AEB"/>
+    </radialGradient>
     <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.9 5.9 3.9 9s-1.4 6.3-3.9 9c-2.5-2.7-3.9-5.9-3.9-9S9.5 5.7 12 3z"/>
     </symbol>
@@ -742,7 +753,7 @@
     <symbol id="i-portfolio" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v12h16V6H4z"/><path d="M6 8h12v1.5H6zm0 3.5h9V13H6zm0 3.5h7V16.5H6z"/></symbol>
     <symbol id="i-cv" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8zm0 3h8v1.5H8zm0 3h5v1.5H8z"/></symbol>
     <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5A3 3 0 0 0 2.4 7.2C1.9 9.1 1.9 12 1.9 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM10 15.3V8.7l5.7 3.3L10 15.3z"/></symbol>
-    <symbol id="i-ig" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.1-1-.3-2.1-.3C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-2.1a1.1 1.1 0 1 1 0 2.3 1.1 1.1 0 0 1 0-2.3z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig-grad)"/><rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="white" stroke-width="2"/><circle cx="17" cy="7" r="1" fill="white"/></symbol>
     <symbol id="i-arrow-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
@@ -1183,7 +1194,7 @@
             <div>
               <div class="title">인플루언서 맞춤 이미지 생성</div>
               <div class="stack">Stable Diffusion, LoRA, ComfyUI workflow, Gradio WebUI</div>
-              <div class="desc">특정 인물 맞춤 이미지 생성 모델과 내부 툴을 구축하여<br/>버추얼 인플루언서 콘텐츠 제작</div>
+              <div class="desc">특정 인물 맞춤 이미지 생성 모델과 내부 툴을 구축하여 버추얼 인플루언서 콘텐츠 제작</div>
             </div>
             <div class="impact">
               Instagram 포스트 및 YouTube 썸네일 제작에 실제 적용 <a href="https://www.instagram.com/rina.8k/" target="_blank" rel="noopener" class="brand-link brand-ig" title="rina.8k Instagram"><svg width="22" height="22"><use href="#i-ig"/></svg></a><a href="https://www.youtube.com/@mave_official/videos" target="_blank" rel="noopener" class="brand-link brand-yt" title="MAVE: YouTube"><svg width="22" height="22"><use href="#i-yt"/></svg></a><br/>
@@ -1196,7 +1207,7 @@
             <div>
               <div class="title">Face Re-Aging 기술 개발</div>
               <div class="stack">StyleGAN, GAN Inversion, Gradio WebUI</div>
-              <div class="desc">디자이너의 인물 연령 리터칭 효율 개선을 위해<br/>2단계 연령 변환 프레임워크를 설계하고 연구 성과로 확장</div>
+              <div class="desc">디자이너의 인물 연령 리터칭 효율 개선<br/><span class="indent">2단계 연령 변환 프레임워크를 설계, 연구 성과로 확장</span></div>
             </div>
             <div class="impact">
               연령 리터칭 자동화를 위한 AI 기반 대안 기술 제시<br/>
@@ -1208,7 +1219,7 @@
             <div>
               <div class="title">화자 변환 음성 AI 연구</div>
               <div class="stack">Retrieval-based VC, VITS, Gradio WebUI</div>
-              <div class="desc">콘텐츠 제작 비용 절감을 위해 캐릭터 특화 음성 모델과<br/>다국어 TTS 기능을 개발하여 콘텐츠 서비스에 활용</div>
+              <div class="desc">콘텐츠 제작 비용 절감 및 서비스 활용<br/><span class="indent">캐릭터 특화 음성 변환 모델과 다국어 TTS 기능을 개발</span></div>
             </div>
             <div class="impact">
               관련 YouTube 콘텐츠 제작에 실제 활용 <a href="https://www.youtube.com/watch?v=UoWzaH7a8C0" target="_blank" rel="noopener" class="brand-link brand-yt" title="MAVE: April Fool YouTube"><svg width="22" height="22"><use href="#i-yt"/></svg></a><br/>
