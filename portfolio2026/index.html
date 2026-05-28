@@ -335,6 +335,27 @@
   .point .title { font-size: 17px; font-weight: 700; color: var(--ink); }
   .point .desc { font-size: 14px; color: var(--muted); margin-top: 6px; }
 
+  /* Skills under 핵심 강점 — compact inline format */
+  .skill-group {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: baseline;
+    gap: 14px;
+    padding: 5px 0;
+    border-top: 1px solid var(--line);
+  }
+  .skill-group .skill-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .skill-group .skill-items {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+
   /* ===== Project title slide ===== */
   .project-title { justify-content: center; padding-left: 120px; }
   .project-title .eyebrow { font-size: 24px; }
@@ -764,8 +785,8 @@
   /* Standalone — slide has no footer-brand */
   .slide > .page-indicator {
     position: absolute;
-    bottom: 48px;
-    right: 64px;
+    bottom: 22px;
+    right: 32px;
     z-index: 5;
   }
 
@@ -970,6 +991,24 @@
             <div class="point">
               <div class="title">논문 및 특허로 이어지는 연구 성과 확장</div>
               <div class="desc">연구 산출물의 지적 재산화로 회사 기술 자산 축적</div>
+            </div>
+
+            <p class="section-label" style="margin-top:16px;margin-bottom:8px;">기술 스택</p>
+            <div class="skill-group">
+              <div class="skill-title">검출 / 인식</div>
+              <div class="skill-items">YOLO, Florence2, CLIP</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-title">생성형 AI</div>
+              <div class="skill-items">StableDiffusion, FLUX, LoRA, ComfyUI, StyleGAN</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-title">엣지 AI / 배포</div>
+              <div class="skill-items">Jetson, Hailo, Docker, Bitbucket CI/CD</div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-title">언어 / 프레임워크</div>
+              <div class="skill-items">Python, PyTorch, Gradio</div>
             </div>
           </div>
         </div>
