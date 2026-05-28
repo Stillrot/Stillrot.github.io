@@ -338,20 +338,21 @@
   /* Skills under 핵심 강점 — compact inline format */
   .skill-group {
     display: grid;
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 170px 1fr;
     align-items: baseline;
     gap: 14px;
-    padding: 5px 0;
+    padding: 3px 0;
     border-top: 1px solid var(--line);
   }
   .skill-group .skill-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--ink);
     letter-spacing: -0.01em;
+    white-space: nowrap;
   }
   .skill-group .skill-items {
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--ink-2);
     line-height: 1.55;
   }
@@ -996,7 +997,7 @@
             <p class="section-label" style="margin-top:16px;margin-bottom:8px;">기술 스택</p>
             <div class="skill-group">
               <div class="skill-title">Detection / Recognition</div>
-              <div class="skill-items">YOLO, Florence2, CLIP</div>
+              <div class="skill-items">YOLO v8 / 11 / 26, JDE, Florence2, CLIP, SAM</div>
             </div>
             <div class="skill-group">
               <div class="skill-title">Generative AI</div>
@@ -1004,7 +1005,7 @@
             </div>
             <div class="skill-group">
               <div class="skill-title">Edge AI / Deployment</div>
-              <div class="skill-items">Jetson, Hailo, Docker, Bitbucket CI/CD</div>
+              <div class="skill-items">Jetson, ONNX, TensorRT, Docker, Bitbucket CI/CD</div>
             </div>
             <div class="skill-group">
               <div class="skill-title">Languages / Frameworks</div>
