@@ -493,9 +493,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 56px;
     flex: 1;
-    align-items: start;
+    align-items: stretch;
   }
-  .outcomes > .visual { align-self: start; }
+  .outcomes > .visual {
+    align-self: stretch;
+    justify-content: center;
+  }
 
   .stacked-visuals {
     display: flex;
