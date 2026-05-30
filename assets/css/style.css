@@ -636,7 +636,8 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 }
 .career-detail .proj-card.active::after { display: none; }
 .career-detail .proj-panel { display: none; }
-.career-detail .proj-panel.active {
+/* selector includes .project so #fff wins over .project.lemon/.cream tints below */
+.career-detail .project.proj-panel.active {
   display: block; animation: projFade .25s ease;
   margin-top: 0; background: #fff;
   border: 1px solid var(--accent);
