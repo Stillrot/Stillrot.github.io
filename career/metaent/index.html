@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20260527e">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260530">
 </head>
 <body data-root="../../" style="--accent:#6d28d9;--accent-soft:#ede4ff;">
 
@@ -47,9 +47,13 @@
         </div>
       </div>
 
-      <h2>Task</h2>
-      <div class="task-grid">
-        <a class="task-card" href="#proj-img">
+      <h2>Projects</h2>
+      <p style="color:var(--fg-muted);margin-top:-12px;">
+        <span class="ko-only">프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.</span>
+        <span class="en-only">Select a project to view its details below.</span>
+      </p>
+      <div class="proj-select-grid">
+        <button type="button" class="proj-card active" data-panel="img">
           <div class="name">
             <span class="ko-only">사용자 맞춤형 이미지 생성</span>
             <span class="en-only">Customized Image Generation</span>
@@ -62,8 +66,8 @@
             <li>Built and internally deployed a Stable Diffusion-based generative pipeline</li>
             <li>Researched StyleGAN-based age-transformation techniques</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-tts">
+        </button>
+        <button type="button" class="proj-card" data-panel="tts">
           <div class="name">
             <span class="ko-only">화자 변환 음성 AI 연구</span>
             <span class="en-only">Speaker-Conversion Voice AI</span>
@@ -76,8 +80,8 @@
             <li>Researched AutoEncoder-based multilingual TTS</li>
             <li>Fine-tuned and internally deployed a voice-conversion model</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-chat">
+        </button>
+        <button type="button" class="proj-card" data-panel="chat">
           <div class="name">
             <span class="ko-only">페르소나 AI Chatbot 개발</span>
             <span class="en-only">Persona AI Chatbot Development</span>
@@ -88,12 +92,10 @@
           <ul class="en-only">
             <li>Built and demoed a RAG-based chatbot using LLaMA2 and GPT-4</li>
           </ul>
-        </a>
+        </button>
       </div>
 
-      <h2>Projects</h2>
-
-      <div class="project" id="proj-img">
+      <div class="project proj-panel active" data-panel="img" id="proj-img">
         <h3>
           <span class="ko-only">인플루언서 맞춤 이미지 생성</span>
           <span class="en-only">Influencer-Tailored Image Generation</span>
@@ -196,7 +198,7 @@
         </div>
       </div>
 
-      <div class="project cream" id="proj-tts">
+      <div class="project cream proj-panel" data-panel="tts" id="proj-tts">
         <h3>
           <span class="ko-only">화자 변환 음성 AI 연구</span>
           <span class="en-only">Speaker-Conversion Voice AI</span>
@@ -228,7 +230,7 @@
         </ul>
       </div>
 
-      <div class="project lemon" id="proj-chat">
+      <div class="project lemon proj-panel" data-panel="chat" id="proj-chat">
         <h3>
           <span class="ko-only">페르소나 AI Chatbot 개발</span>
           <span class="en-only">Persona AI Chatbot Development</span>
@@ -260,6 +262,6 @@
   <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
 </footer>
 
-<script src="../../assets/js/main.js?v=20260527e"></script>
+<script src="../../assets/js/main.js?v=20260530"></script>
 </body>
 </html>

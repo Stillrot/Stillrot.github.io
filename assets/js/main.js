@@ -482,9 +482,29 @@
     if (alreadyInit) return;
     initLanguageToggle();
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', autoInitLanguageToggle);
-  } else {
+
+  // Career pages: clicking a project card reveals its detail panel below
+  // (accordion). One panel visible at a time; first is active by default.
+  function initProjectSelector() {
+    const cards = document.querySelectorAll('.proj-card[data-panel]');
+    if (!cards.length) return;
+    const panels = document.querySelectorAll('.proj-panel[data-panel]');
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const name = card.dataset.panel;
+        cards.forEach((c) => c.classList.toggle('active', c === card));
+        panels.forEach((p) => p.classList.toggle('active', p.dataset.panel === name));
+      });
+    });
+  }
+
+  function autoInit() {
     autoInitLanguageToggle();
+    initProjectSelector();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', autoInit);
+  } else {
+    autoInit();
   }
 })();

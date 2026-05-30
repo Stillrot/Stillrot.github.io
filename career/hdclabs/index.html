@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20260527e">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260530">
 </head>
 <body data-root="../../" style="--accent:#c8102e;--accent-soft:#fcecef;">
 
@@ -49,9 +49,13 @@
         </div>
       </div>
 
-      <h2>Task</h2>
-      <div class="task-grid">
-        <a class="task-card" href="#proj-fire">
+      <h2>Projects</h2>
+      <p style="color:var(--fg-muted);margin-top:-12px;">
+        <span class="ko-only">프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.</span>
+        <span class="en-only">Select a project to view its details below.</span>
+      </p>
+      <div class="proj-select-grid">
+        <button type="button" class="proj-card active" data-panel="fire">
           <div class="name">
             <span class="ko-only">지하주차장 화재 탐지</span>
             <span class="en-only">Underground Parking Fire Detection</span>
@@ -64,8 +68,8 @@
             <li>Developed a fire detection solution based on an integrated YOLO + VLM architecture</li>
             <li>Published a paper on the work and deployed the solution at the Gwangmyeong Central IPARK complex</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-elv">
+        </button>
+        <button type="button" class="proj-card" data-panel="elv">
           <div class="name">
             <span class="ko-only">엘리베이터 내부 상황 분석 시스템</span>
             <span class="en-only">In-Elevator Situational Analysis System</span>
@@ -78,8 +82,8 @@
             <li>Developed an AI-based solution for monitoring specific situations inside elevators</li>
             <li>Ran PoC validation that led to a three-party MOU among HDC group affiliates</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-ip">
+        </button>
+        <button type="button" class="proj-card" data-panel="ip">
           <div class="name">
             <span class="ko-only">지적재산권 확보</span>
             <span class="en-only">Intellectual Property Portfolio</span>
@@ -92,12 +96,10 @@
             <li>Filed and registered patents covering core AI technologies</li>
             <li>Model lightweighting for edge-device deployment, published in peer-reviewed venues</li>
           </ul>
-        </a>
+        </button>
       </div>
 
-      <h2>Projects</h2>
-
-      <div class="project" id="proj-fire">
+      <div class="project proj-panel active" data-panel="fire" id="proj-fire">
         <h3>
           <span class="ko-only">지하주차장 화재 감지 보조 시스템</span>
           <span class="en-only">Underground Parking Fire Detection Assistance System</span>
@@ -189,7 +191,7 @@
         </div>
       </div>
 
-      <div class="project mint" id="proj-elv">
+      <div class="project mint proj-panel" data-panel="elv" id="proj-elv">
         <h3>
           <span class="ko-only">엘리베이터 내부 상황 분석 시스템</span>
           <span class="en-only">In-Elevator Situational Analysis System</span>
@@ -267,7 +269,7 @@
         </div>
       </div>
 
-      <div class="project lemon" id="proj-ip">
+      <div class="project lemon proj-panel" data-panel="ip" id="proj-ip">
         <h3>
           <span class="ko-only">지적재산권 확보</span>
           <span class="en-only">Intellectual Property Portfolio</span>
@@ -350,6 +352,6 @@
   <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
 </footer>
 
-<script src="../../assets/js/main.js?v=20260527e"></script>
+<script src="../../assets/js/main.js?v=20260530"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20260527e">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260530">
 </head>
 <body data-root="../../" style="--accent:#003a70;--accent-soft:#e6edf6;">
 
@@ -78,9 +78,13 @@
         <li>Hosted a daily computer-vision research seminar at 7:30 a.m</li>
       </ul>
 
-      <h2>Research Tasks</h2>
-      <div class="task-grid">
-        <a class="task-card" href="#proj-gan">
+      <h2>Projects</h2>
+      <p style="color:var(--fg-muted);margin-top:-12px;">
+        <span class="ko-only">프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.</span>
+        <span class="en-only">Select a project to view its details below.</span>
+      </p>
+      <div class="proj-select-grid">
+        <button type="button" class="proj-card active" data-panel="gan">
           <div class="name">
             <span class="ko-only">GAN 기반 이미지 생성 및 변환 연구</span>
             <span class="en-only">GAN-based Image Generation &amp; Translation</span>
@@ -93,8 +97,8 @@
             <li>Dataset generation via Conditional GAN</li>
             <li>Improved pix2pix performance through a refined loss function</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-mrcnn">
+        </button>
+        <button type="button" class="proj-card" data-panel="mrcnn">
           <div class="name">
             <span class="ko-only">Mask R-CNN 기반 객체 분할</span>
             <span class="en-only">Mask R-CNN-based Object Segmentation</span>
@@ -107,12 +111,10 @@
             <li>Semantic segmentation via object detection</li>
             <li>Detection-based dataset augmentation</li>
           </ul>
-        </a>
+        </button>
       </div>
 
-      <h2>Projects</h2>
-
-      <div class="project" id="proj-gan">
+      <div class="project proj-panel active" data-panel="gan" id="proj-gan">
         <h3>
           <span class="ko-only">RAPGAN과 RRDB를 이용한 Image-to-Image Translation 성능 개선</span>
           <span class="en-only">Improved Image-to-Image Translation using RAPGAN and RRDB</span>
@@ -163,7 +165,7 @@
         </div>
       </div>
 
-      <div class="project cream" id="proj-mrcnn">
+      <div class="project cream proj-panel" data-panel="mrcnn" id="proj-mrcnn">
         <h3>
           <span class="ko-only">ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할</span>
           <span class="en-only">Object Segmentation using ESRGAN and Semantic Soft Segmentation</span>
@@ -279,6 +281,6 @@
   <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
 </footer>
 
-<script src="../../assets/js/main.js?v=20260527e"></script>
+<script src="../../assets/js/main.js?v=20260530"></script>
 </body>
 </html>

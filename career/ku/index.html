@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20260527e">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260530">
 </head>
 <body data-root="../../" style="--accent:#8b0029;--accent-soft:#f8ecef;">
 
@@ -71,9 +71,13 @@
         (<a href="https://dcollection.korea.ac.kr/srch/srchDetail/000000270183" target="_blank" rel="noopener">Paper</a>)</span>
       </p>
 
-      <h2>Research</h2>
-      <div class="task-grid">
-        <a class="task-card" href="#proj-eq">
+      <h2>Projects</h2>
+      <p style="color:var(--fg-muted);margin-top:-12px;">
+        <span class="ko-only">프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.</span>
+        <span class="en-only">Select a project to view its details below.</span>
+      </p>
+      <div class="proj-select-grid">
+        <button type="button" class="proj-card active" data-panel="eq">
           <div class="name">
             <span class="ko-only">1차원 신호처리</span>
             <span class="en-only">1D Signal Processing</span>
@@ -86,8 +90,8 @@
             <li>Developed a GAN-based algorithm for generating moderate-magnitude synthetic seismic signals</li>
             <li>Built software for simulating virtual earthquake scenarios</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-tts">
+        </button>
+        <button type="button" class="proj-card" data-panel="tts">
           <div class="name">
             <span class="ko-only">음성 합성 (TTS)</span>
             <span class="en-only">Text-to-Speech (TTS)</span>
@@ -100,8 +104,8 @@
             <li>Developed TTS models for both narration and dialogue styles</li>
             <li>Built a multi-speaker, multi-emotion speech database</li>
           </ul>
-        </a>
-        <a class="task-card" href="#proj-img">
+        </button>
+        <button type="button" class="proj-card" data-panel="img">
           <div class="name">
             <span class="ko-only">이미지 처리</span>
             <span class="en-only">Image Processing</span>
@@ -114,12 +118,10 @@
             <li>Developed a conditional face image inpainting model</li>
             <li>Image editing using StyleGAN and NeRF-GAN</li>
           </ul>
-        </a>
+        </button>
       </div>
 
-      <h2>Projects</h2>
-
-      <div class="project" id="proj-eq">
+      <div class="project proj-panel active" data-panel="eq" id="proj-eq">
         <h3>
           <span class="ko-only">인공지능 기술을 활용한 가상의 한반도 지진 시나리오 생성 기법 연구 (기상청 연구용역, 2021)</span>
           <span class="en-only">AI-based Generation of Virtual Earthquake Scenarios on the Korean Peninsula (Research project commissioned by the Korea Meteorological Administration (KMA), 2021)</span>
@@ -178,7 +180,7 @@
         </div>
       </div>
 
-      <div class="project cream" id="proj-tts">
+      <div class="project cream proj-panel" data-panel="tts" id="proj-tts">
         <h3>
           <span class="ko-only">낭독체 및 대화체 음성 합성 모델 개발 연구 (Deep Machine LAB, 2022)</span>
           <span class="en-only">Reading- and Conversational-Style TTS Model Development (Deep Machine LAB, 2022)</span>
@@ -232,7 +234,7 @@
         </div>
       </div>
 
-      <div class="project lemon" id="proj-img">
+      <div class="project lemon proj-panel" data-panel="img" id="proj-img">
         <h3>
           <span class="ko-only">이미지 처리 연구</span>
           <span class="en-only">Image Processing Research</span>
@@ -292,6 +294,6 @@
   <div class="container">© Dongsik Yoon · <a href="../../">Home</a></div>
 </footer>
 
-<script src="../../assets/js/main.js?v=20260527e"></script>
+<script src="../../assets/js/main.js?v=20260530"></script>
 </body>
 </html>
