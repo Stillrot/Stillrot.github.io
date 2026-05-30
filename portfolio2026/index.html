@@ -769,7 +769,19 @@
     background: var(--bg-soft);
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease, background .15s ease;
   }
+  a.rcard:hover {
+    border-color: #2c3a6c;
+    background: #fff;
+    box-shadow: 0 10px 26px rgba(31, 41, 55, 0.12);
+    transform: translateY(-3px);
+  }
+  a.rcard:hover .rcard-link { color: #2c3a6c; }
+  a.rcard:hover .rcard-kw { color: #2c3a6c; }
   .rcard-head {
     display: flex;
     align-items: baseline;
@@ -1532,7 +1544,7 @@
 
         <div class="research-grid">
           <!-- 01 WACVW -->
-          <div class="rcard">
+          <a class="rcard" href="https://stillrot.github.io/papers/wacvw2026/" target="_blank" rel="noopener">
             <div class="rcard-head">
               <div class="rcard-kw">합성 데이터 생성 자동화</div>
               <div class="rcard-venue">WACVW 2026 · Oral</div>
@@ -1544,10 +1556,10 @@
               <div class="pt">실수집 데이터 의존도 낮추며 특정 객체 검출 <span class="metric">mAP 0.47 → 0.79</span> 향상</div>
             </div>
             <div class="rcard-link"><span class="arrow">→</span>엘리베이터, 화재 감지 데이터 전략</div>
-          </div>
+          </a>
 
           <!-- 02 ICLRW -->
-          <div class="rcard">
+          <a class="rcard" href="https://stillrot.github.io/papers/iclrw2025/" target="_blank" rel="noopener">
             <div class="rcard-head">
               <div class="rcard-kw">YOLO-VLM 기반 실내 화재 감지</div>
               <div class="rcard-venue">ICLRW 2025</div>
@@ -1559,10 +1571,10 @@
               <div class="pt">VLM 결합으로 <span class="metric">F1 0.82 → 0.86</span>, <span class="metric">연기 recall 0.70 → 0.83</span> 향상</div>
             </div>
             <div class="rcard-link"><span class="arrow">→</span>화재 감지, 현장 배포</div>
-          </div>
+          </a>
 
           <!-- 03 RGB-only (Under Review) -->
-          <div class="rcard">
+          <a class="rcard" href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">
             <div class="rcard-head">
               <div class="rcard-kw">엣지 배포용 경량 행동인식</div>
               <div class="rcard-venue">Under Review 2026</div>
@@ -1574,10 +1586,10 @@
               <div class="pt">최소 파라미터 <span class="metric">0.96M</span>로 SOTA 정확도 달성, Jetson Orin Nano <span class="metric">10.3 FPS</span> 추론</div>
             </div>
             <div class="rcard-link"><span class="arrow">→</span>엘리베이터 이상행동 인식</div>
-          </div>
+          </a>
 
           <!-- 04 ICCVW -->
-          <div class="rcard">
+          <a class="rcard" href="https://stillrot.github.io/papers/iccvw2025/" target="_blank" rel="noopener">
             <div class="rcard-head">
               <div class="rcard-kw">실환경 대응 경량 초해상도 성능 개선</div>
               <div class="rcard-venue">ICCVW 2025</div>
@@ -1589,7 +1601,7 @@
               <div class="pt">정수 및 소수 배율을 단일 가중치로 대응, <span class="metric">평균 PSNR +4.3 dB</span> 향상</div>
             </div>
             <div class="rcard-link"><span class="arrow">→</span>화재 감지 입력 품질</div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
