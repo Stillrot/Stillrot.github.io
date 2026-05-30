@@ -828,7 +828,25 @@
     letter-spacing: -0.02em;
   }
   .thanks .who { font-size: 26px; color: var(--muted); margin-top: 4px; }
-  .thanks .stack { margin-top: 220px; color: var(--muted); font-size: 18px; }
+  .thanks .cta-note { margin-top: 40px; font-size: 17px; color: var(--muted); }
+  .thanks .cta {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1.5px solid #2c3a6c;
+    border-radius: 999px;
+    color: #2c3a6c;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: background .15s ease, color .15s ease, transform .15s ease;
+  }
+  .thanks .cta svg { width: 20px; height: 20px; }
+  .thanks .cta:hover { background: #2c3a6c; color: #fff; transform: translateY(-2px); }
+  .thanks .stack { margin-top: 120px; color: var(--muted); font-size: 18px; }
 
   /* ===== UI Controls ===== */
   .pdf-btn-top {
@@ -1613,6 +1631,11 @@
       <div class="thanks">
         <div class="h1">Thank You</div>
         <div class="who">윤동식 · AI Researcher</div>
+        <div class="cta-note">더 자세한 연구와 프로젝트가 궁금하시다면</div>
+        <a class="cta" href="https://stillrot.github.io/" target="_blank" rel="noopener">
+          <svg><use href="#i-globe"/></svg>
+          stillrot.github.io
+        </a>
         <div class="stack">Computer Vision / Edge AI / Real-World Deployment</div>
       </div>
     </div>
