@@ -753,6 +753,53 @@
   .pub-row .title { line-height: 1.5; font-size: 17px; }
   .pub-row .icons { display: flex; gap: 10px; color: var(--muted-2); }
 
+  /* ===== Research Highlights slide (4-card grid) ===== */
+  .research-grid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+  }
+  .rcard {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 24px;
+    background: var(--bg-soft);
+    display: flex;
+    flex-direction: column;
+  }
+  .rcard-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .rcard-kw { font-size: 25px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+  .rcard-venue { font-size: 14px; color: var(--muted); white-space: nowrap; letter-spacing: 0.01em; font-weight: 600; }
+  .rcard-paper { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 6px; line-height: 1.4; }
+  .rcard-points { margin-top: 18px; display: flex; flex-direction: column; gap: 11px; }
+  .rcard-points .pt {
+    position: relative;
+    padding-left: 16px;
+    font-size: 16px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+  .rcard-points .pt::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--muted-2);
+  }
+  .rcard-points .pt .metric { color: #2c3a6c; font-weight: 700; }
+  .rcard-link { margin-top: auto; padding-top: 14px; font-size: 14px; color: var(--muted); }
+  .rcard-link .arrow { margin-right: 6px; }
+
   /* ===== Slide 12 · Thank You ===== */
   .thanks {
     height: 100%;
@@ -1475,8 +1522,81 @@
     </div>
   </section>
 
-  <!-- Slide 12: Thank You -->
+  <!-- Slide 12: Research Highlights -->
   <section class="stage" data-slide="12">
+    <div class="slide">
+      <div class="pad" style="padding:48px 80px;">
+        <p class="eyebrow">Publications</p>
+        <h2 class="h1" style="font-size:46px;margin:6px 0 0;">Research Highlights</h2>
+        <p style="font-size:19px;color:var(--muted);margin-top:8px;">실무에서 출발한 대표 연구</p>
+
+        <div class="research-grid">
+          <!-- 01 WACVW -->
+          <div class="rcard">
+            <div class="rcard-head">
+              <div class="rcard-kw">합성 데이터 생성 자동화</div>
+              <div class="rcard-venue">WACVW 2026 · Oral</div>
+            </div>
+            <div class="rcard-paper">Auto-Curated Domain-Specific Dataset Generation via Diffusion Models</div>
+            <div class="rcard-points">
+              <div class="pt">도메인 특화 데이터의 수집 난이도와 높은 구축 비용</div>
+              <div class="pt">이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계</div>
+              <div class="pt">실수집 데이터 의존도 낮추며 특정 객체 검출 <span class="metric">mAP 0.47 → 0.79</span> 향상</div>
+            </div>
+            <div class="rcard-link"><span class="arrow">→</span>엘리베이터, 화재 감지 데이터 전략</div>
+          </div>
+
+          <!-- 02 ICLRW -->
+          <div class="rcard">
+            <div class="rcard-head">
+              <div class="rcard-kw">YOLO-VLM 기반 실내 화재 감지</div>
+              <div class="rcard-venue">ICLRW 2025</div>
+            </div>
+            <div class="rcard-paper">An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments</div>
+            <div class="rcard-points">
+              <div class="pt">모호한 화재와 연기 경계로 YOLO 단독 검출의 오탐 빈발</div>
+              <div class="pt">객체 검출(YOLO)과 문맥 추론(VLM)을 결합한 end-to-end 감지 구조 설계</div>
+              <div class="pt">VLM 결합으로 <span class="metric">F1 0.82 → 0.86</span>, <span class="metric">연기 recall 0.70 → 0.83</span> 향상</div>
+            </div>
+            <div class="rcard-link"><span class="arrow">→</span>화재 감지, 현장 배포</div>
+          </div>
+
+          <!-- 03 RGB-only (Under Review) -->
+          <div class="rcard">
+            <div class="rcard-head">
+              <div class="rcard-kw">엣지 배포용 경량 행동인식</div>
+              <div class="rcard-venue">Under Review 2026</div>
+            </div>
+            <div class="rcard-paper">Resource-Efficient RGB-Only Action Recognition for Edge Deployment</div>
+            <div class="rcard-points">
+              <div class="pt">깊이나 스켈레톤 기반 행동인식은 별도 센서나 무거운 포즈 추정이 필요</div>
+              <div class="pt">RGB 입력만으로 동작하는 경량 행동인식 네트워크 설계</div>
+              <div class="pt">최소 파라미터 <span class="metric">0.96M</span>로 SOTA 정확도 달성, Jetson Orin Nano <span class="metric">10.3 FPS</span> 추론</div>
+            </div>
+            <div class="rcard-link"><span class="arrow">→</span>엘리베이터 이상행동 인식</div>
+          </div>
+
+          <!-- 04 ICCVW -->
+          <div class="rcard">
+            <div class="rcard-head">
+              <div class="rcard-kw">실환경 대응 경량 초해상도 성능 개선</div>
+              <div class="rcard-venue">ICCVW 2025</div>
+            </div>
+            <div class="rcard-paper">Your Super Resolution Model is not Enough for Tackling Real-World Scenarios</div>
+            <div class="rcard-points">
+              <div class="pt">고정 배율로 학습된 기존 초해상화 모델은 미학습 배율에서 추론 불가</div>
+              <div class="pt">기존 초해상화 백본에 이식 가능한 다중 배율 플러그인 모듈 설계</div>
+              <div class="pt">정수 및 소수 배율을 단일 가중치로 대응, <span class="metric">평균 PSNR +4.3 dB</span> 향상</div>
+            </div>
+            <div class="rcard-link"><span class="arrow">→</span>화재 감지 입력 품질</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 13: Thank You -->
+  <section class="stage" data-slide="13">
     <div class="slide">
       <div class="thanks">
         <div class="h1">Thank You</div>
