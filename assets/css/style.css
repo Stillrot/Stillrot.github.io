@@ -755,9 +755,10 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 .career-detail .project-figure .video-thumb:hover img { transform: scale(1.05); filter: brightness(.82); }
 .career-detail .project-figure .video-thumb:hover .play-badge { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
 .career-detail .project-figure .video-thumb:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-/* TTS panel: make the video column a touch smaller (desktop only) */
+/* TTS / chat panels: make the media column a touch smaller (desktop only) */
 @media (min-width: 821px) {
-  .career-detail #proj-tts .project-row { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+  .career-detail #proj-tts .project-row,
+  .career-detail #proj-chat .project-row { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
 }
 .career-detail .project-figure figcaption {
   padding: 10px 14px; color: var(--fg); font-size: 13px; font-weight: 600;
