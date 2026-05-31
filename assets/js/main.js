@@ -142,7 +142,7 @@
       a.innerHTML = `
         <div class="thumb">${n.thumbnail_external ? `<img src="${n.thumbnail_external}" alt="" loading="lazy">` : ''}</div>
         <div class="body">
-          <div class="date">${escapeHtml(n.date)} · ${escapeHtml(source || '')}</div>
+          <div class="date">${escapeHtml(n.date)} ${escapeHtml(source || '')}</div>
           <div class="title">${escapeHtml(title)}</div>
           <div class="summary">${escapeHtml(summary)}</div>
         </div>`;
@@ -152,7 +152,7 @@
   }
 
   function renderPaper(target, paper) {
-    document.title = `${paper.short_title || paper.title} · Dongsik Yoon`;
+    document.title = `${paper.short_title || paper.title} Dongsik Yoon`;
     const sectionsHtml = (paper.sections || [])
       .map((sec) => {
         const isRow = sec.layout === 'row';
@@ -187,7 +187,7 @@
       <section class="paper-header">
         <div class="container">
           <h1>${escapeHtml(paper.title)}</h1>
-          <div class="venue-line"><strong>${escapeHtml(paper.venue)}</strong>${paper.year ? `, ${paper.year}` : ''}${paper.note ? ` · <span class="venue-note">${escapeHtml(paper.note)}</span>` : ''}</div>
+          <div class="venue-line"><strong>${escapeHtml(paper.venue)}</strong>${paper.year ? `, ${paper.year}` : ''}${paper.note ? ` <span class="venue-note">${escapeHtml(paper.note)}</span>` : ''}</div>
           <div class="authors">${highlightAuthors(paper.authors.join(', '))}</div>
           <div class="affiliation">${escapeHtml(paper.affiliation || '')}</div>
           <div class="link-row">
