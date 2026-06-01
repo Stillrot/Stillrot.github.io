@@ -715,6 +715,30 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 }
 .career-detail .related-group ul li { margin: 3px 0; font-size: 14px; }
 
+/* Grouped achievements: themed outcome groups with metric sub-lines (deck-style). */
+.career-detail .outcome-groups { margin: 4px 0 8px; display: flex; flex-direction: column; gap: 12px; }
+.career-detail .outcome-group .group-label {
+  font-size: 13px; font-weight: 700; color: var(--fg);
+  border-left: 3px solid var(--accent); padding-left: 8px; margin-bottom: 4px;
+}
+.career-detail .outcome-group ul { list-style: disc; margin: 4px 0 0 18px; padding: 0; }
+.career-detail .outcome-group ul li { margin: 4px 0; }
+.career-detail .outcome-group ul li .sub {
+  display: block; font-size: 12.5px; color: var(--fg-muted); margin-top: 2px;
+}
+
+/* Contribution & collaboration block (mirrors the deck's contribution banner). */
+.career-detail .contrib {
+  display: flex; align-items: center; gap: 16px;
+  padding: 12px 16px; margin: 6px 0 4px;
+  background: var(--accent-soft); border: 1px solid var(--border); border-radius: 10px;
+}
+.career-detail .contrib-donut { width: 62px; height: 62px; flex-shrink: 0; }
+.career-detail .contrib-text { font-size: 13px; line-height: 1.5; }
+.career-detail .contrib-role { font-weight: 700; color: var(--fg); }
+.career-detail .contrib-collab { color: var(--fg-muted); margin-top: 4px; }
+.career-detail .contrib-collab strong { color: var(--accent-strong); margin-right: 5px; }
+
 /* Links inside career detail pages use a darker variant of the page accent,
    so they're obviously clickable but still match the page color identity. */
 .career-detail {
