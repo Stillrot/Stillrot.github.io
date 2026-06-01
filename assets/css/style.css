@@ -734,7 +734,7 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 }
 .career-detail .project-figure {
   margin: 0; border: 1px solid var(--border); border-radius: var(--radius-sm);
-  background: white; overflow: hidden;
+  background: white; overflow: hidden; transition: border-color .2s ease, box-shadow .2s ease;
 }
 .career-detail .project-figure img { width: 100%; max-height: 460px; object-fit: contain; background: white; display: block; }
 /* Clickable video thumbnail (links out to YouTube instead of embedding) */
@@ -760,6 +760,9 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 .career-detail .project-figure a img { transition: transform .3s ease, filter .3s ease; }
 .career-detail .project-figure a:hover img { transform: scale(1.04); filter: brightness(.93); }
 .career-detail .project-figure a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* accent border on the figure while its link is hovered/focused */
+.career-detail .project-figure:has(a:hover),
+.career-detail .project-figure:has(a:focus-visible) { border-color: var(--accent); }
 /* TTS / chat panels: make the media column a touch smaller (desktop only) */
 @media (min-width: 821px) {
   .career-detail #proj-tts .project-row,
