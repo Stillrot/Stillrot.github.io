@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../../assets/css/style.css?v=20260531j">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260531k">
 </head>
 <body data-root="../../" style="--accent:#c8102e;--accent-soft:#fcecef;">
 
@@ -340,23 +340,50 @@
         </div>
 
         <div class="phase">
-          <div class="phase-title"><span class="pnum">3</span><span class="ko-only">배포 및 연구 확장</span><span class="en-only">Deployment &amp; Research Expansion</span></div>
+          <div class="phase-title"><span class="pnum">3</span><span class="ko-only">현장 배포 자동화</span><span class="en-only">Field Deployment Automation</span></div>
           <div class="project-text">
-            <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+            <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
             <ul class="ko-only">
-              <li>모델 및 코드 변경 반영을 위한 배포 자동화(CI/CD) 환경 구축</li>
+              <li>코드 수정마다 현장 엘리베이터로 가서 USB로 수동 업데이트하는 운영 비효율</li>
+              <li>개발 PC와 현장 환경 차이, 버전 추적 부재로 안정적 배포 어려움</li>
             </ul>
             <ul class="en-only">
-              <li>Built an automated (CI/CD) deployment environment for rolling out model and code updates</li>
+              <li>Every code change required visiting the elevator for a manual USB update</li>
+              <li>Environment gaps between dev PC and field, with no version tracking, made stable deployment hard</li>
+            </ul>
+            <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+            <ul class="ko-only">
+              <li>코드, 모델, 의존성을 Docker 이미지로 묶는 배포 흐름 설계 및 CI/CD 구축</li>
+              <li>ARM64 호환 위한 사무실 Jetson self-hosted runner 네이티브 빌드 구성</li>
+              <li>PT hash engine cache 도입으로 동일 PT 재빌드 생략</li>
+            </ul>
+            <ul class="en-only">
+              <li>Designed the deployment flow and built a CI/CD that bundles code, model, and dependencies into a Docker image</li>
+              <li>Set up an in-office Jetson self-hosted runner for ARM64-native builds</li>
+              <li>Introduced a PT-hash engine cache to skip rebuilds for the same PT</li>
             </ul>
             <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
             <ul class="ko-only">
-              <li>Docker 기반 배포 자동화로 모델 변경의 안정적 반영<span class="sub">Bitbucket Pipelines + Jetson self-hosted runner 빌드, polling pull 재시작 (사내 검증 약 2분 내 반영)</span></li>
-              <li>후속 연구 및 IP 자산 확보 기반 마련<span class="sub">특허 3건 발명자 등재</span><span class="sub"><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">엣지 배포용 경량 RGB 행동 인식 (Under Review)</a></span><span class="sub"><a href="../../papers/ntu60-audio/">행동 인식 합성 데이터셋 증강 (Under Review)</a></span></li>
+              <li>수동 USB 업데이트에서 git push 기반 자동 배포로 전환</li>
+              <li>불안정 네트워크와 디바이스별 빌드 조건에 견고한 배포 구조 확보</li>
             </ul>
             <ul class="en-only">
-              <li>Stable rollout of model changes via Docker-based deployment automation<span class="sub">Bitbucket Pipelines + a Jetson self-hosted runner build, polling pull and restart (~2 min, in-house validation)</span></li>
-              <li>Laid the groundwork for follow-up research and IP assets<span class="sub">Named inventor on 3 patents</span><span class="sub"><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">Lightweight RGB action recognition for edge deployment (Under Review)</a></span><span class="sub"><a href="../../papers/ntu60-audio/">Action-recognition synthetic dataset augmentation (Under Review)</a></span></li>
+              <li>Shifted from manual USB updates to git push-driven automatic deployment</li>
+              <li>A robust deployment structure for unstable networks and per-device builds</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-title"><span class="pnum">4</span><span class="ko-only">연구 확장 및 IP</span><span class="en-only">Research &amp; IP</span></div>
+          <div class="project-text">
+            <ul class="ko-only">
+              <li>엘리베이터 엣지 작업 기반 후속 연구 진행<span class="sub"><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">엣지 배포용 경량 RGB 행동 인식 (Under Review)</a></span><span class="sub"><a href="../../papers/ntu60-audio/">행동 인식 합성 데이터셋 증강 (Under Review)</a></span></li>
+              <li>특허 3건 발명자 등재</li>
+            </ul>
+            <ul class="en-only">
+              <li>Follow-up research extended from the elevator edge work<span class="sub"><a href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">Lightweight RGB action recognition for edge deployment (Under Review)</a></span><span class="sub"><a href="../../papers/ntu60-audio/">Action-recognition synthetic dataset augmentation (Under Review)</a></span></li>
+              <li>Named inventor on 3 patents</li>
             </ul>
           </div>
         </div>
@@ -445,6 +472,6 @@
   <div class="container">© Dongsik Yoon <a href="../../">Home</a></div>
 </footer>
 
-<script src="../../assets/js/main.js?v=20260531j"></script>
+<script src="../../assets/js/main.js?v=20260531k"></script>
 </body>
 </html>
