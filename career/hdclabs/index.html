@@ -61,12 +61,12 @@
             <span class="en-only">Underground Parking Fire Detection</span>
           </div>
           <ul class="ko-only">
-            <li>YOLO + VLM 기반 화재/연기 탐지, PoC 설계부터 현장 배포까지 수행</li>
-            <li>광명센트럴아이파크 전기차 충전구역 적용 및 ICLRW 논문 발표</li>
+            <li>YOLO 및 VLM 통합 구조 기반의 화재 탐지 솔루션 개발</li>
+            <li>관련 논문 게재 및 신축 아이파크 단지에 해당 솔루션 적용</li>
           </ul>
           <ul class="en-only">
-            <li>End-to-end fire/smoke detection (YOLO + VLM), from PoC design to field deployment</li>
-            <li>Deployed at Gwangmyeong Central IPARK's EV charging zone; published at ICLRW</li>
+            <li>Developed a fire detection solution based on an integrated YOLO + VLM architecture</li>
+            <li>Published a paper on the work and deployed the solution at the Gwangmyeong Central IPARK complex</li>
           </ul>
         </button>
         <button type="button" class="proj-card" data-panel="elv">
@@ -75,12 +75,12 @@
             <span class="en-only">In-Elevator Situational Analysis System</span>
           </div>
           <ul class="ko-only">
-            <li>AI 기반 엘리베이터 내부 상황 실시간 분석, 데이터 구축부터 배포 자동화까지</li>
-            <li>3사 기술 제휴 MOU 체결, Jetson 기반 사내 엘리베이터 실연동</li>
+            <li>AI 기반의 승강기 내부 특정 상황 모니터링 솔루션 개발</li>
+            <li>현대 3사 MOU 체결을 위한 PoC 검증</li>
           </ul>
           <ul class="en-only">
-            <li>Real-time in-elevator situational analysis, from data construction to deployment automation</li>
-            <li>Enabled a three-party MOU; integrated on-site on Jetson</li>
+            <li>Developed an AI-based solution for monitoring specific situations inside elevators</li>
+            <li>Ran PoC validation that led to a three-party MOU among HDC group affiliates</li>
           </ul>
         </button>
         <button type="button" class="proj-card" data-panel="ip">
@@ -128,56 +128,21 @@
               <li>Researched and redesigned the end-to-end framework from PoC through field deployment</li>
               <li>Collaborated with external porting vendors and in-house system integrators to connect monitoring and alert services</li>
             </ul>
-            <h4><span class="ko-only">기여도 &amp; 협업</span><span class="en-only">Contribution &amp; Collaboration</span></h4>
-            <div class="contrib">
-              <svg class="contrib-donut" viewBox="0 0 100 100" aria-hidden="true">
-                <circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="9"/>
-                <circle cx="50" cy="50" r="40" fill="none" style="stroke:var(--accent)" stroke-width="9" stroke-dasharray="251.33" stroke-dashoffset="125.66" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-                <text x="50" y="58" text-anchor="middle" font-size="23" font-weight="700" style="fill:var(--accent)" font-family="inherit">50%</text>
-              </svg>
-              <div class="contrib-text">
-                <div class="contrib-role"><span class="ko-only">AI 시스템 개발 주도 (데이터, 모델 학습, 판단 구조)</span><span class="en-only">Led AI system development (data, model training, decision pipeline)</span></div>
-                <div class="contrib-collab"><span class="ko-only"><strong>협업</strong>PoC (팀 엔지니어 2명), 하드웨어/현장 포팅 (수호이미지), 플랫폼/알람 (내부 플랫폼팀)</span><span class="en-only"><strong>Collaboration</strong>PoC (2 team engineers), hardware/field porting (Suho Image), platform/alerts (internal platform team)</span></div>
-              </div>
-            </div>
             <h4><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></h4>
-            <div class="outcome-groups">
-              <div class="outcome-group">
-                <div class="group-label"><span class="ko-only">연구 결과</span><span class="en-only">Research Results</span></div>
-                <ul class="ko-only">
-                  <li>YOLOv8s + VLM(Florence2) 기반 화재/연기 탐지 PoC 설계 및 논문 발표</li>
-                  <li>합성 데이터 활용으로 화재/연기 탐지 정량 성능 향상<span class="sub">F1 0.82 → 0.86, 연기 recall 0.70 → 0.83</span></li>
-                  <li>도메인 특화 데이터 생성 파이프라인 구축으로 후속 연구 확장<span class="sub">추가 연구를 통한 논문 게재 및 특허 출원</span></li>
-                </ul>
-                <ul class="en-only">
-                  <li>Designed a YOLOv8s + VLM (Florence2) fire/smoke detection PoC and published a paper on it</li>
-                  <li>Improved fire/smoke detection accuracy using synthetic data<span class="sub">F1 0.82 → 0.86, smoke recall 0.70 → 0.83</span></li>
-                  <li>Extended the domain-specific data generation pipeline into follow-up research<span class="sub">Led to additional publications and patent filings</span></li>
-                </ul>
-              </div>
-              <div class="outcome-group">
-                <div class="group-label"><span class="ko-only">배포 구조 전환</span><span class="en-only">Deployment Redesign</span></div>
-                <ul class="ko-only">
-                  <li>초기 VLM 중심 PoC 구조의 엣지 디바이스 제약으로 현장 적용 한계 확인</li>
-                  <li>YOLOv8n + CLIP 경량 구조로 전환, Hailo 듀얼 칩 기반 실행 구조 확정<span class="sub">단순 모델 교체가 아닌 판단 구조 자체를 사후 검증 방식으로 재설계</span></li>
-                </ul>
-                <ul class="en-only">
-                  <li>Identified field-deployment limits of the initial VLM-centric PoC under edge-device constraints</li>
-                  <li>Switched to a YOLOv8n + CLIP lightweight architecture on a dual-chip Hailo runtime<span class="sub">Redesigned the decision pipeline itself as post-hoc verification, not a simple model swap</span></li>
-                </ul>
-              </div>
-              <div class="outcome-group">
-                <div class="group-label"><span class="ko-only">현장 적용</span><span class="en-only">Field Deployment</span></div>
-                <ul class="ko-only">
-                  <li>광명센트럴아이파크 전기차 충전구역 화재 감지 보조 시스템 시연 및 적용</li>
-                  <li>현장 운영 중 모델 오탐 이슈 원인 분석 및 재학습 대응<span class="sub">반복 오탐 유형을 학습 데이터로 재반영하여, 검증 성능을 유지하며 오탐 감소 확인</span></li>
-                </ul>
-                <ul class="en-only">
-                  <li>Demonstrated and deployed the auxiliary fire detection system at the EV charging zone of Gwangmyeong Central IPARK</li>
-                  <li>Diagnosed false-positive issues during field operation and addressed them through retraining<span class="sub">Fed recurring false-positive patterns back into training, cutting false alarms while preserving validated performance</span></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="ko-only">
+              <li>YOLOv8s + VLM(Florence2) 기반 화재/연기 탐지 PoC 설계 및 논문 발표</li>
+              <li>합성 데이터 활용 효과를 정량 검증하여 내부 평가 F1-score 향상</li>
+              <li>도메인 특화 데이터 생성 파이프라인 구축 경험을 후속 연구로 확장</li>
+              <li>YOLOv8n + CLIP 기반 경량 구조로 전환, Hailo 듀얼 칩 기반 실행 구조 확정</li>
+              <li>광명 센트럴 아이파크 전기차 충전구역 화재감지 보조 시스템 시연/적용</li>
+            </ul>
+            <ul class="en-only">
+              <li>Designed a YOLOv8s + VLM (Florence2) fire/smoke detection PoC and published a paper on it</li>
+              <li>Quantitatively validated the benefit of synthetic data, improving F1-score on internal evaluations</li>
+              <li>Extended the domain-specific data generation pipeline into follow-up research</li>
+              <li>Switched to a YOLOv8n + CLIP lightweight architecture; finalized a dual-chip Hailo runtime architecture</li>
+              <li>Demonstrated and deployed the auxiliary fire detection system at the EV charging zone of Gwangmyeong Central IPARK</li>
+            </ul>
             <h4><span class="ko-only">관련 연구</span><span class="en-only">Related Research</span></h4>
             <div class="related-groups">
               <div class="related-group">
@@ -255,56 +220,19 @@
               <li>Built synthetic data generation and a real-data collection/labeling pipeline to handle the wide-angle overhead viewpoint of elevator cameras</li>
               <li>Set up an automated deployment environment for rolling out model and code updates</li>
             </ul>
-            <h4><span class="ko-only">기여도 &amp; 협업</span><span class="en-only">Contribution &amp; Collaboration</span></h4>
-            <div class="contrib">
-              <svg class="contrib-donut" viewBox="0 0 100 100" aria-hidden="true">
-                <circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="9"/>
-                <circle cx="50" cy="50" r="40" fill="none" style="stroke:var(--accent)" stroke-width="9" stroke-dasharray="251.33" stroke-dashoffset="87.96" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-                <text x="50" y="58" text-anchor="middle" font-size="23" font-weight="700" style="fill:var(--accent)" font-family="inherit">65%</text>
-              </svg>
-              <div class="contrib-text">
-                <div class="contrib-role"><span class="ko-only">AI 시스템 개발 주도 (데이터, 모델 학습, 판단 로직, 배포)</span><span class="en-only">Led AI system development (data, model training, decision logic, deployment)</span></div>
-                <div class="contrib-collab"><span class="ko-only"><strong>협업</strong>하드웨어 (팀 엔지니어 2명, 내부 IoT팀), E/V 제어 (현대엘리베이터)</span><span class="en-only"><strong>Collaboration</strong>Hardware (2 team engineers, internal IoT team), E/V control (Hyundai Elevator)</span></div>
-              </div>
-            </div>
             <h4><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></h4>
-            <div class="outcome-groups">
-              <div class="outcome-group">
-                <div class="group-label"><span class="ko-only">기술 PoC 검증</span><span class="en-only">Technical PoC Validation</span></div>
-                <ul class="ko-only">
-                  <li>반려견 검출과 점유율 추정이 가능한 상황 분석 PoC 설계 및 검증</li>
-                  <li>HDC랩스, HDC현대산업개발, 현대엘리베이터 3사 기술 제휴 MOU 체결<span class="sub">PoC 검증 결과를 3사 기술 제휴 검토의 기술적 근거로 활용</span></li>
-                </ul>
-                <ul class="en-only">
-                  <li>Designed and validated a situational-analysis PoC that detects pets and estimates cabin occupancy</li>
-                  <li>Reached a three-party technical-partnership MOU among HDC LABS, HDC Hyundai Development, and Hyundai Elevator<span class="sub">PoC results served as the technical basis for the three-party partnership review</span></li>
-                </ul>
-              </div>
-              <div class="outcome-group">
-                <div class="group-label"><span class="ko-only">엣지 환경 재설계와 데이터 전략</span><span class="en-only">Edge Redesign &amp; Data Strategy</span></div>
-                <ul class="ko-only">
-                  <li>10Hz 상태 송신 요구 대응을 위한 Jetson 기반 배포 구조 전환<span class="sub">사내 엘리베이터 2대 실연동, E/V 운행 및 도어 제어 검증</span></li>
-                  <li>운영 시나리오 중심 검증 및 판단 로직 최적화로 제품화 가능성 제고<span class="sub">top-view 차폐, door status 기반 상황과 CAN payload 출력 구조 검증</span><span class="sub">7개 시나리오 평균 KPI 97.7% 달성 (목표 95% 초과)</span></li>
-                  <li>도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제<span class="sub">반려견 검출 mAP50-95 0.47 → 0.79 개선</span></li>
-                </ul>
-                <ul class="en-only">
-                  <li>Switched to a Jetson-based deployment to meet a 10 Hz status-streaming requirement<span class="sub">Integrated with two in-house elevators; validated E/V operation and door control</span></li>
-                  <li>Optimized scenario-driven validation and decision logic to improve productization readiness<span class="sub">Validated top-view occlusion, door-status-aware states, and CAN-payload output structure</span><span class="sub">Achieved 97.7% average KPI across 7 scenarios (above the 95% target)</span></li>
-                  <li>Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data<span class="sub">Improved pet-detection mAP50-95 from 0.47 to 0.79</span></li>
-                </ul>
-              </div>
-              <div class="outcome-group">
-                <div class="group-label"><span class="ko-only">배포 준비와 연구 확장</span><span class="en-only">Deployment &amp; Research Expansion</span></div>
-                <ul class="ko-only">
-                  <li>배포 자동화 환경(CI/CD) 구축으로 모델 변경의 안정적 반영<span class="sub">수동 업데이트에서 Docker 기반 pull 배포 구조로 정립</span></li>
-                  <li>Vision AI 전반 후속 연구 및 IP 자산 확보 기반 마련<span class="sub">관련 논문 2편 제출, 특허 3건 발명자 등재</span></li>
-                </ul>
-                <ul class="en-only">
-                  <li>Built an automated deployment (CI/CD) environment for stable rollout of model changes<span class="sub">Moved from manual updates to a Docker-based pull deployment</span></li>
-                  <li>Laid the groundwork for broader Vision-AI follow-up research and IP assets<span class="sub">Submitted 2 related papers; named inventor on 3 patents</span></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="ko-only">
+              <li>반려견 검출과 점유율 추정이 가능한 엘리베이터 내부 상황 분석 PoC 설계 및 검증</li>
+              <li>PoC 결과를 바탕으로 HDC랩스, HDC현대산업개발, 현대엘리베이터 3사 기술 제휴 MOU 체결</li>
+              <li>운영 시나리오 중심의 검출 및 판단 로직 최적화를 통해 제품화 가능성 제고</li>
+              <li>도메인 특화 합성 데이터 생성 체계 및 배포 자동화 환경 구축</li>
+            </ul>
+            <ul class="en-only">
+              <li>Designed and validated a PoC capable of detecting pets and estimating cabin occupancy</li>
+              <li>The PoC enabled a three-party technical-partnership MOU among HDC LABS, HDC Hyundai Development, and Hyundai Elevator</li>
+              <li>Improved productization readiness by tuning detection and decision logic grounded in real-world operating scenarios</li>
+              <li>Established a domain-specific synthetic data generation pipeline and an automated deployment environment</li>
+            </ul>
             <h4><span class="ko-only">관련 연구</span><span class="en-only">Related Research</span></h4>
             <div class="related-groups">
               <div class="related-group">
