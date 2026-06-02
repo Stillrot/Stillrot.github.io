@@ -663,6 +663,10 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 .career-detail .project h4 { margin: 16px 0 6px; font-size: 14px; color: var(--accent); letter-spacing: 0.2px; }
 .career-detail .project ul { margin: 4px 0 8px 18px; padding: 0; color: var(--fg); }
 .career-detail .project ul li { margin: 2px 0; }
+/* small circle bullets (icon-link-list keeps its disc) */
+.career-detail .project ul:not(.icon-link-list) { list-style: none; }
+.career-detail .project ul:not(.icon-link-list) > li { position: relative; }
+.career-detail .project ul:not(.icon-link-list) > li::before { content: ''; position: absolute; left: -12px; top: 0.55em; width: 4.5px; height: 4.5px; border-radius: 50%; background: var(--fg); }
 .career-detail .related-links { margin: 12px 0; display: flex; flex-direction: column; gap: 6px; }
 .career-detail .related-links a { font-size: 14px; }
 
@@ -758,9 +762,10 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 .career-detail .project .phase .project-text > .blabel:first-child { margin-top: 0; }
 .career-detail .project .phase ul { margin: 2px 0 4px 18px; }
 /* indented detail/metric line under an achievement bullet */
-.career-detail .project ul li .sub { display: block; font-size: 12.5px; color: var(--fg-muted); margin-top: 3px; }
-.career-detail .project ul li .sub a { color: var(--accent-strong); font-weight: 600; }
-.career-detail .project ul li .sub a:hover { color: var(--accent); text-decoration: underline; }
+.career-detail .project ul li .sub { display: block; font-size: 12.5px; color: var(--fg-muted); line-height: 1.55; margin: 3px 0 0 1px; padding-left: 11px; border-left: 2px solid var(--border); }
+.career-detail .project ul li .sub a { color: var(--fg-muted); font-weight: 600; text-decoration: underline; text-decoration-color: var(--fg-muted); text-underline-offset: 2px; }
+.career-detail .project ul li .sub a::after { content: '\2197'; margin-left: 2px; font-weight: 700; }
+.career-detail .project ul li .sub a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .career-detail .project .phase ul li > a { color: var(--accent-strong); font-weight: 600; }
 .career-detail .project .phase ul li > a:hover { color: var(--accent); text-decoration: underline; }
 
