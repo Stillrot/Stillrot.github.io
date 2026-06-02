@@ -898,16 +898,16 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 }
 
 /* ----- Work & Activities timeline (two columns) ----- */
-.career-detail .wa { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; margin: 4px 0 8px; }
-.career-detail .wa-h { display: flex; align-items: baseline; gap: 8px; font-size: 14px; font-weight: 800; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 6px; margin-bottom: 4px; }
+.career-detail .wa { display: grid; grid-template-columns: 1.3fr 1fr; gap: 26px; align-items: start; margin: 4px 0 44px; }
+.career-detail .wa-h { display: flex; align-items: baseline; gap: 8px; font-size: 14px; font-weight: 800; color: var(--accent); border-bottom: 2px solid var(--accent-soft); padding-bottom: 5px; margin-bottom: 1px; }
 .career-detail .wa-col.edu .wa-h { color: #475569; border-bottom-color: #e2e8f0; }
 .career-detail .wa-ct { font-size: 11px; font-weight: 700; color: var(--fg-muted); }
 .career-detail .wa ul { list-style: none; margin: 0; padding: 0; }
-.career-detail .wa li { padding: 9px 0; border-bottom: 1px solid #f1f2f4; }
+.career-detail .wa li { display: flex; gap: 13px; align-items: baseline; padding: 4px 0; border-bottom: 1px solid #f1f2f4; }
 .career-detail .wa li:last-child { border-bottom: none; }
-.career-detail .wa-y { font-family: ui-monospace, monospace; font-size: 10.5px; font-weight: 700; color: var(--accent); letter-spacing: 0.3px; }
+.career-detail .wa-y { flex: 0 0 76px; font-family: ui-monospace, monospace; font-size: 10.5px; font-weight: 700; color: var(--accent); letter-spacing: 0.3px; white-space: nowrap; }
 .career-detail .wa-col.edu .wa-y { color: #64748b; }
-.career-detail .wa-nm { font-size: 13.5px; font-weight: 600; color: var(--fg); margin-top: 3px; line-height: 1.4; }
+.career-detail .wa-nm { flex: 1; min-width: 0; font-size: 13.5px; font-weight: 600; color: var(--fg); margin-top: 0; line-height: 1.32; }
 .career-detail .wa-role { font-size: 11px; font-weight: 500; color: var(--fg-muted); margin-left: 8px; white-space: nowrap; }
 .career-detail .wa-sub { display: block; font-weight: 500; color: var(--fg-muted); font-size: 11.5px; margin-top: 2px; }
 .career-detail .wa-news { font-size: 10px; font-weight: 600; color: var(--accent-strong); text-decoration: none; margin-left: 7px; white-space: nowrap; }
