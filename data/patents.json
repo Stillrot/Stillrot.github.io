@@ -98,6 +98,15 @@
       "patent_no": "10-2963799",
       "application_no": "10-2025-0182181",
       "granted_date": "2026-05-07"
+    },
+    {
+      "idx": 12,
+      "title": "행동인식을 기반으로 한 IoT 가전기기 제어방법 및 시스템",
+      "title_en": "Action-recognition-based method and system for controlling IoT home appliances",
+      "country": "KR",
+      "patent_no": "10-2971047",
+      "application_no": "10-2025-0182191",
+      "granted_date": "2026-05-26"
     }
   ],
   "application": [
@@ -119,13 +128,6 @@
     },
     {
       "idx": 3,
-      "title": "행동인식을 기반으로 한 IoT 가전기기 제어방법 및 시스템",
-      "title_en": "Action-recognition-based method and system for controlling IoT home appliances",
-      "country": "KR",
-      "application_no": "10-2025-0182191"
-    },
-    {
-      "idx": 4,
       "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
       "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
       "country": "KR",
