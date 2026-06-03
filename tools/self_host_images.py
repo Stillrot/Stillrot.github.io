@@ -25,6 +25,7 @@ import os
 import re
 import glob
 import subprocess
+import urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DESTDIR = os.path.join(ROOT, "assets", "img", "ext")
@@ -35,7 +36,13 @@ HTML_FILES = sorted(glob.glob(os.path.join(ROOT, "career", "*", "index.html")))
 
 
 def local_name(url):
-    return url.split("?")[0].rstrip("/").split("/")[-1]
+    # ASCII-safe filename: a percent-encoded name on disk would 404 because the
+    # server URL-decodes the request path before looking up the file.
+    name = url.split("?")[0].rstrip("/").split("/")[-1]
+    name = urllib.parse.unquote(name)
+    name = name.encode("ascii", "ignore").decode()
+    name = re.sub(r"[^A-Za-z0-9._-]+", "_", name)
+    return re.sub(r"_+", "_", name).strip("_")
 
 
 def collect_urls():
