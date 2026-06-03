@@ -103,6 +103,7 @@ section.hero { padding: 56px 0 32px; }
 }
 .hero h1 { font-size: 34px; margin: 0 0 6px; font-weight: 700; }
 .hero .subtitle { color: var(--fg-muted); margin: 0 0 16px; font-size: 16px; }
+.hero .lead { color: var(--fg); font-weight: 600; margin: 0 0 12px; font-size: 18px; line-height: 1.5; max-width: 620px; }
 .hero ul.bullets { margin: 0; padding: 0 0 0 18px; color: var(--fg-muted); }
 .hero ul.bullets li { margin: 4px 0; }
 .hero .avatar {

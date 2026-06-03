@@ -33,17 +33,17 @@ EN
 # 윤동식 AI Engineer
 Dongsik Yoon AI Engineer
 
-- AI 기반 영상처리에 관심을 가지고 있는 개발자
+연구부터 현장 배포까지, 실서비스에서 동작하는 영상 인식 AI 개발
 
-- 다년간의 연구실 경력으로 문제 해결을 위한 아이디어 제시 및 팀원과 협업할 수 있는 개발자
+Building real-world vision AI, from research to field deployment
 
-- 항상 새로운 것을 공부하여 개발에 필요한 기술 리서치가 가능한 개발자
+- 화재 감지, 엘리베이터 상황 분석 등 실환경 비전 과제의 PoC부터 현장 적용까지 수행
 
-- Engineer focused on AI-driven image and video processing
+- 엣지 타겟 파이프라인 재설계와 도메인 특화 데이터 구축, 연구 성과의 논문 및 특허화
 
-- Years of lab experience proposing solutions and collaborating with team members to solve real problems
+- Fire detection, in-elevator situational analysis, and other real-world vision tasks — from PoC to field deployment
 
-- Continuously studying new technologies and conducting research needed for development
+- Edge-targeted pipeline redesign and domain-specific data, with results consolidated into papers and patents
 
 GitHub
 
