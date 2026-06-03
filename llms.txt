@@ -1,0 +1,15 @@
+# Dongsik Yoon — AI Engineer
+
+> Portfolio of Dongsik Yoon (윤동식), AI Engineer — AI-driven image/video processing. Publications, patents, and project case studies (HDC LABS: fire detection, elevator situation analysis, IP/research).
+
+## Pages
+- [Home](https://stillrot.github.io/): Profile, career overview, and tabbed publications / patents / news / research
+- [Career — HDC LABS](https://stillrot.github.io/career/hdclabs/): Work & Activities timeline + fire / elevator / IP project deep-dives
+- [Career — Metaverse Entertainment](https://stillrot.github.io/career/metaent/): TD Team, AI Part
+- [Career — Korea University](https://stillrot.github.io/career/ku/): M.S. in Electrical Engineering
+- [Career — Baekseok University](https://stillrot.github.io/career/bu/): B.S. in Multimedia Engineering
+- [CV](https://stillrot.github.io/cv/): Curriculum vitae
+- [Portfolio Deck (2026)](https://stillrot.github.io/portfolio2026/): Slide-deck narrative of the projects and research
+
+## Full content
+- [llms-full.txt](https://stillrot.github.io/llms-full.txt): the entire site content + data in one plain-text file (best for feeding to an LLM)

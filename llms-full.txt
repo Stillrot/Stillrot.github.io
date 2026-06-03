@@ -1,0 +1,2359 @@
+# Dongsik Yoon — AI Engineer · Portfolio (full content)
+
+> Complete plain-text content and structure of https://stillrot.github.io/ , provided for LLMs/agents because the live site renders parts of its content with JavaScript. Contains: site map, every page's text, all internal/external links, and the full publications/patents/news/research data.
+
+Source of truth: the repository at github.com/Stillrot/Stillrot.github.io . Regenerate with tools/generate_llms.py after any content change.
+
+## Site map
+- https://stillrot.github.io/ — Home: Profile, career overview, and tabbed publications / patents / news / research
+- https://stillrot.github.io/career/hdclabs/ — Career — HDC LABS: Work & Activities timeline + fire / elevator / IP project deep-dives
+- https://stillrot.github.io/career/metaent/ — Career — Metaverse Entertainment: TD Team, AI Part
+- https://stillrot.github.io/career/ku/ — Career — Korea University: M.S. in Electrical Engineering
+- https://stillrot.github.io/career/bu/ — Career — Baekseok University: B.S. in Multimedia Engineering
+- https://stillrot.github.io/cv/ — CV: Curriculum vitae
+- https://stillrot.github.io/portfolio2026/ — Portfolio Deck (2026): Slide-deck narrative of the projects and research
+- https://stillrot.github.io/llms.txt — short index (this file's table of contents)
+
+
+======================================================================
+## Page: Home  (https://stillrot.github.io/)
+_Profile, career overview, and tabbed publications / patents / news / research_
+
+Dongsik Yoon
+
+HOME
+CAREER
+PUBLICATIONS
+NEWS
+RESEARCH
+
+KR
+EN
+
+# 윤동식 AI Engineer
+Dongsik Yoon AI Engineer
+
+- AI 기반 영상처리에 관심을 가지고 있는 개발자
+
+- 다년간의 연구실 경력으로 문제 해결을 위한 아이디어 제시 및 팀원과 협업할 수 있는 개발자
+
+- 항상 새로운 것을 공부하여 개발에 필요한 기술 리서치가 가능한 개발자
+
+- Engineer focused on AI-driven image and video processing
+
+- Years of lab experience proposing solutions and collaborating with team members to solve real problems
+
+- Continuously studying new technologies and conducting research needed for development
+
+GitHub
+
+LinkedIn
+
+Scholar
+
+Portfolio
+
+CV
+
+[image: Profile]
+
+## Career
+
+Click a card to view the details.
+
+[image: HDC LABS]
+
+HDC LABS
+
+R&D Center AI LAB
+
+2024.05 ~ Present
+
+[image: Metaverse Entertainment]
+
+Metaverse
+Entertainment
+
+TD Team AI Part
+
+2023.01 ~ 2024.05
+
+[image: Korea University]
+
+Korea
+University
+
+M.S. in Electrical Engineering
+
+2021.03 ~ 2023.02
+
+[image: Baekseok University]
+
+Baekseok
+University
+
+B.S. in Multimedia Engineering
+
+2015.03 ~ 2021.02
+
+Publications
+Patents
+News
+Research
+
+
+
+
+
+© Dongsik Yoon
+
+### Internal links
+- Dongsik Yoon -> https://stillrot.github.io/
+- HOME -> https://stillrot.github.io/
+- CAREER -> https://stillrot.github.io/#career
+- PUBLICATIONS -> https://stillrot.github.io/#publications
+- NEWS -> https://stillrot.github.io/#news
+- RESEARCH -> https://stillrot.github.io/#research
+- Portfolio -> https://stillrot.github.io/portfolio2026/
+- CV -> https://stillrot.github.io/cv/
+- HDC LABS R&D Center AI LAB 2024.05 ~ Present -> https://stillrot.github.io/career/hdclabs/
+- Metaverse Entertainment TD Team AI Part 2023.01 ~ 2024.05 -> https://stillrot.github.io/career/metaent/
+- Korea University M.S. in Electrical Engineering 2021.03 ~ 2023.02 -> https://stillrot.github.io/career/ku/
+- Baekseok University B.S. in Multimedia Engineering 2015.03 ~ 2021.02 -> https://stillrot.github.io/career/bu/
+
+### External links
+- GitHub -> https://github.com/Stillrot/RGINP
+- LinkedIn -> https://www.linkedin.com/in/%EB%8F%99%EC%8B%9D-%EC%9C%A4-30366223b/
+- Scholar -> https://scholar.google.co.kr/citations?user=-EfCFGAAAAAJ&hl=ko
+
+======================================================================
+## Page: Career — HDC LABS  (https://stillrot.github.io/career/hdclabs/)
+_Work & Activities timeline + fire / elevator / IP project deep-dives_
+
+Dongsik Yoon
+
+HOME
+CAREER
+PUBLICATIONS
+NEWS
+RESEARCH
+
+KR
+EN
+
+[image: HDC LABS]
+
+# HDC LABS
+
+R&D Center AI LAB Computer Vision Part 2024.05 ~ (재직중)
+
+R&D Center AI LAB Computer Vision Part 2024.05 ~ Present
+
+Computer Vision
+Edge Deployment
+Synthetic Data
+
+## Work & Activities
+
+- 2024
+
+디지털 AI 프레임
+Digital AI Frame AI Engineer
+기사 ↗
+News ↗
+
+- 2024 – 2025
+
+지하주차장 화재감지
+Underground Parking Fire Detection AI Engineer
+기사 ↗
+News ↗
+
+- 2025
+
+HL로보틱스 순찰로봇
+HL Robotics Patrol Robot AI Engineer
+기사 ↗
+News ↗
+
+- 2025 – 2026
+
+엘리베이터 내부 상황분석
+In-Elevator Situational Analysis AI Engineer
+기사 ↗
+News ↗
+
+- 2026 ~
+
+아이파크몰 AI 방문자 분석
+IPARK Mall AI Visitor Analytics
+기술 PM
+Technical PM
+기사 ↗
+News ↗
+
+- 2026 ~
+
+독자 AI 파운데이션 모델
+Sovereign AI Foundation Model
+실무담당자
+Core Engineer
+기사 ↗
+News ↗
+
+- 2025 – 2026
+
+K-Digital Training (KDT)
+강사, 멘토
+Instructor, Mentor
+기사 ↗
+News ↗
+생성형 AI 분석 및 서비스 개발
+Generative AI for Analytics & Service Development
+
+- 2026
+
+일학습병행
+Work-Study Program
+기업현장교사 3급
+On-site Mentor
+
+## Projects
+
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+
+Select a project to view its details below.
+
+지하주차장 화재 탐지
+
+Underground Parking Fire Detection
+
+- YOLO 및 VLM 기반 화재 탐지 솔루션 개발
+
+- Hailo-8 듀얼칩 기반 경량 구조로 재설계
+
+- 광명센트럴아이파크 실적용, 논문 및 특허 확보
+
+- Developed a YOLO + VLM-based fire detection solution
+
+- Redesigned to a lightweight architecture on dual Hailo-8 chips
+
+- Deployed at Gwangmyeong Central IPARK, with a paper and patent secured
+
+엘리베이터 내부 상황 분석 시스템
+
+In-Elevator Situational Analysis System
+
+- AI 기반 승강기 내부 상황 분석 솔루션 개발
+
+- Jetson 기반 단일 모델 구조 재설계
+
+- 현대 3사 MOU 체결, 서울원 아이파크 도입 예정
+
+- Developed an AI-based in-elevator situational-analysis solution
+
+- Redesigned to a single-model architecture on Jetson
+
+- Reached a three-party HDC MOU, with deployment planned at Seoul One IPARK
+
+지적재산권 확보
+
+Intellectual Property Portfolio
+
+- 특허 12건 등록, 3건 출원 진행
+
+- 국제 학회 논문 4편 게재
+
+- 논문화를 위한 기술 스터디 주도
+
+- 12 patents granted, 3 applications in progress
+
+- 4 papers published at international venues
+
+- Led a technical study group toward publications
+
+### 지하주차장 화재 감지 보조 시스템
+
+Underground Parking Fire Detection Assistance System
+
+핵심 역할
+Key role
+
+AI 시스템 개발 주도 (데이터, 모델 학습, 판단 구조)
+Led AI system development (data, model training, decision pipeline)
+
+협업PoC(팀 엔지니어 2명), 하드웨어/현장 포팅(수호이미지), 플랫폼/알람(내부 플랫폼팀)
+WithPoC (2 team engineers), hardware/field porting (Suho Image), platform/alerts (internal platform team)
+
+1
+기술 PoC 및 연구
+Technical PoC & Research
+
+연구 필요성
+Motivation
+
+- 잇따른 지하주차장 전기차 화재 발생으로 전용 화재 감지 시스템 요구
+
+- 이상온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요
+
+- Recurring EV fires in underground parking lots created demand for a dedicated detection system
+
+- An auxiliary system with early thermal-anomaly detection and automatic alerts was needed
+
+담당 업무
+Responsibilities
+
+- 지하주차장 CCTV 환경 특화 합성 데이터 생성
+
+- 화재/연기 탐지 YOLO 모델 재학습 및 검증
+
+- YOLOv8s + VLM(Florence2) 기반 탐지 PoC 설계
+
+- Built underground-parking CCTV-specific synthetic data
+
+- Retrained and validated YOLO fire/smoke detectors
+
+- Designed a YOLOv8s + VLM(Florence2) detection PoC
+
+업무 성과
+Achievements
+
+- 합성 데이터 활용으로 화재/연기 탐지 정량 성능 향상 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83
+
+- 연구 성과를 지식재산권으로 확보 — 논문 1건 게재, 특허 1건 등록 YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025)
+
+- Improved fire/smoke detection accuracy using synthetic data F1 0.82 → 0.86, smoke recall 0.70 → 0.83
+
+- Secured intellectual property from the work — 1 paper published, 1 patent granted YOLO-VLM-based indoor fire detection (ICLRW 2025)
+
+[image: Fire detection framework]
+
+ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크
+
+YOLO + VLM fire detection framework published at ICLRW.
+
+2
+현장 적용을 위한 재설계
+Redesign for Field Deployment
+
+기존 문제점
+Problem
+
+- 초기 VLM 중심 PoC 구조가 엣지 디바이스 제약으로 현장 적용에 한계
+
+- The initial VLM-centric PoC hit field-deployment limits under edge-device constraints
+
+담당 업무
+Responsibilities
+
+- YOLOv8n + CLIP 경량 구조 + Hailo 듀얼칩으로 재설계
+
+- 단순 모델 교체가 아닌 사후 검증(Detector → VLM) 판단 구조로 설계
+
+- 외부 포팅 업체, 내부 플랫폼팀과 협업해 모니터링/알람 서비스 연동
+
+- Redesigned to a YOLOv8n + CLIP lightweight architecture on a dual-chip Hailo runtime
+
+- Designed a post-hoc verification (Detector → VLM) decision structure rather than a simple model swap
+
+- Connected monitoring/alert services with an external porting vendor and the internal platform team
+
+업무 성과
+Achievements
+
+- 엣지 디바이스 제약을 충족하는 현장 적용 가능 구조 확보
+
+- Secured a field-deployable structure that satisfies edge-device constraints
+
+[image: Detection popup alert]
+
+AI CCTV 감시 공간 내 불꽃과 연기 감지 시 팝업 알림 예시
+
+Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV.
+
+3
+실 적용 현황
+Field Deployment Status
+
+담당 업무
+Responsibilities
+
+- 화재 감지 보조 시스템 현장 시연 및 적용 작업
+
+- 운영 중 모델 오탐 원인 분석 및 재학습 대응
+
+- Ran on-site demonstration and deployment work for the auxiliary fire detection system
+
+- Diagnosed model false-positive causes during operation and addressed them through retraining
+
+업무 성과
+Achievements
+
+- 광명센트럴아이파크 전기차 충전구역 실적용
+
+- 반복 오탐 재학습으로 검증 성능 유지하며 오탐 감소
+
+- 현장 운영 데이터 기반 후속 고도화 연구로 논문 2건 추가 게재 경량 초해상화 기술 검토 (ICCVW 2025) 합성 데이터 생성 자동화 (WACVW 2026)
+
+- Deployed in production at Gwangmyeong Central IPARK's EV charging zone
+
+- Cut false alarms through targeted retraining while preserving validated performance
+
+- Published 2 follow-up papers from advancement research on field-operation data Lightweight super-resolution study (ICCVW 2025) Automated synthetic data generation (WACVW 2026)
+
+[image: Field deployment example]
+
+광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황
+
+AI-assisted fire detection deployed at Gwangmyeong Central IPARK.
+
+### 엘리베이터 내부 상황 분석 시스템
+
+In-Elevator Situational Analysis System
+
+핵심 역할
+Key role
+
+AI 시스템 개발 주도 (데이터, 모델 학습, 판단 로직, 배포)
+Led AI system development (data, model training, decision logic, deployment)
+
+협업하드웨어(팀 엔지니어 2명, 내부 IoT팀), E/V 제어(현대엘리베이터)
+Withhardware (2 team engineers, internal IoT team), E/V control (Hyundai Elevator)
+
+1
+기술 PoC 검증
+Technical PoC Validation
+
+업무 목표
+Objectives
+
+- AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발
+
+- 점유 상태, 반려견 합승 등 특이상황 자동 탐지 및 대응
+
+- Developed a real-time AI system for analyzing situations inside elevators
+
+- Automatically detect and respond to special cases such as cabin occupancy and pets boarding
+
+담당 업무
+Responsibilities
+
+- 기술 제휴 MOU 검토용 내부 상황 분석 PoC 설계
+
+- 반려견 검출 및 점유율 추정 모델 구축
+
+- Designed the in-elevator situational-analysis PoC to support a partnership MOU
+
+- Built models for pet detection and cabin-occupancy estimation
+
+업무 성과
+Achievements
+
+- 3D detector와 VLM 결합 구조로 실시간 동작 가능성 검증 RTX 6000 Ada 기준 약 3 FPS 실측
+
+- HDC랩스, HDC현대산업개발, 현대엘리베이터 기술 제휴 MOU 체결 PoC 검증 결과를 3사 기술 제휴 검토의 기술적 근거로 활용 HDC현산, 서울원 아이파크에 AI 승강기 도입
+
+- Verified real-time feasibility with a combined 3D-detector + VLM architecture ~3 FPS measured on an RTX 6000 Ada
+
+- Reached a three-party MOU among HDC LABS, HDC Hyundai Development, and Hyundai Elevator PoC results served as the technical basis for the three-party partnership review HDC Hyundai Development to deploy AI elevators at Seoul One IPARK
+
+[image: Elevator interior PoC]
+
+HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시
+
+PoC footage captured inside an elevator at HDC LABS headquarters.
+
+2
+엣지 환경 재설계와 데이터 전략
+Edge Redesign & Data Strategy
+
+기존 문제점
+Problem
+
+- 협력사의 10Hz 상태 송신 요구 등 실서비스 엣지 환경 제약 충족 필요
+
+- top-view 차폐 등 엘리베이터 특수 시점 대응 데이터 부족
+
+- Real-service edge constraints such as a partner's 10 Hz status-streaming requirement had to be met
+
+- Data was scarce for the elevator's special viewpoint, including top-view occlusion
+
+담당 업무
+Responsibilities
+
+- 엣지 기반 경량 단일 파이프라인으로 재설계
+
+- 운영 시나리오 중심 판단 로직 최적화 및 CAN payload 출력 연동
+
+- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제
+
+- Redesigned the system into a lightweight, edge-based single-detector pipeline
+
+- Optimized scenario-driven decision logic and CAN-payload output integration
+
+- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data
+
+업무 성과
+Achievements
+
+- Jetson에서 10Hz 상태 송신 조건 충족 및 사내 엘리베이터 2대 실연동 전체 프로세스 10~13 FPS 실측, E/V 운행 및 도어 제어 검증
+
+- 내부 7개 시나리오 평균 KPI 97.7% 달성으로 제품화 가능성 확인
+
+- 도메인 특화 합성 데이터 생성 연구로 반려견 검출 성능 향상, 논문 1건 게재 반려견 검출 mAP50-95 0.47 → 0.79 합성 데이터 생성 자동화 (WACVW 2026)
+
+- Met the 10 Hz status-streaming requirement on Jetson and integrated two in-house elevators ~10–13 FPS end-to-end; validated E/V operation and door control
+
+- 97.7% average KPI across 7 internal scenarios, confirming productization readiness
+
+- Domain-specific synthetic-data-generation research improving pet detection, with 1 paper published Pet-detection mAP50-95 0.47 → 0.79 Automated synthetic data generation (WACVW 2026)
+
+[image: PoC architecture]
+
+기술 검증용 PoC 아키텍처 예시
+
+Example architecture used for technical PoC validation.
+
+3
+현장 배포 자동화
+Field Deployment Automation
+
+기존 문제점
+Problem
+
+- 코드 수정마다 현장 엘리베이터로 가서 USB로 수동 업데이트하는 운영 비효율
+
+- 개발 PC와 현장 환경 차이, 버전 추적 부재로 안정적 배포 어려움
+
+- Every code change required visiting the elevator for a manual USB update
+
+- Environment gaps between dev PC and field, with no version tracking, made stable deployment hard
+
+담당 업무
+Responsibilities
+
+- 코드, 모델, 의존성을 Docker 이미지로 묶는 배포 흐름 설계 및 CI/CD 구축
+
+- ARM64 호환 위한 사무실 Jetson self-hosted runner 네이티브 빌드 구성
+
+- PT hash engine cache 도입으로 동일 PT 재빌드 생략
+
+- Designed the deployment flow and built a CI/CD that bundles code, model, and dependencies into a Docker image
+
+- Set up an in-office Jetson self-hosted runner for ARM64-native builds
+
+- Introduced a PT-hash engine cache to skip rebuilds for the same PT
+
+업무 성과
+Achievements
+
+- 수동 USB 업데이트에서 git push 기반 자동 배포로 전환 사내 반영까지 약 2분
+
+- Shifted from manual USB updates to git push-driven automatic deployment ~2 min to in-house rollout
+
+4
+연구 확장 및 IP
+Research & IP
+
+연구 계기
+Background
+
+- 사내 사업개발팀의 추가 기술 개발 가능성 문의
+
+- Inquiry from the in-house business-development team on the feasibility of additional technical development
+
+연구 성과
+Results
+
+- 가능성 검토를 위한 후속 연구 진행
+
+- 관련 특허 3건 발명자 등재
+
+- Conducted follow-up research to assess that feasibility
+
+- Named inventor on 3 related patents
+
+Under Review
+
+엣지 배포용 경량 RGB 행동 인식
+Lightweight RGB Action Recognition for Edge Deployment
+
+Under Review
+
+행동 인식 합성 데이터셋 증강
+Action-Recognition Synthetic Dataset Augmentation
+
+### 지적재산권 확보
+
+Intellectual Property Portfolio
+
+#### 업무 배경
+Background
+
+- 자체 개발한 핵심 알고리즘과 시스템의 권리화
+
+- HDC 그룹의 AI 기술 자산 확보 및 경쟁력 강화
+
+- Patent prosecution for core algorithms and systems developed in-house
+
+- Build the HDC Group's AI technology assets and strengthen competitiveness
+
+#### 담당 업무
+Responsibilities
+
+- 주요 프로젝트 결과물에 대한 청구항 설계
+
+- 특허 사무소가 작성한 명세서 검토
+
+- 우선심사 신청을 위한 기술 자료 정리 및 근거 자료 작성
+
+- 국제 학회 논문 작성, 투고, 심사 대응
+
+- Drafted claim structures for the outputs of major projects
+
+- Reviewed patent specifications drafted by external patent attorneys
+
+- Compiled technical evidence and supporting documents for expedited examination requests
+
+- Wrote, submitted, and managed reviewer responses for international conference papers
+
+#### 업무 성과
+Achievements
+
+- KR 특허 12건 등록, 2건 출원 진행
+
+- 국제 학회 논문 4편 게재
+
+- 자세한 목록은 홈 Publications 및 Patents 섹션 참고
+
+- 12 KR patents granted, 2 additional applications in progress
+
+- 4 papers published at international venues
+
+- See the home page Publications and Patents sections for the full list
+
+WACVW 2026 Oral
+
+From Prompts to Deployment
+
+ICCVW 2025
+
+Your Super Resolution Model is not Enough
+
+ICLRW 2025
+
+Integrated YOLO and VLM Fire Detection
+
+SIGGRAPH Asia 2024
+
+OverallNet: Scale-Arbitrary Lightweight SR
+
+© Dongsik Yoon Home
+
+
+### External links
+- Dongsik Yoon -> https://
+- HOME -> https://
+- CAREER -> https://#career
+- PUBLICATIONS -> https://#publications
+- NEWS -> https://#news
+- RESEARCH -> https://#research
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/277/0005646517
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/421/0008160290
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/018/0006142307
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/119/0002945075
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/119/0003093394
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/241/0003495235
+- 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/215/0001221815
+- YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025) -> https://papers/iclrw2025/
+- YOLO-VLM-based indoor fire detection (ICLRW 2025) -> https://papers/iclrw2025/
+- 경량 초해상화 기술 검토 (ICCVW 2025) -> https://papers/iccvw2025/
+- 합성 데이터 생성 자동화 (WACVW 2026) -> https://papers/wacvw2026/
+- Lightweight super-resolution study (ICCVW 2025) -> https://papers/iccvw2025/
+- Automated synthetic data generation (WACVW 2026) -> https://papers/wacvw2026/
+- HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
+- HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
+- Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
+- Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://papers/ntu60-audio/
+- 홈 Publications -> https://#publications
+- Patents -> https://#patents
+- Publications -> https://#publications
+- WACVW 2026 Oral From Prompts to Deployment -> https://papers/wacvw2026/
+- ICCVW 2025 Your Super Resolution Model is not Enough -> https://papers/iccvw2025/
+- ICLRW 2025 Integrated YOLO and VLM Fire Detection -> https://papers/iclrw2025/
+- SIGGRAPH Asia 2024 OverallNet: Scale-Arbitrary Lightweight SR -> https://papers/siggraph2024/
+- Home -> https://
+
+======================================================================
+## Page: Career — Metaverse Entertainment  (https://stillrot.github.io/career/metaent/)
+_TD Team, AI Part_
+
+Dongsik Yoon
+
+HOME
+CAREER
+PUBLICATIONS
+NEWS
+RESEARCH
+
+KR
+EN
+
+[image: Metaverse Entertainment]
+
+# Metaverse Entertainment
+
+Technical Design Department Technical Development Team AI Part 2023.01 ~ 2024.05
+
+Generative AI
+StyleGAN
+TTS / Voice
+LLM Chatbot
+
+## Projects
+
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+
+Select a project to view its details below.
+
+사용자 맞춤형 이미지 생성
+
+Customized Image Generation
+
+- Stable Diffusion 기반 생성 모델 구축 및 사내 배포
+
+- StyleGAN 기반 연령 변환 기술 연구
+
+- Built and internally deployed a Stable Diffusion-based generative pipeline
+
+- Researched StyleGAN-based age-transformation techniques
+
+화자 변환 음성 AI 연구
+
+Speaker-Conversion Voice AI
+
+- AutoEncoder 기반의 다중 언어 TTS 기술 연구
+
+- 음성 변환 모델 미세조정 및 사내 배포
+
+- Researched AutoEncoder-based multilingual TTS
+
+- Fine-tuned and internally deployed a voice-conversion model
+
+페르소나 AI Chatbot 개발
+
+Persona AI Chatbot Development
+
+- RAG 기반 LLM(LLaMA2, GPT-4) 챗봇 구축 및 데모
+
+- Built and demoed a RAG-based chatbot using LLaMA2 and GPT-4
+
+### 인플루언서 맞춤 이미지 생성
+
+Influencer-Tailored Image Generation
+
+#### 업무 목표
+Objectives
+
+- 디자이너의 버추얼 인플루언서 SNS 이미지 편집 속도 개선
+
+- 특정 인물의 의상 착의, 구도 확인 등을 위한 이미지 생성 모델 구축
+
+- Improved the designers' editing throughput for virtual-influencer social posts
+
+- Built an image generation model for previewing outfits and compositions on a specific persona
+
+#### 담당 업무
+Responsibilities
+
+- Stable Diffusion 모델 선정 및 LoRA finetuning
+
+- 고품질 이미지 생성을 위한 ComfyUI workflow 개선
+
+- 디자이너 편의를 위한 Gradio 기반 webui 사내 배포
+
+- Selected a Stable Diffusion backbone and ran LoRA fine-tuning
+
+- Improved ComfyUI workflows to produce higher-quality generations
+
+- Internally deployed a Gradio-based web UI for the design team
+
+#### 업무 성과
+Achievements
+
+- 인플루언서 인스타그램(rina.8k) 포스트 제작
+
+- 유튜브 썸네일 및 컨텐츠 이미지 제작
+
+- Produced posts for the influencer Instagram account (rina.8k)
+
+- Produced YouTube thumbnails and supporting content imagery
+
+- MAVE: YouTube
+
+- rina.8k Instagram
+
+[image: Faceswap example]
+
+대역 모델 → 특정 인플루언서 face-swap 예시
+
+Example of face-swapping from a stand-in model onto the target influencer persona.
+
+### Face Re-Aging 기술 개발
+
+Face Re-Aging Technology Development
+
+#### 업무 목표
+Objectives
+
+- 디자이너의 인물 연령 리터칭 작업 속도 개선
+
+- AI 기술 기반의 가이드 이미지 제공
+
+- Speed up designers' character-age retouching workflow
+
+- Provide AI-generated reference images to guide the work
+
+#### 담당 업무
+Responsibilities
+
+- StyleGAN 기반의 나이 변환 기술 연구 및 논문 작성
+
+- 연령 변환을 위해 두 단계로 구성된 새로운 프레임워크 제안
+
+- Researched and wrote a paper on StyleGAN-based age transformation
+
+- Proposed a novel two-stage framework for face re-aging
+
+#### 업무 성과
+Achievements
+
+- IEEE Access 1저자 논문 게재 (IF=3.9)
+First-author paper published in IEEE Access (IF=3.9).
+
+[image: Age transformation result]
+
+연령 변환 가이드 이미지 생성 예시
+
+Example reference images generated for age transformation.
+
+### 화자 변환 음성 AI 연구
+
+Speaker-Conversion Voice AI
+
+#### 담당 업무
+Responsibilities
+
+- 촬영 비용 절감을 위한 특정 캐릭터 성우 전용 음성 변환 모델 미세조정 및 사내 배포
+
+- 캐릭터 음성 서비스를 위한 AutoEncoder 기반의 다중 언어 TTS 기술 개발
+
+- Fine-tuned and internally deployed a character-specific voice-conversion model to reduce voice actor casting costs
+
+- Developed an AutoEncoder-based multilingual TTS system for character voice services
+
+#### 업무 성과
+Achievements
+
+- 관련 유튜브 컨텐츠 제작 및 성우 섭외 비용 절감
+
+- Produced supporting YouTube content while cutting voice actor casting costs
+
+[image: MAVE April Fools' special thumbnail]
+
+음성 변환 TTS 기술을 적용한 MAVE 만우절 특집 영상
+
+MAVE April Fools' special, featuring the voice-conversion TTS work
+
+### 페르소나 AI Chatbot 개발
+
+Persona AI Chatbot Development
+
+#### 담당 업무
+Responsibilities
+
+- RAG 기반 Open LLM(LLaMA2, GPT-4)을 활용한 챗봇 데모 구축 및 사내 테스트
+
+- 특정 아티스트의 정체성으로 학습된 LLM 모델을 사용한 1:1 대화 서비스 제공
+
+- 라이브 컨텐츠에 사용될 LLM 기반 챗봇 시스템 개발 및 Unreal Engine과 연동
+
+- 챗봇 시스템 전문 업체 미팅 및 관련 회의 참석
+
+- Built and internally tested a RAG-based chatbot demo on open LLMs (LLaMA2, GPT-4)
+
+- Delivered a 1:1 conversation service using LLMs trained on a specific artist's persona
+
+- Developed an LLM-based chatbot system for live content and integrated it with Unreal Engine
+
+- Met with specialist chatbot vendors and attended related discussions
+
+#### 관련 기사
+Related News
+
+- 메타버스엔터테인먼트, 업스테이지와 '페르소나AI' 공동 개발 위한 전략적 협업
+Metaverse Entertainment partners with Upstage to co-develop "Persona AI"
+
+- 메타버스엔터테인먼트, 페르소나 AI 적용한 채팅 서비스 '챗 시우' 오픈
+Metaverse Entertainment launches "Chat SIU:", a chat service powered by Persona AI
+
+[image: Chat SIU: persona chatbot conversation example]
+
+MAVE 멤버 '시우' 페르소나로 학습된 챗봇과의 대화 예시 ('챗 시우' 서비스)
+
+A conversation with the chatbot trained on MAVE member SIU's persona (the "Chat SIU:" service)
+
+© Dongsik Yoon Home
+
+
+### External links
+- Dongsik Yoon -> https://
+- HOME -> https://
+- CAREER -> https://#career
+- PUBLICATIONS -> https://#publications
+- NEWS -> https://#news
+- RESEARCH -> https://#research
+- MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
+- rina.8k Instagram -> https://www.instagram.com/rina.8k/
+- IEEE Access 1저자 논문 게재 (IF=3.9)First-author paper published in IEEE Access (IF=3.9). -> https://papers/access2023/
+- MAVE 만우절 특집 영상을 유튜브에서 보기 -> https://www.youtube.com/watch?v=UoWzaH7a8C0
+- 메타버스엔터테인먼트, 업스테이지와 '페르소나AI' 공동 개발 위한 전략적 협업Metaverse Entertainment partners with Upstage to co-develop "Persona AI" -> https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4221&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8
+- 메타버스엔터테인먼트, 페르소나 AI 적용한 채팅 서비스 '챗 시우' 오픈Metaverse Entertainment launches "Chat SIU:", a chat service powered by Persona AI -> https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4559&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8
+- Home -> https://
+
+======================================================================
+## Page: Career — Korea University  (https://stillrot.github.io/career/ku/)
+_M.S. in Electrical Engineering_
+
+Dongsik Yoon
+
+HOME
+CAREER
+PUBLICATIONS
+NEWS
+RESEARCH
+
+KR
+EN
+
+[image: Korea University]
+
+# Korea University
+
+전기전자공학과 석사 ISPL 2021.03 ~ 2023.02
+
+M.S. in Electrical Engineering ISPL 2021.03 ~ 2023.02
+
+Signal Processing
+GAN
+TTS
+Computer Vision
+
+## Education
+
+전기전자공학과 석사과정 2021.03 ~ 2023.02
+
+M.S. program, Department of Electrical Engineering 2021.03 ~ 2023.02
+
+- 전체평점: 4.13 / 4.5 (총 24 학점)
+
+- Overall GPA: 4.13 / 4.5 (24 credits total)
+
+ISPL: Intelligent Signal Processing Laboratory 2020.11 ~ 2022.12 지도교수 고한석
+
+ISPL: Intelligent Signal Processing Laboratory 2020.11 ~ 2022.12 Advisor: Prof. Hanseok Ko
+
+졸업 논문: Deep Learning Framework Design via Condition Guided Learning
+( Paper)
+
+M.S. thesis: Deep Learning Framework Design via Condition Guided Learning
+( Paper)
+
+## Projects
+
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+
+Select a project to view its details below.
+
+1차원 신호처리
+
+1D Signal Processing
+
+- GAN 기반 가상 중규모 지진파 생성 알고리즘 개발
+
+- 가상 지진 시나리오 소프트웨어 개발
+
+- Developed a GAN-based algorithm for generating moderate-magnitude synthetic seismic signals
+
+- Built software for simulating virtual earthquake scenarios
+
+음성 합성 (TTS)
+
+Text-to-Speech (TTS)
+
+- 낭독체 및 대화체 음성 합성 모델 개발
+
+- 다중 화자 및 감정 음성 DB 구축
+
+- Developed TTS models for both narration and dialogue styles
+
+- Built a multi-speaker, multi-emotion speech database
+
+이미지 처리
+
+Image Processing
+
+- 조건부 얼굴 이미지 복원 모델 개발
+
+- StyleGAN 및 NeRF-GAN을 활용한 이미지 편집
+
+- Developed a conditional face image inpainting model
+
+- Image editing using StyleGAN and NeRF-GAN
+
+### 인공지능 기술을 활용한 가상의 한반도 지진 시나리오 생성 기법 연구 (기상청 연구용역, 2021)
+
+AI-based Generation of Virtual Earthquake Scenarios on the Korean Peninsula (Research project commissioned by the Korea Meteorological Administration (KMA), 2021)
+
+#### 연구 필요성
+Motivation
+
+- 2000년 이후 한반도 내 규모 5.0 이상 지진 발생, 추가 가능성 경고
+
+- 국내 규모 3.0 이상 지진 빈도가 낮아 분석 시스템 검증 한계
+
+- Since 2000, magnitude 5.0+ earthquakes have occurred on the Korean Peninsula, with warnings of further events
+
+- Low frequency of M3.0+ events in Korea limits validation of analysis systems
+
+#### 연구 목표
+Objectives
+
+- GAN 기반 규모 3.0 이상의 지진 데이터 생성 기술 개발
+
+- 메타데이터를 이용한 가상 지진 시나리오 소프트웨어 개발
+
+- Develop GAN-based generation of M3.0+ synthetic earthquake data
+
+- Develop software that uses metadata to compose virtual earthquake scenarios
+
+#### 담당 업무
+Responsibilities
+
+- 생성 모델 학습을 위한 지진 데이터셋 구축
+
+- 생성된 지진파 검증 알고리즘 구현
+
+- 지진 시나리오 소프트웨어 제작 및 유지보수
+
+- Built the earthquake dataset used to train the generative model
+
+- Implemented an algorithm for validating generated waveforms
+
+- Developed and maintained the earthquake-scenario software
+
+#### 연구 성과
+Results
+
+- 지진 시나리오 소프트웨어 기상청 배포 및 유지보수
+
+- Delivered and maintained the earthquake-scenario software for the Korea Meteorological Administration
+
+- IEEE GRSL 1저자 게재 (IF=5.3)
+First-author paper in IEEE GRSL (IF=5.3)
+
+[image: Virtual earthquake scenario]
+
+가상 지진 시나리오 소프트웨어 예시
+
+Example screen from the virtual earthquake-scenario software.
+
+### 낭독체 및 대화체 음성 합성 모델 개발 연구 (Deep Machine LAB, 2022)
+
+Reading- and Conversational-Style TTS Model Development (Deep Machine LAB, 2022)
+
+#### 연구 목표
+Objectives
+
+- 빠른 추론이 가능한 음성 합성(Text-to-Speech) 알고리즘 설계
+
+- 다중 화자 음성 합성을 위한 모델 구조 연구
+
+- 운율 및 감정 제어 TTS 모델 연구
+
+- 발화 시간 및 피치 조절 인코더 연구
+
+- Design a fast-inference text-to-speech algorithm
+
+- Study model architectures for multi-speaker synthesis
+
+- Investigate TTS models with prosody and emotion control
+
+- Investigate duration and pitch control encoders
+
+#### 담당 업무
+Responsibilities
+
+- 화자 및 감정별 음성 데이터셋 구축 및 전처리 파이프라인 개발
+
+- 참조 오디오 기반의 감정 제어 음성 합성 모델 제안
+
+- Built the speaker- and emotion-labelled speech dataset and the preprocessing pipeline
+
+- Proposed a reference-audio-based TTS model with emotion control
+
+#### 연구 성과
+Results
+
+- 낭독 및 대화체 통합 TTS 프로토타입 구현
+
+- MOS +5%, Similarity-MOS +11% (n = 30)
+
+- Implemented a unified TTS prototype covering narration and dialogue styles
+
+- MOS +5%, Similarity-MOS +11% (n = 30)
+
+- 데모 페이지
+Demo page
+
+[image: TTS model architecture]
+
+제안한 참조 스타일 기반의 음성 합성 모델 구조
+
+Architecture of the proposed reference-style TTS model.
+
+### 이미지 처리 연구
+
+Image Processing Research
+
+#### 연구 목표
+Objectives
+
+- 사용자 의도를 반영할 수 있는 참조 이미지 얼굴 속성 기반 이미지 복원 모델 제안
+
+- StyleGAN 기반의 이미지 복원 및 편집 모델 제안
+
+- 비지도학습 기반의 3D aware GAN 구조 제안
+
+- Propose a reference-image, attribute-aware face inpainting model that reflects user intent
+
+- Propose StyleGAN-based image inpainting and editing models
+
+- Propose an unsupervised 3D-aware GAN architecture
+
+#### 담당 업무
+Responsibilities
+
+- 박사 과정 연구생들과의 CV 논문 세미나 준비
+
+- 구체적인 연구 코드 및 결과를 보며 실험 과정 및 방향성 공유
+
+- Co-organized computer-vision paper seminars with PhD students
+
+- Walked through concrete code and results, sharing experimental procedures and directions
+
+#### 연구 성과
+Results
+
+- BMVC 2021 1저자 게재
+First-author paper at BMVC 2021
+
+- ICIP 2022 1저자 게재
+First-author paper at ICIP 2022
+
+- ECCV 2022 3저자 게재
+Third-author paper at ECCV 2022
+
+[image: BMVC2021 result]
+
+BMVC 2021 발표 논문 결과 예시
+
+Example results from the BMVC 2021 paper.
+
+[image: ECCV2022 result]
+
+ECCV 2022 발표 논문 결과 예시
+
+Example results from the ECCV 2022 paper.
+
+© Dongsik Yoon Home
+
+
+### External links
+- Dongsik Yoon -> https://
+- HOME -> https://
+- CAREER -> https://#career
+- PUBLICATIONS -> https://#publications
+- NEWS -> https://#news
+- RESEARCH -> https://#research
+- Paper -> https://dcollection.korea.ac.kr/srch/srchDetail/000000270183
+- IEEE GRSL 1저자 게재 (IF=5.3)First-author paper in IEEE GRSL (IF=5.3) -> https://papers/grsl2023/
+- 데모 페이지Demo page -> https://sites.google.com/view/silhouetts-samples/%ED%99%88
+- BMVC 2021 1저자 게재First-author paper at BMVC 2021 -> https://papers/bmvc2021/
+- ICIP 2022 1저자 게재First-author paper at ICIP 2022 -> https://papers/icip2022/
+- ECCV 2022 3저자 게재Third-author paper at ECCV 2022 -> https://jgkwak95.github.io/surfgan/
+- BMVC 2021 논문 페이지로 이동 -> https://papers/bmvc2021/
+- ECCV 2022 프로젝트 페이지로 이동 -> https://jgkwak95.github.io/surfgan/
+- Home -> https://
+
+======================================================================
+## Page: Career — Baekseok University  (https://stillrot.github.io/career/bu/)
+_B.S. in Multimedia Engineering_
+
+Dongsik Yoon
+
+HOME
+CAREER
+PUBLICATIONS
+NEWS
+RESEARCH
+
+KR
+EN
+
+[image: Baekseok University]
+
+# Baekseok University
+
+ICT학부 멀티미디어학전공 학사 IPCG 2015.03 ~ 2021.02
+
+B.S. in Multimedia Engineering, School of ICT IPCG 2015.03 ~ 2021.02
+
+CNN / GAN
+Mask R-CNN
+Image Generation
+
+학부 연구실장
+
+Head of Undergraduate Research Group
+
+## Education
+
+ICT학부 멀티미디어학전공 학사과정 2015.03 ~ 2021.02
+
+B.S. program in Multimedia Engineering, School of ICT 2015.03 ~ 2021.02
+
+- 전체평점: 4.36 / 4.5 (총 130 학점)
+
+- 전공평점: 4.49 / 4.5 (총 79 학점)
+
+- Overall GPA: 4.36 / 4.5 (130 credits total)
+
+- Major GPA: 4.49 / 4.5 (79 credits total)
+
+IPCG: Image Processing and Computer Graphics Laboratory 2018.03 ~ 2020.10 지도교수 곽노윤
+
+IPCG: Image Processing and Computer Graphics Laboratory 2018.03 ~ 2020.10 Advisor: Prof. Noyoon Kwak
+
+## Experience
+
+- 2020년도 IPCG 연구실장
+
+- 매일 오전 7:30 Computer Vision 관련 세미나 진행
+
+- Head of the IPCG undergraduate research group, 2020
+
+- Hosted a daily computer-vision research seminar at 7:30 a.m
+
+## Projects
+
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+
+Select a project to view its details below.
+
+GAN 기반 이미지 생성 및 변환 연구
+
+GAN-based Image Generation & Translation
+
+- Conditional GAN 기반 데이터셋 생성
+
+- 손실 함수 개선을 통한 pix2pix 성능 개선
+
+- Dataset generation via Conditional GAN
+
+- Improved pix2pix performance through a refined loss function
+
+Mask R-CNN 기반 객체 분할
+
+Mask R-CNN-based Object Segmentation
+
+- 객체 인식을 통한 의미론적 분할 연구
+
+- 객체 인식 기반 데이터셋 증강
+
+- Semantic segmentation via object detection
+
+- Detection-based dataset augmentation
+
+### RAPGAN과 RRDB를 이용한 Image-to-Image Translation 성능 개선
+
+Improved Image-to-Image Translation using RAPGAN and RRDB
+
+#### 연구 목표
+Objectives
+
+- pix2pix 한계(저해상도, 품질 저하) 보완
+
+- Relativistic Average Patch GAN + RRDB 기반 새로운 구조 제안
+
+- 안정적이고 고품질의 Image-to-Image 변환
+
+- Address pix2pix limitations (low resolution, degraded quality)
+
+- Propose a new architecture combining Relativistic Average Patch GAN and RRDB
+
+- Achieve stable, high-quality image-to-image translation
+
+#### 담당 업무
+Responsibilities
+
+- RRDB 적층 Generator 설계 및 적용
+
+- RAPGAN 기반 손실함수 설계
+
+- Generator 사전 학습을 통한 초기 학습 불안정 해결
+
+- Designed and applied an RRDB-stacked generator
+
+- Designed a loss function based on RAPGAN
+
+- Resolved early-stage training instability via generator pre-training
+
+#### 연구 성과
+Results
+
+- 기존 pix2pix 대비 평균 FID 13% 이상 성능 향상
+
+- 다양한 데이터셋에서 시각적으로 우수한 결과 확인
+
+- Improved average FID by 13%+ over the original pix2pix
+
+- Visually superior results confirmed across multiple datasets
+
+[image: Facades dataset comparison]
+
+Facades 데이터셋 기반의 기존 pix2pix와 제안된 방법 비교
+
+Comparison of the original pix2pix and the proposed method on the Facades dataset.
+
+### ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할
+
+Object Segmentation using ESRGAN and Semantic Soft Segmentation
+
+#### 연구 목표
+Objectives
+
+- Mask R-CNN 분할 성능 보완
+
+- 소형 객체 분할 성능 향상 기법 개발
+
+- 초해상화 + Semantic Soft Segmentation(SSS) 기반 파이프라인 제안
+
+- Improve Mask R-CNN segmentation performance
+
+- Develop a technique that improves small-object segmentation
+
+- Propose a pipeline combining super-resolution with Semantic Soft Segmentation (SSS)
+
+#### 담당 업무
+Responsibilities
+
+- 객체 검출 및 초해상화 알고리즘 적용
+
+- SSS와 워터쉐드 기반 분할 보정
+
+- 제안 기법 성능 검증 및 기존 방식 비교
+
+- Applied object detection and super-resolution algorithms
+
+- Refined segmentation using SSS and watershed
+
+- Validated the proposed method and compared against prior approaches
+
+#### 연구 성과
+Results
+
+- 소형 객체 분할 성능 향상 (Mask R-CNN 대비 개선)
+
+- 반자동 데이터셋 생성 및 고품질 영상 편집 활용 가능성 확인
+
+- Improved small-object segmentation over baseline Mask R-CNN
+
+- Demonstrated applicability to semi-automated dataset construction and high-quality image editing
+
+[image: Block diagram]
+
+제안한 방법의 블록 다이어그램
+
+Block diagram of the proposed method.
+
+[image: Small object segmentation result]
+
+소형 객체 분할 성능 향상 예시
+
+Example of improved small-object segmentation.
+
+## Publications
+
+### Journal
+
+- [2]
+KCI
+
+윤동식, 곽노윤
+
+Dongsik Yoon, Noyoon Kwak,
+
+"ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할"
+"Object Segmentation using ESRGAN and Semantic Soft Segmentation",
+
+사물인터넷융복합논문지 Vol. 9, No. 1, pp. 97-104
+Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 97-104, 2023.02
+
+- [1]
+KCI
+
+윤동식, 곽노윤
+
+Dongsik Yoon, Noyoon Kwak,
+
+"RAPGAN와 RRDB를 이용한 Image-to-Image Translation의 성능 개선"
+"Improving Image-to-Image Translation Performance using RAPGAN and RRDB",
+
+사물인터넷융복합논문지 Vol. 9, No. 1, pp. 131-138
+Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 131-138, 2023.02
+
+### Conference
+
+- [10] 우수논문발표상 김주은, 김준오, 윤동식, 곽노윤, "Mask R-CNN과 Image-to-Image Translation을 이용한 카툰 이미지 생성", 한국멀티미디어학회 하계학술발표대회, 2020.08
+
+- [9] 윤동식, 곽노윤, "Relativistic Average Patch GAN과 Residual in Residual Dense Block을 이용한 개선된 Image-to-Image Translation", Korea Computer Congress (KCC) 2020, 2020.07
+
+- [8] 윤동식, 곽노윤, "ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할의 성능 개선", 한국정보처리학회 춘계학술발표대회, 2020.05
+
+- [7] 윤동식, 곽노윤, "Mask R-CNN과 Semantic Soft Segmentation을 이용한 객체 분할", 한국통신학회 동계종합학술발표회, 2020.02
+
+- [6] 우수논문상 윤동식, 곽노윤, "Mask R-CNN과 Image-to-Image Translation을 이용한 카툰 스케치 이미지의 자동 채색", 한국디지털콘텐츠·정보기술학회 공동학술대회, 2019.11
+
+- [5] 윤동식, 곽노윤, "Conditional GAN과 Mask R-CNN 기반의 Image-to-Image Translation을 이용한 차량 이미지 생성", 한국통신학회 추계종합학술발표회, 2019.11
+
+- [4] 윤동식, 신서연, 곽노윤, "Mask R-CNN과 Conditional GAN 기반의 Image-to-Image Translation을 이용한 얼굴 이미지 생성", 제29회 신호처리합동학술대회, 2019.09
+
+- [3] 윤동식, 최상욱, 곽노윤, "Mask R-CNN을 이용한 다중 뉴럴 스타일 전이 방법", 한국통신학회 하계종합학술발표회, 2019.06
+
+- [2] 금상 최상욱, 윤동식, 곽노윤, "VGG Net과 Saliency Map을 이용한 다중 뉴럴 스타일 전이 방법", 한국정보기술·디지털콘텐츠학회 하계공동학술대회, 2019.06
+
+- [1] 장려상 윤동식, 최상욱, 노성혁, 곽노윤, "Convolutional Neural Networks와 GrabCut을 이용한 다중 스타일 전이 방법", 한국통신학회 동계종합학술발표회, 2019.01
+
+- [10] Best Presentation J. Kim, J. Kim, Dongsik Yoon, N. Kwak, "Cartoon Image Generation using Mask R-CNN and Image-to-Image Translation", Korea Multimedia Society (KMMS) Summer Conference, 2020.08
+
+- [9] Dongsik Yoon, N. Kwak, "Improved Image-to-Image Translation using Relativistic Average Patch GAN and Residual-in-Residual Dense Blocks", Korea Computer Congress (KCC) 2020, 2020.07
+
+- [8] Dongsik Yoon, N. Kwak, "Performance Improvement of Object Segmentation using ESRGAN and Semantic Soft Segmentation", Korea Information Processing Society (KIPS) Spring Conference, 2020.05
+
+- [7] Dongsik Yoon, N. Kwak, "Object Segmentation using Mask R-CNN and Semantic Soft Segmentation", Korean Institute of Communications and Information Sciences (KICS) Winter Conference, 2020.02
+
+- [6] Best Paper Dongsik Yoon, N. Kwak, "Automatic Colorization of Cartoon Sketches using Mask R-CNN and Image-to-Image Translation", Korean Digital Content & Information Technology (KDCIT) Joint Conference, 2019.11
+
+- [5] Dongsik Yoon, N. Kwak, "Vehicle Image Generation using Conditional GAN and Mask R-CNN-based Image-to-Image Translation", KICS Fall Conference, 2019.11
+
+- [4] Dongsik Yoon, S. Shin, N. Kwak, "Face Image Generation using Mask R-CNN and Conditional GAN-based Image-to-Image Translation", 29th Joint Conference on Signal Processing, 2019.09
+
+- [3] Dongsik Yoon, S. Choi, N. Kwak, "Multi-Style Neural Style Transfer using Mask R-CNN", KICS Summer Conference, 2019.06
+
+- [2] Gold Prize S. Choi, Dongsik Yoon, N. Kwak, "Multi-Style Neural Style Transfer using VGG Net and a Saliency Map", Korea Institute of Information Technology / KDCIT Summer Conference, 2019.06
+
+- [1] Honorable Mention Dongsik Yoon, S. Choi, S. Noh, N. Kwak, "Multi-Style Transfer using Convolutional Neural Networks and GrabCut", KICS Winter Conference, 2019.01
+
+© Dongsik Yoon Home
+
+
+### External links
+- Dongsik Yoon -> https://
+- HOME -> https://
+- CAREER -> https://#career
+- PUBLICATIONS -> https://#publications
+- NEWS -> https://#news
+- RESEARCH -> https://#research
+- [2] KCI 윤동식, 곽노윤 Dongsik Yoon, Noyoon Kwak, "ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할""Object Segmentation using ESRGAN and Semantic Soft Segmentation", 사물인터넷융복합논문지 Vol. 9, No. 1, pp. 97-104Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 97-104, 2023.02 -> https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002935586
+- [1] KCI 윤동식, 곽노윤 Dongsik Yoon, Noyoon Kwak, "RAPGAN와 RRDB를 이용한 Image-to-Image Translation의 성능 개선""Improving Image-to-Image Translation Performance using RAPGAN and RRDB", 사물인터넷융복합논문지 Vol. 9, No. 1, pp. 131-138Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 131-138, 2023.02 -> https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002935590
+- Home -> https://
+
+======================================================================
+## Page: CV  (https://stillrot.github.io/cv/)
+_Curriculum vitae_
+
+← Portfolio
+Save as PDF / Print
+
+# Dongsik Yoon
+
+Curriculum Vitae
+Last updated May 2026
+
+kevinds1106@korea.ac.kr
+
+https://stillrot.github.io/
+
+Research
+Interest
+
+Real-World Computer Vision (Action Recognition, Anomaly Detection in CCTV)
+
+Synthetic Data Generation via Generative Models
+
+Edge AI (Resource-Efficient Inference, On-Device Deployment)
+
+Education
+
+M.S., Electrical Engineering
+
+Korea University, Seoul, Korea
+
+Dissertation: Deep Learning Framework Design via Condition Guided Learning
+
+Advisor: Prof. Hanseok Ko (Intelligent Signal Processing Laboratory, ISPL)
+
+Mar. 2021 - Feb. 2023
+
+B.S., ICT, Multimedia Engineering
+
+Baekseok University, Cheonan, Korea
+
+Advisor: Prof. No-Yoon Kwak (Image Processing and Computer Graphics Laboratory, IPCG)
+
+Overall GPA 4.36 / 4.5, Major GPA 4.49 / 4.5
+
+Mar. 2015 - Feb. 2021
+
+Industry
+Experience
+
+AI Research Engineer
+
+HDC LABS, Seoul, Korea
+
+Research on CCTV-based vision systems for indoor safety (fire detection, elevator analytics)
+
+May 2024 - Present
+
+AI Research Engineer
+
+Metaverse Entertainment, Seoul, Korea
+
+Generative AI for virtual-influencer content (image editing, voice synthesis)
+
+Jan. 2023 - May 2024
+
+Publications
+
+International Conference
+
+H. Park, J. Kim, J. Kim, D. Yoon,
+"CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",
+arXiv preprint, 2026
+
+D. Yoon, J. Kim, B. Park, S. Kim, S. Hwang,
+"Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition",
+Under review, 2026
+
+D. Yoon *, J. Kim *, D. Lee *,
+"Resource-Efficient RGB-Only Action Recognition for Edge Deployment",
+Under review, 2026
+
+D. Yoon, J. Kim,
+"From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
+IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 (Oral)
+
+D. Yoon, J. Kim,
+"Your Super Resolution Model is not Enough for Tackling Real-World Scenarios",
+International Conference on Computer Vision Workshop (ICCVW), 2025
+
+J. Kim *, Y. Lee *, D. Yoon *, C. Jung, G. Lee,
+"An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments",
+International Conference on Learning Representations Workshop (ICLRW), 2025
+
+D. Yoon, J. Kim, S. Song, Y. Lee, G. Lee,
+"OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360° Panoramic Images",
+SIGGRAPH Asia Posters, 2024
+
+J. Kwak, Y. Li, D. Yoon, D. Kim, H. Ko,
+"Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis",
+European Conference on Computer Vision (ECCV), 2022
+
+D. Yoon, J. Kwak, Y. Li, D. Han, H. Ko,
+"DIFAI: Diverse Facial Inpainting using StyleGAN Inversion",
+IEEE International Conference on Image Processing (ICIP), 2022
+
+J. Kwak, Y. Li, D. Yoon, D. Han, H. Ko,
+"Generate and Edit Your Own Character in a Canonical View",
+IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (CVPRW), AI for Content Creation Workshop, 2022
+
+D. Yoon, J. Kwak, Y. Li, Y. Jin, D. Han, H. Ko,
+"Reference Guided Image Inpainting using Facial Attributes",
+British Machine Vision Conference (BMVC), 2021
+
+J. Kwak, Y. Jin, Y. Li, D. Yoon, D. Kim, H. Ko,
+"Adverse Weather Image Translation with Asymmetric and Uncertainty-aware GAN",
+British Machine Vision Conference (BMVC), 2021
+
+Y. Li, Y. Jin, J. Kwak, D. Yoon, D. Han, H. Ko,
+"Adaptive Content Feature Enhancement GAN for Multimodal Selfie to Anime Translation",
+British Machine Vision Conference (BMVC), 2021
+
+International Journal
+
+Y. Li, D. Yoon, B. Ku, H. Ko,
+"ConSeisGen: Controllable Synthetic Seismic Waveform Generation",
+IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 4.8, SCI-E)
+
+D. Yoon, J. Kim, V. Lorant, S. Kang,
+"Manipulation of Age Variation Using StyleGAN Inversion and Fine-Tuning",
+IEEE Access, 2023 (IF 3.9, SCI-E)
+
+D. Yoon, Y. Li, B. Ku, H. Ko,
+"Estimation of Magnitude and Epicentral Distance from Seismic Waves using Deeper CRNN",
+IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 5.3, SCI-E)
+
+Projects
+
+In-elevator situational awareness
+
+Jan. 2025 - Feb. 2026
+
+Built a PoC for in-cab anomaly detection (pet detection, occupancy estimation) that triggered a HDC LABS / HDC Hyundai Industrial Development / Hyundai Elevator three-party MOU. Constructed a domain-specific synthetic + real labelling pipeline and a deployment-automation environment.
+
+Affiliation: HDC LABS
+
+AI fire / smoke detection for underground parking lots
+
+May 2024 - Oct. 2025
+
+Designed a synthetic-data pipeline for CCTV-specific fire scenes; trained YOLOv8s + Florence2 VLM detector and migrated to a YOLOv8n + CLIP edge variant for Hailo dual-chip deployment. Demonstrated at Gwangmyeong Central IPARK.
+
+Affiliation: HDC LABS
+
+Designer-facing image generation for virtual influencers
+
+Jan. 2023 - May 2024
+
+Curated Stable Diffusion LoRA workflows and a Gradio-based internal UI used for MAVE: / rina.8k content. Researched a two-stage StyleGAN-based face re-aging framework, published in IEEE Access.
+
+Affiliation: Metaverse Entertainment
+
+Expressive multi-speaker TTS
+
+Jan. 2022 - Dec. 2022
+
+Built reference-audio-conditioned emotion control model for reading-style / dialog-style TTS (MOS +5%, Similarity-MOS +11% over baseline, n=30).
+
+Funding: Deep Machine Laboratory (DMLAB)
+
+Generative virtual earthquake scenarios for the Korean Peninsula
+
+Jan. 2021 - Dec. 2021
+
+Built a GAN-based generator and verification pipeline producing M ≥ 3.0 seismic waveforms; delivered a scenario-authoring software to KMA.
+
+Funding: Korea Meteorological Administration (KMA)
+
+Patents
+
+12 KR patents granted, 3 patent applications in progress (2 KR + 1 US)
+
+2024 - 2026
+
+Topics include fire detection in enclosed environments, in-elevator pet / occupancy analytics, construction-site hazard detection, domain-specific synthetic data generation, personalized object tracking, and AI-driven home agents.
+
+See stillrot.github.io/#patents for the full list.
+
+Academic
+Service
+
+Reviewer (peer-review)
+
+ICIP(26), ICBINB @ ICLR(26)
+
+Instructor, K-Digital Training | HDC LABS
+
+Generative AI for Analytics and Service Development
+
+2025 - 2026
+
+Grants & Awards
+
+Best Paper Presentation Award
+
+2020
+
+Korea Multimedia Society (KMS) Summer Annual Conference
+
+Best Paper Award
+
+2019
+
+Joint Conference of Korea Digital Contents Society (KDCS) and Korea Institute of Information Technology (KIIT)
+
+Gold Prize, Undergraduate Paper Competition
+
+2019
+
+KIIT / KDCS Joint Summer Conference
+
+Encouragement Award
+
+2019
+
+Korean Institute of Communications and Information Sciences (KICS) Winter Annual Conference
+
+### Internal links
+- https://stillrot.github.io/ -> https://stillrot.github.io/
+- stillrot.github.io/#patents -> https://stillrot.github.io/#patents
+
+### External links
+- ← Portfolio -> https://
+
+======================================================================
+## Page: Portfolio Deck (2026)  (https://stillrot.github.io/portfolio2026/)
+_Slide-deck narrative of the projects and research_
+
+[image: 윤동식 프로필 사진]
+
+윤동식
+
+AI Engineer
+
+Computer Vision / Edge AI
+
+Home
+
+GitHub
+
+LinkedIn
+
+Scholar
+
+CV
+
+# 실서비스 조건에서 동작하는
+
+Vision AI 시스템을
+
+설계하고 배포합니다.
+
+PoC to Deployment for Real-World Vision Systems
+
+화재 감지　 엘리베이터 내부 분석　 이상행동 인식　 생성형 AI
+
+PROFILE
+
+## 인적 사항
+
+학력
+
+고려대학교 석사
+
+전기전자공학과
+
+2021.03 – 2023.02 GPA 4.13 / 4.5
+
+[image: Korea University]
+
+백석대학교 학사
+
+ICT학부 멀티미디어공학
+
+2015.03 – 2021.02 GPA 4.36 / 4.5
+
+[image: 백석대학교]
+
+경력
+
+HDC LABS
+
+R&D Center AI LAB, Computer Vision Part
+
+2024.05 – 현재
+
+[image: HDC LABS]
+
+Metaverse Entertainment
+
+Technical Development Team, AI Part
+
+2023.01 – 2024.05
+
+[image: Metaverse Entertainment]
+
+핵심 강점
+
+현장 배포를 전제로 한 Vision PoC 설계 및 검증 경험
+
+실험용 PoC를 배포 가능한 구조로 전환해 현장 적용까지 수행
+
+도메인 특화 합성데이터 파이프라인 구축
+
+실데이터와 합성데이터를 연계한 데이터 구축 체계 설계
+
+엣지 디바이스 기준 파이프라인 재설계
+
+경량화 모델 기반 구조 설계 및 배포 자동화 환경 구축
+
+논문 및 특허로 이어지는 연구 성과 확장
+
+연구 산출물의 지적 재산화로 회사 기술 자산 축적
+
+기술 스택
+
+Vision Models
+
+YOLO family, Florence2, CLIP, SAM
+
+Generative AI
+
+StableDiffusion, FLUX, LoRA, ComfyUI, StyleGAN
+
+Edge AI / Deployment
+
+Jetson, ONNX, TensorRT, Docker, Bitbucket CI/CD
+
+Languages / Frameworks
+
+Python, PyTorch, Gradio
+
+PROJECT 01
+
+# 엘리베이터 내부 상황 분석 시스템
+
+엘리베이터 현장 적용을 목표로 데이터 구축부터 모델 검증, 배포 자동화까지 수행
+
+HDC LABS 2025.01 – 진행 중
+
+YOLO
+FLUX
+Jetson
+Bitbucket
+CI/CD
+
+[image: HDC LABS]
+
+## 엘리베이터 내부 상황 분석 시스템
+
+HDC LABS 2025.01 – 진행 중
+
+업무 목표
+
+AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발
+
+엘리베이터 내부 점유 상태, 반려견 합승 등 실시간 상황 분석
+
+담당 업무
+
+기술 제휴 MOU 검토를 위한 엘리베이터 내부 상황 분석 PoC 설계 및 성능 검증
+
+실서비스 적용을 위한 배포형 모델 구조 최적화 및 검출, 판단 로직 정교화
+
+엘리베이터 특수 시점 대응 합성 데이터 생성 및 실데이터 수집, 라벨링 체계 구축
+
+모델, 코드 변경사항 반영을 위한 배포 자동화(CI/CD) 환경 구축
+
+관련 연구
+
+Technical Exploration
+
+엣지 배포형 RGB-only 행동 인식 (Under Review)
+
+Technical Exploration
+
+행동 인식 전용 음성 데이터셋 구축 (Under Review)
+
+Dataset Generation
+
+합성 데이터 생성 자동화 (WACVW 2026)
+
+[image: 엘리베이터 내부 PoC 영상 예시]
+
+HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시
+
+기여도
+
+AI 시스템 개발 주도
+
+데이터, 모델 학습, 판단 로직, 배포
+
+협업하드웨어 (팀 엔지니어 2명, 내부 IoT팀),  E/V 제어 (현대엘리베이터)
+
+[image: HDC LABS]
+
+## 엘리베이터 내부 상황 분석 시스템 주요 성과
+
+01기술 PoC 검증
+
+반려견 검출과 점유율 추정이 가능한 상황 분석 PoC 설계 및 검증
+
+HDC현대산업개발, HDC랩스, 현대엘리베이터 기술 제휴 MOU 체결
+
+PoC 검증 결과를 3사 기술 제휴 검토의 기술적 근거로 활용
+
+02엣지 환경 재설계와 데이터 전략
+
+10Hz 상태 송신 요구 대응을 위한 Jetson 기반 경량 구조 전환
+
+사내 엘리베이터 2대 실연동, E/V 운행 및 도어 제어 검증
+
+운영 시나리오 중심 검증 및 판단 로직 최적화로 제품화 가능성 제고
+
+top-view 차폐, door status 기반 상황과 CAN payload 출력 구조 검증
+
+내부 7개 시나리오 평균 KPI 97.7% 달성
+
+도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제
+
+반려견 검출 mAP50-95 0.47 → 0.79 개선
+
+03배포 준비와 연구 확장
+
+배포 자동화 환경(CI/CD) 구축으로 모델 변경의 안정적 반영
+
+수동 업데이트에서 Docker 기반 pull 배포 구조로 정립
+
+Vision AI 전반 후속 연구 및 IP 자산 확보 기반 마련
+
+관련 논문 2편 제출, 특허 3건 발명자 등재
+
+[image: 기술 검증용 PoC 아키텍처 예시]
+
+기술 검증용 PoC 아키텍처 예시
+
+[image: HDC LABS]
+
+PROJECT 02
+
+# 지하주차장 화재 감지 보조 시스템
+
+지하주차장 CCTV 환경에 맞춰 PoC 설계부터 현장 배포까지 전 과정 수행
+
+HDC LABS 2024.05 – 2025.10
+
+YOLO
+Florence2
+CLIP
+StableDiffusion
+Hailo
+
+[image: HDC LABS]
+
+## 지하주차장 화재 감지 보조 시스템
+
+HDC LABS 2024.05 – 2025.10 Deployed
+
+연구 필요성
+
+잇따른 지하주차장 전기차 화재 사건 발생으로 전용 감지 시스템 요청
+
+이상 온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요
+
+담당 업무
+
+지하주차장 CCTV 환경 특화 합성 데이터 생성 프로세스 설계 및 구축
+
+합성 데이터 기반 화재, 연기 탐지 YOLO 모델 재학습 및 성능 검증
+
+PoC에서 현장 배포까지 단계별 프레임워크 연구 및 재설계
+
+외부 포팅 업체 및 내부 연계 조직과 협업하여 알림 서비스 연결
+
+관련 연구
+
+PoC Validation
+
+화재 감지 PoC 검증 (ICLRW 2025)
+
+Technical Exploration
+
+경량 초해상화 기술 검증 (ICCVW 2025)
+
+Dataset Generation
+
+합성 데이터 생성 자동화 (WACVW 2026)
+
+[image: AI CCTV 화재 감지 팝업 알림]
+
+AI CCTV 감시 공간 내 불꽃, 연기 감지 시 화재 감지 팝업 알림 예시
+
+기여도
+
+AI 시스템 개발 주도
+
+데이터, 모델 학습, 판단 구조
+
+협업PoC (팀 엔지니어 2명),  하드웨어/현장 포팅 (수호이미지),  플랫폼/알람 (내부 플랫폼팀)
+
+[image: HDC LABS]
+
+## 지하주차장 화재 감지 보조 시스템 주요 성과
+
+01연구 결과
+
+YOLOv8s + VLM(Florence2) 기반 화재, 연기 탐지 PoC 설계 및 논문 발표
+
+합성 데이터 활용으로 화재, 연기 탐지 정량적 성능 향상
+
+F1 0.82 → 0.86, 연기 recall 0.70 → 0.83
+
+도메인 특화 데이터 생성 파이프라인 구축으로 후속 연구로 확장
+
+추가 연구를 통한 논문 게재 및 특허 등록
+
+02배포 구조 전환
+
+초기 VLM 중심 PoC 구조에서 엣지 디바이스 제약으로 현장 적용 한계 확인
+
+YOLOv8n + CLIP 경량 구조로 전환, Hailo 듀얼 칩 기반 실행 구조 확정
+
+단순 모델 교체가 아닌 판단 구조 자체를 사후 검증 방식으로 재설계
+
+03현장 적용
+
+광명센트럴아이파크 전기차 충전구역 화재 감지 보조 시스템 시연 및 적용
+
+현장 운영 중 모델 오탐 이슈에 대한 원인 분석과 재학습 대응 수행
+
+반복 오탐 유형을 학습 데이터로 재반영, 기존 검증 성능 유지하며 오탐 감소 확인
+
+[image: YOLO + VLM 화재 감지 프레임워크]
+
+ICLRW에 게재된 YOLO 및 VLM이 결합된 화재 감지 프레임워크
+
+[image: 광명센트럴아이파크 적용 현황]
+
+광명센트럴아이파크 AI 화재 감지 보조 시스템 적용 현황
+
+[image: HDC LABS]
+
+PROJECT 03
+
+# 콘텐츠 제작을 위한 생성형 AI 기능 개발
+
+버추얼 인플루언서 이미지 생성, Face Re-Aging, 화자 변환 음성 AI
+
+METAVERSE ENTERTAINMENT 2023.01 – 2024.05
+
+StableDiffusion
+LoRA
+StyleGAN
+ComfyUI
+Gradio
+
+[image: METAVERSE Entertainment]
+
+## 콘텐츠 제작을 위한 생성형 AI 기능 개발
+
+METAVERSE ENTERTAINMENT 2023.01 – 2024.05
+
+01인플루언서 맞춤 이미지 생성
+
+Stable Diffusion, LoRA, ComfyUI workflow, Gradio WebUI
+
+버추얼 인플루언서 콘텐츠 제작 특정 인물 맞춤 이미지 생성 모델 및 관련 내부 툴 구축
+
+기여도
+
+Instagram 포스트 및 YouTube 썸네일 제작에 실제 적용
+
+디자이너가 직접 활용 가능한 내부 WebUI로 배포
+
+반복 편집 공수 절감 및 콘텐츠 제작 효율 향상
+
+02Face Re-Aging 기술 개발
+
+StyleGAN, GAN Inversion, Gradio WebUI
+
+디자이너의 인물 연령 리터칭 효율 개선 2단계 연령 변환 프레임워크를 설계, 연구 성과로 확장
+
+기여도
+
+연령 리터칭 자동화를 위한 AI 기반 대안 기술 제시
+
+IEEE Access (SCI-E, IF=3.9) 1저자 논문 게재
+
+03화자 변환 음성 AI 연구
+
+Retrieval-based VC, VITS, Gradio WebUI
+
+콘텐츠 제작 비용 절감 및 서비스 활용 캐릭터 특화 음성 변환 모델과 다국어 TTS 기능 개발
+
+기여도
+
+관련 YouTube 콘텐츠 제작에 실제 활용
+
+버추얼 휴먼 전용 VC 모델 미세조정 및 다국어 TTS 사내 배포
+
+성우 섭외 비용 절감 및 제작 효율 향상
+
+[image: METAVERSE Entertainment]
+
+PUBLICATIONS & PATENTS
+
+3
+
+International Journals
+
+12
+
+International Conferences
+
+11
+
+KR 등록
+
+3
+
+KR 출원
+
+1
+
+US 출원
+
+직무 연관 주요 연구
+
+행동인식을 위한 합성 데이터셋 증강
+
+Synthesized Audio Dataset Augmentation for Multimodal Action Recognition (Under Review, 2026) 1st Author
+
+엣지 배포용 경량 RGB 행동인식
+
+Resource-Efficient RGB-Only Action Recognition for Edge Deployment (Under Review, 2026) 1st Author
+
+합성 데이터 생성 자동화
+
+Auto-Curated Domain-Specific Dataset Generation via Diffusion Models (WACVW 2026, Oral) 1st Author
+
+실환경 대응 경량 초해상도 성능 개선
+
+Your Super Resolution Model is not Enough for Tackling Real-World Scenarios (ICCVW, 2025) 1st Author
+
+YOLO-VLM 기반 실내 화재 감지
+
+An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments (ICLRW, 2025) 1st Author
+
+3D 인식 기반 인물 이미지 생성 및 편집
+
+Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN (ECCV, 2022) 3rd Author
+
+속성 가이드 기반 얼굴 이미지 복원
+
+Reference Guided Image Inpainting using Facial Attributes (BMVC, 2021) 1st Author
+
+Publications
+
+## Research Highlights
+
+실무에서 출발한 대표 연구
+
+합성 데이터 생성 자동화
+
+WACVW 2026 Oral
+
+Auto-Curated Domain-Specific Dataset Generation via Diffusion Models
+
+도메인 특화 데이터의 수집 난이도와 높은 구축 비용
+
+이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계
+
+실수집 데이터 의존도 낮추며 특정 객체 검출 mAP 0.47 → 0.79 향상
+
+→엘리베이터, 화재 감지 데이터 전략
+
+YOLO-VLM 기반 실내 화재 감지
+
+ICLRW 2025
+
+An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments
+
+모호한 화재와 연기 경계로 YOLO 단독 검출의 오탐 빈발
+
+객체 검출(YOLO)과 문맥 추론(VLM)을 결합한 end-to-end 감지 구조 설계
+
+VLM 결합으로 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83 향상
+
+→화재 감지 PoC
+
+엣지 배포용 경량 행동인식
+
+Under Review 2026
+
+Resource-Efficient RGB-Only Action Recognition for Edge Deployment
+
+깊이나 스켈레톤 기반 행동인식은 별도 센서나 무거운 포즈 추정이 필요
+
+RGB 입력만으로 동작하는 경량 행동인식 네트워크 설계
+
+최소 파라미터 0.96M로 SOTA 정확도 달성, Jetson Orin Nano 10.3 FPS 추론
+
+→엘리베이터 이상행동 인식
+
+실환경 대응 경량 초해상도 성능 개선
+
+ICCVW 2025
+
+Your Super Resolution Model is not Enough for Tackling Real-World Scenarios
+
+고정 배율로 학습된 기존 초해상화 모델은 미학습 배율에서 추론 불가
+
+기존 초해상화 백본에 이식 가능한 다중 배율 플러그인 모듈 설계
+
+정수 및 소수 배율을 단일 가중치로 대응, 평균 PSNR +4.3 dB 향상
+
+→화재 감지 입력 품질
+
+Thank You
+
+윤동식 AI Engineer
+
+더 자세한 연구와 프로젝트가 궁금하시다면
+
+홈페이지 바로가기
+
+Computer Vision / Edge AI / Real-World Deployment
+
+PDF 저장
+
+### Internal links
+- Home -> https://stillrot.github.io/
+- CV -> https://stillrot.github.io/cv/
+- Project Page -> https://stillrot.github.io/papers/ntu60-audio/
+- Project Page -> https://stillrot.github.io/papers/wacvw2026/
+- Project Page -> https://stillrot.github.io/papers/iclrw2025/
+- Project Page -> https://stillrot.github.io/papers/iccvw2025/
+- Project Page -> https://stillrot.github.io/papers/access2023/
+- Project Page -> https://stillrot.github.io/papers/bmvc2021/
+- 합성 데이터 생성 자동화 WACVW 2026 Oral Auto-Curated Domain-Specific Dataset Generation via Diffusion Models 도메인 특화 데이터의 수집 난이도와 높은 구축 비용 이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계 실수집 데이터 의존도 낮추며 특정 객체 검출 mAP 0.47 → 0.79 향상 →엘리베이터, 화재 감지 데이터 전략 -> https://stillrot.github.io/papers/wacvw2026/
+- YOLO-VLM 기반 실내 화재 감지 ICLRW 2025 An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments 모호한 화재와 연기 경계로 YOLO 단독 검출의 오탐 빈발 객체 검출(YOLO)과 문맥 추론(VLM)을 결합한 end-to-end 감지 구조 설계 VLM 결합으로 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83 향상 →화재 감지 PoC -> https://stillrot.github.io/papers/iclrw2025/
+- 실환경 대응 경량 초해상도 성능 개선 ICCVW 2025 Your Super Resolution Model is not Enough for Tackling Real-World Scenarios 고정 배율로 학습된 기존 초해상화 모델은 미학습 배율에서 추론 불가 기존 초해상화 백본에 이식 가능한 다중 배율 플러그인 모듈 설계 정수 및 소수 배율을 단일 가중치로 대응, 평균 PSNR +4.3 dB 향상 →화재 감지 입력 품질 -> https://stillrot.github.io/papers/iccvw2025/
+- 홈페이지 바로가기 -> https://stillrot.github.io/
+
+### External links
+- GitHub -> https://github.com/Stillrot/RGINP
+- LinkedIn -> https://www.linkedin.com/in/%EB%8F%99%EC%8B%9D-%EC%9C%A4-30366223b/
+- Scholar -> https://scholar.google.co.kr/citations?user=-EfCFGAAAAAJ&hl=ko
+- Paper (arXiv) -> https://arxiv.org/abs/2602.10818
+- Paper (arXiv) -> https://arxiv.org/abs/2601.08095
+- YouTube -> https://www.youtube.com/watch?v=Z2OQIBj17bM
+- Paper (PMLR) -> https://proceedings.mlr.press/v296/kim25a.html
+- Paper (CVF Open Access) -> https://openaccess.thecvf.com/content/ICCV2025W/ECLR/html/Yoon_Your_Super_Resolution_Model_is_not_Enough_for_Tackling_Real-World_ICCVW_2025_paper.html
+- rina.8k Instagram -> https://www.instagram.com/rina.8k/
+- MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
+- Paper (IEEE Xplore) -> https://ieeexplore.ieee.org/document/10328572
+- MAVE: April Fool YouTube -> https://www.youtube.com/watch?v=UoWzaH7a8C0
+- Paper (Project Page) -> https://jgkwak95.github.io/surfgan/
+- Project Page -> https://jgkwak95.github.io/surfgan/
+- GitHub Code -> https://github.com/jgkwak95/SurfGAN
+- Paper (arXiv) -> https://arxiv.org/abs/2301.08044
+- GitHub Code -> https://github.com/Stillrot/RGINP
+- 엣지 배포용 경량 행동인식 Under Review 2026 Resource-Efficient RGB-Only Action Recognition for Edge Deployment 깊이나 스켈레톤 기반 행동인식은 별도 센서나 무거운 포즈 추정이 필요 RGB 입력만으로 동작하는 경량 행동인식 네트워크 설계 최소 파라미터 0.96M로 SOTA 정확도 달성, Jetson Orin Nano 10.3 FPS 추론 →엘리베이터 이상행동 인식 -> https://arxiv.org/abs/2602.10818
+
+======================================================================
+## Publications
+
+### Journals (3)
+- Yuanming Li, Dongsik Yoon, Bonwha Ku, Hanseok Ko. "ConSeisGen: Controllable Synthetic Seismic Waveform Generation." IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 [SCI-E] (IF=4.8) — https://ieeexplore.ieee.org/document/10339272
+- Dongsik Yoon, Jineui Kim, Vincent Lorant, Sungku Kang. "Manipulation of Age Variation using StyleGAN inversion and fine-tuning." IEEE Access, 2023 [SCI-E] (IF=3.9) — https://stillrot.github.io/papers/access2023/
+- Dongsik Yoon, Yuanming Li, Bonwha Ku, Hanseok Ko. "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN." IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 [SCI-E] (IF=5.3) — https://stillrot.github.io/papers/grsl2023/
+
+### Conferences (13)
+- Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon. "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents." arXiv, 2026 — https://arxiv.org/abs/2604.15802
+- Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition." Under review, 2026 — https://stillrot.github.io/papers/ntu60-audio/
+- Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." Under review, 2026 — https://arxiv.org/abs/2602.10818
+- Dongsik Yoon, Jongeun Kim. "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models." IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 (Oral) — https://stillrot.github.io/papers/wacvw2026/
+- Dongsik Yoon, Jongeun Kim. "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios." International Conference on Computer Vision Workshop (ICCVW), 2025 — https://stillrot.github.io/papers/iccvw2025/
+- Jongeun Kim*, Yejin Lee*, Dongsik Yoon*, Chansung Jung, Gunhee Lee. "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments." International Conference on Learning Representations Workshop (ICLRW), 2025 — https://stillrot.github.io/papers/iclrw2025/
+- Dongsik Yoon, Jongeun Kim, Seonggeun Song, Yejin Lee, Gunhee Lee. "OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360 Panoramic Images." SIGGRAPH Asia Posters, 2024 — https://stillrot.github.io/papers/siggraph2024/
+- Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, Donghyeon Kim, Hanseok Ko. "Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis." European Conference on Computer Vision (ECCV), 2022 — https://jgkwak95.github.io/surfgan/
+- Dongsik Yoon, Jeong-gi Kwak, Yuanming Li, David Han, Hanseok Ko. "DIFAI: Diverse Facial Inpainting using StyleGAN Inversion." IEEE International Conference on Image Processing (ICIP), 2022 — https://stillrot.github.io/papers/icip2022/
+- Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, David Han, Hanseok Ko. "Generate and Edit Your Own Character in a Canonical View." IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (CVPRW), 2022 — https://arxiv.org/abs/2205.02974
+- Dongsik Yoon, Jeong-gi Kwak, Yuanming Li, Youngsaeng Jin, David Han, Hanseok Ko. "Reference Guided Image Inpainting using Facial Attributes." British Machine Vision Conference (BMVC), 2021 — https://stillrot.github.io/papers/bmvc2021/
+- Jeong-gi Kwak, Youngsaeng Jin, Yuanming Li, Dongsik Yoon, Donghyeon Kim, Hanseok Ko. "Adverse Weather Image Translation with Asymmetric and Uncertainty-aware GAN." British Machine Vision Conference (BMVC), 2021 — https://arxiv.org/abs/2112.04283
+- Yuanming Li, Youngsaeng Jin, Jeong-gi Kwak, Dongsik Yoon, David Han, Hanseok Ko. "Adaptive Content Feature Enhancement GAN for Multimodal Selfie to Anime Translation." British Machine Vision Conference (BMVC), 2021 — https://pure.korea.ac.kr/en/publications/adaptive-content-feature-enhancement-gan-for-multimodal-selfie-to/
+
+======================================================================
+## Patents
+
+### Granted (12)
+- [KR] 10-2793868 — 전자 장치 및 전자 장치의 디스플레이에 대응하는 이미지를 획득하는 방법 (Electronic device and method of acquiring an image corresponding to its display). Granted 2025-04-04. Application 10-2024-0183119.
+- [KR] 10-2809119 — 인공지능 모델 기반 실내 건축 공사의 하자를 검출하기 위한 전자 장치 및 그 구동 방법 (AI-based electronic device for detecting defects in indoor construction work, and its operating method). Granted 2025-05-13. Application 10-2024-0162810.
+- [KR] 10-2857163 — 인공신경망 기반의 복합모델을 이용한 주차장 화재 탐지 방법 및 시스템 (Parking-lot fire detection method and system using a neural-network-based composite model). Granted 2025-09-04. Application 10-2024-0177540.
+- [KR] 10-2876730 — 사용자로그를 고려한 엘리베이터 내부의 반려동물 유무 탐지방법 및 시스템 (Method and system for detecting pets inside an elevator, accounting for user logs). Granted 2025-10-22. Application 10-2025-0066321.
+- [KR] 10-2910653 — 인공신경망을 이용한 건설현장에서의 충돌위험 탐지방법 및 시스템 (Neural-network-based method and system for detecting collision risks at construction sites). Granted 2026-01-06. Application 10-2025-0060698.
+- [KR] 10-2942435 — 개인화된 DB의 조회를 이용한 홈에이전트 서비스 제공방법 및 시스템 (Home-agent service method and system using lookups against a personalized DB). Granted 2026-03-18. Application 10-2025-0182169.
+- [KR] 10-2942432 — 사용자별 시계열루틴데이터를 학습한 AI에이전트를 포함하는 홈IoT시스템 및 상기 사용자별 시계열루틴데이터에 따른 사용자별 맞춤정보 생성방법 (Home-IoT system with an AI agent trained on per-user time-series routine data, and a method for generating per-user personalized information from that data). Granted 2026-03-18. Application 10-2025-0098512.
+- [KR] 10-2956420 — 건축물의 인테리어 평면도를 자동 생성하는 방법 (Method for automatically generating interior floor plans of buildings). Granted 2026-04-20. Application 10-2025-0182185.
+- [KR] 10-2958364 — 인공신경망을 이용한 공간의 점유율 추정방법 및 시스템 (Neural-network-based method and system for estimating spatial occupancy). Granted 2026-04-23. Application 10-2025-0066324.
+- [KR] 10-2963796 — 사용자가 원하는 객체가 포함된 도메인 특화데이터 생성방법 및 이를 수행하는 컴퓨팅시스템 (Method for generating domain-specific data containing user-specified objects, and the computing system that performs it). Granted 2026-05-07. Application 10-2025-0098510.
+- [KR] 10-2963799 — 개인화된 사전 DB를 이용한 개인화된 객체 추적 방법 및 시스템 (Personalized object-tracking method and system using a personalized prior database). Granted 2026-05-07. Application 10-2025-0182181.
+- [KR] 10-2971047 — 행동인식을 기반으로 한 IoT 가전기기 제어방법 및 시스템 (Action-recognition-based method and system for controlling IoT home appliances). Granted 2026-05-26. Application 10-2025-0182191.
+
+### Applications (3)
+- [US] Systems and methods for diverse image inpainting (Systems and methods for diverse image inpainting). Application 18/625,052, publication US20240338802A1 2024-10-10.
+- [KR] 객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체 (Behavior-prediction method, system, and computer-readable medium that leverages topology data produced via per-object action recognition and behavior-pattern normalization). Application 10-2025-0098513.
+- [KR] 메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법 (Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method). Application 10-2026-0008565.
+
+======================================================================
+## News (12)
+
+- 2026-05-22 — HDC랩스, 아이파크몰 용산점 AI 스마트빌딩 실증…'안심건물' 인증 획득 지원 / HDC LABS' AI smart-building pilot at IPARK Mall Yongsan supports an 'Anshim Building' (Safe Building) certification (데일리안) — https://n.news.naver.com/mnews/article/119/0003093394
+  - 공간 AIoT(AI+IoT) 솔루션 기업 HDC랩스는 자사의 AI 기반 스마트빌딩 자율운전 기술로 실증 운영에 참여한 아이파크몰 용산점이 '건물 에너지·공기질 안심건물' 인증을 획득했다고 밝혔다.
+- 2026-03-26 — IPARK현대산업개발, AI 통한 아이파크 입주민 서비스 확대 / HDC Hyundai Development expands AI-powered services for IPARK residents (이데일리) — https://n.news.naver.com/mnews/article/018/0006243240
+  - IPARK현대산업개발이 인공지능(AI)을 활용한 주거 서비스를 통해 입주민 편의성을 대폭 높인다. 입주민들은 AI 기반 헬스케어, 로봇 서비스, 안전 관리 등 다양한 주거 솔루션을 받을 수 있게 됐다.
+- 2026-02-20 — 국대 AI 프로젝트에 모티프 추가 선정 / Motif added to Korea's national AI project lineup (일간스포츠) — https://n.news.naver.com/mnews/article/241/0003495235
+  - 국가대표 AI(인공지능) 프로젝트에 AI 스타트업 모티프테크놀로지스가 추가 선정됐다. 과학기술정보통신부가 주관하는 '독자 AI 파운데이션 모델' 사업의 정예팀에 이름을 올렸다.
+- 2025-10-20 — HDC랩스, HL로보틱스와 자율 순찰로봇 공동 개발 MOU 체결 / HDC LABS signs MOU with HL Robotics to co-develop autonomous patrol robots (이데일리) — https://n.news.naver.com/mnews/article/018/0006142307
+  - HDC랩스는 HL로보틱스와 함께 차세대 지능형 순찰로봇 공동 개발 및 상용화 검증을 위한 업무협약(MOU)을 체결했다고 밝혔다. HDC랩스의 AI 영상분석·데이터 처리 기술이 결합된다.
+- 2025-09-03 — HDC랩스, AI·디자인 접목한 스마트홈 시스템 선보여 / HDC LABS unveils smart-home systems combining AI and design (네이버 뉴스) — https://n.news.naver.com/mnews/article/277/0005646517
+  - HDC랩스는 AI 기술과 디자인 철학을 더해 차별화된 기능과 디자인을 겸비한 스마트홈 시스템과 제품들을 선보이고 있다고 3일 밝혔다. 지난해 리더급 AI 전문가 영입과 전담 조직 신설을 통해 연구개발 체계를 한층 강화...
+- 2025-08-29 — HDC랩스, 'AIoT 인재 양성 교육과정' 개강… 현직 개발자 직접 참가 / HDC LABS launches its 'AIoT talent program', with practicing engineers as instructors (네이버 뉴스) — https://n.news.naver.com/mnews/article/215/0001221815
+  - HDC랩스(대표 김성은)가 지난 26일 서울 노량진 아이그로스 교육센터에서 '생성형 AI 활용 스마트 IoT 분석 및 서비스 개발 과정'과 '스마트 IoT 풀스택 개발자 과정'을 개강했다고 밝혔다.
+- 2025-08-13 — HDC현대산업개발 "송파한양2차 '스마트 AI 랜드마크'로 만든다" / HDC Hyundai Development: 'We will make Songpa Hanyang II a smart-AI landmark' (네이버 뉴스) — https://n.news.naver.com/mnews/article/629/0000416456
+  - HDC현대산업개발은 서울 송파구 송파한양2차 재건축사업에 최첨단 인공지능(AI)과 디지털전환(DX) 기술을 모두 적용해 '스마트 AI 랜드마크'로 완성하겠다고 13일 밝혔다.
+- 2025-04-14 — HDC현산, 서울원 아이파크에 AI 승강기 도입 / HDC Hyundai Development to deploy AI elevators at Seoul One IPARK (네이버 뉴스) — https://n.news.naver.com/mnews/article/119/0002945075
+  - HDC현대산업개발은 인공지능(AI)을 활용한 승강기 운영 시스템 개발을 위해 HDC랩스, 현대엘리베이터와 기술제휴를 위한 업무협약식을 진행했다고 14일 밝혔다.
+- 2025-03-28 — HDC현대산업개발, 아이파크 단지에 AI·로봇 기반 맞춤 서비스 강화 / HDC Hyundai Development strengthens AI- and robot-based personalized services in IPARK complexes (네이버 뉴스) — https://n.news.naver.com/mnews/article/421/0008160290
+  - HDC현대산업개발(294870)은 아이파크 단지에서 인공지능(AI)과 로봇을 활용한 입주민 맞춤 서비스를 강화한다고 28일 밝혔다.
+- 2024-12-02 — HDC랩스, AI 인재 영입 등 혁신 박차 / HDC LABS accelerates AI-talent hiring and innovation push (네이버 뉴스) — https://n.news.naver.com/mnews/article/025/0003404781
+  - 공간 AIoT 플랫폼 기업 HDC랩스가 AX(AI Transformation)에 박차를 가하고 있다. HDC아이서비스와 HDC아이콘트롤스가 합병하여 2021년 12월에 출범한 HDC랩스는 기존 사업 분야에 머무르지 않고 혁신적인 변화를...
+- 2024-01-25 — 메타버스엔터테인먼트, 페르소나 AI 적용한 채팅 서비스 '챗 시우' 오픈 / Metaverse Entertainment launches Persona-AI-powered chat service 'Chat SIU:' (넷마블 뉴스룸) — https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4559&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8
+  - 넷마블(대표 권영식, 김병규)은 넷마블에프앤씨 자회사 메타버스엔터테인먼트가 버추얼 아이돌 그룹 '메이브(MAVE:)'의 리더 '시우'와 직접 대화할 수 있는 '챗 시우(Chat SIU:)'를 오늘부터 2월 14일까지 특별 운영...
+- 2023-09-25 — 메타버스엔터테인먼트, 업스테이지와 '페르소나AI' 공동 개발 위한 전략적 협업 / Metaverse Entertainment forms strategic partnership with Upstage to co-develop 'Persona AI' (넷마블 뉴스룸) — https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4221&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8
+  - 넷마블(대표 권영식,도기욱)은 메타버스엔터테인먼트(대표 서우원)와 업스테이지(대표 김성훈)가 '페르소나 AI 공동 개발'을 위한 전략적 협업을 맺었다고 21일 밝혔다.
+
+======================================================================
+## Research / Papers (10)
+
+- "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition" (NTU60-AUDIO) — Interspeech 2026, 2026 (Under review)
+  - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
+- "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026 (Oral)
+  - Authors: Dongsik Yoon, Jongeun Kim
+  - In this paper, we present an automated pipeline for generating domain-specific synthetic datasets with diffusion models, addressing the distribution shift between pre-trained models and real-world deployment environments. Our three-stage framework first synthesizes target objects within domain-specific backgrounds through controlled inpainting. The generated outputs are then validated via a multi-modal assessment that integrates object detection, aesthetic scoring, and vision-language alignment. Finally, a user-preference classifier is employed to capture subjective selection criteria. This pipeline enables the efficient construction of high-quality, deployable datasets while reducing reliance on extensive real-world data collection.
+- "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios" (Your Super Resolution Model is not Enough) — ICCVW 2025, 2025
+  - Authors: Dongsik Yoon, Jongeun Kim
+  - Despite remarkable progress in Single Image Super-Resolution (SISR), traditional models often struggle to generalize across varying scale factors, limiting their real-world applicability. To address this, we propose a plugin Scale-Aware Attention Module (SAAM) designed to retrofit modern fixed-scale SR models with the ability to perform arbitrary-scale SR. SAAM employs lightweight, scale-adaptive feature extraction and upsampling, incorporating the Simple parameter-free Attention Module (SimAM) for efficient guidance and gradient variance loss to enhance sharpness in image details. Our method integrates seamlessly into multiple state-of-the-art SR backbones (e.g., SCNet, HiT-SR, OverNet), delivering competitive or superior performance across a wide range of integer and non-integer scale factors. Extensive experiments on benchmark datasets demonstrate that our approach enables robust multi-scale upscaling with minimal computational overhead, offering a practical solution for real-world scenarios.
+- "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments" (Integrated YOLO and VLM Fire Detection) — ICLRW 2025, 2025
+  - Authors: Jongeun Kim*, Yejin Lee*, Dongsik Yoon*, Chansung Jung, Gunhee Lee
+  - While YOLO models show promise in car fire detection, they remain insufficient for real-world deployment in underground and indoor car parks due to dataset limitations, evaluation gaps, and deployment constraints. We first fine-tune YOLO on fire/smoke-augmented dataset, but analysis reveals that it struggles with ambiguous fire-smoke boundaries, leading to false predictions. To address this, we propose a real-time end-to-end framework integrating YOLOv8s with Florence2 VLM, combining object detection with contextual reasoning. While YOLOv8s with VLM improves detection reliability, challenges are still ongoing. Our findings highlight YOLO's limitations in fire detection and the need for a more adaptive, environment-aware approach.
+- "OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360° Panoramic Images" (OverallNet) — SIGGRAPH Asia 2024, 2024
+  - Authors: Dongsik Yoon, Jongeun Kim, Seonggeun Song, Yejin Lee, Gunhee Lee
+  - Estimating room layouts from 360° panoramic images is an essential task in computer vision, enhancing 3D scene understanding from 2D images. To achieve and handle high-quality panoramas necessitates a Super-Resolution (SR) technique that is both light and capable of arbitrary-scale SR, optimized for efficient inference. In this study, we propose a simple model that employs a modular arbitrary-scale technique. Additionally, our model incorporates quantization to maximize efficiency during user inference, making it well-suited for processing high-quality panoramic images.
+- "Manipulation of Age Variation Using StyleGAN Inversion and Fine-Tuning" (Age Variation via StyleGAN Inversion) — IEEE Access 2023, 2023 (SCI-E, IF=3.9)
+  - Authors: Dongsik Yoon, Jineui Kim, Vincent Lorant, Sungku Kang
+  - Recent advancements in deep learning have yielded significant developments in age manipulation techniques in the field of computer vision. To handle this task, recent approaches using generative adversarial networks latent space transformation or image-to-image based techniques have been developed. However, such methods are limited in terms of preserving the facial identity of the subject and recovering background details during lifelong age variation. To address these limitations, this paper presents a novel framework to manipulate the age of subjects in photos. The proposed framework involves two main steps, i.e., age manipulation and StyleGAN fine-tuning. In the first step, the iterative ReStyle StyleGAN inversion technique discovers a latent vector that is most similar to the input image, and which is used to train an age manipulation encoder. In the second step, a StyleGAN fine-tuning process is used to reconstruct the details lost in the images synthesized using the StyleGAN generator during the age manipulation. Compared with state-of-the-art methods, the proposed framework achieves reasonable manipulation and variation of the target age for real-world input images.
+- "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN" (Magnitude / Epicentral Distance via Deeper CRNN) — IEEE GRSL 2023, 2023 (SCI-E, IF=5.3)
+  - Authors: Dongsik Yoon, Yuanming Li, Bonhwa Ku, Hanseok Ko
+  - Estimating earthquake parameters is an essential process for an earthquake analysis system. In particular, the magnitude and epicentral distance of an earthquake are the most basic parameters in earthquake analysis. To estimate these, existing approaches require long waveform data from multiple stations. In this paper, we propose a novel estimation method based on multi-tasking deep learning and a convolutional recurrent neural network using only a single station. We also use the stream maximum of the input waveform to accurately estimate the earthquake magnitude. Based on evaluation using the Stanford Earthquake dataset (STEAD) and the Kiban Kyoshin Network (KiK-net) dataset, we verify the high performance of the proposed method.
+- "Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis" (SurfGAN) — ECCV 2022, 2022
+  - Authors: Jeong-gi Kwak, Yuanming Li, Dongsik Yoon, Donghyeon Kim, Hanseok Ko
+- "DIFAI: Diverse Facial Inpainting using StyleGAN Inversion" (DIFAI) — ICIP 2022, 2022
+  - Authors: Dongsik Yoon, Jeong-gi Kwak, Yuanming Li, David K Han, Hanseok Ko
+  - Image inpainting is an old problem in computer vision that restores occluded regions and completes damaged images. In the case of facial image inpainting, most of the methods generate only one result for each masked image, even though there are other reasonable possibilities. To prevent any potential biases and unnatural constraints stemming from generating only one image, we propose a novel framework for diverse facial inpainting exploiting the embedding space of StyleGAN. Our framework employs pSp encoder and SeFa algorithm to identify semantic components of the StyleGAN embeddings and feed them into our proposed SPARN decoder that adopts region normalization for plausible inpainting. We demonstrate that our proposed method outperforms several state-of-the-art methods.
+- "Reference Guided Image Inpainting using Facial Attributes" (Reference Guided Image Inpainting) — BMVC 2021, 2021
+  - Authors: Dongsik Yoon, Jeong-gi Kwak, Yuanming Li, Youngsaeng Jin, David K Han, Hanseok Ko
+  - Image inpainting is a technique of completing missing pixels such as occluded region restoration, distracting objects removal, and facial completion. Among these inpainting tasks, facial completion algorithm performs face inpainting according to the user direction. Existing approaches require delicate and well controlled input by the user, thus it is difficult for an average user to provide the guidance sufficiently accurate for the algorithm to generate desired results. To overcome this limitation, we propose an alternative user-guided inpainting architecture that manipulates facial attributes using a single reference image as the guide. Our end-to-end model consists of attribute extractors for accurate reference image attribute transfer and an inpainting model to map the attributes realistically and accurately to generated images. We customize MS-SSIM loss and learnable bidirectional attention maps in which importance structures remain intact even with irregular shaped masks. Based on our evaluation using the publicly available dataset CelebA-HQ, we demonstrate that the proposed method delivers superior performance compared to some state-of-the-art methods specialized in inpainting tasks.
