@@ -57,7 +57,7 @@
     "source_en": "Naver News",
     "link": "https://n.news.naver.com/mnews/article/277/0005646517",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68e8fcf72f23eec5eb565761_6.jpg"
+    "thumbnail_external": "/assets/img/ext/68e8fcf72f23eec5eb565761_6.jpg"
   },
   {
     "date": "2025-08-29",
@@ -69,7 +69,7 @@
     "source_en": "Naver News",
     "link": "https://n.news.naver.com/mnews/article/215/0001221815",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/68e8fc6f211db4d96a57bf01_5.jpg"
+    "thumbnail_external": "/assets/img/ext/68e8fc6f211db4d96a57bf01_5.jpg"
   },
   {
     "date": "2025-08-13",
@@ -81,7 +81,7 @@
     "source_en": "Naver News",
     "link": "https://n.news.naver.com/mnews/article/629/0000416456",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/689d33f67f9dd12a8e1b9936_2.png"
+    "thumbnail_external": "/assets/img/ext/689d33f67f9dd12a8e1b9936_2.png"
   },
   {
     "date": "2025-04-14",
@@ -93,7 +93,7 @@
     "source_en": "Naver News",
     "link": "https://n.news.naver.com/mnews/article/119/0002945075",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6875d184f127c6a93b657b73_5.jpeg"
+    "thumbnail_external": "/assets/img/ext/6875d184f127c6a93b657b73_5.jpeg"
   },
   {
     "date": "2025-03-28",
@@ -105,7 +105,7 @@
     "source_en": "Naver News",
     "link": "https://n.news.naver.com/mnews/article/421/0008160290",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6875d0fde697f78651973cc1_4.jpg"
+    "thumbnail_external": "/assets/img/ext/6875d0fde697f78651973cc1_4.jpg"
   },
   {
     "date": "2024-12-02",
@@ -117,7 +117,7 @@
     "source_en": "Naver News",
     "link": "https://n.news.naver.com/mnews/article/025/0003404781",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6875d0c1a7c637eaa2ee5273_3.jpg"
+    "thumbnail_external": "/assets/img/ext/6875d0c1a7c637eaa2ee5273_3.jpg"
   },
   {
     "date": "2024-01-25",
@@ -129,7 +129,7 @@
     "source_en": "Netmarble Newsroom",
     "link": "https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4559&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6875ce93df5eb5e758a9afd1_2.jpeg"
+    "thumbnail_external": "/assets/img/ext/6875ce93df5eb5e758a9afd1_2.jpeg"
   },
   {
     "date": "2023-09-25",
@@ -141,6 +141,6 @@
     "source_en": "Netmarble Newsroom",
     "link": "https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4221&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
     "link_type": "external",
-    "thumbnail_external": "https://cdn.prod.website-files.com/6864050ce5b2cc150c2935c2/6875ce2b675edbad1982a57c_1.png"
+    "thumbnail_external": "/assets/img/ext/6875ce2b675edbad1982a57c_1.png"
   }
 ]

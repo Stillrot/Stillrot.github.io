@@ -141,6 +141,9 @@ class Extract(HTMLParser):
 def extract_page(disk):
     with open(os.path.join(ROOT, disk), encoding="utf-8") as f:
         raw = f.read()
+    # Drop prerendered home blocks here — their data is already covered by the
+    # dedicated Publications/Patents/News/Research sections below (avoid dupes).
+    raw = re.sub(r"<!--prerender:.*?-->.*?<!--/prerender-->", "", raw, flags=re.S)
     p = Extract()
     p.feed(raw)
     return p.result(), p.links

@@ -42,5 +42,5 @@ Buckets to expect:
 
 ## Known acceptable cases
 
-- Some Webflow CDN thumbnails may 404 over time — the layout degrades gracefully (the surrounding `<figure>` still shows the caption).
-- `cdn.prod.website-files.com` is a third-party CDN. If you want to fully self-host, run `scripts/check_links.py --external -v`, collect every `cdn.prod.website-files.com` URL, download to `assets/img/`, and rewrite the JSON `thumbnail_external` fields to point at the local copies (`./assets/img/...`).
+- Project figures/thumbnails are self-hosted under `assets/img/ext/` (no Webflow-CDN dependency). The remaining external images (news outlets, HuggingFace, arXiv, YouTube) degrade gracefully if they 404 — the surrounding `<figure>` still shows the caption.
+- To re-self-host after adding new Webflow-hosted images, run `python3 tools/self_host_images.py` (downloads into `assets/img/ext/` and rewrites the JSON/HTML refs), then `tools/prerender_home.py`.

@@ -31,7 +31,7 @@ portfolio/
 ├── assets/
 │   ├── css/style.css
 │   ├── js/main.js          # shared renderers: bootHome / bootNews / bootPaperList / bootPaper
-│   └── img/                # (empty — see "Self-host images" below)
+│   └── img/                # logos, profile + self-hosted figures (ext/)
 ├── scripts/
 │   └── check_links.py
 ├── sitemap.xml
@@ -50,7 +50,7 @@ python3 -m http.server 8123
 # open http://localhost:8123/
 ```
 
-The data is fetched at runtime via `fetch()`, so **you must serve over HTTP** (file:// won't work).
+The home page's data sections are **prerendered into `index.html`** (`tools/prerender_home.py`), so a no-JS / plain fetch still shows real content. Dynamic re-rendering and the other data-driven pages still use `fetch()`, so **serve over HTTP** for full functionality (file:// falls back to the static HTML).
 
 ## Deploy to GitHub Pages
 
@@ -89,10 +89,16 @@ Output is grouped by link class — `internal`, `anchor`, `arxiv`, `ieee`, `cvf_
 
 See `LINK_CHECKLIST.md` for the manual review steps.
 
-## Self-host images (optional)
+## Self-hosted images & generated files
 
-By default thumbnails are loaded from `cdn.prod.website-files.com` (the original Webflow CDN). To make the site fully self-contained:
+Project figures and thumbnails are **self-hosted** under `assets/img/ext/` — no
+dependency on the Webflow CDN. (News-outlet, HuggingFace, arXiv, and YouTube
+images are intentionally left external.) After adding any new
+`cdn.prod.website-files.com` image, re-sync and refresh the generated files:
 
-1. `python3 scripts/check_links.py --external -v | grep cdn.prod.website-files.com`
-2. Download each URL into `assets/img/`.
-3. In `data/papers.json` and `data/news.json`, replace `thumbnail_external` with `./assets/img/<filename>` (or `../../assets/img/<filename>` for paper detail pages — `main.js` already uses relative paths via `data-root`).
+    python3 tools/self_host_images.py   # download new Webflow images + rewrite refs
+    python3 tools/prerender_home.py     # refresh the home static fallback (raw-HTML content)
+    python3 tools/generate_llms.py      # refresh llms.txt / llms-full.txt
+
+`llms.txt` / `llms-full.txt` (repo root) give LLMs and agents the full site
+content in plain text, since the live pages render some data with JavaScript.
