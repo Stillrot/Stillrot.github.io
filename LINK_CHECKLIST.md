@@ -34,8 +34,8 @@ Buckets to expect:
 - [ ] Home page hero shows profile image and 3 social icons (GitHub, LinkedIn, Scholar)
 - [ ] Career grid has 4 cards in this order: HDC LABS, Metaverse, Korea University, Baekseok University
 - [ ] Publications list renders in **descending** index order, with the author "Dongsik Yoon" bolded
-- [ ] Patents section shows two tables (Granted, Application) with correct counts (11 granted, 4 applications)
-- [ ] News page shows 8 cards in reverse-chronological order
+- [ ] Patents section shows two tables (Granted, Application) with correct counts (12 granted, 3 applications)
+- [ ] News page shows 12 cards in reverse-chronological order
 - [ ] Each paper detail page shows: title, venue line, authors (with bold), affiliation, link buttons, thumbnail+caption, abstract, ≥1 figure section, BibTeX
 - [ ] BibTeX "Copy" button works in a browser (writes to clipboard)
 - [ ] All career detail pages have at least one inline link back to a paper

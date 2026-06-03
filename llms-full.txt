@@ -620,13 +620,13 @@ Responsibilities
 #### 업무 성과
 Achievements
 
-- KR 특허 12건 등록, 2건 출원 진행
+- KR 특허 12건 등록, 3건 출원 진행 (국내 2건 + 미국 1건)
 
 - 국제 학회 논문 4편 게재
 
 - 자세한 목록은 홈 Publications 및 Patents 섹션 참고
 
-- 12 KR patents granted, 2 additional applications in progress
+- 12 KR patents granted, 3 applications in progress (2 KR + 1 US)
 
 - 4 papers published at international venues
 
@@ -2103,11 +2103,11 @@ International Journals
 
 International Conferences
 
-11
+12
 
 KR 등록
 
-3
+2
 
 KR 출원
 
