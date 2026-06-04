@@ -411,8 +411,9 @@
       if (newsBox) renderNews(newsBox, news);
       if (paperBox) renderPaperList(paperBox, papers);
     } catch (e) {
+      // The home sections are prerendered into index.html (tools/prerender_home.py),
+      // so on a fetch failure we keep that static fallback instead of blanking it.
       console.error(e);
-      if (pubBox) pubBox.textContent = (currentLang() === 'ko' ? '데이터를 불러오지 못했습니다.' : 'Failed to load data.');
     }
     initTabs();
     // After async render, re-anchor + activate tab if URL had hash
