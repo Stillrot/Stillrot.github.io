@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Tags & Tech Stack — Style Samples</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', 'Inter', sans-serif;
+    background: #f5f5f5;
+    padding: 40px 20px;
+    color: #1a1a1a;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 24pt;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: #666;
+    margin-bottom: 32px;
+    font-size: 11pt;
+  }
+  h2 {
+    font-size: 16pt;
+    font-weight: 700;
+    margin: 32px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #333;
+  }
+  .sample-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .sample-label {
+    font-size: 9.5pt;
+    color: #888;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .sample-label .num {
+    background: #1a1a1a;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    margin-right: 6px;
+  }
+  .sample-name {
+    color: #1a1a1a;
+    font-size: 11pt;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .sample-desc {
+    color: #666;
+    font-size: 9.5pt;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .row-vert {
+    display: block;
+  }
+  .row-vert > * + * {
+    margin-top: 8px;
+  }
+  .label-mini {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    width: 90px;
+    flex-shrink: 0;
+  }
+
+  /* ===== Current (Reference) ===== */
+  .current-tags {
+    font-size: 9.5pt;
+  }
+  .current-tags .tag {
+    display: inline-block;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-right: 10px;
+  }
+  .current-tech {
+    font-size: 9pt;
+    font-weight: 600;
+  }
+  .current-tech .tech {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 8px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    background: #fafafa;
+  }
+
+  /* ===== TAGS VARIANTS ===== */
+
+  /* T1: Solid colored pill */
+  .tag-t1 {
+    display: inline-block;
+    background: #1a1a1a;
+    color: white;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 9pt;
+    margin-right: 5px;
+  }
+
+  /* T2: Outline accent (color per category, no fill) */
+  .tag-t2 {
+    display: inline-block;
+    border: 1.5px solid #d32a1f;
+    color: #d32a1f;
+    background: white;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 3px;
+    font-size: 9pt;
+    margin-right: 5px;
+  }
+
+  /* T3: Subtle filled (current with pastel) */
+  .tag-t3 {
+    display: inline-block;
+    background: #ffe9e6;
+    color: #b8261c;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 9pt;
+    margin-right: 5px;
+  }
+
+  /* T4: Hashtag style */
+  .tag-t4 {
+    color: #4f7dc8;
+    font-weight: 700;
+    margin-right: 12px;
+    font-size: 10pt;
+  }
+  .tag-t4::before { content: "#"; opacity: 0.7; margin-right: 1px; }
+
+  /* T5: Slash separated */
+  .tag-t5 {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .tag-t5 .sep {
+    color: #aaa;
+    margin: 0 8px;
+    font-weight: 400;
+  }
+
+  /* T6: Underline accent */
+  .tag-t6 {
+    display: inline-block;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 10pt;
+    margin-right: 14px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #d32a1f;
+  }
+
+  /* T7: Dot prefix */
+  .tag-t7 {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 10pt;
+    margin-right: 14px;
+  }
+  .tag-t7::before { content: "● "; color: #d32a1f; font-size: 8pt; vertical-align: middle; }
+
+
+  /* ===== TECH STACK VARIANTS ===== */
+
+  /* S1: Current — outlined chip */
+  .tech-s1 {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 8px;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    background: #fafafa;
+    font-weight: 600;
+    font-size: 9pt;
+  }
+
+  /* S2: Code/monospace style */
+  .tech-s2 {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 2px 7px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+
+  /* S3: Pill with brand color */
+  .tech-s3 {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 3px 10px;
+    background: #2a2a2a;
+    color: white;
+    border-radius: 12px;
+    font-size: 9pt;
+    font-weight: 600;
+  }
+
+  /* S4: Brand-colored individual chips */
+  .tech-s4 {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 9pt;
+    font-weight: 700;
+    color: white;
+  }
+  .tech-s4.yolo { background: #00ade5; }
+  .tech-s4.flux { background: #6e3dde; }
+  .tech-s4.jetson { background: #76b900; }
+  .tech-s4.bitbucket { background: #2684ff; }
+
+  /* S5: Left accent bar */
+  .tech-s5 {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 8px 2px 10px;
+    background: #fafafa;
+    border-left: 3px solid #4f7dc8;
+    font-size: 9pt;
+    font-weight: 600;
+  }
+
+  /* S6: Two-tone (left dot + text) */
+  .tech-s6 {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+    padding: 2px 9px 2px 7px;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+    background: white;
+    font-size: 9pt;
+    font-weight: 600;
+  }
+  .tech-s6::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4f7dc8;
+    margin-right: 6px;
+  }
+
+  /* S7: Bold ghost (no border, slight bg) */
+  .tech-s7 {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 2px 8px;
+    background: #eef3fb;
+    color: #2a4d8c;
+    border-radius: 3px;
+    font-size: 9pt;
+    font-weight: 700;
+  }
+
+  /* S8: Mono with dot */
+  .tech-s8 {
+    margin-right: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 9.5pt;
+    color: #2a2a2a;
+  }
+  .tech-s8::before {
+    content: "▸ ";
+    color: #4f7dc8;
+    font-weight: 700;
+  }
+
+  /* Combined preview boxes */
+  .combo {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px 18px;
+    background: #fdfdfd;
+    margin-top: 10px;
+  }
+  .combo-meta {
+    font-size: 9pt;
+    color: #6a6a6a;
+    margin-bottom: 4px;
+  }
+  .combo-title {
+    font-size: 14pt;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .combo-sect {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #888;
+    margin: 10px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Tags & Tech Stack — Style Samples</h1>
+  <div class="subtitle">엘리베이터 프로젝트 카드(Vision AI / Edge AI / PoC / CI/CD + YOLO / FLUX / Jetson / Bitbucket)를 기준으로 비교</div>
+
+  <h2>📌 현재 스타일 (참고)</h2>
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">0</span>CURRENT</div>
+    <div class="row">
+      <div class="label-mini">Tags</div>
+      <div class="current-tags">
+        <span class="tag">Vision AI</span><span class="tag">Edge AI</span><span class="tag">PoC</span><span class="tag">CI/CD</span>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 12px;">
+      <div class="label-mini">Tech Stack</div>
+      <div class="current-tech">
+        <span class="tech">YOLO</span><span class="tech">FLUX</span><span class="tech">Jetson</span><span class="tech">Bitbucket</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>🎨 Tags 스타일 — 7가지</h2>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">1</span>SOLID DARK PILL</div>
+    <div class="sample-name">검은색 알약 (Solid Dark Pill)</div>
+    <div class="sample-desc">모던하고 강한 인상. 카테고리가 명확히 시각적으로 분리됨.</div>
+    <span class="tag-t1">Vision AI</span><span class="tag-t1">Edge AI</span><span class="tag-t1">PoC</span><span class="tag-t1">CI/CD</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">2</span>OUTLINE COLORED</div>
+    <div class="sample-name">컬러 아웃라인 (Outline Accent)</div>
+    <div class="sample-desc">회사 컬러(HDC 빨강)와 통일된 아웃라인. 가볍고 깔끔.</div>
+    <span class="tag-t2">Vision AI</span><span class="tag-t2">Edge AI</span><span class="tag-t2">PoC</span><span class="tag-t2">CI/CD</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">3</span>PASTEL FILL</div>
+    <div class="sample-name">파스텔 채움 (Subtle Filled)</div>
+    <div class="sample-desc">은은한 컬러 배경. 부드럽지만 카테고리 구분 명확.</div>
+    <span class="tag-t3">Vision AI</span><span class="tag-t3">Edge AI</span><span class="tag-t3">PoC</span><span class="tag-t3">CI/CD</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">4</span>HASHTAG</div>
+    <div class="sample-name">해시태그 스타일 (#Hashtag)</div>
+    <div class="sample-desc">SNS·블로그 친숙한 형태. 캐주얼하고 가벼움.</div>
+    <span class="tag-t4">Vision AI</span><span class="tag-t4">Edge AI</span><span class="tag-t4">PoC</span><span class="tag-t4">CI/CD</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">5</span>SLASH-SEPARATED</div>
+    <div class="sample-name">슬래시 구분 (Slash Separated)</div>
+    <div class="sample-desc">미니멀. 박스 없이 텍스트만으로 깔끔하게 표현.</div>
+    <span class="tag-t5">Vision AI<span class="sep">/</span>Edge AI<span class="sep">/</span>PoC<span class="sep">/</span>CI/CD</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">6</span>UNDERLINE ACCENT</div>
+    <div class="sample-name">밑줄 강조 (Underline Accent)</div>
+    <div class="sample-desc">박스 없이 컬러 밑줄로 카테고리 강조. 인쇄물에 좋음.</div>
+    <span class="tag-t6">Vision AI</span><span class="tag-t6">Edge AI</span><span class="tag-t6">PoC</span><span class="tag-t6">CI/CD</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">7</span>DOT PREFIX</div>
+    <div class="sample-name">점 프리픽스 (Dot Prefix)</div>
+    <div class="sample-desc">간결. 박스 부담 없이 항목 구분 명확.</div>
+    <span class="tag-t7">Vision AI</span><span class="tag-t7">Edge AI</span><span class="tag-t7">PoC</span><span class="tag-t7">CI/CD</span>
+  </div>
+
+  <h2>🔧 Tech Stack 스타일 — 8가지</h2>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">1</span>OUTLINED CHIP (CURRENT)</div>
+    <div class="sample-name">아웃라인 칩 (현재)</div>
+    <div class="sample-desc">기본 회색 보더의 가벼운 칩.</div>
+    <span class="tech-s1">YOLO</span><span class="tech-s1">FLUX</span><span class="tech-s1">Jetson</span><span class="tech-s1">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">2</span>MONOSPACE CODE</div>
+    <div class="sample-name">코드 모노스페이스 (Code Style)</div>
+    <div class="sample-desc">기술 스택이라는 점을 시각적으로 어필. 개발자 친화적.</div>
+    <span class="tech-s2">YOLO</span><span class="tech-s2">FLUX</span><span class="tech-s2">Jetson</span><span class="tech-s2">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">3</span>DARK PILL</div>
+    <div class="sample-name">다크 알약 (Dark Pill)</div>
+    <div class="sample-desc">강한 존재감. Tags가 outline일 때 대비 효과.</div>
+    <span class="tech-s3">YOLO</span><span class="tech-s3">FLUX</span><span class="tech-s3">Jetson</span><span class="tech-s3">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">4</span>BRAND COLORS</div>
+    <div class="sample-name">브랜드 컬러 (Brand-Colored)</div>
+    <div class="sample-desc">각 도구의 브랜드 컬러 적용. 가장 임팩트 강함. 다채로움.</div>
+    <span class="tech-s4 yolo">YOLO</span><span class="tech-s4 flux">FLUX</span><span class="tech-s4 jetson">Jetson</span><span class="tech-s4 bitbucket">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">5</span>LEFT ACCENT BAR</div>
+    <div class="sample-name">좌측 컬러 바 (Left Accent)</div>
+    <div class="sample-desc">왼쪽 컬러 막대로 통일감 + 포인트.</div>
+    <span class="tech-s5">YOLO</span><span class="tech-s5">FLUX</span><span class="tech-s5">Jetson</span><span class="tech-s5">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">6</span>DOT + ROUNDED</div>
+    <div class="sample-name">도트 + 라운드 (Two-tone Pill)</div>
+    <div class="sample-desc">왼쪽 컬러 닷 + 라운드 칩. 정돈된 느낌.</div>
+    <span class="tech-s6">YOLO</span><span class="tech-s6">FLUX</span><span class="tech-s6">Jetson</span><span class="tech-s6">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">7</span>GHOST BLUE</div>
+    <div class="sample-name">고스트 블루 (Ghost Filled)</div>
+    <div class="sample-desc">은은한 블루 톤 배경. 차분하고 신뢰감.</div>
+    <span class="tech-s7">YOLO</span><span class="tech-s7">FLUX</span><span class="tech-s7">Jetson</span><span class="tech-s7">Bitbucket</span>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label"><span class="num">8</span>ARROW MONO</div>
+    <div class="sample-name">화살표 + 모노스페이스</div>
+    <div class="sample-desc">박스 없이 모노스페이스 + ▸ 프리픽스. 가장 미니멀.</div>
+    <span class="tech-s8">YOLO</span><span class="tech-s8">FLUX</span><span class="tech-s8">Jetson</span><span class="tech-s8">Bitbucket</span>
+  </div>
+
+  <h2>🧪 추천 조합 — 카드 전체 미리보기</h2>
+
+  <div class="sample-card">
+    <div class="sample-label">🅐 COMBO A — 강한 임팩트</div>
+    <div class="sample-desc">Tags: SOLID DARK PILL (#1) + Tech Stack: BRAND COLORS (#4)</div>
+    <div class="combo">
+      <div class="combo-meta">R&D Center AI LAB | 2025.01 – 2026.02</div>
+      <div class="combo-title">엘리베이터 내부 상황 분석 시스템</div>
+      <span class="tag-t1">Vision AI</span><span class="tag-t1">Edge AI</span><span class="tag-t1">PoC</span><span class="tag-t1">CI/CD</span>
+      <div class="combo-sect">Tech Stack</div>
+      <span class="tech-s4 yolo">YOLO</span><span class="tech-s4 flux">FLUX</span><span class="tech-s4 jetson">Jetson</span><span class="tech-s4 bitbucket">Bitbucket</span>
+    </div>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label">🅑 COMBO B — 차분/전문</div>
+    <div class="sample-desc">Tags: OUTLINE COLORED (#2) + Tech Stack: MONOSPACE CODE (#2)</div>
+    <div class="combo">
+      <div class="combo-meta">R&D Center AI LAB | 2025.01 – 2026.02</div>
+      <div class="combo-title">엘리베이터 내부 상황 분석 시스템</div>
+      <span class="tag-t2">Vision AI</span><span class="tag-t2">Edge AI</span><span class="tag-t2">PoC</span><span class="tag-t2">CI/CD</span>
+      <div class="combo-sect">Tech Stack</div>
+      <span class="tech-s2">YOLO</span><span class="tech-s2">FLUX</span><span class="tech-s2">Jetson</span><span class="tech-s2">Bitbucket</span>
+    </div>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label">🅒 COMBO C — 미니멀</div>
+    <div class="sample-desc">Tags: UNDERLINE ACCENT (#6) + Tech Stack: ARROW MONO (#8)</div>
+    <div class="combo">
+      <div class="combo-meta">R&D Center AI LAB | 2025.01 – 2026.02</div>
+      <div class="combo-title">엘리베이터 내부 상황 분석 시스템</div>
+      <span class="tag-t6">Vision AI</span><span class="tag-t6">Edge AI</span><span class="tag-t6">PoC</span><span class="tag-t6">CI/CD</span>
+      <div class="combo-sect">Tech Stack</div>
+      <span class="tech-s8">YOLO</span><span class="tech-s8">FLUX</span><span class="tech-s8">Jetson</span><span class="tech-s8">Bitbucket</span>
+    </div>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label">🅓 COMBO D — 부드러움</div>
+    <div class="sample-desc">Tags: PASTEL FILL (#3) + Tech Stack: GHOST BLUE (#7)</div>
+    <div class="combo">
+      <div class="combo-meta">R&D Center AI LAB | 2025.01 – 2026.02</div>
+      <div class="combo-title">엘리베이터 내부 상황 분석 시스템</div>
+      <span class="tag-t3">Vision AI</span><span class="tag-t3">Edge AI</span><span class="tag-t3">PoC</span><span class="tag-t3">CI/CD</span>
+      <div class="combo-sect">Tech Stack</div>
+      <span class="tech-s7">YOLO</span><span class="tech-s7">FLUX</span><span class="tech-s7">Jetson</span><span class="tech-s7">Bitbucket</span>
+    </div>
+  </div>
+
+  <div class="sample-card">
+    <div class="sample-label">🅔 COMBO E — 직관적 균형</div>
+    <div class="sample-desc">Tags: DOT PREFIX (#7) + Tech Stack: DOT + ROUNDED (#6)</div>
+    <div class="combo">
+      <div class="combo-meta">R&D Center AI LAB | 2025.01 – 2026.02</div>
+      <div class="combo-title">엘리베이터 내부 상황 분석 시스템</div>
+      <span class="tag-t7">Vision AI</span><span class="tag-t7">Edge AI</span><span class="tag-t7">PoC</span><span class="tag-t7">CI/CD</span>
+      <div class="combo-sect">Tech Stack</div>
+      <span class="tech-s6">YOLO</span><span class="tech-s6">FLUX</span><span class="tech-s6">Jetson</span><span class="tech-s6">Bitbucket</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

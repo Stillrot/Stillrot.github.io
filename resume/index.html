@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>경력기술서 - 윤동식</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #e5e5e5;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 18mm 16mm 16mm 16mm;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    position: relative;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  /* Korean line-break safety: keep Korean words intact, balance lines */
+  .profile-text,
+  .summary-item,
+  .exp-summary,
+  .exp-summary-detail,
+  .exp-list li,
+  .exp-team,
+  .project-title,
+  .project-meta,
+  .project-list li,
+  .project-section-title,
+  .pub-item,
+  .tech-items,
+  .ref-label,
+  .tech-stack-label {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  /* ===== Page 1 ===== */
+  .name-header {
+    font-size: 40pt;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: #1a1a1a;
+  }
+  .name-role {
+    font-size: 13pt;
+    font-weight: 700;
+    margin-top: 2px;
+    margin-bottom: 14px;
+    color: #1a1a1a;
+  }
+
+  .top-divider {
+    border: 0;
+    border-top: 1px solid #c8c8c8;
+    margin: 4px 0 18px 0;
+  }
+
+  .profile-section {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  .profile-photo {
+    width: 155px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+
+  .profile-text {
+    flex: 1;
+    font-size: 10.5pt;
+    line-height: 1.65;
+    color: #2a2a2a;
+    padding-top: 4px;
+  }
+
+  .profile-text p {
+    margin-bottom: 9px;
+  }
+
+  .profile-text strong {
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  /* Summary box */
+  .summary-box {
+    background: #fbf5dc;
+    border-radius: 4px;
+    padding: 14px 22px 16px 22px;
+    margin-bottom: 30px;
+  }
+
+  .summary-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #6b6b3e;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .summary-item {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 3px 0;
+    padding-left: 0;
+  }
+  .summary-item::before {
+    content: "✓ ";
+    color: #6b6b3e;
+    font-weight: 700;
+    margin-right: 2px;
+  }
+  .summary-item .light {
+    font-weight: 400;
+  }
+
+  /* Section header */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 22px 0 8px 0;
+    padding-bottom: 2px;
+  }
+  .section-title {
+    font-size: 16pt;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+  }
+  .section-sub {
+    font-size: 9.5pt;
+    color: #6e6e6e;
+    font-weight: 400;
+  }
+
+  .section-divider {
+    border: 0;
+    border-top: 1px solid #b8b8b8;
+    margin-bottom: 14px;
+  }
+
+  /* Company experience block */
+  .exp-block {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 30px;
+    align-items: stretch;
+  }
+
+  .exp-left {
+    width: 240px;
+    flex-shrink: 0;
+  }
+
+  .exp-company {
+    font-size: 16pt;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+    line-height: 1.15;
+  }
+  .exp-company.hdc { color: #d32a1f; }
+  .exp-company.meta { color: #5d4ea0; }
+
+  .exp-date {
+    font-size: 10pt;
+    font-weight: 700;
+    margin-top: 3px;
+    color: #1a1a1a;
+  }
+
+  .exp-role {
+    font-size: 10pt;
+    color: #555;
+    margin-bottom: 14px;
+  }
+
+  .exp-summary {
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1.55;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+  }
+
+  .exp-summary-detail {
+    font-size: 9pt;
+    color: #888;
+    line-height: 1.5;
+  }
+
+  .exp-right {
+    flex: 1;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exp-team {
+    font-size: 12pt;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+
+  .exp-list {
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .exp-list li {
+    font-size: 10pt;
+    line-height: 1.7;
+    color: #2a2a2a;
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .exp-list li:last-child {
+    margin-bottom: 0;
+  }
+  .exp-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+  }
+  .exp-list strong { font-weight: 700; color: #1a1a1a; }
+
+  /* ===== Page 2 - Projects ===== */
+  .projects-header {
+    font-size: 18pt;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+  }
+
+  .company-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid #333;
+    margin: 16px 0 18px 0;
+  }
+  .company-header .name {
+    font-size: 17pt;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+  }
+  .company-header .name.hdc { color: #d32a1f; }
+  .company-header .name.meta { color: #5d4ea0; }
+  .company-header .period {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .project-block {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 30px;
+    align-items: stretch;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .project-block:last-child {
+    border-bottom: none;
+  }
+
+  .project-left {
+    width: 270px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-bottom-fixed {
+    margin-top: auto;
+  }
+
+  .project-meta {
+    font-size: 9pt;
+    color: #6a6a6a;
+    margin-bottom: 4px;
+  }
+
+  .project-title {
+    font-size: 14.5pt;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+  }
+
+  .project-tags {
+    margin-bottom: 18px;
+    font-size: 9.5pt;
+  }
+  .tag {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 11px;
+    font-size: 8pt;
+    margin-right: 3px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  .tech-stack-label,
+  .ref-label {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: 14px;
+    margin-bottom: 4px;
+  }
+
+  .tech-items {
+    font-size: 9pt;
+    color: #1a1a1a;
+    line-height: 1.9;
+  }
+  .tech-items .tech {
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 3px;
+    padding: 2px 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 9pt;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+
+  .ref-numbers {
+    display: flex;
+    gap: 5px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+  .ref-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    background: #4f7dc8;
+    color: #fff;
+    border-radius: 11px;
+    font-size: 8.5pt;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s;
+    min-width: 56px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .ref-num:hover {
+    background: #335fa3;
+  }
+
+  .project-right {
+    flex: 1;
+  }
+
+  .project-section-title {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+  .project-section-title:not(:first-child) {
+    margin-top: 14px;
+  }
+
+  .project-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+  .project-list li {
+    font-size: 9.5pt;
+    line-height: 1.65;
+    letter-spacing: -0.2px;
+    color: #2a2a2a;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .project-list li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    color: #1a1a1a;
+    font-size: 11pt;
+    line-height: 1;
+    top: 6px;
+  }
+  .project-list li strong {
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  /* ===== Page 3 - Publications ===== */
+  .pub-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .pub-header-row .legend {
+    font-size: 9.5pt;
+    color: #555;
+  }
+  .pub-header-row .legend .h-tag { color: #d32a1f; font-weight: 700; }
+  .pub-header-row .legend .m-tag { color: #5d4ea0; font-weight: 700; }
+  .pub-header-row .legend .k-tag { color: #2a7fc7; font-weight: 700; }
+
+  .pub-divider {
+    border: 0;
+    border-top: 1.5px solid #333;
+    margin-bottom: 18px;
+  }
+
+  .pub-section-title {
+    font-size: 14pt;
+    font-weight: 800;
+    margin-top: 18px;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+  }
+
+  .pub-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .pub-item {
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+  .pub-item .num {
+    text-decoration: underline;
+    margin-right: 2px;
+  }
+  .pub-item strong { font-weight: 700; color: #1a1a1a; }
+  .pub-item .tag-h { color: #d32a1f; font-weight: 700; font-size: 8.5pt; }
+  .pub-item .tag-m { color: #5d4ea0; font-weight: 700; font-size: 8.5pt; }
+  .pub-item .tag-k { color: #2a7fc7; font-weight: 700; font-size: 8.5pt; }
+
+  @media print {
+    body { background: #fff; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Page 1 ===== -->
+<div class="page">
+  <h1 class="name-header">윤동식</h1>
+  <div class="name-role">AI Engineer</div>
+
+  <hr class="top-divider">
+
+  <div class="profile-section">
+    <img class="profile-photo" src="profile.jpg" alt="윤동식">
+    <div class="profile-text">
+      <p><strong>실서비스 조건에서 동작하는 Computer Vision / Edge AI 시스템</strong>을 연구하고 구현하는 AI 연구자입니다.</p>
+      <p>화재 감지, 엘리베이터 내부 상황 분석, 이상행동 인식과 같은 실환경 문제를 대상으로, <strong>기술 PoC 설계, 도메인 특화 데이터 구축, 배포형 모델 전환, 운영 자동화 환경 설계</strong>까지 전 과정을 수행해왔습니다.</p>
+      <p>특히, 현장 제약으로 인해 연구용 고성능 구조를 그대로 적용할 수 없는 상황에서, <strong>엣지 디바이스 기준으로 모델 구조를 재설계하고 운영 가능한 형태로 단순화</strong>하는 과정에 강점을 갖고 있습니다.</p>
+      <p>프로젝트 과정에서 확보한 기술을 주기적으로 <strong>논문 및 특허로 체계화하여 지적재산권</strong>으로 확보해왔습니다.</p>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-title">SUMMARY</div>
+    <div class="summary-item"><strong>PoC부터 배포형 전환까지 연결되는 실전형 AI 개발 경험</strong><span class="light">이 있습니다.</span></div>
+    <div class="summary-item"><strong>도메인 특화 합성 데이터 생성과 실데이터 구축</strong><span class="light">을 통해 현장 성능 한계를 보완해왔습니다.</span></div>
+    <div class="summary-item"><strong>엣지 제약을 고려한 경량화, 최적화, 배포 자동화</strong><span class="light">로 실제 서비스 적용 가능성을 높여왔습니다.</span></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-title">Work Experience</div>
+    <div class="section-sub">총 3년 5개월 간의 경력</div>
+  </div>
+  <hr class="section-divider">
+
+  <div class="exp-block">
+    <div class="exp-left">
+      <div class="exp-company hdc">HDC LABS</div>
+      <div class="exp-date">2024.05 - (재직 중)</div>
+      <div class="exp-role">AI Engineer</div>
+      <div class="exp-summary">CCTV 기반 현장 비전 과제에서<br>PoC 설계부터 배포와 현장 적용까지<br>전 과정을 수행했습니다.</div>
+      <div class="exp-summary-detail">데이터 구축과 품질 관리, AI모델<br>검증 및 개선을 통한 현장 적용</div>
+    </div>
+    <div class="exp-right">
+      <div class="exp-team">R&amp;D Center AI LAB</div>
+      <ul class="exp-list">
+        <li>CCTV 기반 비전 과제에 대한 <strong>PoC 개발 및 성능 검증</strong> 수행</li>
+        <li>현장 데이터 중심 <strong>수집, 정제, 라벨링, 품질 관리</strong> 프로세스 운영</li>
+        <li>실서비스 적용을 위한 <strong>모델 검증/개선 반복</strong> 및 적용 전략 정리</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-left">
+      <div class="exp-company meta">METAVERSE ENT.</div>
+      <div class="exp-date">2023.01 - 2024.05</div>
+      <div class="exp-role">AI Engineer</div>
+      <div class="exp-summary">버추얼 인플루언서 콘텐츠 제작을 위한<br>AI 기반 기능 개발과<br>내부 데모 구축을 수행했습니다.</div>
+      <div class="exp-summary-detail">콘텐츠 제작 프로세스 개선, 데모 기반 활용성 검증</div>
+    </div>
+    <div class="exp-right">
+      <div class="exp-team">Technical Development Team, AI Part</div>
+      <ul class="exp-list">
+        <li>얼굴 생성과 편집, 음성 합성 등 <strong>콘텐츠 특화 AI 기능 개발</strong></li>
+        <li>콘텐츠 제작 프로세스 개선을 위한 <strong>내부 도구/워크플로우 정리</strong></li>
+        <li>사내 데모 구축 및 테스트 운영을 통한 <strong>활용성 검증과 배포 지원</strong></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Page 2 - Projects ===== -->
+<div class="page">
+  <div class="projects-header">Projects</div>
+
+  <div class="company-header">
+    <span class="name hdc">HDC LABS</span>
+    <span class="period">2024.05 - (재직 중)</span>
+  </div>
+
+  <!-- Project 1 -->
+  <div class="project-block">
+    <div class="project-left">
+      <div class="project-meta">R&amp;D Center AI LAB | 2025.01 – 2026.02</div>
+      <div class="project-title">엘리베이터 내부 상황 분석 시스템</div>
+      <div class="project-tags">
+        <span class="tag">Vision AI</span>
+        <span class="tag">Edge AI</span>
+        <span class="tag">PoC</span>
+        <span class="tag">CI/CD</span>
+      </div>
+      <div class="project-bottom-fixed">
+        <div class="tech-stack-label">Tech Stack</div>
+        <div class="tech-items">
+          <span class="tech">YOLO</span>
+          <span class="tech">FLUX</span>
+          <span class="tech">Jetson</span>
+          <span class="tech">Bitbucket</span>
+        </div>
+        <div class="ref-label">참조 사이트</div>
+        <div class="ref-numbers">
+          <a class="ref-num" href="https://stillrot.github.io/career/hdclabs/#proj-elv" target="_blank" rel="noopener">Project</a>
+          <a class="ref-num" href="https://www.youtube.com/watch?v=Z2OQIBj17bM" target="_blank" rel="noopener">YouTube</a>
+          <a class="ref-num" href="https://n.news.naver.com/mnews/article/119/0002945075" target="_blank" rel="noopener">News</a>
+          <a class="ref-num" href="https://doi.org/10.8080/1020250066321" target="_blank" rel="noopener">Patent</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-right">
+      <div class="project-section-title">주요 업무 내용</div>
+      <ul class="project-list">
+        <li>반려견 검출 및 내부 점유 상태 인지를 위한 상황 분석 PoC 설계</li>
+        <li>엣지 디바이스 기준 경량 단일 파이프라인 재설계 및 판단 로직 최적화</li>
+        <li>엘리베이터 특수 시점 대응 합성 데이터 및 실환경 데이터 확보</li>
+        <li>Docker 기반 배포 흐름 설계 및 CI/CD 자동화 구축</li>
+      </ul>
+      <div class="project-section-title">프로젝트 성과</div>
+      <ul class="project-list">
+        <li>상황 분석 PoC 검증을 통해 <strong>HDC 3사 기술 제휴 MOU 체결</strong>에 기여</li>
+        <li>엣지 환경 기준 재설계 및 사내 엘리베이터 실연동을 통한 제품화 가능성 확인</li>
+        <li>도메인 특화 합성 데이터 생성 연구로 모델 성능 향상 및 국제 학회 논문 게재</li>
+        <li>배포 자동화 환경을 구축해 모델과 코드 변경사항 반영 기반 확보</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-block">
+    <div class="project-left">
+      <div class="project-meta">R&amp;D Center AI LAB | 2024.05 – 2025.10</div>
+      <div class="project-title">지하주차장 화재 감지 보조 시스템</div>
+      <div class="project-tags">
+        <span class="tag">Vision AI</span>
+        <span class="tag">Synthetic Data</span>
+        <span class="tag">Deployed</span>
+      </div>
+      <div class="project-bottom-fixed">
+        <div class="tech-stack-label">Tech Stack</div>
+        <div class="tech-items">
+          <span class="tech">YOLO</span>
+          <span class="tech">CLIP</span>
+          <span class="tech">FLUX</span>
+          <span class="tech">Hailo</span>
+        </div>
+        <div class="ref-label">참조 사이트</div>
+        <div class="ref-numbers">
+          <a class="ref-num" href="https://stillrot.github.io/career/hdclabs/#proj-fire" target="_blank" rel="noopener">Project</a>
+          <a class="ref-num" href="https://iclr.cc/virtual/2025/33606" target="_blank" rel="noopener">Paper</a>
+          <a class="ref-num" href="https://n.news.naver.com/mnews/article/277/0005646517" target="_blank" rel="noopener">News</a>
+          <a class="ref-num" href="https://doi.org/10.8080/1020240177540" target="_blank" rel="noopener">Patent</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-right">
+      <div class="project-section-title">주요 업무 내용</div>
+      <ul class="project-list">
+        <li>지하주차장 CCTV 환경 특화 화재 및 연기 탐지 PoC 설계</li>
+        <li>도메인 특화 합성 데이터 생성 및 탐지 모델 재학습</li>
+        <li>엣지 환경 적용을 위한 경량 사후 검증 판단 구조로 재설계</li>
+        <li>현장 적용 및 운영 중 발생 오탐 재학습 대응</li>
+      </ul>
+      <div class="project-section-title">프로젝트 성과</div>
+      <ul class="project-list">
+        <li>도메인 특화 <strong>합성 데이터 활용</strong>을 통한 화재 및 연기 탐지 성능 향상 검증</li>
+        <li>VLM 기반 초기 PoC에서 엣지 적용 가능한 경량 판단 구조로 재설계 적용</li>
+        <li>광명 센트럴 아이파크 전기차 충전구역에 화재감지 보조 시스템 실적용 완료</li>
+        <li>도메인 특화 데이터 생성 경험을 후속 연구 및 기술 자산으로 확장</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="company-header" style="margin-top: 8px;">
+    <span class="name meta">METAVERSE ENT.</span>
+    <span class="period">2023.01 - 2024.05</span>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-block" style="border-bottom: none;">
+    <div class="project-left">
+      <div class="project-meta">TD Team, AI Part | 2023.01 – 2024.05</div>
+      <div class="project-title">콘텐츠 제작용 생성형 AI 기능 개발</div>
+      <div class="project-tags">
+        <span class="tag">Gen AI</span>
+        <span class="tag">Face Editing</span>
+        <span class="tag">Internal Tool</span>
+      </div>
+      <div class="project-bottom-fixed">
+        <div class="tech-stack-label">Tech Stack</div>
+        <div class="tech-items">
+          <span class="tech">StableDiffusion</span>
+          <span class="tech">LoRA</span>
+          <span class="tech">ComfyUI</span>
+        </div>
+        <div class="ref-label">참조 사이트</div>
+        <div class="ref-numbers">
+          <a class="ref-num" href="https://stillrot.github.io/career/metaent/" target="_blank" rel="noopener">Project</a>
+          <a class="ref-num" href="https://www.instagram.com/rina.8k/" target="_blank" rel="noopener">Insta</a>
+          <a class="ref-num" href="https://www.youtube.com/@mave_official/videos" target="_blank" rel="noopener">YouTube</a>
+          <a class="ref-num" href="https://ieeexplore.ieee.org/document/10328572" target="_blank" rel="noopener">Paper</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-right">
+      <div class="project-section-title">주요 업무 내용</div>
+      <ul class="project-list">
+        <li>인플루언서 맞춤 이미지 생성 파이프라인 구축, 생성 품질 개선과 내부 WebUI 배포까지 적용</li>
+        <li>얼굴 이미지 연령 변환 모델 구조/학습 전략 설계, 성능 검증 및 대외 공개 가능한 연구 산출물로 정리</li>
+        <li>특정 인플루언서 전용 음성 변환(VC) 모델 미세조정 및 사내 배포, 다국어 TTS 기능 개발과 활용성 검증</li>
+      </ul>
+      <div class="project-section-title">프로젝트 성과</div>
+      <ul class="project-list">
+        <li>버추얼 인플루언서 Instagram 및 YouTube 콘텐츠 제작에 <strong>실제 적용</strong></li>
+        <li>Face Re-Aging 기술 개발 성과를 논문화하여 기술 자산으로 확보</li>
+        <li>음성 변환 모델 <strong>사내 배포</strong>를 통한 콘텐츠 제작 비용 절감</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Page 3 - Publications ===== -->
+<div class="page">
+  <div class="pub-header-row">
+    <div class="projects-header" style="margin-bottom: 0;">Publications</div>
+    <div class="legend">
+      <span class="h-tag">H</span>: HDC LABS&nbsp;&nbsp;
+      <span class="m-tag">M</span>: META Ent.&nbsp;&nbsp;
+      <span class="k-tag">K</span>: Korea Univ.
+    </div>
+  </div>
+  <hr class="pub-divider">
+
+  <div class="pub-section-title">International Journal</div>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <span class="num">[3]</span> [SCI-E] Yuanming Li, <strong>Dongsik Yoon</strong>, Bonwha Ku, Hanseok Ko, "ConSeisGen: Controllable Synthetic Seismic Waveform Generation", IEEE Geoscience and Remote Sensing Letters (GRSL), 2023.12 [IF=4.8] <span class="tag-k">K</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[2]</span> [SCI-E] <strong>Dongsik Yoon</strong>, Jineui Kim, Vincent Lorant, Sungku Kang, "Manipulation of Age Variation using StyleGAN inversion and fine-tuning", IEEE Access, 2023.11 [IF=3.9] <span class="tag-m">M</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[1]</span> [SCI-E] <strong>Dongsik Yoon</strong>, Yuanming Li, Bonwha Ku, Hanseok Ko, "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN", IEEE Geoscience and Remote Sensing Letters (GRSL), 2023.01 [IF=5.3] <span class="tag-k">K</span>
+    </li>
+  </ul>
+
+  <div class="pub-section-title">International Conference</div>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <span class="num">[12]</span> <strong>Dongsik Yoon</strong>, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang, "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition", (Under review), 2026 <span class="tag-h">H</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[11]</span> <strong>Dongsik Yoon*</strong>, Jongeun Kim*, Dayeon Lee*, "Resource-Efficient RGB-Only Action Recognition for Edge Deployment", (Under review), 2026 <span class="tag-h">H</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[10]</span> <strong>Dongsik Yoon</strong>, Jongeun Kim, "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models", IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026.03 (Oral) <span class="tag-h">H</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[9]</span> <strong>Dongsik Yoon</strong>, Jongeun Kim, "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios", International Conference on Computer Vision Workshop (ICCVW), 2025.10 <span class="tag-h">H</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[8]</span> Jongeun Kim*, Yejin Lee*, <strong>Dongsik Yoon*</strong>, Chansung Jung, Gunhee Lee, "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments", International Conference on Learning Representations Workshop (ICLRW), 2025.04 <span class="tag-h">H</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[7]</span> <strong>Dongsik Yoon</strong>, Jongeun Kim, Seonggeun Song, Yejin Lee, Gunhee Lee, "OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360 Panoramic Images", SIGGRAPH Asia Posters, 2024.12 <span class="tag-h">H</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[6]</span> Jeong-gi Kwak, Yuanming Li, <strong>Dongsik Yoon</strong>, Donghyeon Kim, Hanseok Ko, "Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis", European Conference on Computer Vision (ECCV), 2022.10 <span class="tag-k">K</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[5]</span> <strong>Dongsik Yoon</strong>, Jeong-gi Kwak, Yuanming Li, David Han, Hanseok Ko, "DIFAI: Diverse Facial Inpainting using StyleGAN Inversion", IEEE International Conference on Image Processing (ICIP), 2022.10 <span class="tag-k">K</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[4]</span> Jeong-gi Kwak, Yuanming Li, <strong>Dongsik Yoon</strong>, David Han, Hanseok Ko, "Generate and Edit Your Own Character in a Canonical View", IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (CVPRW), 2022.06 <span class="tag-k">K</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[3]</span> <strong>Dongsik Yoon</strong>, Jeong-gi Kwak, Yuanming Li, Youngsaeng Jin, David Han, Hanseok Ko, "Reference Guided Image Inpainting using Facial Attributes", British Machine Vision Conference (BMVC), 2021.11 <span class="tag-k">K</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[2]</span> Jeong-gi Kwak, Youngsaeng Jin, Yuanming Li, <strong>Dongsik Yoon</strong>, Donghyeon Kim, Hanseok Ko, "Adverse Weather Image Translation with Asymmetric and Uncertainty-aware GAN", British Machine Vision Conference (BMVC), 2021.11 <span class="tag-k">K</span>
+    </li>
+    <li class="pub-item">
+      <span class="num">[1]</span> Yuanming Li, Youngsaeng Jin, Jeong-gi Kwak, <strong>Dongsik Yoon</strong>, David Han, Hanseok Ko, "Adaptive Content Feature Enhancement GAN for Multimodal Selfie to Anime Translation", British Machine Vision Conference (BMVC), 2021.11 <span class="tag-k">K</span>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
