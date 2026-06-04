@@ -1,27 +1,27 @@
 # Sitemap
 
-Dongsik Yoon portfolio static-site, mirror of `https://dongsik-yoon.webflow.io/`.
+Dongsik Yoon portfolio — static site (GitHub Pages).
 All paths are relative to the site root (`/`) so the deploy works at any GitHub Pages base path.
 
 ## Pages
 
-| Path | Source on original site | Purpose |
-| ---- | ----------------------- | ------- |
-| `/` | `/` | Home: profile, career list, publications, patents |
-| `/news/` | `/news-ds` | Press/news clippings |
-| `/career/hdclabs/` | `/hdclabs` | HDC LABS career detail |
-| `/career/metaent/` | `/metaent` | Metaverse Entertainment career detail |
-| `/career/ku/` | `/ku` | Korea University M.S. career detail |
-| `/career/bu/` | `/bu` | Baekseok University B.S. career detail |
-| `/papers/` | `/#publications` | Listing of paper detail pages |
-| `/papers/wacvw2026/` | `/papers/wacvw2026` | WACVW 2026 paper |
-| `/papers/iccvw2025/` | `/papers/iccvw2025` | ICCVW 2025 paper |
-| `/papers/iclrw2025/` | `/papers/iclr2025` | ICLRW 2025 paper |
-| `/papers/siggraph2024/` | `/papers/siggraph2024` | SIGGRAPH Asia 2024 poster |
-| `/papers/access2023/` | `/papers/access2023` | IEEE Access 2023 paper |
-| `/papers/grsl2023/` | `/papers/grsl2023` | IEEE GRSL 2023 paper |
-| `/papers/icip2022/` | `/papers/icip2022` | IEEE ICIP 2022 paper |
-| `/papers/bmvc2021/` | `/papers/bmvc2021` | BMVC 2021 paper |
+| Path | Purpose |
+| ---- | ------- |
+| `/` | Home: profile, career list, publications, patents |
+| `/news/` | Press/news clippings |
+| `/career/hdclabs/` | HDC LABS career detail |
+| `/career/metaent/` | Metaverse Entertainment career detail |
+| `/career/ku/` | Korea University M.S. career detail |
+| `/career/bu/` | Baekseok University B.S. career detail |
+| `/papers/` | Listing of paper detail pages |
+| `/papers/wacvw2026/` | WACVW 2026 paper |
+| `/papers/iccvw2025/` | ICCVW 2025 paper |
+| `/papers/iclrw2025/` | ICLRW 2025 paper |
+| `/papers/siggraph2024/` | SIGGRAPH Asia 2024 poster |
+| `/papers/access2023/` | IEEE Access 2023 paper |
+| `/papers/grsl2023/` | IEEE GRSL 2023 paper |
+| `/papers/icip2022/` | IEEE ICIP 2022 paper |
+| `/papers/bmvc2021/` | BMVC 2021 paper |
 
 ## Data files (JSON)
 
@@ -43,7 +43,7 @@ All paths are relative to the site root (`/`) so the deploy works at any GitHub 
 | `cvf_openaccess` | host equals `openaccess.thecvf.com` |
 | `acm` | host equals `dl.acm.org` |
 | `mlr` | host equals `proceedings.mlr.press` |
-| `project_page` | github.io / webflow.io / similar — paper project pages |
+| `project_page` | github.io / similar — paper project pages |
 | `code` | host equals `github.com` (non-pages) |
 | `external` | anything else (news, social, scholar) |
 

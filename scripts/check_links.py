@@ -39,7 +39,7 @@ CLASSES = {
     "code": lambda h: urllib.parse.urlparse(h).netloc.endswith("github.com"),
     "project_page": lambda h: any(
         urllib.parse.urlparse(h).netloc.endswith(d)
-        for d in (".github.io", ".webflow.io", "sites.google.com", "pure.korea.ac.kr",
+        for d in (".github.io", "sites.google.com", "pure.korea.ac.kr",
                   "dcollection.korea.ac.kr", "kci.go.kr")
     ),
 }

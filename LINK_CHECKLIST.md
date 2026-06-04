@@ -26,7 +26,7 @@ Buckets to expect:
 | `acm`             | SIGGRAPH paper                             | 200                                                            |
 | `mlr`             | ICLRW paper                                | 200                                                            |
 | `code`            | BMVC paper                                 | GitHub repo                                                    |
-| `project_page`    | ECCV (surfgan), NTU60-audio, KCI, Korea U  | github.io / webflow.io / pure.korea.ac.kr                      |
+| `project_page`    | ECCV (surfgan), NTU60-audio, KCI, Korea U  | github.io / pure.korea.ac.kr                      |
 | `external`        | news (네이버, netmarble), socials, scholar | These are user-facing news clippings — open in a new tab       |
 
 ## Manual visual review
@@ -43,4 +43,4 @@ Buckets to expect:
 ## Known acceptable cases
 
 - Project figures/thumbnails are self-hosted under `assets/img/ext/` (no Webflow-CDN dependency). The remaining external images (news outlets, HuggingFace, arXiv, YouTube) degrade gracefully if they 404 — the surrounding `<figure>` still shows the caption.
-- To re-self-host after adding new Webflow-hosted images, run `python3 tools/self_host_images.py` (downloads into `assets/img/ext/` and rewrites the JSON/HTML refs), then `tools/prerender_home.py`.
+- For a new image, place the file in `assets/img/ext/` and reference it by local path, then re-run `tools/prerender_home.py`.

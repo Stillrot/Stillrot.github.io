@@ -1,13 +1,13 @@
-# Dongsik Yoon · Portfolio (static)
+# Dongsik Yoon — Portfolio (static)
 
-Static mirror of [dongsik-yoon.webflow.io](https://dongsik-yoon.webflow.io/) that runs on **GitHub Pages** with zero build step.
+Personal portfolio — a hand-built static site on **GitHub Pages** with zero build step.
 
 ## Layout
 
 ```
 portfolio/
 ├── index.html              # Home (profile, career grid, publications, patents)
-├── news/index.html         # /news/  ← original /news-ds
+├── news/index.html         # /news/
 ├── papers/
 │   ├── index.html          # paper listing
 │   ├── wacvw2026/index.html
@@ -19,10 +19,10 @@ portfolio/
 │   ├── icip2022/index.html
 │   └── bmvc2021/index.html
 ├── career/
-│   ├── hdclabs/index.html  # ← /hdclabs
-│   ├── metaent/index.html  # ← /metaent
-│   ├── ku/index.html       # ← /ku
-│   └── bu/index.html       # ← /bu
+│   ├── hdclabs/index.html
+│   ├── metaent/index.html
+│   ├── ku/index.html
+│   └── bu/index.html
 ├── data/
 │   ├── papers.json         # title, authors, venue, abstract, figures, bibtex …
 │   ├── publications.json   # journals + conferences
@@ -34,6 +34,9 @@ portfolio/
 │   └── img/                # logos, profile + self-hosted figures (ext/)
 ├── scripts/
 │   └── check_links.py
+├── tools/                  # generators: prerender_home.py, generate_llms.py
+├── llms.txt                # short index for LLMs / agents
+├── llms-full.txt           # full site content for LLMs / agents
 ├── sitemap.xml
 ├── SITEMAP.md
 ├── LINK_CHECKLIST.md
@@ -89,14 +92,14 @@ Output is grouped by link class — `internal`, `anchor`, `arxiv`, `ieee`, `cvf_
 
 See `LINK_CHECKLIST.md` for the manual review steps.
 
-## Self-hosted images & generated files
+## Images & generated files
 
-Project figures and thumbnails are **self-hosted** under `assets/img/ext/` — no
-dependency on the Webflow CDN. (News-outlet, HuggingFace, arXiv, and YouTube
-images are intentionally left external.) After adding any new
-`cdn.prod.website-files.com` image, re-sync and refresh the generated files:
+Project figures and thumbnails are **self-hosted** under `assets/img/ext/` (no
+external-CDN dependency for the core images). A few third-party images (news
+outlets, HuggingFace, arXiv, YouTube) are linked externally on purpose.
 
-    python3 tools/self_host_images.py   # download new Webflow images + rewrite refs
+After editing `data/*.json` or page content, refresh the generated files:
+
     python3 tools/prerender_home.py     # refresh the home static fallback (raw-HTML content)
     python3 tools/generate_llms.py      # refresh llms.txt / llms-full.txt
 
