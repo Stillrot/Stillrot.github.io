@@ -105,3 +105,9 @@ After editing `data/*.json` or page content, refresh the generated files:
 
 `llms.txt` / `llms-full.txt` (repo root) give LLMs and agents the full site
 content in plain text, since the live pages render some data with JavaScript.
+
+A **git pre-commit hook** (`tools/hooks/pre-commit`) runs both generators
+automatically on every commit and re-stages the outputs, so they always match
+the committed content — no need to run them by hand. Activate once per clone:
+
+    git config core.hooksPath tools/hooks
