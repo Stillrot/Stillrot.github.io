@@ -59,7 +59,7 @@ CV
 
 ## Career
 
-Click a card to view the details.
+Click a card to view the details
 
 [image: HDC LABS]
 
@@ -260,9 +260,9 @@ On-site Mentor
 
 ## Projects
 
-프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다
 
-Select a project to view its details below.
+Select a project to view its details below
 
 지하주차장 화재 탐지
 
@@ -370,7 +370,7 @@ Achievements
 
 ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크
 
-YOLO + VLM fire detection framework published at ICLRW.
+YOLO + VLM fire detection framework published at ICLRW
 
 2
 현장 적용을 위한 재설계
@@ -409,7 +409,7 @@ Achievements
 
 AI CCTV 감시 공간 내 불꽃과 연기 감지 시 팝업 알림 예시
 
-Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV.
+Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV
 
 3
 실 적용 현황
@@ -445,7 +445,7 @@ Achievements
 
 광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황
 
-AI-assisted fire detection deployed at Gwangmyeong Central IPARK.
+AI-assisted fire detection deployed at Gwangmyeong Central IPARK
 
 ### 엘리베이터 내부 상황 분석 시스템
 
@@ -501,7 +501,7 @@ Achievements
 
 HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시
 
-PoC footage captured inside an elevator at HDC LABS headquarters.
+PoC footage captured inside an elevator at HDC LABS headquarters
 
 2
 엣지 환경 재설계와 데이터 전략
@@ -552,7 +552,7 @@ Achievements
 
 기술 검증용 PoC 아키텍처 예시
 
-Example architecture used for technical PoC validation.
+Example architecture used for technical PoC validation
 
 3
 현장 배포 자동화
@@ -752,9 +752,9 @@ LLM Chatbot
 
 ## Projects
 
-프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다
 
-Select a project to view its details below.
+Select a project to view its details below
 
 사용자 맞춤형 이미지 생성
 
@@ -837,7 +837,7 @@ Achievements
 
 대역 모델 → 특정 인플루언서 face-swap 예시
 
-Example of face-swapping from a stand-in model onto the target influencer persona.
+Example of face-swapping from a stand-in model onto the target influencer persona
 
 ### Face Re-Aging 기술 개발
 
@@ -875,7 +875,7 @@ First-author paper published in IEEE Access (IF=3.9).
 
 연령 변환 가이드 이미지 생성 예시
 
-Example reference images generated for age transformation.
+Example reference images generated for age transformation
 
 ### 화자 변환 음성 AI 연구
 
@@ -1011,9 +1011,9 @@ M.S. thesis: Deep Learning Framework Design via Condition Guided Learning
 
 ## Projects
 
-프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다
 
-Select a project to view its details below.
+Select a project to view its details below
 
 1차원 신호처리
 
@@ -1106,7 +1106,7 @@ First-author paper in IEEE GRSL (IF=5.3)
 
 가상 지진 시나리오 소프트웨어 예시
 
-Example screen from the virtual earthquake-scenario software.
+Example screen from the virtual earthquake-scenario software
 
 ### 낭독체 및 대화체 음성 합성 모델 개발 연구 (Deep Machine LAB, 2022)
 
@@ -1160,7 +1160,7 @@ Demo page
 
 제안한 참조 스타일 기반의 음성 합성 모델 구조
 
-Architecture of the proposed reference-style TTS model.
+Architecture of the proposed reference-style TTS model
 
 ### 이미지 처리 연구
 
@@ -1208,13 +1208,13 @@ Third-author paper at ECCV 2022
 
 BMVC 2021 발표 논문 결과 예시
 
-Example results from the BMVC 2021 paper.
+Example results from the BMVC 2021 paper
 
 [image: ECCV2022 result]
 
 ECCV 2022 발표 논문 결과 예시
 
-Example results from the ECCV 2022 paper.
+Example results from the ECCV 2022 paper
 
 © Dongsik Yoon Home
 
@@ -1297,9 +1297,9 @@ IPCG: Image Processing and Computer Graphics Laboratory 2018.03 ~ 2020.10 Adviso
 
 ## Projects
 
-프로젝트를 선택하면 아래에 상세 내용이 표시됩니다.
+프로젝트를 선택하면 아래에 상세 내용이 표시됩니다
 
-Select a project to view its details below.
+Select a project to view its details below
 
 GAN 기반 이미지 생성 및 변환 연구
 
@@ -1374,7 +1374,7 @@ Results
 
 Facades 데이터셋 기반의 기존 pix2pix와 제안된 방법 비교
 
-Comparison of the original pix2pix and the proposed method on the Facades dataset.
+Comparison of the original pix2pix and the proposed method on the Facades dataset
 
 ### ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할
 
@@ -1425,13 +1425,13 @@ Results
 
 제안한 방법의 블록 다이어그램
 
-Block diagram of the proposed method.
+Block diagram of the proposed method
 
 [image: Small object segmentation result]
 
 소형 객체 분할 성능 향상 예시
 
-Example of improved small-object segmentation.
+Example of improved small-object segmentation
 
 ## Publications
 
