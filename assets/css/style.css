@@ -111,6 +111,9 @@ section.hero { padding: 56px 0 32px; }
 a.sp-card:hover { border-color: var(--accent); transform: translateY(-2px); transition: 120ms; text-decoration: none; }
 .sp-info { flex: 1; min-width: 0; }
 .sp-name { font-weight: 700; font-size: 14px; color: var(--fg); }
+.sp-arrow { margin-left: 6px; color: var(--fg-muted); font-weight: 700; display: inline-block; transition: transform 0.14s ease, color 0.14s ease; }
+a.sp-card:hover .sp-name { color: var(--accent); }
+a.sp-card:hover .sp-arrow { transform: translateX(4px); color: var(--accent); }
 .sp-period { color: var(--fg-muted); font-size: 11.5px; margin-top: 2px; }
 .sp-chips { margin-top: 9px; display: flex; flex-wrap: wrap; gap: 5px; }
 .sp-chip { font-size: 10.5px; font-weight: 600; color: var(--tag-fg); background: var(--tag-bg); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px; }
