@@ -2317,7 +2317,7 @@ PDF 저장
 ======================================================================
 ## Research / Papers (10)
 
-- "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition" (NTU60-AUDIO) — Interspeech 2026, 2026 (Under review)
+- "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition" (NTU60-AUDIO) — Under review, 2026
   - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
 - "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026 (Oral)
   - Authors: Dongsik Yoon, Jongeun Kim
