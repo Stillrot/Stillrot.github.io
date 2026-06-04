@@ -158,6 +158,7 @@ a.sp-card:hover .sp-arrow { transform: translateX(4px); color: var(--accent); }
 /* ----- Section ----- */
 section.block { padding: 40px 0; }
 section.block + section.block { border-top: 1px solid var(--border); }
+section.block#projects { border-top: 0; } /* no gray divider between Career and Selected Projects */
 section.block.tinted { background: var(--bg-soft); border-radius: var(--radius); margin: 8px 24px; padding: 32px; }
 section.block.cream { background: var(--bg-cream); border-radius: var(--radius); margin: 8px 24px; padding: 32px; }
 section.block h2 {

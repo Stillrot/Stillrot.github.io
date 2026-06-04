@@ -57,6 +57,45 @@ CV
 
 [image: Profile]
 
+## Career
+
+Click a card to view the details
+
+[image: HDC LABS]
+
+HDC LABS
+
+R&D Center AI LAB
+
+2024.05 ~ Present
+
+[image: Metaverse Entertainment]
+
+Metaverse
+Entertainment
+
+TD Team AI Part
+
+2023.01 ~ 2024.05
+
+[image: Korea University]
+
+Korea
+University
+
+M.S. in Electrical Engineering
+
+2021.03 ~ 2023.02
+
+[image: Baekseok University]
+
+Baekseok
+University
+
+B.S. in Multimedia Engineering
+
+2015.03 ~ 2021.02
+
 ## Selected Projects
 
 Selected projects and key contributions
@@ -97,45 +136,6 @@ Contribution
 
 60%
 
-## Career
-
-Click a card to view the details
-
-[image: HDC LABS]
-
-HDC LABS
-
-R&D Center AI LAB
-
-2024.05 ~ Present
-
-[image: Metaverse Entertainment]
-
-Metaverse
-Entertainment
-
-TD Team AI Part
-
-2023.01 ~ 2024.05
-
-[image: Korea University]
-
-Korea
-University
-
-M.S. in Electrical Engineering
-
-2021.03 ~ 2023.02
-
-[image: Baekseok University]
-
-Baekseok
-University
-
-B.S. in Multimedia Engineering
-
-2015.03 ~ 2021.02
-
 Publications
 Patents
 News
@@ -152,13 +152,13 @@ Research
 - RESEARCH -> https://stillrot.github.io/#research
 - Portfolio -> https://stillrot.github.io/portfolio2026/
 - CV -> https://stillrot.github.io/cv/
-- 엘리베이터 내부 상황 분석In-Elevator Situational Analysis→ HDC LABS / 2025 – 2026 YOLOJetsonCI/CD 기여도Contribution65% -> https://stillrot.github.io/career/hdclabs/
-- 지하주차장 화재 감지Underground Parking Fire Detection→ HDC LABS / 2024 – 2025 YOLOVLMHailo-8 기여도Contribution50% -> https://stillrot.github.io/career/hdclabs/
-- 인플루언서 맞춤 이미지 생성Influencer Custom Image Generation→ Meta Ent. / 2023 – 2024 StableDiffusionLoRAComfyUI 기여도Contribution60% -> https://stillrot.github.io/career/metaent/
 - HDC LABS R&D Center AI LAB 2024.05 ~ Present -> https://stillrot.github.io/career/hdclabs/
 - Metaverse Entertainment TD Team AI Part 2023.01 ~ 2024.05 -> https://stillrot.github.io/career/metaent/
 - Korea University M.S. in Electrical Engineering 2021.03 ~ 2023.02 -> https://stillrot.github.io/career/ku/
 - Baekseok University B.S. in Multimedia Engineering 2015.03 ~ 2021.02 -> https://stillrot.github.io/career/bu/
+- 엘리베이터 내부 상황 분석In-Elevator Situational Analysis→ HDC LABS / 2025 – 2026 YOLOJetsonCI/CD 기여도Contribution65% -> https://stillrot.github.io/career/hdclabs/
+- 지하주차장 화재 감지Underground Parking Fire Detection→ HDC LABS / 2024 – 2025 YOLOVLMHailo-8 기여도Contribution50% -> https://stillrot.github.io/career/hdclabs/
+- 인플루언서 맞춤 이미지 생성Influencer Custom Image Generation→ Meta Ent. / 2023 – 2024 StableDiffusionLoRAComfyUI 기여도Contribution60% -> https://stillrot.github.io/career/metaent/
 
 ### External links
 - GitHub -> https://github.com/Stillrot/RGINP
