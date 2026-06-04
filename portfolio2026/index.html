@@ -700,31 +700,30 @@
     color: var(--ink);
     text-transform: uppercase;
   }
-  .stat-row {
+  .pp-row {
     margin-top: 22px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 64px;
   }
-  .stat {
-    background: var(--bg-soft);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 22px 18px;
-    text-align: center;
+  .pp-row .ppcell {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 0;
   }
-  .stat .num {
-    font-size: 56px;
-    font-weight: 800;
-    line-height: 1;
-    color: var(--ink);
-    letter-spacing: -0.02em;
+  .pp-row .ppr1 { border-bottom: 1px solid var(--line); }
+  .pp-row .ppl {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--muted);
   }
-  .stat .label {
-    margin-top: 10px;
-    font-size: 14px;
-    color: var(--muted);
+  .pp-row .ppn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; font-size: 19px; color: var(--ink);
   }
+  .pp-row .ppsub { font-size: 13px; font-weight: 500; color: var(--muted-2); }
   .pub-list { margin-top: 40px; }
   .pub-list .head {
     font-size: 24px;
@@ -1508,12 +1507,13 @@
       <div class="pad">
         <p class="pub-header">PUBLICATIONS &amp; PATENTS</p>
 
-        <div class="stat-row">
-          <div class="stat"><div class="num">3</div><div class="label">International Journals</div></div>
-          <div class="stat"><div class="num">10</div><div class="label">International Conferences</div></div>
-          <div class="stat"><div class="num">12</div><div class="label">KR 등록</div></div>
-          <div class="stat"><div class="num">2</div><div class="label">KR 출원</div></div>
-          <div class="stat"><div class="num">1</div><div class="label">US 출원</div></div>
+        <div class="pp-row">
+          <div class="ppcell ppr1"><span class="ppl">International Journal <span class="ppsub">(SCI-E)</span></span><span class="ppn">3</span></div>
+          <div class="ppcell ppr1"><span class="ppl">Domestic Journal <span class="ppsub">(KCI)</span></span><span class="ppn">2</span></div>
+          <div class="ppcell ppr1"><span class="ppl">Patents Granted</span><span class="ppn">12</span></div>
+          <div class="ppcell"><span class="ppl">International Conference</span><span class="ppn">10</span></div>
+          <div class="ppcell"><span class="ppl">Domestic Conference</span><span class="ppn">10</span></div>
+          <div class="ppcell"><span class="ppl">Patents Applications <span class="ppsub">(2 KR / 1 US)</span></span><span class="ppn">3</span></div>
         </div>
 
         <div class="pub-list">
