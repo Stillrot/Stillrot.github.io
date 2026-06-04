@@ -838,6 +838,12 @@ Achievements
 
 Example of face-swapping from a stand-in model onto the target influencer persona
 
+[image: ComfyUI workflow for influencer image generation]
+
+IPAdapter / Reactor / FaceDetailer 기반 인플루언서 이미지 생성 ComfyUI 워크플로우 예시
+
+Example ComfyUI workflow for influencer image generation (IPAdapter / Reactor / FaceDetailer)
+
 ### Face Re-Aging 기술 개발
 
 Face Re-Aging Technology Development
