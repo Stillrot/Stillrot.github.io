@@ -350,8 +350,10 @@
       raf = requestAnimationFrame(() => { raf = null; update(); });
     }, { passive: true });
     window.addEventListener('resize', update);
-    // Re-run when tab changes (so nav active syncs)
-    document.querySelectorAll('.tab-btn').forEach((b) => b.addEventListener('click', update));
+    // When the active tab changes (tab click, top-nav link, or deep-link hash),
+    // mirror it onto the nav right away instead of waiting for a scroll to land
+    // on #content — otherwise the nav stays stuck on the section above it.
+    document.addEventListener('tabchange', () => activate('content'));
     update();
   }
 
@@ -368,6 +370,9 @@
     document.querySelectorAll('.tab-panel').forEach((p) => {
       p.classList.toggle('active', p.dataset.panel === name);
     });
+    // Notify the scroll-spy so it can mirror this tab onto the top nav,
+    // independent of the current scroll position.
+    document.dispatchEvent(new CustomEvent('tabchange', { detail: name }));
   }
 
   function initTabs() {
