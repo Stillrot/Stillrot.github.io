@@ -158,6 +158,35 @@ a.sp-card:hover .sp-arrow { transform: translateX(4px); color: var(--accent); }
 .social-grp .social-row { margin-top: 0; }
 .grp-lbl { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--fg-muted); margin-bottom: 7px; }
 
+/* Floating documents rail (home) — quick access that follows on scroll */
+.doc-rail {
+  position: fixed; right: 18px; top: 50%;
+  transform: translateY(-50%) translateX(14px);
+  z-index: 40;
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 8px;
+  background: rgba(255,255,255,0.86);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(26,27,31,0.10);
+  opacity: 0; pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.doc-rail.show { opacity: 1; pointer-events: auto; transform: translateY(-50%) translateX(0); }
+.doc-rail a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; width: 58px; padding: 8px 4px;
+  border-radius: 10px;
+  background: var(--bg-soft); border: 1px solid var(--border);
+  color: var(--fg); text-decoration: none;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+.doc-rail a:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.doc-rail svg { width: 20px; height: 20px; }
+.doc-rail .dr-label { font-size: 9.5px; font-weight: 600; color: var(--fg-muted); letter-spacing: 0.2px; }
+.doc-rail a:hover .dr-label { color: var(--accent); }
+@media (max-width: 860px) { .doc-rail { display: none; } }
+
 /* ----- Section ----- */
 section.block { padding: 40px 0; }
 section.block + section.block { border-top: 1px solid var(--border); }

@@ -357,6 +357,45 @@
     update();
   }
 
+  // A fixed "documents" rail (Portfolio / CV / Resume) that follows on scroll.
+  // Shown on the home page and the career detail pages; built in JS so the
+  // markup lives in one place and links resolve via the page's data-root.
+  function initDocRail() {
+    const isHome = !!document.getElementById('hero');
+    const isCareer = location.pathname.includes('/career/');
+    if (!isHome && !isCareer) return;
+    if (document.querySelector('.doc-rail')) return; // guard against double-init
+    const root = document.body.getAttribute('data-root') || './';
+    const ICONS = {
+      portfolio: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v12h16V6H4z"/><path d="M6 8h12v1.5H6zm0 3.5h9V13H6zm0 3.5h7V16.5H6z"/></svg>',
+      cv: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8zm0 3h8v1.5H8zm0 3h5v1.5H8z"/></svg>',
+      resume: '<svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 4v2h8V6H8zm0 4v1.5h8V10H8zm0 3.5V15h8v-1.5H8zm0 3.5V18h5v-1.5H8z"/></svg>',
+    };
+    const rail = document.createElement('aside');
+    rail.className = 'doc-rail';
+    rail.setAttribute('aria-label', 'Documents');
+    rail.innerHTML =
+      '<a href="' + root + 'portfolio2026/" target="_blank" rel="noopener" title="Portfolio (Deck)">' + ICONS.portfolio + '<span class="dr-label">Portfolio</span></a>' +
+      '<a href="' + root + 'cv/" title="CV">' + ICONS.cv + '<span class="dr-label">CV</span></a>' +
+      '<a href="' + root + 'resume/" title="Resume">' + ICONS.resume + '<span class="dr-label">Resume</span></a>';
+    document.body.appendChild(rail);
+
+    const hero = document.getElementById('hero');
+    let raf = null;
+    function update() {
+      // Home: appear once the hero is scrolled past (its docs are up there too).
+      // Career: no hero, so appear after a small scroll.
+      const show = hero ? hero.getBoundingClientRect().bottom < 120 : window.scrollY > 80;
+      rail.classList.toggle('show', show);
+    }
+    window.addEventListener('scroll', () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => { raf = null; update(); });
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   // Page bootstraps
   const TAB_NAMES = ['publications', 'patents', 'news', 'research'];
 
@@ -527,6 +566,7 @@
   function autoInit() {
     autoInitLanguageToggle();
     initProjectSelector();
+    initDocRail();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', autoInit);
