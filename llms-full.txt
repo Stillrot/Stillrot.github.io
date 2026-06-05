@@ -45,17 +45,21 @@ Building real-world vision AI, from research to field deployment
 
 - Edge-targeted pipeline redesign and domain-specific data, with results consolidated into papers and patents
 
-GitHub
-
-LinkedIn
-
-Scholar
+DOCUMENTS
 
 Portfolio
 
 CV
 
 Resume
+
+PROFILES
+
+GitHub
+
+LinkedIn
+
+Scholar
 
 [image: Profile]
 

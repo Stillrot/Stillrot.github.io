@@ -154,6 +154,9 @@ a.sp-card:hover .sp-arrow { transform: translateX(4px); color: var(--accent); }
   letter-spacing: 0.2px;
 }
 .social-row a:hover .social-label { color: var(--accent); }
+.social-groups { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; margin-top: 18px; }
+.social-grp .social-row { margin-top: 0; }
+.grp-lbl { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--fg-muted); margin-bottom: 7px; }
 
 /* ----- Section ----- */
 section.block { padding: 40px 0; }
