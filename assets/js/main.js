@@ -486,17 +486,37 @@
 
   // Career pages: clicking a project card reveals its detail panel below
   // (accordion). One panel visible at a time; first is active by default.
+  // Also supports deep links like #proj-elv so a shared URL opens the right
+  // project instead of leaving the default (first) one selected.
   function initProjectSelector() {
     const cards = document.querySelectorAll('.proj-card[data-panel]');
     if (!cards.length) return;
     const panels = document.querySelectorAll('.proj-panel[data-panel]');
+    const names = Array.from(cards).map((c) => c.dataset.panel);
+
+    function activatePanel(name) {
+      if (!names.includes(name)) return false;
+      cards.forEach((c) => c.classList.toggle('active', c.dataset.panel === name));
+      panels.forEach((p) => p.classList.toggle('active', p.dataset.panel === name));
+      return true;
+    }
+
     cards.forEach((card) => {
-      card.addEventListener('click', () => {
-        const name = card.dataset.panel;
-        cards.forEach((c) => c.classList.toggle('active', c === card));
-        panels.forEach((p) => p.classList.toggle('active', p.dataset.panel === name));
-      });
+      card.addEventListener('click', () => activatePanel(card.dataset.panel));
     });
+
+    // Panel ids are "proj-<name>" (e.g. #proj-elv); strip the prefix to match
+    // data-panel, then activate and scroll the panel into view.
+    function activateFromHash() {
+      const h = decodeURIComponent(location.hash.slice(1));
+      if (!h) return;
+      const name = h.replace(/^proj-/, '');
+      if (activatePanel(name)) {
+        document.getElementById('proj-' + name)?.scrollIntoView({ block: 'start' });
+      }
+    }
+    activateFromHash();
+    window.addEventListener('hashchange', activateFromHash);
   }
 
   function autoInit() {
