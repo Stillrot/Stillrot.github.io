@@ -55,6 +55,8 @@ Portfolio
 
 CV
 
+Resume
+
 [image: Profile]
 
 ## Career
@@ -152,6 +154,7 @@ Research
 - RESEARCH -> https://stillrot.github.io/#research
 - Portfolio -> https://stillrot.github.io/portfolio2026/
 - CV -> https://stillrot.github.io/cv/
+- Resume -> https://stillrot.github.io/resume/
 - HDC LABS R&D Center AI LAB 2024.05 ~ Present -> https://stillrot.github.io/career/hdclabs/
 - Metaverse Entertainment TD Team AI Part 2023.01 ~ 2024.05 -> https://stillrot.github.io/career/metaent/
 - Korea University M.S. in Electrical Engineering 2021.03 ~ 2023.02 -> https://stillrot.github.io/career/ku/
