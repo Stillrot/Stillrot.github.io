@@ -1532,7 +1532,7 @@ Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 131-138, 2023.02
 _Curriculum vitae_
 
 ← Portfolio
-Save as PDF / Print
+Download PDF
 
 # Dongsik Yoon
 
@@ -1760,6 +1760,7 @@ Korean Institute of Communications and Information Sciences (KICS) Winter Annual
 
 ### External links
 - ← Portfolio -> https://
+- Download PDF -> https://assets/pdf/Dongsik_Yoon_CV.pdf
 
 ======================================================================
 ## Page: Portfolio Deck (2026)  (https://stillrot.github.io/portfolio2026/)
@@ -2257,7 +2258,7 @@ Thank You
 
 Computer Vision / Edge AI / Real-World Deployment
 
-PDF 저장
+PDF 다운로드
 
 ### Internal links
 - Home -> https://stillrot.github.io/

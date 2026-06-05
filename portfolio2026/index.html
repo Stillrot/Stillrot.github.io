@@ -1652,8 +1652,8 @@
 <!-- Controls -->
 <div class="dots" id="dots"></div>
 
-<button class="pdf-btn-top" id="exportPdf" title="PDF로 저장 (Cmd/Ctrl+P)">
-  <svg width="16" height="16"><use href="#i-download"/></svg>PDF 저장
+<button class="pdf-btn-top" id="exportPdf" title="PDF 다운로드">
+  <svg width="16" height="16"><use href="#i-download"/></svg>PDF 다운로드
 </button>
 
 <script>
@@ -1752,9 +1752,10 @@
   });
 
   document.getElementById('exportPdf').addEventListener('click', () => {
-    stages.forEach(s => s.style.display = 'grid');
-    // Allow browser to lay out before invoking print
-    requestAnimationFrame(() => requestAnimationFrame(() => window.print()));
+    const a = document.createElement('a');
+    a.href = '../assets/pdf/Dongsik_Yoon_Portfolio.pdf';
+    a.download = 'Dongsik_Yoon_Portfolio.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
   });
 
   window.addEventListener('resize', fit);
