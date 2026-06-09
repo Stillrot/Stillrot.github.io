@@ -102,12 +102,27 @@ After editing `data/*.json` or page content, refresh the generated files:
 
     python3 tools/prerender_home.py     # refresh the home static fallback (raw-HTML content)
     python3 tools/generate_llms.py      # refresh llms.txt / llms-full.txt
+    python3 tools/generate_pdfs.py      # refresh assets/pdf + the 3 PDFs in ~/Downloads
+
+PDF generation writes the canonical files to `assets/pdf/`, then mirrors only
+these three files into the top-level Downloads folder:
+
+    ~/Downloads/Dongsik_Yoon_Resume.pdf
+    ~/Downloads/Dongsik_Yoon_CV.pdf
+    ~/Downloads/Dongsik_Yoon_Portfolio.pdf
+
+While editing the print pages, keep this watcher running in another terminal:
+
+    python3 tools/watch_pdfs.py
 
 `llms.txt` / `llms-full.txt` (repo root) give LLMs and agents the full site
 content in plain text, since the live pages render some data with JavaScript.
 
-A **git pre-commit hook** (`tools/hooks/pre-commit`) runs both generators
-automatically on every commit and re-stages the outputs, so they always match
+A **git pre-commit hook** (`tools/hooks/pre-commit`) runs the generators
+automatically on every commit and re-stages the repo outputs, so they always match
 the committed content — no need to run them by hand. Activate once per clone:
 
     git config core.hooksPath tools/hooks
+
+The hook also refreshes only the three top-level `~/Downloads/Dongsik_Yoon_*.pdf`
+files listed above.

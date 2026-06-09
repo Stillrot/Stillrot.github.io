@@ -2,19 +2,28 @@
 # Auto-refresh generated files on every commit so they always match the content:
 #   tools/prerender_home.py -> home static fallback baked into index.html
 #   tools/generate_llms.py  -> llms.txt / llms-full.txt
-# The regenerated files are re-staged into the commit. Never blocks the commit:
-# if a generator fails (e.g. bad JSON) it warns and lets the commit through.
+#   tools/generate_pdfs.py  -> assets/pdf/*.pdf and the 3 PDFs in ~/Downloads
+# The regenerated repo files are re-staged into the commit. Never blocks the
+# commit: if a generator fails, it warns and lets the commit through.
 #
 # Activated via:  git config core.hooksPath tools/hooks
 root="$(git rev-parse --show-toplevel)" || exit 0
 cd "$root" || exit 0
-command -v python3 >/dev/null 2>&1 || exit 0
 
-if python3 tools/prerender_home.py >/dev/null 2>&1 \
-   && python3 tools/generate_llms.py >/dev/null 2>&1; then
-  git add index.html llms.txt llms-full.txt 2>/dev/null
-  echo "↻ pre-commit: refreshed prerender + llms.txt/llms-full.txt"
+if command -v python >/dev/null 2>&1 && python -c "import sys" >/dev/null 2>&1; then
+  py=python
+elif command -v python3 >/dev/null 2>&1 && python3 -c "import sys" >/dev/null 2>&1; then
+  py=python3
 else
-  echo "⚠ pre-commit: could not refresh generated files (check tools/*.py) — committing anyway"
+  exit 0
+fi
+
+if "$py" tools/prerender_home.py >/dev/null 2>&1 \
+   && "$py" tools/generate_llms.py >/dev/null 2>&1 \
+   && "$py" tools/generate_pdfs.py >/dev/null 2>&1; then
+  git add index.html llms.txt llms-full.txt assets/pdf/*.pdf 2>/dev/null
+  echo "pre-commit: refreshed prerender, llms, and PDFs"
+else
+  echo "pre-commit: could not refresh generated files (check tools/*.py); committing anyway"
 fi
 exit 0

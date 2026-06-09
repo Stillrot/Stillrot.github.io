@@ -125,15 +125,16 @@ def extract_json_urls(root: str) -> list[tuple[str, str]]:
 
 def resolve_internal(href: str, source_file: str, root: str) -> str | None:
     """Return absolute filesystem path the href should resolve to, or None if it cannot exist (anchor)."""
-    # Strip fragment
-    href_no_frag = href.split("#", 1)[0]
-    if not href_no_frag:
+    # Strip cache-busting query strings and fragments before resolving on disk.
+    parsed = urllib.parse.urlsplit(href)
+    href_path = parsed.path
+    if not href_path:
         return None
     src_dir = os.path.dirname(source_file)
-    if href_no_frag.startswith("/"):
-        target = os.path.join(root, href_no_frag.lstrip("/"))
+    if href_path.startswith("/"):
+        target = os.path.join(root, href_path.lstrip("/"))
     else:
-        target = os.path.normpath(os.path.join(src_dir, href_no_frag))
+        target = os.path.normpath(os.path.join(src_dir, href_path))
     # Directory link -> index.html
     if target.endswith("/") or os.path.isdir(target):
         target = os.path.join(target.rstrip("/"), "index.html")
@@ -251,7 +252,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         if any(l.kind == "internal" for l in report.broken):
             return 1
     else:
-        print("\nall good ✓")
+        print("\nall good")
     return 0
 
 
