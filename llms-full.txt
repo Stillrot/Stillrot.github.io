@@ -2342,7 +2342,7 @@ PDF 다운로드
 - [US] Systems and methods for diverse image inpainting (Systems and methods for diverse image inpainting). Application 18/625,052, publication US20240338802A1 2024-10-10.
 - [KR] 객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체 (Behavior-prediction method, system, and computer-readable medium that leverages topology data produced via per-object action recognition and behavior-pattern normalization). Application 10-2025-0098513.
 - [KR] 메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법 (Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method). Application 10-2026-0008565.
-- [KR] 사용자 주차이력 기반의 주차공간추천방법 및 시스템 (Method and System for Recommending Parking Space Based on User Parking History). Application Ref. DP260166, filed 2026-06-15.
+- [KR] 사용자 주차이력 기반의 주차공간추천방법 및 시스템 (Method and System for Recommending Parking Space Based on User Parking History). Application 10-2026-0108966, filed 2026-06-15.
 
 ======================================================================
 ## News (12)
