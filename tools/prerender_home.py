@@ -115,14 +115,15 @@ def render_patents():
                         r["idx"], title, esc(r["country"]), esc(r["patent_no"]),
                         esc(r["application_no"]), esc(r.get("granted_date", ""))))
             else:
+                ident = r.get("application_no") or ("Ref. %s" % r.get("reference_no") if r.get("reference_no") else "Pending")
                 if r.get("publication_no"):
-                    num = "%s %s (Pub. %s)" % (esc(r["country"]), esc(r["application_no"]), esc(r["publication_no"]))
+                    num = "%s %s (Pub. %s)" % (esc(r["country"]), esc(ident), esc(r["publication_no"]))
                 else:
-                    num = "%s %s" % (esc(r["country"]), esc(r["application_no"]))
+                    num = "%s %s" % (esc(r["country"]), esc(ident))
                 body.append(
                     '<tr><td class="num">[%s]</td><td>%s</td>'
                     '<td class="num">%s</td><td class="num">%s</td></tr>' % (
-                        r["idx"], title, num, esc(r.get("published_date") or "-")))
+                        r["idx"], title, num, esc(r.get("published_date") or r.get("filed_date") or "-")))
         return '<table class="patent-table"><thead>%s</thead><tbody>%s</tbody></table>' % (
             head, "".join(body))
 

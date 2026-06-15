@@ -116,14 +116,15 @@
           <td class="num">${escapeHtml(r.application_no)}</td>
           <td class="num">${escapeHtml(r.granted_date)}</td>`;
       } else {
+        const id = r.application_no || (r.reference_no ? `Ref. ${r.reference_no}` : 'Pending');
         const num = r.publication_no
-          ? `${escapeHtml(r.country)} ${escapeHtml(r.application_no)} (Pub. ${escapeHtml(r.publication_no)})`
-          : `${escapeHtml(r.country)} ${escapeHtml(r.application_no)}`;
+          ? `${escapeHtml(r.country)} ${escapeHtml(id)} (Pub. ${escapeHtml(r.publication_no)})`
+          : `${escapeHtml(r.country)} ${escapeHtml(id)}`;
         tr.innerHTML = `
           <td class="num">[${r.idx}]</td>
           <td>${escapeHtml(title)}</td>
           <td class="num">${num}</td>
-          <td class="num">${escapeHtml(r.published_date || '-')}</td>`;
+          <td class="num">${escapeHtml(r.published_date || r.filed_date || '-')}</td>`;
       }
       body.appendChild(tr);
     });

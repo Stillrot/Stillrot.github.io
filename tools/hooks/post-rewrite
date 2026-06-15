@@ -1,0 +1,4 @@
+#!/bin/sh
+hook_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+"$hook_dir/sync-download-pdfs"
+exit 0

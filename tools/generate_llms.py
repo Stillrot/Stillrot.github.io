@@ -246,10 +246,12 @@ def fmt_patents():
     out.append("")
     out.append("### Applications (%d)" % len(a))
     for p in a:
-        no = p.get("application_no") or p.get("publication_no", "")
+        no = p.get("application_no") or ("Ref. %s" % p.get("reference_no") if p.get("reference_no") else p.get("publication_no", "Pending"))
         extra = ""
         if p.get("publication_no"):
             extra = ", publication %s %s" % (p["publication_no"], p.get("published_date", ""))
+        elif p.get("filed_date"):
+            extra = ", filed %s" % p["filed_date"]
         out.append("- [%s] %s (%s). Application %s%s." % (
             p["country"], p["title"], p.get("title_en", ""), no, extra))
     return "\n".join(out)

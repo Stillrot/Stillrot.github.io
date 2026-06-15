@@ -118,11 +118,24 @@ While editing the print pages, keep this watcher running in another terminal:
 `llms.txt` / `llms-full.txt` (repo root) give LLMs and agents the full site
 content in plain text, since the live pages render some data with JavaScript.
 
-A **git pre-commit hook** (`tools/hooks/pre-commit`) runs the generators
-automatically on every commit and re-stages the repo outputs, so they always match
-the committed content — no need to run them by hand. Activate once per clone:
+A **git hook set** in `tools/hooks/` keeps generated and local PDF outputs in
+sync. `pre-commit` runs the generators automatically on every commit and
+re-stages the repo outputs, so they always match the committed content. The
+post hooks (`post-commit`, `post-checkout`, `post-merge`, `post-rewrite`) mirror
+the committed `assets/pdf/` files into `~/Downloads` after local Git changes
+such as commits, branch switches, pulls, and rebases. Activate once per clone:
 
     git config core.hooksPath tools/hooks
 
-The hook also refreshes only the three top-level `~/Downloads/Dongsik_Yoon_*.pdf`
-files listed above.
+The mirror hook refreshes only the three top-level
+`~/Downloads/Dongsik_Yoon_*.pdf` files listed above.
+
+To have Codex/local commits push themselves to GitHub after every successful
+commit, opt in per clone:
+
+    git config portfolio.autoPush true
+
+The auto-push hook uses the normal Git credential setup for this Mac. It never
+stores GitHub tokens in the repository. Disable it with:
+
+    git config --unset portfolio.autoPush

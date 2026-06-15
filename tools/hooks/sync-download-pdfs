@@ -1,0 +1,39 @@
+#!/bin/sh
+# Mirror the repository PDFs into the user's Downloads folder.
+# This keeps the local downloadable copies in step after Git changes such as
+# commits, pulls, branch switches, and rebases without re-rendering PDFs.
+root="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+cd "$root" || exit 0
+
+downloads="$HOME/Downloads"
+if [ ! -d "$downloads" ]; then
+  echo "pdf-sync: $downloads not found; skipping"
+  exit 0
+fi
+
+status=0
+for name in \
+  Dongsik_Yoon_Resume.pdf \
+  Dongsik_Yoon_CV.pdf \
+  Dongsik_Yoon_Portfolio.pdf
+do
+  src="assets/pdf/$name"
+  if [ ! -f "$src" ]; then
+    echo "pdf-sync: missing $src; skipping"
+    status=1
+    continue
+  fi
+
+  if ! cp "$src" "$downloads/$name"; then
+    echo "pdf-sync: could not copy $name"
+    status=1
+  fi
+done
+
+if [ "$status" -eq 0 ]; then
+  echo "pdf-sync: mirrored PDFs to ~/Downloads"
+else
+  echo "pdf-sync: one or more PDFs could not be mirrored"
+fi
+
+exit 0

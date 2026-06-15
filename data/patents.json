@@ -132,6 +132,23 @@
       "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
       "country": "KR",
       "application_no": "10-2026-0008565"
+    },
+    {
+      "idx": 4,
+      "title": "사용자 주차이력 기반의 주차공간추천방법 및 시스템",
+      "title_en": "Method and System for Recommending Parking Space Based on User Parking History",
+      "country": "KR",
+      "reference_no": "DP260166",
+      "filed_date": "2026-06-15",
+      "applicant": "HDC LABS Co., Ltd.",
+      "inventors": [
+        "Da Yeon Lee",
+        "Jong Eun Kim",
+        "Dong Sik Yoon",
+        "Chan Sung Jung",
+        "Gun Hee Lee"
+      ],
+      "summary_en": "Personalized parking-space recommendation using vehicle identification, real-time parking-lot imagery, available-space detection, and user-history-based weights over area, relative area, distance, parking-zone type, and wall position."
     }
   ]
 }

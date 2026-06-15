@@ -1,0 +1,46 @@
+#!/bin/sh
+# Optionally push the current branch after a successful local commit.
+#
+# Enable per clone with:
+#   git config portfolio.autoPush true
+#
+# This deliberately relies on the user's normal Git credential setup. Never put
+# GitHub tokens in this repository or in this hook.
+root="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+cd "$root" || exit 0
+
+enabled="$(git config --bool portfolio.autoPush 2>/dev/null || true)"
+if [ "$enabled" != "true" ]; then
+  exit 0
+fi
+
+branch="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+if [ -z "$branch" ]; then
+  echo "auto-push: detached HEAD; skipping"
+  exit 0
+fi
+
+upstream="$(git rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>/dev/null || true)"
+if [ -n "$upstream" ]; then
+  echo "auto-push: pushing $branch to $upstream"
+  if git push; then
+    echo "auto-push: pushed $branch"
+  else
+    echo "auto-push: push failed; check GitHub authentication"
+  fi
+  exit 0
+fi
+
+remote="$(git config portfolio.autoPushRemote 2>/dev/null || true)"
+if [ -z "$remote" ]; then
+  remote="origin"
+fi
+
+echo "auto-push: pushing $branch to $remote/$branch"
+if git push -u "$remote" "$branch"; then
+  echo "auto-push: pushed $branch"
+else
+  echo "auto-push: push failed; check GitHub authentication"
+fi
+
+exit 0
