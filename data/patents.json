@@ -148,8 +148,7 @@
         "Dong Sik Yoon",
         "Chan Sung Jung",
         "Gun Hee Lee"
-      ],
-      "summary_en": "Personalized parking-space recommendation using vehicle identification, real-time parking-lot imagery, available-space detection, and user-history-based weights over area, relative area, distance, parking-zone type, and wall position."
+      ]
     }
   ]
 }
