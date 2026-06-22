@@ -149,6 +149,33 @@
         "Chan Sung Jung",
         "Gun Hee Lee"
       ]
+    },
+    {
+      "idx": 5,
+      "title": "실시간 혼잡도 및 대기인원 기반의 지능형 승강기 관제방법 및 시스템",
+      "title_en": "The Method and System That Control an Intelligent Elevator Based on Real-time Congestion and Number of Waiting Passengers",
+      "country": "KR",
+      "application_no": "10-2025-0147115",
+      "reference_no": "DP250362",
+      "filed_date": "2025-10-13",
+      "applicant": "HDC Hyundai Development Company, HDC LABS Co., Ltd., Hyundai Elevator Co., Ltd.",
+      "inventors": [
+        "Ik Su Lee",
+        "Jun Hyung Lee",
+        "Pyung Seok Ko",
+        "Gil Ho An",
+        "Kwan Il Jang",
+        "Si Young Lee",
+        "Kyung Jae Moon",
+        "Jong Min Park",
+        "Gun Hee Lee",
+        "Hyo Sup Kim",
+        "Chan Sung Jung",
+        "Dong Sik Yoon",
+        "Mi Jeong Park",
+        "Dae Ryung Ahn",
+        "Moon Su Kim"
+      ]
     }
   ]
 }

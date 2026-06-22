@@ -306,13 +306,13 @@ In-Elevator Situational Analysis System
 
 Intellectual Property Portfolio
 
-- 특허 12건 등록, 4건 출원 진행
+- 특허 12건 등록, 5건 출원 진행
 
 - 국제 학회 논문 4편 게재
 
 - 논문화를 위한 기술 스터디 주도
 
-- 12 patents granted, 4 applications in progress
+- 12 patents granted, 5 applications in progress
 
 - 4 papers published at international venues
 
@@ -666,13 +666,13 @@ Responsibilities
 #### 업무 성과
 Achievements
 
-- KR 특허 12건 등록, 4건 출원 진행 (국내 3건 + 미국 1건)
+- KR 특허 12건 등록, 5건 출원 진행 (국내 4건 + 미국 1건)
 
 - 국제 학회 논문 4편 게재
 
 - 자세한 목록은 홈 Publications 및 Patents 섹션 참고
 
-- 12 KR patents granted, 4 applications in progress (3 KR + 1 US)
+- 12 KR patents granted, 5 applications in progress (4 KR + 1 US)
 
 - 4 papers published at international venues
 
@@ -1711,11 +1711,11 @@ Funding: Korea Meteorological Administration (KMA)
 
 Patents
 
-12 KR patents granted, 4 patent applications in progress (3 KR + 1 US)
+12 KR patents granted, 5 patent applications in progress (4 KR + 1 US)
 
 2024 - 2026
 
-Topics include fire detection in enclosed environments, in-elevator pet / occupancy analytics, construction-site hazard detection, domain-specific synthetic data generation, personalized object tracking, and AI-driven home agents.
+Topics include fire detection in enclosed environments, in-elevator pet / occupancy analytics, elevator congestion / waiting-passenger control, construction-site hazard detection, domain-specific synthetic data generation, personalized object tracking, and AI-driven home agents.
 
 See stillrot.github.io/#patents for the full list.
 
@@ -2158,7 +2158,7 @@ International Conference 10
 
 Domestic Conference 10
 
-Patents Applications (3 KR / 1 US) 4
+Patents Applications (4 KR / 1 US) 5
 
 직무 연관 주요 연구
 
@@ -2338,11 +2338,12 @@ PDF 다운로드
 - [KR] 10-2963799 — 개인화된 사전 DB를 이용한 개인화된 객체 추적 방법 및 시스템 (Personalized object-tracking method and system using a personalized prior database). Granted 2026-05-07. Application 10-2025-0182181.
 - [KR] 10-2971047 — 행동인식을 기반으로 한 IoT 가전기기 제어방법 및 시스템 (Action-recognition-based method and system for controlling IoT home appliances). Granted 2026-05-26. Application 10-2025-0182191.
 
-### Applications (4)
+### Applications (5)
 - [US] Systems and methods for diverse image inpainting (Systems and methods for diverse image inpainting). Application 18/625,052, publication US20240338802A1 2024-10-10.
 - [KR] 객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체 (Behavior-prediction method, system, and computer-readable medium that leverages topology data produced via per-object action recognition and behavior-pattern normalization). Application 10-2025-0098513.
 - [KR] 메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법 (Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method). Application 10-2026-0008565.
 - [KR] 사용자 주차이력 기반의 주차공간추천방법 및 시스템 (Method and System for Recommending Parking Space Based on User Parking History). Application 10-2026-0108966, filed 2026-06-15.
+- [KR] 실시간 혼잡도 및 대기인원 기반의 지능형 승강기 관제방법 및 시스템 (The Method and System That Control an Intelligent Elevator Based on Real-time Congestion and Number of Waiting Passengers). Application 10-2025-0147115, filed 2025-10-13.
 
 ======================================================================
 ## News (12)
