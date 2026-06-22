@@ -1715,7 +1715,7 @@ Patents
 
 2024 - 2026
 
-Topics include fire detection in enclosed environments, in-elevator pet / occupancy analytics, elevator congestion / waiting-passenger control, construction-site hazard detection, domain-specific synthetic data generation, personalized object tracking, and AI-driven home agents.
+Topics include fire detection in enclosed environments, in-elevator pet / occupancy analytics, construction-site hazard detection, domain-specific synthetic data generation, personalized object tracking, and AI-driven home agents.
 
 See stillrot.github.io/#patents for the full list.
 
