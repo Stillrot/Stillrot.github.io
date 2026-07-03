@@ -578,13 +578,13 @@ Problem
 담당 업무
 Responsibilities
 
-- 코드, 모델, 의존성 버전을 일관되게 관리하는 Docker 기반 배포 파이프라인 구축
+- Jetson(ARM64) 환경의 모델 빌드 및 도커 기반 배포 파이프라인 구축
 
 - ARM64 호환 위한 사무실 Jetson self-hosted runner 네이티브 빌드 구성
 
 - PT hash engine cache 도입으로 동일 PT 재빌드 생략
 
-- Built a Docker-based deployment pipeline to manage code, model, and dependency versions consistently
+- Built a model-build and Docker-based deployment pipeline for the Jetson (ARM64) environment
 
 - Set up an in-office Jetson self-hosted runner for ARM64-native builds
 
@@ -1966,7 +1966,7 @@ top-view 차폐, door status 기반 상황과 CAN payload 출력 구조 검증
 
 03배포 준비와 연구 확장
 
-ARM64 Jetson 환경에 맞춘 CI/CD 구축으로 모델 변경의 안정적 반영
+Jetson(ARM64) 환경의 모델 빌드 및 도커 기반 배포 파이프라인 구축
 
 코드 변경 시 빌드 및 배포 파이프라인이 자동 실행되도록 전환
 
