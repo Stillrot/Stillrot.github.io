@@ -580,13 +580,13 @@ Responsibilities
 
 - Jetson(ARM64) 환경의 모델 빌드 및 도커 기반 배포 파이프라인 구축
 
-- ARM64 호환 위한 사무실 Jetson self-hosted runner 네이티브 빌드 구성
+- 사무실 Jetson 기반 self-hosted runner로 네이티브 빌드 환경 구성
 
 - PT hash engine cache 도입으로 동일 PT 재빌드 생략
 
 - Built a model-build and Docker-based deployment pipeline for the Jetson (ARM64) environment
 
-- Set up an in-office Jetson self-hosted runner for ARM64-native builds
+- Configured a native build environment with an in-office Jetson self-hosted runner
 
 - Introduced a PT-hash engine cache to skip rebuilds for the same PT
 
