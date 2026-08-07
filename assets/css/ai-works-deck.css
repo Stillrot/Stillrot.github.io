@@ -139,6 +139,10 @@ body.cursor-right {
   transform-origin: center center;
 }
 
+@media screen {
+  .pg:not(:first-child) { display: none; }
+}
+
 @media print {
   html, body { background: #fff !important; }
   body.deck { overflow: visible; }
