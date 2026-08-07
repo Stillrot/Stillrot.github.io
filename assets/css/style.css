@@ -822,6 +822,14 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 .career-detail .project ul li .sub a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .career-detail .project .phase ul li > a { color: var(--accent-strong); font-weight: 600; }
 .career-detail .project .phase ul li > a:hover { color: var(--accent); text-decoration: underline; }
+.career-detail .project ul li > a.inline-work-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+}
+.career-detail .project ul li > a.inline-work-link:hover { color: var(--accent); }
 
 /* Links inside career detail pages use a darker variant of the page accent,
    so they're obviously clickable but still match the page color identity. */
