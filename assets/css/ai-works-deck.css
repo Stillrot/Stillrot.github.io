@@ -188,6 +188,28 @@ body.cursor-right {
   border-bottom: 1px solid var(--line);
 }
 
+.company-brand {
+  position: absolute;
+  top: 11.8mm;
+  right: var(--pad-x);
+  z-index: 2;
+  height: 6mm;
+  display: flex;
+  align-items: center;
+}
+
+.company-brand img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.company-brand.meta {
+  top: 9.2mm;
+  right: 12mm;
+  height: 11.5mm;
+}
+
 .kick {
   font-family: var(--mono);
   font-size: 6.8pt;
