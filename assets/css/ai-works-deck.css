@@ -31,8 +31,8 @@
   --r-md: 1.6mm;
   --r-sm: 1.05mm;
 
-  --deck-font: "Montserrat", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
-    "Noto Sans KR", "NanumBarunGothic", sans-serif;
+  --deck-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
