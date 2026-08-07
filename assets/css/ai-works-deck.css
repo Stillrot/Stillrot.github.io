@@ -38,75 +38,122 @@
 
 * { box-sizing: border-box; }
 
-html, body { margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body.deck {
   background: #e9edf2;
   color: var(--ink);
   font-family: var(--deck-font);
+  overflow: hidden;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 
 /* ---------- screen-only chrome ---------- */
 
-.deck-bar {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 18px;
-  border-bottom: 1px solid #d3dae3;
-  background: #fff;
-  font-size: 12px;
-  color: var(--ink-2);
+.sheets {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
-.deck-bar strong { font-size: 12px; color: var(--ink); }
-.deck-bar .sep { color: #c3ccd8; }
-.deck-bar a { color: var(--brand); }
+body.cursor-left {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23111' fill-opacity='0.6'/%3E%3Cpath d='M14 7 L8 12 L14 17' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 12 12, w-resize;
+}
 
-.deck-bar button {
-  margin-left: auto;
-  padding: 7px 14px;
-  border: 1px solid var(--brand);
+body.cursor-right {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23111' fill-opacity='0.6'/%3E%3Cpath d='M10 7 L16 12 L10 17' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 12 12, e-resize;
+}
+
+.pdf-btn-top {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border: 0;
   border-radius: 999px;
-  background: var(--brand);
+  background: rgba(20, 22, 26, 0.85);
   color: #fff;
-  font: inherit;
+  font-family: var(--deck-font);
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.sheets { padding: 20px 0 40px; }
+.pdf-btn-top:hover { background: rgba(20, 22, 26, 1); }
+.pdf-btn-top svg { display: block; }
+
+.dots {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateY(-50%);
+}
+
+.dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.dots button.active {
+  background: #fff;
+  transform: scale(1.4);
+}
 
 .pg {
   position: relative;
   width: var(--pg-w);
   height: var(--pg-h);
-  margin: 0 auto 10mm;
+  margin: 0;
   padding: var(--pad-y) var(--pad-x);
   overflow: hidden;
   background: #fff;
   box-shadow: 0 1px 2px rgba(20, 30, 45, 0.12), 0 10px 28px rgba(20, 30, 45, 0.10);
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  transform: scale(var(--scale, 1));
+  transform-origin: center center;
 }
 
-@media screen and (max-width: 1240px) { .sheets { zoom: 0.72; } }
-@media screen and (max-width: 900px)  { .sheets { zoom: 0.52; } }
-@media screen and (max-width: 620px)  { .sheets { zoom: 0.36; } }
-
 @media print {
-  body.deck { background: #fff; }
-  .deck-bar { display: none; }
-  .sheets { padding: 0; zoom: 1; }
+  html, body { background: #fff !important; }
+  body.deck { overflow: visible; }
+  .pdf-btn-top, .dots { display: none !important; }
+  .sheets {
+    display: block !important;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
   .pg {
+    display: flex !important;
     margin: 0;
     box-shadow: none;
+    transform: none !important;
     break-after: page;
     page-break-after: always;
   }

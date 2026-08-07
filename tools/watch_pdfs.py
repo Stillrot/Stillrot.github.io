@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Watch print-ready HTML/CSS files and regenerate the downloadable PDFs.
+"""Watch print-ready HTML/CSS/image files and regenerate the downloadable PDFs.
 
 This is a small polling watcher with no extra dependency. It runs
 ``tools/generate_pdfs.py`` whenever the print sources change, which updates:
@@ -7,9 +7,11 @@ This is a small polling watcher with no extra dependency. It runs
   * assets/pdf/Dongsik_Yoon_Resume.pdf
   * assets/pdf/Dongsik_Yoon_CV.pdf
   * assets/pdf/Dongsik_Yoon_Portfolio.pdf
+  * assets/pdf/Dongsik_Yoon_AI_Works.pdf
   * ~/Downloads/Dongsik_Yoon_Resume.pdf
   * ~/Downloads/Dongsik_Yoon_CV.pdf
   * ~/Downloads/Dongsik_Yoon_Portfolio.pdf
+  * ~/Downloads/Dongsik_Yoon_AI_Works.pdf
 
 Usage:
     python tools/watch_pdfs.py
@@ -29,9 +31,10 @@ WATCH_DIRS = (
     ROOT / "resume",
     ROOT / "cv",
     ROOT / "portfolio2026",
+    ROOT / "ai-works" / "deck",
     ROOT / "assets" / "css",
 )
-WATCH_EXTS = {".html", ".css"}
+WATCH_EXTS = {".html", ".css", ".svg", ".jpg", ".jpeg", ".png", ".webp"}
 
 
 def iter_sources() -> list[pathlib.Path]:
@@ -75,7 +78,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     before = snapshot()
-    print("watch_pdfs: watching resume/, cv/, portfolio2026/, assets/css/")
+    print("watch_pdfs: watching resume/, cv/, portfolio2026/, ai-works/deck/, assets/css/")
     print("watch_pdfs: press Ctrl+C to stop.")
     if not args.no_initial:
         run_generator()

@@ -2,7 +2,7 @@
 # Auto-refresh generated files on every commit so they always match the content:
 #   tools/prerender_home.py -> home static fallback baked into index.html
 #   tools/generate_llms.py  -> llms.txt / llms-full.txt
-#   tools/generate_pdfs.py  -> assets/pdf/*.pdf and the 3 PDFs in ~/Downloads
+#   tools/generate_pdfs.py  -> assets/pdf/*.pdf and matching PDFs in ~/Downloads
 # The regenerated repo files are re-staged into the commit. Never blocks the
 # commit: if a generator fails, it warns and lets the commit through.
 #

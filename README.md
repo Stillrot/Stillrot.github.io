@@ -102,14 +102,15 @@ After editing `data/*.json` or page content, refresh the generated files:
 
     python3 tools/prerender_home.py     # refresh the home static fallback (raw-HTML content)
     python3 tools/generate_llms.py      # refresh llms.txt / llms-full.txt
-    python3 tools/generate_pdfs.py      # refresh assets/pdf + the 3 PDFs in ~/Downloads
+    python3 tools/generate_pdfs.py      # refresh assets/pdf + matching PDFs in ~/Downloads
 
-PDF generation writes the canonical files to `assets/pdf/`, then mirrors only
-these three files into the top-level Downloads folder:
+PDF generation writes the canonical files to `assets/pdf/`, then mirrors these
+files into the top-level Downloads folder:
 
     ~/Downloads/Dongsik_Yoon_Resume.pdf
     ~/Downloads/Dongsik_Yoon_CV.pdf
     ~/Downloads/Dongsik_Yoon_Portfolio.pdf
+    ~/Downloads/Dongsik_Yoon_AI_Works.pdf
 
 While editing the print pages, keep this watcher running in another terminal:
 
@@ -127,7 +128,7 @@ such as commits, branch switches, pulls, and rebases. Activate once per clone:
 
     git config core.hooksPath tools/hooks
 
-The mirror hook refreshes only the three top-level
+The mirror hook refreshes only the top-level
 `~/Downloads/Dongsik_Yoon_*.pdf` files listed above.
 
 To have Codex/local commits push themselves to GitHub after every successful

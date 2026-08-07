@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
 """Regenerate the downloadable PDFs from the print-ready HTML pages.
 
-The resume / cv / portfolio2026 pages are hand-built to print cleanly (each has
-its own ``@page`` / ``@media print`` rules). This renders them to
+The resume / cv / portfolio2026 / AI Works pages are hand-built to print cleanly
+(each has its own ``@page`` / ``@media print`` rules). This renders them to
 ``assets/pdf/*.pdf`` with headless Chrome (via Playwright, reusing the system
 Chrome install -- no ``playwright install`` needed) so the PDFs always match the
-current HTML/CSS, then mirrors exactly those three PDFs into ``~/Downloads``.
+current HTML/CSS, then mirrors those PDFs into ``~/Downloads``.
 
 Two render modes:
-  * "single" (cv, portfolio2026): one ``page.pdf()`` call; page size comes from
-    the page's own ``@page`` CSS.
+  * "single" (cv, portfolio2026, AI Works): one ``page.pdf()`` call; page size
+    comes from the page's own ``@page`` CSS.
   * "paged"  (resume): each ``.page`` block is printed to its own
     content-height sheet and the sheets are merged, so a 2-block resume is
     exactly 2 pages no matter how tall each block grows. This mirrors how the
     original committed PDF was built (its two pages have different heights).
 
 Usage:
-    python tools/generate_pdfs.py                 # regenerate all three
-    python tools/generate_pdfs.py resume cv       # regenerate only some
+    python tools/generate_pdfs.py                 # regenerate all PDFs
+    python tools/generate_pdfs.py resume aiworks  # regenerate only some
 
 Requires: playwright (+ a system Chrome/Edge), pypdf.
 Exit codes: 0 = ok, 2 = bad args, 3 = missing dependency / no browser.
@@ -45,6 +45,11 @@ JOBS = {
     ),
     "portfolio2026": dict(
         out="Dongsik_Yoon_Portfolio.pdf", mode="single",
+        opts=dict(prefer_css_page_size=True, print_background=True, margin=ZERO),
+    ),
+    "aiworks": dict(
+        src="ai-works/deck/index.html",
+        out="Dongsik_Yoon_AI_Works.pdf", mode="single",
         opts=dict(prefer_css_page_size=True, print_background=True, margin=ZERO),
     ),
 }
@@ -117,7 +122,7 @@ def main(argv):
         page = browser.new_page()
         for name in which:
             job = JOBS[name]
-            src = (ROOT / name / "index.html").resolve()
+            src = (ROOT / job.get("src", f"{name}/index.html")).resolve()
             if not src.exists():
                 print(f"  ! {name}: {src} not found, skipping", file=sys.stderr)
                 continue

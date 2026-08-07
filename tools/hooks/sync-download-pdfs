@@ -15,7 +15,8 @@ status=0
 for name in \
   Dongsik_Yoon_Resume.pdf \
   Dongsik_Yoon_CV.pdf \
-  Dongsik_Yoon_Portfolio.pdf
+  Dongsik_Yoon_Portfolio.pdf \
+  Dongsik_Yoon_AI_Works.pdf
 do
   src="assets/pdf/$name"
   if [ ! -f "$src" ]; then
