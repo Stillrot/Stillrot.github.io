@@ -821,13 +821,13 @@ Responsibilities
 
 - Stable Diffusion 모델 선정 및 LoRA finetuning
 
-- 고품질 이미지 생성을 위한 ComfyUI workflow 개선
+- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 ↗
 
 - 디자이너 편의를 위한 Gradio 기반 webui 사내 배포
 
 - Selected a Stable Diffusion backbone and ran LoRA fine-tuning
 
-- Improved ComfyUI workflows to produce higher-quality generations
+- Improved ComfyUI workflows to produce higher-quality generations ↗
 
 - Internally deployed a Gradio-based web UI for the design team
 
@@ -851,12 +851,6 @@ Achievements
 대역 모델 → 특정 인플루언서 face-swap 예시
 
 Example of face-swapping from a stand-in model onto the target influencer persona
-
-[image: ComfyUI workflow for influencer image generation]
-
-IPAdapter / Reactor / FaceDetailer 기반 인플루언서 이미지 생성 ComfyUI 워크플로우 예시
-
-Example ComfyUI workflow for influencer image generation (IPAdapter / Reactor / FaceDetailer)
 
 ### Face Re-Aging 기술 개발
 
@@ -972,8 +966,8 @@ A conversation with the chatbot trained on MAVE member SIU's persona (the "Chat 
 - PUBLICATIONS -> https://#publications
 - NEWS -> https://#news
 - RESEARCH -> https://#research
-- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 -> https://ai-works/deck/#slide=8
-- Improved ComfyUI workflows to produce higher-quality generations -> https://ai-works/deck/#slide=8
+- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 ↗ -> https://ai-works/deck/#slide=8
+- Improved ComfyUI workflows to produce higher-quality generations ↗ -> https://ai-works/deck/#slide=8
 - MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
 - rina.8k Instagram -> https://www.instagram.com/rina.8k/
 - IEEE Access 1저자 논문 게재 (IF=3.9)First-author paper published in IEEE Access (IF=3.9). -> https://papers/access2023/
