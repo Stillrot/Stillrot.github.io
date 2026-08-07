@@ -1,0 +1,1509 @@
+/*
+ * Print-first layout for the /ai-works/deck/ submission PDF.
+ * A4 landscape (297 x 210mm); one .pg element == one PDF page.
+ * Mockup stage: every .ph is an image slot meant to be swapped 1:1 for a real
+ * asset without touching the surrounding layout.
+ */
+
+@page { size: A4 landscape; margin: 0; }
+
+:root {
+  --pg-w: 297mm;
+  --pg-h: 210mm;
+  --pad-x: 15mm;
+  --pad-y: 12mm;
+
+  /* Palette follows the Stripe Docs token set (oh-my-design.kr reference):
+     quiet, information-dense documentation chrome. Deliberately monochrome —
+     Stripe's own guidance is not to bring marketing accents into docs surfaces,
+     which also keeps this in step with the portfolio's existing neutral scheme. */
+  --ink: #1a2c44;        /* foreground-strong — headings */
+  --ink-2: #414552;      /* foreground — body */
+  --ink-3: #50617a;      /* muted — labels, captions */
+  --line: #d4dee9;       /* hairline */
+  --line-2: #e4ecf4;     /* hairline, lightened for inner dividers */
+  --line-3: #95a4ba;     /* hairline-hover — slot borders */
+  --wash: #f4f7fa;       /* surface-subtle */
+  --brand: #414552;
+
+  /* 8 / 6 / 4px, per the reference's border-radius scale */
+  --r-lg: 2.1mm;
+  --r-md: 1.6mm;
+  --r-sm: 1.05mm;
+
+  --deck-font: "Montserrat", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Noto Sans KR", "NanumBarunGothic", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body.deck {
+  background: #e9edf2;
+  color: var(--ink);
+  font-family: var(--deck-font);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- screen-only chrome ---------- */
+
+.deck-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 18px;
+  border-bottom: 1px solid #d3dae3;
+  background: #fff;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.deck-bar strong { font-size: 12px; color: var(--ink); }
+.deck-bar .sep { color: #c3ccd8; }
+.deck-bar a { color: var(--brand); }
+
+.deck-bar button {
+  margin-left: auto;
+  padding: 7px 14px;
+  border: 1px solid var(--brand);
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sheets { padding: 20px 0 40px; }
+
+.pg {
+  position: relative;
+  width: var(--pg-w);
+  height: var(--pg-h);
+  margin: 0 auto 10mm;
+  padding: var(--pad-y) var(--pad-x);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(20, 30, 45, 0.12), 0 10px 28px rgba(20, 30, 45, 0.10);
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1240px) { .sheets { zoom: 0.72; } }
+@media screen and (max-width: 900px)  { .sheets { zoom: 0.52; } }
+@media screen and (max-width: 620px)  { .sheets { zoom: 0.36; } }
+
+@media print {
+  body.deck { background: #fff; }
+  .deck-bar { display: none; }
+  .sheets { padding: 0; zoom: 1; }
+  .pg {
+    margin: 0;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+  .pg:last-of-type { break-after: auto; page-break-after: auto; }
+}
+
+/* ---------- page frame ---------- */
+
+/* Masthead rail: segmented metadata over a double rule (slides-grab editorial
+   pattern), which reads more considered than a single label + page number. */
+.pg-head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8mm;
+  flex: none;
+  padding-bottom: 2.4mm;
+  border-bottom: 0.35mm solid var(--ink-3);
+}
+
+.pg-head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1.3mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.kick {
+  font-family: var(--mono);
+  font-size: 6.8pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.kick s { text-decoration: none; margin: 0 2mm; font-weight: 400; color: var(--line-3); }
+.kick u { text-decoration: none; color: var(--ink-3); font-weight: 700; }
+
+/* Block-level eyebrow, above a headline or a figure group. */
+.eyebrow {
+  display: block;
+  margin-bottom: 2.2mm;
+  font-family: var(--mono);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.pg-id {
+  font-family: var(--mono);
+  font-size: 7pt;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.pg-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 10mm;
+  flex: none;
+  margin-top: auto;
+  padding-top: 2.4mm;
+  border-top: 1px solid var(--line-2);
+  font-size: 6.6pt;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+/* The page number always sits bottom-right. On workflow pages the role key takes
+   the left slot and space-between handles it; on every other page the number is
+   the only child, so it needs pushing across. */
+.pg-foot > span:only-child { margin-left: auto; }
+
+/* Display headline: large and tight, set ragged-right. The size jump from body
+   text is what carries the hierarchy — not rules or boxes. */
+/* No hardcoded line breaks: headlines are written short enough to set on one line,
+   and wrap balanced if edited longer. Each extra line costs ~11mm of image area. */
+.t1 {
+  margin: 6mm 0 0;
+  max-width: 245mm;
+  font-size: 26pt;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+/* Sub-clause that rides on the headline line. Lets a title carry the project
+   name at full size and its scope at a size that does not compete with it. */
+.t1 .sub {
+  margin-left: 2mm;
+  font-size: 15pt;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  color: var(--ink-2);
+}
+
+.t1 .sub a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line-3);
+  text-decoration-thickness: 0.25mm;
+  text-underline-offset: 1mm;
+}
+
+.t1 .sub a .ext { margin-left: 0.6mm; font-size: 0.7em; }
+
+.t1 .en {
+  display: block;
+  margin-top: 2.6mm;
+  font-family: var(--mono);
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Section title for a page that carries no display headline. Small enough that
+   the figures below keep most of the height a .t1 would have taken. */
+.t2 {
+  flex: none;
+  margin: 4.5mm 0 0;
+  font-size: 14pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.016em;
+  color: var(--ink);
+}
+
+.lead {
+  margin: 4mm 0 0;
+  max-width: 178mm;
+  font-size: 9.4pt;
+  line-height: 1.62;
+  color: var(--ink-2);
+}
+
+.body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+
+/* ---------- image slots ---------- */
+
+.ph {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4mm;
+  min-height: 0;
+  padding: 5mm;
+  overflow: hidden;
+  border: 1px dashed var(--line-3);
+  border-radius: var(--r-lg);
+  background: var(--wash);
+  text-align: center;
+}
+
+.ph b { font-size: 9pt; font-weight: 700; color: var(--ink); }
+.ph span { max-width: 92%; font-size: 7.2pt; line-height: 1.5; color: var(--ink-2); }
+
+.ph i {
+  position: absolute;
+  right: 2.4mm;
+  bottom: 1.8mm;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 6.2pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+/* ---------- spec strip (tools / role / contribution / period) ---------- */
+
+.spec {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  flex: none;
+  margin-top: 4mm;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+
+.spec > div {
+  padding: 2.8mm 3.4mm;
+  border-right: 1px solid var(--line);
+}
+
+.spec > div:last-child { border-right: 0; }
+
+.spec dt {
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.spec dd {
+  margin: 1.3mm 0 0;
+  font-size: 8.2pt;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* Fill-in marker. Deliberately not a fake number. */
+.tbd {
+  display: inline-block;
+  padding: 0.2mm 1.5mm;
+  border: 1px dashed var(--line-3);
+  border-radius: var(--r-sm);
+  background: #fbfcfd;
+  font-size: 6.8pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+/* ---------- content blocks ---------- */
+
+.cols {
+  display: grid;
+  gap: 5mm;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: 5mm;
+}
+
+.cols.c-4-6 { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
+.cols.c-1-1 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.stack { display: flex; flex-direction: column; gap: 4mm; min-height: 0; }
+
+.qa { display: flex; flex-direction: column; gap: 3.6mm; }
+
+/* Inside a column, spread the blocks so leftover height becomes even spacing
+   rather than one dead gap above the pinned metrics row. */
+.stack > .qa { flex: 1 1 auto; justify-content: space-between; }
+
+.qa > div { padding-bottom: 3.4mm; border-bottom: 1px solid var(--line-2); }
+.qa > div:last-child { padding-bottom: 0; border-bottom: 0; }
+
+/* Section label as a mono eyebrow rather than a bold run-in heading — keeps the
+   copy column feeling like set text instead of a form. */
+.qa h3 {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.qa h3 em { font-style: normal; }
+
+.qa p { margin: 2mm 0 0; font-size: 8.4pt; line-height: 1.6; color: var(--ink-2); }
+
+.qa ul { margin: 1.6mm 0 0; padding-left: 4mm; }
+.qa li { margin: 0.8mm 0; font-size: 8pt; line-height: 1.56; color: var(--ink-2); }
+
+/* ---------- figures: label above the frame, caption below ----------
+   Deliberately outside the image box, so both survive when the placeholder is
+   replaced by a real capture — the label becomes the figure's actual caption. */
+
+.fig { display: flex; flex-direction: column; margin: 0; min-height: 0; }
+.fig .ph { flex: 1 1 auto; }
+
+.fig-t {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+  margin-bottom: 2mm;
+  padding-bottom: 1.4mm;
+  border-bottom: 1px solid var(--line);
+  font-size: 8.4pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.fig-t span {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+}
+
+.fig-c { margin: 2mm 0 0; font-size: 6.8pt; line-height: 1.5; color: var(--ink-3); }
+
+/* Real capture in place of a placeholder. Same box, so nothing else moves.
+   `cover` fills the frame; `.fit` letterboxes instead, for crops and masks where
+   cropping would hide the point of the figure. */
+.fig img.shot {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--wash);
+}
+
+.fig img.shot.fit { object-fit: contain; }
+
+/* Subject sits in the upper part of the frame (smoke/fire on vehicles), so a
+   centred crop would cut it out. Anchor the crop to the top instead. */
+.fig img.shot.top { object-position: center top; }
+
+/* Workflow diagram row: the SVG is 3.64:1, so at full page width it lands near
+   73mm tall and its 17-unit labels print around 10pt — legible, which they are
+   not when the same diagram is squeezed into a half-width slot. */
+.fig.wf-row { flex: 0 0 auto; }
+.fig.wf-row img.shot { height: 50mm; flex: none; border: 0; background: none; }
+
+/* Row of tall before/after crop pairs — for portrait-orientation subjects that a
+   landscape slot would waste. Each pair is two verticals sharing one label. */
+.pairs {
+  display: grid;
+  grid-template-columns: repeat(var(--pairs, 4), minmax(0, 1fr));
+  gap: 5mm;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pair { display: flex; flex-direction: column; min-height: 0; }
+
+.pair-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4mm;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Before/after crops differ in aspect, so contain leaves slack. Anchor both to the
+   bottom — subjects stand on a floor, so their feet line up — and keep the fill
+   white so the slack reads as margin rather than a grey band. */
+.pair-imgs img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center bottom;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: #fff;
+}
+
+.pair-imgs.trio { grid-template-columns: repeat(3, 1fr); }
+
+/* ---------- display statistic ----------
+   The headline number is the hero, not a cell in a table of cards. */
+
+.stats { display: flex; flex-wrap: wrap; gap: 8mm; }
+
+.stat { min-width: 0; }
+
+.stat-k {
+  display: block;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.stat-v {
+  display: block;
+  margin-top: 1.4mm;
+  font-size: 27pt;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.stat-v .was { font-size: 15pt; font-weight: 600; color: var(--ink-3); }
+.stat-v .arw { font-size: 13pt; font-weight: 600; color: var(--line-3); margin: 0 0.6mm; }
+.stat-v .tbd { font-size: 8pt; letter-spacing: 0.04em; vertical-align: 0.9mm; }
+
+.stat-c { display: block; margin-top: 1.8mm; font-size: 6.8pt; line-height: 1.45; color: var(--ink-3); }
+
+/* Legacy compact metric row, still used where two values share a narrow column. */
+.metrics { display: grid; gap: 3mm; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+
+.metric { padding: 0 0 0 3mm; border-left: 1px solid var(--line); }
+
+.metric small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 6.2pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.metric strong {
+  display: block;
+  margin-top: 1.4mm;
+  font-size: 14pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.metric strong .was { font-size: 9.5pt; font-weight: 600; color: var(--ink-3); }
+
+/* ---------- node chain ---------- */
+
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chain li {
+  padding: 1.5mm 2.8mm;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-family: var(--mono);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.chain li.arw {
+  padding: 0 0.4mm;
+  border: 0;
+  background: none;
+  color: var(--ink-3);
+}
+
+/* ---------- numbered step strip ---------- */
+
+.steps {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  list-style: none;
+}
+
+.steps > li { padding: 3.2mm 3.4mm; border-right: 1px solid var(--line); }
+.steps > li:last-child { border-right: 0; }
+
+.steps em {
+  display: block;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.steps b { display: block; margin-top: 1.2mm; font-size: 8.4pt; }
+.steps span { display: block; margin-top: 1mm; font-size: 7.2pt; line-height: 1.5; color: var(--ink-2); }
+
+/* ---------- frame sequence (process strip) ---------- */
+
+.seq { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2.4mm; }
+.seq .ph { padding: 3mm; }
+.seq .ph b { font-size: 7.6pt; }
+.seq .ph span { font-size: 6.6pt; }
+
+.cap {
+  margin: 2mm 0 0;
+  font-size: 6.8pt;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+/* ---------- section label above a group ---------- */
+
+.grp {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6mm;
+  margin-bottom: 2.4mm;
+}
+
+.grp h3 {
+  margin: 0;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.grp p { margin: 0; font-size: 7pt; color: var(--ink-3); }
+
+/* ---------- tables ---------- */
+
+.tbl { width: 100%; border-collapse: collapse; }
+
+.tbl th, .tbl td {
+  padding: 2.6mm 3mm;
+  border-bottom: 1px solid var(--line-2);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tbl thead th {
+  border-bottom: 1px solid var(--line);
+  background: var(--wash);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.tbl td { font-size: 7.8pt; line-height: 1.5; color: var(--ink-2); }
+.tbl td strong { font-size: 8.2pt; color: var(--ink); }
+.tbl td .mono { font-family: var(--mono); font-size: 7.2pt; }
+
+/* proficiency dots — intentionally empty until filled in */
+.lvl { display: flex; gap: 1.1mm; }
+
+.lvl i {
+  width: 2.1mm;
+  height: 2.1mm;
+  border: 1px solid var(--line-3);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.lvl i.on { border-color: var(--brand); background: var(--brand); }
+
+/* ---------- index cards ---------- */
+
+.idx {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4mm;
+}
+
+.idx article {
+  display: flex;
+  flex-direction: column;
+  padding: 4mm;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+
+.idx .n {
+  font-family: var(--mono);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brand);
+}
+
+.idx h3 { margin: 1.6mm 0 0; font-size: 10.4pt; font-weight: 700; line-height: 1.3; }
+.idx p { margin: 1.8mm 0 0; font-size: 7.8pt; line-height: 1.55; color: var(--ink-2); }
+
+.idx dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8mm 3mm;
+  margin: 3mm 0 0;
+  padding-top: 2.6mm;
+  border-top: 1px solid var(--line-2);
+}
+
+.idx dt { font-size: 6.6pt; font-weight: 700; letter-spacing: 0.06em; color: var(--ink-3); }
+.idx dd { margin: 0; font-size: 7.4pt; color: var(--ink); }
+
+/* Card thumbnail absorbs the leftover height instead of leaving it blank. */
+.idx article .ph { flex: 1 1 auto; margin-top: 3mm; min-height: 24mm; }
+.idx article dl { margin-top: 3mm; }
+
+/* ---------- cover ---------- */
+
+.pg.cover { padding: 18mm 15mm 12mm; }
+
+.cover-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 12mm;
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+.cover-top > div:first-child { display: flex; flex-direction: column; }
+.cover-top .who { margin-top: 7mm; }
+
+.cover h1 {
+  margin: 8mm 0 0;
+  font-size: 43pt;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+}
+
+.cover h1 small {
+  display: block;
+  margin-top: 5mm;
+  font-size: 11pt;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  color: var(--ink-2);
+}
+
+.cover .who {
+  margin-top: auto;
+  padding-top: 6mm;
+  border-top: 1px solid var(--line);
+}
+
+.cover .who b { display: block; font-size: 13pt; letter-spacing: -0.01em; }
+.cover .who span { display: block; margin-top: 1.6mm; font-size: 8.4pt; color: var(--ink-2); }
+
+/* Hairline-ruled rows instead of filled panels — fewer containers, more air. */
+.cover-meta { display: flex; flex-direction: column; gap: 5mm; }
+
+.cover-meta section { padding-top: 3mm; border-top: 1px solid var(--line); }
+.cover-meta section:first-child { border-top: 0.35mm solid var(--ink-3); }
+
+.cover-meta h2 {
+  margin: 0 0 2.4mm;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.cover-meta ol { margin: 0; padding-left: 4.4mm; }
+.cover-meta li { margin: 1mm 0; font-size: 7.8pt; line-height: 1.45; color: var(--ink); }
+.cover-meta p { margin: 0; font-size: 7.8pt; line-height: 1.6; color: var(--ink-2); }
+
+/* Grows into whatever the title block leaves, so the cover has no dead middle. */
+.cover-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3mm;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: 8mm;
+}
+
+.mock-note {
+  flex: none;
+  margin-top: 4mm;
+  padding: 2.4mm 3.2mm;
+  border: 1px dashed var(--line-3);
+  border-radius: var(--r-md);
+  font-size: 6.8pt;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+/* ---------- cover: split hero ---------- */
+
+.cv-who b { display: block; font-size: 11pt; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+.cv-who span { display: block; margin-top: 1.4mm; font-size: 8pt; line-height: 1.5; color: var(--ink-2); }
+.cv-contact { margin-top: 2.6mm; font-size: 7.6pt; line-height: 1.7; color: var(--ink-2); }
+.cv-kick { flex: none; margin: 0 0 2.4mm; font-family: var(--mono); font-size: 7.2pt; font-weight: 700;
+           letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.cv-num { font-family: var(--mono); font-size: 9.2pt; font-weight: 700; color: var(--ink-3); }
+
+.spl { display: grid; grid-template-columns: minmax(0, 1fr) 64mm; gap: 10mm; flex: 1 1 auto; min-height: 0; }
+.spl .hero { position: relative; margin: 0; border: 1px solid var(--line); border-radius: var(--r-lg);
+             overflow: hidden; background: #fff; }
+.spl .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.spl .hero figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2mm 3.2mm;
+             background: rgba(255,255,255,0.92); font-family: var(--mono); font-size: 7pt;
+             letter-spacing: 0.08em; color: var(--ink-2); }
+.spl .list { display: flex; flex-direction: column; min-height: 0; }
+
+/* The four rows split the leftover column height evenly, so the list has no
+   dead band above the who/contact block no matter how the title wraps. */
+.spl .plist { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; margin-top: 9mm; }
+.spl .prj { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center;
+            padding: 3mm 0; border-top: 1px solid var(--line); }
+.spl .prj:first-of-type { border-top: 0.35mm solid var(--ink-3); }
+.spl .prj h3 { margin: 0; font-size: 13.5pt; font-weight: 700; letter-spacing: -0.012em; color: var(--ink);
+               display: flex; align-items: baseline; gap: 3mm; }
+.spl .prj h3 .pgno { margin-left: auto; font-family: var(--mono); font-size: 7.6pt; font-weight: 400; color: var(--ink-3); }
+.spl .prj h3 .mtail { font-size: 9.2pt; font-weight: 400; letter-spacing: 0; color: var(--ink-2); }
+.spl .prj .sb { margin: 1.4mm 0 0 9mm; font-size: 8.2pt; color: var(--ink-2); }
+.spl .whorow { flex: none; margin-top: 5mm; padding-top: 5mm; border-top: 1px solid var(--line);
+               display: flex; align-items: flex-end; }
+
+/* Name block directly under the cover title (business-card style). */
+.cv-links { font-family: var(--mono); font-size: 7.6pt; letter-spacing: 0.01em; color: var(--ink-2); }
+.cv-links a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--line-3);
+              text-decoration-thickness: 0.2mm; text-underline-offset: 0.5mm; }
+.cv-links .sp { margin: 0 1.8mm; color: var(--line-3); }
+.nmblk { margin-top: 6.5mm; padding-top: 4mm; border-top: 1px solid var(--line); }
+.nmblk b { display: block; font-size: 13.5pt; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+.nmblk .intro { margin: 1.8mm 0 0; font-size: 9.6pt; line-height: 1.55; color: var(--ink-2); word-break: keep-all; }
+.nmblk .cv-links { display: block; margin-top: 2mm; }
+
+/* ---------- closing ---------- */
+
+.close-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 10mm;
+  flex: 1 1 auto;
+  align-content: center;
+  min-height: 0;
+}
+
+.links { display: flex; flex-direction: column; gap: 2.6mm; margin: 0; padding: 0; list-style: none; }
+
+.links li {
+  display: grid;
+  grid-template-columns: 26mm 1fr;
+  gap: 3mm;
+  padding-bottom: 2.6mm;
+  border-bottom: 1px solid var(--line-2);
+  font-size: 8pt;
+}
+
+.links b { font-size: 6.8pt; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.links span { color: var(--ink); word-break: break-all; }
+.links .tbd { justify-self: start; }
+
+/* ---------- model strip (replaces the tools/role/contribution spec block) ---------- */
+
+/* Labelled spec rows: models on one line, techniques on the next. Full width, so
+   growing it redistributes height to/from the image row rather than leaving a
+   void — a text column would not behave that way. */
+.specs {
+  flex: none;
+  margin-top: 4mm;
+  border-top: 1px solid var(--line);
+}
+
+.specs > div {
+  display: grid;
+  grid-template-columns: 22mm minmax(0, 1fr);
+  gap: 4mm;
+  align-items: baseline;
+  padding: 2mm 0;
+  border-bottom: 1px solid var(--line-2);
+}
+
+.specs > div:last-child { border-bottom: 0; }
+
+.specs dt {
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.specs dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1mm 2.4mm;
+  margin: 0;
+  min-width: 0;
+}
+
+.specs dd > span {
+  font-family: var(--mono);
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+/* Items are separated by a thin rule instead of a middle dot. */
+.specs dd > span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 2.6mm;
+  margin-left: 2.4mm;
+  background: var(--line-3);
+  vertical-align: -0.4mm;
+}
+
+/* Links in a spec row stay in the chip face; the rule under them is what marks
+   them as links, since colour alone would not survive greyscale print. */
+.specs dd a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line-3);
+  text-decoration-thickness: 0.2mm;
+  text-underline-offset: 0.5mm;
+}
+
+.specs dd > .tbd { font-family: var(--deck-font); }
+.specs dd > .tbd::after { content: none; }
+
+/* Hard break inside a chip row: a zero-width flex item that fills the line, so
+   the chips after it start on a new one and the hairline separators stay right. */
+.specs dd > .brk { flex: 1 0 100%; height: 0; }
+.specs dd > .brk::after { content: none; }
+/* The chip before a break ends its line, so it must not trail a separator. */
+.specs dd > span:has(+ .brk)::after { content: none; }
+
+/* A spec row that explains instead of listing. Prose needs the body face and a
+   line-height chips do not, so it opts out of the flex chip track entirely. */
+.specs dd.concept {
+  display: block;
+  font-family: var(--deck-font);
+  font-size: 8pt;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--ink-2);
+  word-break: keep-all;   /* Korean breaks between words, never inside one */
+}
+
+/* Unboxed: a hairline-ruled row rather than a filled panel. One less container. */
+.models {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1.6mm 2.6mm;
+  flex: none;
+  margin-top: 5mm;
+  padding-top: 2.6mm;
+  border-top: 1px solid var(--line);
+}
+
+.models > b {
+  margin-right: 2mm;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.models > span {
+  font-family: var(--mono);
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.models > span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 2.6mm;
+  margin-left: 2.6mm;
+  background: var(--line-3);
+  vertical-align: -0.4mm;
+}
+
+.models > .tbd { font-family: var(--deck-font); }
+
+/* ---------- project page: content row over a full-width graph row ---------- */
+
+.pj { display: flex; flex-direction: column; gap: 5mm; flex: 1 1 auto; min-height: 0; margin-top: 5.5mm; }
+/* Directly under a section title the default lead-in reads as a gap, so close it up. */
+.t2 + .pj { margin-top: 3mm; }
+
+/* Image-dominant project row: two large figures, the left one carrying the graph.
+   Both grow to eat every millimetre the page has left, so no copy block can leave
+   a void — the figure labels do the explaining instead of a text column. */
+.pj-2up {
+  display: grid;
+  grid-template-columns: minmax(0, 61fr) minmax(0, 39fr);
+  gap: 5mm;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pj-2up .fig .ph { flex: 1 1 auto; min-height: 0; }
+
+/* One-line summary under the headline. Deliberately a line, never a paragraph. */
+.dek {
+  margin: 4mm 0 0;
+  font-size: 9.6pt;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* Thumbnail row: fixed height so every millimetre it does not use goes to the
+   large row above. Height set once, in --strip-h. */
+.pj-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 2.6mm;
+  flex: 0 0 var(--strip-h, 36mm);
+  min-height: 0;
+}
+
+.pj-strip .fig .ph { flex: 1 1 auto; min-height: 0; }
+.pj-strip .fig-t { font-size: 7.6pt; margin-bottom: 1.6mm; padding-bottom: 1.2mm; }
+.pj-strip .fig-t span { font-size: 6pt; }
+.pj-strip .note { padding: 3.2mm 3.4mm; }
+.pj-strip .note b { font-size: 8.4pt; }
+.pj-strip .note p { margin-top: 1.6mm; font-size: 6.8pt; }
+
+/* ---------- screening: side-by-side comparison of two differing methods ---------- */
+
+.cmp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5mm; flex: 1 1 auto; min-height: 0; }
+
+.cmp > section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6mm;
+  min-height: 0;
+  padding: 4mm;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+
+.cmp .tag {
+  font-family: var(--mono);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brand);
+}
+
+.cmp h3 { margin: 0; font-size: 9.6pt; font-weight: 700; line-height: 1.3; }
+.cmp > section > p { margin: 0; font-size: 7.8pt; line-height: 1.55; color: var(--ink-2); }
+.cmp ul { margin: 0; padding-left: 4mm; }
+.cmp li { margin: 1mm 0; font-size: 7.8pt; line-height: 1.5; color: var(--ink-2); }
+.cmp .ph { flex: 1 1 auto; min-height: 30mm; }
+
+/* Callout for a credential attached to one project (e.g. the paper behind it). */
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4mm 4.2mm;
+  border: 1px solid var(--line);
+  border-left: 0.8mm solid var(--ink);
+  border-radius: var(--r-md);
+  background: var(--wash);
+}
+
+.note b { font-size: 9.4pt; font-weight: 700; line-height: 1.28; color: var(--ink); }
+.note p { margin: 2mm 0 0; font-size: 7.2pt; line-height: 1.5; color: var(--ink-3); }
+
+/* Marks a block whose final placement is still open. Screen + print. */
+.pending {
+  display: inline-block;
+  margin-left: 2mm;
+  padding: 0.3mm 1.8mm;
+  border: 1px dashed var(--brand);
+  border-radius: var(--r-sm);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--brand);
+}
+
+/* Workflow page: the diagram owns the whole content area, so it can be drawn at
+   2.14:1 (267 x 125mm) where node labels print near 10.7pt. */
+.fig.wf-full { flex: 1 1 auto; min-height: 0; }
+
+.fig.wf-full img.shot {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  object-fit: contain;
+  border: 0;
+  background: none;
+}
+
+/* ---------- workflow-page footer: role key instead of running text ----------
+   The diagram's tints only mean something with a key, and the key belongs on the
+   page rather than inside the drawing, so all three workflow pages share one. */
+.pg-foot.roles { align-items: center; }
+
+.role-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2mm 5mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-key li {
+  display: flex;
+  align-items: center;
+  gap: 1.8mm;
+  font-size: 7.4pt;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.role-key li::before {
+  content: "";
+  width: 3.4mm;
+  height: 2.6mm;
+  border-radius: 0.8mm;
+  border: 1px solid;
+}
+
+.role-key .r-model::before   { background: #eae4f3; border-color: #8b7cab; }
+.role-key .r-prompt::before  { background: #f7f0e3; border-color: #b79a68; }
+.role-key .r-sampler::before { background: #e4efec; border-color: #6b9c90; }
+.role-key .r-latent::before  { background: #f8e3e4; border-color: #b57b83; }
+.role-key .r-process::before { background: #f2f2f3; border-color: #9fa3a9; }
+
+/* ---------- dataset-screening band on a results page ----------
+   How the generated set was filtered, stated beside evidence of the filter
+   working. The two projects screened differently, so the band takes either
+   examples (metric-based rejection) or a flow (curation and split). */
+.qc {
+  display: grid;
+  grid-template-columns: minmax(0, 50fr) minmax(0, 50fr);
+  gap: 6mm;
+  flex: 0 0 auto;
+  min-height: 0;
+  padding: 3.6mm 4.2mm;
+  border: 1px solid var(--line);
+  border-left: 0.8mm solid var(--ink);
+  border-radius: var(--r-lg);
+  background: var(--wash);
+}
+
+.qc-copy { display: flex; flex-direction: column; min-width: 0; }
+.qc-copy h4 { margin: 0; font-size: 9.4pt; font-weight: 700; color: var(--ink); }
+.qc-copy p { margin: 1.8mm 0 0; font-size: 7.6pt; line-height: 1.5; color: var(--ink-2); }
+
+.qc-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4mm 2mm;
+  margin: 2.6mm 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qc-metrics li {
+  padding: 0.5mm 1.8mm;
+  border: 1px solid var(--line-3);
+  border-radius: 999px;
+  background: #fff;
+  font-family: var(--mono);
+  font-size: 6.6pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.qc-figs { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 3mm; min-height: 0; }
+.qc-figs figure { display: flex; flex-direction: column; margin: 0; min-height: 0; }
+
+.qc-figs figcaption {
+  flex: none;
+  margin-bottom: 1.4mm;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.qc-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2mm; flex: 1 1 auto; min-height: 0; }
+
+.qc-trio img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center bottom;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: #fff;
+}
+
+/* Curation flow, for the project screened by split rather than by metric. */
+.qc-flow { display: flex; flex-direction: column; justify-content: center; gap: 2.2mm; min-width: 0; }
+
+.qc-flow > div {
+  display: grid;
+  grid-template-columns: 26mm 1fr;
+  gap: 3mm;
+  align-items: baseline;
+  padding-bottom: 2mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.qc-flow > div:last-child { padding-bottom: 0; border-bottom: 0; }
+
+.qc-flow dt {
+  font-family: var(--mono);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.qc-flow dd { margin: 0; font-size: 7.6pt; line-height: 1.45; color: var(--ink); }
+.qc-flow dd b { font-weight: 700; }
+
+/* Column variant. The failure crops are roughly 8:1 tall, so they need the page's
+   full height to stay legible; as a bottom band they collapse to slivers. */
+.qc.qc-side {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 4mm;
+  align-content: stretch;
+}
+
+.qc.qc-side .qc-copy p { font-size: 7.2pt; }
+.qc.qc-side .qc-figs { gap: 4mm; }
+
+/* ---------- variant layout: screening left, square result grid right ----------
+   Each cell holds one before/after pair as two 1:2 halves, so the cell reads
+   square while the comparison stays intact. */
+.sq2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4mm;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.sq { display: flex; flex-direction: column; margin: 0; min-height: 0; }
+
+.sq figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 3mm;
+  flex: none;
+  margin-bottom: 1.6mm;
+  font-family: var(--mono);
+  font-size: 6.4pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.sq-imgs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4mm;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Direction marker on the seam. The pair reads before → after without a caption
+   spending a clause on which side is which. Drawn as a data URI so nothing is
+   fetched at print time. */
+.sq-imgs::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4.6mm;
+  height: 4.6mm;
+  transform: translate(-50%, -50%);
+  border: 0.25mm solid var(--ink-3);
+  border-radius: 50%;
+  background: #fff url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M5%2012h12M12.5%206.5L18%2012l-5.5%205.5'%20fill='none'%20stroke='%231a2c44'%20stroke-width='2.6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") center / 2.6mm 2.6mm no-repeat;
+}
+
+.fq2 .sq-imgs::after { width: 3.9mm; height: 3.9mm; background-size: 2.2mm 2.2mm; }
+
+/* Vertical pair: original above, result below, the marker rotated to point down.
+   For landscape frames, where a side-by-side pair would be too wide to read. */
+.sq-imgs.v { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+.sq-imgs.v::after { transform: translate(-50%, -50%) rotate(90deg); }
+
+/* Two related outputs stacked — not a before/after pair, so no marker. */
+.sq-imgs.plain::after { content: none; }
+
+.sq-imgs img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: #fff;
+}
+
+/* ---------- enlarged type, same composition ----------
+   Every size raised by 20% over the base. Measured, not guessed: at this scale
+   all six project pages still fit with zero overflow — the only consequence is
+   that page 3's screening-scale caption wraps to two lines, which the flexible
+   failure band absorbs. At 24% page 3 overflows by 1.3mm. Ratios between sizes
+   are untouched, so the hierarchy reads exactly as before. */
+.pg.tx-lg .t1 { font-size: 31.2pt; }
+.pg.tx-lg .t1 .sub { font-size: 18.0pt; }
+.pg.tx-lg .t1 .sub a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line-3);
+  text-decoration-thickness: 0.25mm;
+  text-underline-offset: 1mm;
+}
+
+.t1 .sub a .ext { margin-left: 0.6mm; font-size: 0.7em; }
+
+.t1 .en { font-size: 8.8pt; }
+.pg.tx-lg .t2 { font-size: 16.8pt; }
+.pg.tx-lg .fig-t { font-size: 10.0pt; }
+.pg.tx-lg .fig-c { font-size: 8.2pt; }
+.pg.tx-lg .specs dt { font-size: 7.6pt; }
+.pg.tx-lg .specs dd > span { font-size: 8.8pt; }
+.pg.tx-lg .specs dd.concept { font-size: 9.6pt; }
+.pg.tx-lg .qcp h4,
+.pg.tx-lg .rescol h4 { font-size: 12.0pt; }
+.pg.tx-lg .rescol .rsub { font-size: 8.2pt; }
+.pg.tx-lg .qsec > h5 { font-size: 8.0pt; }
+.pg.tx-lg .qtab td:first-child { font-size: 8.2pt; }
+.pg.tx-lg .qtab td:last-child { font-size: 8.6pt; }
+
+/* ---------- paper figures ----------
+   Width-only sizing: the height follows the file's own aspect, so a figure can
+   neither stretch nor letterbox. Page totals are controlled by choosing widths. */
+.wfig { display: flex; flex-direction: column; margin: 0; min-width: 0; }
+.wfig > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: #fff;
+}
+.wfig.bare > img { border: 0; border-radius: 0; }
+.wfig > .fig-c { margin-top: 1.6mm; }
+
+.g3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5mm; }
+
+/* Source credit riding on a figure label, set back in the body face. */
+.fig-t .cred {
+  font-family: var(--deck-font);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-3);
+}
+
+/* Narrow variant for a table that sits beside a figure rather than filling a column. */
+.qtab.narrow td:first-child { width: 15mm; }
+/* Wider label column with its own right padding, so the longest label still has
+   air before the description rather than butting up against it. */
+.qtab.tight td:first-child { width: 24mm; padding-right: 4mm; }
+/* Paper notation in the label column: italic variable with a real subscript,
+   rather than the ASCII S_det form. */
+.qtab td:first-child i { font-style: italic; }
+.qtab td:first-child sub { font-size: 0.72em; letter-spacing: 0; }
+.qtab.tight td { padding: 1.8mm 0; }
+
+/* Results column, given the same heading treatment as the screening column so the
+   two read as peer sections rather than a panel plus an unlabelled image block.
+   The label at the top also frees the caption line at the bottom for the figures. */
+.rescol { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.rescol h4 { margin: 0; font-size: 10pt; font-weight: 700; color: var(--ink); }
+.rescol .rsub { margin: 2.2mm 0 0; font-size: 6.8pt; line-height: 1.5; color: var(--ink-3); }
+.rescol .sq2 { margin-top: 3.2mm; }
+
+/* left-hand screening panel, shared by the variants */
+.qcp { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.qcp h4 { margin: 0; font-size: 10pt; font-weight: 700; color: var(--ink); }
+.qcp p { margin: 2mm 0 0; font-size: 7.6pt; line-height: 1.55; color: var(--ink-2); }
+.qcp .eyebrow { margin-bottom: 1.6mm; }
+
+/* metric table (variant C) */
+.qtab { width: 100%; border-collapse: collapse; margin-top: 2.6mm; }
+/* Row padding is set so the screening column's content reaches the same depth as
+   the results grid beside it. Changing it unbalances the two columns. */
+.qtab td { padding: 2.2mm 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+/* No rule above the first row — the gap below the sector label does the
+   separating, so the table opens on white. */
+.qtab td:first-child {
+  width: 34mm;
+  font-family: var(--mono);
+  font-size: 6.8pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+.qtab td:last-child { font-size: 7.2pt; line-height: 1.4; color: var(--ink-2); }
+
+/* numbered stage list (variant B) */
+.qsteps { display: flex; flex-direction: column; gap: 3mm; margin: 3mm 0 0; padding: 0; list-style: none; }
+.qsteps li {
+  display: grid;
+  grid-template-columns: 7mm 1fr;
+  gap: 3mm;
+  padding-bottom: 3mm;
+  border-bottom: 1px solid var(--line);
+}
+.qsteps li:last-child { padding-bottom: 0; border-bottom: 0; }
+.qsteps em {
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--ink-3);
+}
+.qsteps b { display: block; font-size: 8.4pt; color: var(--ink); }
+.qsteps span { display: block; margin-top: 1.2mm; font-size: 7.2pt; line-height: 1.45; color: var(--ink-2); }
+
+/* compact failure evidence strip (variants A and C) */
+.qevid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0,1fr); gap: 3mm; flex: 0 0 auto; margin-top: auto; }
+.qevid figure { display: flex; flex-direction: column; margin: 0; }
+.qevid figcaption { flex: none; margin-bottom: 1.4mm; font-family: var(--mono); font-size: 6.2pt; font-weight: 700; color: var(--ink-3); }
+.qevid .qc-trio { height: 34mm; }
+
+/* Failure evidence as its own 2x2, matching the result grid's arrangement. Cells
+   are shorter than the result cells because the metric table shares the column,
+   but each half stays near-square so the two crops compare cleanly. */
+.fq2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 3mm 4mm;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: 3.4mm;
+}
+
+.fq2 figure { display: flex; flex-direction: column; margin: 0; min-height: 0; }
+
+.fq2 figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 2mm;
+  flex: none;
+  margin-bottom: 1.2mm;
+  font-family: var(--mono);
+  font-size: 6pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.fq2 .sq-imgs { gap: 1.2mm; }
+.fq2 .sq-imgs img { border-radius: var(--r-sm); }
+
+/* ---------- sectors inside the screening column ----------
+   Three parts — what the metrics catch, the order they run in, what they caught.
+   A rule at the masthead's weight separates them; the column read as one blob
+   without it. */
+.qsec {
+  flex: none;
+  margin-top: 3.8mm;
+  padding-top: 2.2mm;
+  border-top: 0.35mm solid var(--ink-3);
+}
+
+.qsec:first-of-type { margin-top: 3mm; }
+
+.qsec > h5 {
+  margin: 0 0 2.2mm;
+  font-family: var(--mono);
+  font-size: 6.6pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+}
+
+/* Extra air below the sector label, standing in for the rule that used to sit
+   above the first row. Must exceed the label's own bottom margin to win the
+   margin collapse. */
+.qsec .qtab { margin-top: 4mm; }
+.qsec.grow { flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; }

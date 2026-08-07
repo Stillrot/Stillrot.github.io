@@ -293,5 +293,19 @@
 </footer>
 
 <script src="../../assets/js/main.js?v=20260605e"></script>
+<script>
+(function(){
+  // #proj-xxx deep links: activate the matching tab once main.js has wired the cards.
+  window.addEventListener('load', function(){
+    var m = (location.hash || '').match(/^#proj-([a-z]+)$/);
+    if (!m) return;
+    var card = document.querySelector('.proj-card[data-panel="' + m[1] + '"]');
+    if (!card) return;
+    card.click();
+    var panel = document.getElementById('proj-' + m[1]);
+    if (panel) setTimeout(function(){ panel.scrollIntoView({block:'start'}); }, 60);
+  });
+})();
+</script>
 </body>
 </html>

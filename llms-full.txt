@@ -49,6 +49,8 @@ DOCUMENTS
 
 Portfolio
 
+AI Works
+
 CV
 
 Resume
@@ -157,6 +159,7 @@ Research
 - NEWS -> https://stillrot.github.io/#news
 - RESEARCH -> https://stillrot.github.io/#research
 - Portfolio -> https://stillrot.github.io/portfolio2026/
+- AI Works -> https://stillrot.github.io/ai-works/deck/
 - CV -> https://stillrot.github.io/cv/
 - Resume -> https://stillrot.github.io/resume/
 - HDC LABS R&D Center AI LAB 2024.05 ~ Present -> https://stillrot.github.io/career/hdclabs/

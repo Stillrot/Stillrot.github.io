@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Generative AI Portfolio — Dongsik Yoon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ComfyUI 기반 합성 데이터 생성과 검수, 이미지 생성 작업물. A4 가로 제출용 문서.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="../../assets/css/ai-works-deck.css?v=20260805d">
+</head>
+<body class="deck">
+
+<div class="deck-bar">
+  <strong>제출용 PDF</strong>
+  <span class="sep">|</span>
+  <span>A4 가로 8페이지</span>
+  <span class="sep">|</span>
+  <span>인쇄 시 <b>배율 100%, 배경 그래픽 켜기, 여백 없음</b></span>
+  <span class="sep">|</span>
+  <a href="../../">← Home</a>
+  <button type="button" onclick="window.print()">PDF로 저장</button>
+</div>
+
+<div class="sheets">
+
+<!-- ===== 01 COVER ===== -->
+<section class="pg cover">
+  <div class="pg-head"></div>
+
+  <div class="spl">
+    <div class="list">
+      <h1 style="margin-top:2mm; font-size:36pt;">Generative AI Portfolio</h1>
+
+      <div class="nmblk">
+        <b>윤동식 &nbsp; Dongsik Yoon</b>
+        <div style="display:flex; align-items:baseline; gap:8mm;">
+        <p class="intro">합성 데이터 생성, 자동 검수, 콘텐츠 제작</p>
+        <span class="cv-links" style="margin-left:auto;">kevinds1106@naver.com<span class="sp">&#9474;</span><a href="https://stillrot.github.io/">홈페이지</a><span class="sp">&#9474;</span><a href="https://stillrot.github.io/portfolio2026/">포트폴리오</a><span class="sp">&#9474;</span><a href="https://stillrot.github.io/cv/">CV</a><span class="sp">&#9474;</span><a href="https://stillrot.github.io/resume/">경력기술서</a></span>
+        </div>
+      </div>
+
+      <div class="plist">
+        <p class="cv-kick">수록 작업</p>
+        <div class="prj">
+          <h3><span class="cv-num">01</span>보행자 성별/연령 데이터셋 증강<span class="mtail">Qwen-Image-Edit</span><span class="pgno">02&ndash;03</span></h3>
+        </div>
+        <div class="prj">
+          <h3><span class="cv-num">02</span>특정 현장 대상 데이터셋 생성 자동화<span class="mtail">FLUX.2</span><span class="pgno">04&ndash;05</span></h3>
+        </div>
+        <div class="prj">
+          <h3><span class="cv-num">03</span>취득 불가 상황 데이터셋 구축<span class="mtail">SD1.5 + FLUX.1, ControlNet</span><span class="pgno">06&ndash;07</span></h3>
+        </div>
+        <div class="prj">
+          <h3><span class="cv-num">04</span>특정 인물 얼굴 생성과 디테일 보정<span class="mtail">SD1.5, SD2.0, SDXL, LCM, IPAdapter</span><span class="pgno">08</span></h3>
+        </div>
+      </div>
+    </div>
+
+    <figure class="hero">
+      <img src="./assets/m4_r2.jpg" alt="버추얼 인플루언서 생성 이미지">
+      <figcaption>METAVERSE ENTERTAINMENT<br>VIRTUAL INFLUENCER RINA</figcaption>
+    </figure>
+  </div>
+
+  <div class="pg-foot">
+    <span>01 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 01 WORKFLOW ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h1 class="t1">보행자 성별/연령 데이터셋 증강<span class="sub">아이파크몰 방문자 분석</span>
+  </h1>
+  <dl class="specs" style="margin-top:5mm;">
+    <div>
+      <dt>작업 개요</dt>
+      <dd class="concept">저해상도 공개 데이터셋 RAPv2를 고해상도로 재생성. 자세와 의복은 유지, 연령과 성별은 라벨과 일치하도록 조건 부여</dd>
+    </div>
+    <div>
+      <dt>사용 모델</dt>
+      <dd>
+      <span>qwen_image_edit_2511_bf16</span>
+      <span>qwen_2.5_vl_7b_fp8_scaled</span>
+      <span>qwen_image_vae</span>
+      <span>LoRA Lightning-4steps-V1.0-bf16</span>
+      </dd>
+    </div>
+    <div>
+      <dt>적용 기법</dt>
+      <dd class="concept">Qwen-Image-Edit 모델을 활용하여 원본의 구도와 인물은 그대로 두고 흐릿하게 뭉개진 저해상도 디테일만 복원</dd>
+    </div>
+  </dl>
+
+  <div class="pj">
+    <figure class="fig wf-full">
+      <figcaption class="fig-t">ComfyUI 워크플로 구조</figcaption>
+      <img class="shot" src="./assets/wf-01.svg" alt="워크플로 도식">
+    </figure>
+  </div>
+
+  <div class="pg-foot roles">
+    <ul class="role-key">
+      <li class="r-model">모델 로드</li>
+      <li class="r-prompt">프롬프트 조건</li>
+      <li class="r-sampler">샘플러 스케줄</li>
+      <li class="r-latent">VAE 변환</li>
+      <li class="r-process">이미지 처리</li>
+    </ul>
+    <span>02 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 01 RESULTS ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h2 class="t2">복원 결과와 지표 검수</h2>
+
+  <div class="pj">
+    <div class="pj-2up" style="grid-template-columns: minmax(0,46fr) minmax(0,54fr); gap:7mm;">
+
+      <div class="qcp">
+        <h4>데이터셋 검수</h4>
+
+        <section class="qsec">
+          <h5>지표 구성과 검출 항목</h5>
+          <table class="qtab">
+            <tbody>
+              <tr><td>정규화 상관(ZNCC)</td><td>전체 구조가 원본에서 이탈했는가</td></tr>
+              <tr><td>평균 절대차(MAD)</td><td>픽셀 평균 차이가 과한가</td></tr>
+              <tr><td>Canny edge IoU</td><td>윤곽선이 유지되는가</td></tr>
+              <tr><td>HSV 히스토그램</td><td>색 분포가 무너졌는가</td></tr>
+              <tr><td>Haar 얼굴 검출</td><td>없던 얼굴이 생겼는가</td></tr>
+              <tr><td>합산 점수</td><td>위 다섯 항목을 가중 합산한 종합 점수</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="qsec">
+          <h5>검수 절차</h5>
+          <img class="shot fit" src="./assets/qc-01.svg" alt="검수 순서도"
+               style="display:block; width:100%; height:26mm; border:0; background:none;">
+          <p class="fig-c">초기 생성분 전체 84,928장 중 10,413장 재생성 대상 (12.26%) &mdash; 얼굴 환각 / 구조 이탈 / 색상 붕괴 등</p>
+        </section>
+
+        <section class="qsec grow">
+          <h5>재생성 대상 판정 사례</h5>
+          <!-- Flexes between these bounds so the column always reaches the same depth
+               as the results grid; text edits above are absorbed here, not left as a gap. -->
+          <div class="fq2" style="grid-template-rows: minmax(0,1fr); flex:1 1 auto; min-height:24mm; max-height:36mm; margin-top:0;">
+            <figure>
+              <div class="sq-imgs">
+                <img src="./assets/f_b_orig.jpg" alt="원본"><img src="./assets/f_b_fail.jpg" alt="실패본">
+              </div>
+            </figure>
+            <figure>
+              <div class="sq-imgs">
+                <img src="./assets/f_d_orig.jpg" alt="원본"><img src="./assets/f_d_fail.jpg" alt="실패본">
+              </div>
+            </figure>
+          </div>
+          <p class="fig-c" style="flex:none;">왼쪽은 얼굴 환각과 구조 이탈, 오른쪽은 구조 이탈만 검출된 컷</p>
+        </section>
+      </div>
+
+      <div class="rescol">
+        <h4>최종 복원 결과</h4>
+        <p class="rsub">세로 197~515px 원본을 1522~1568px로 복원 &mdash; 픽셀 수 기준 9~59배</p>
+        <div class="sq2">
+          <figure class="sq">
+            <div class="sq-imgs">
+              <img src="./assets/q_a_orig.jpg" alt="원본"><img src="./assets/q_a_synth.jpg" alt="복원">
+            </div>
+          </figure>
+          <figure class="sq">
+            <div class="sq-imgs">
+              <img src="./assets/q_b_orig.jpg" alt="원본"><img src="./assets/q_b_synth.jpg" alt="복원">
+            </div>
+          </figure>
+          <figure class="sq">
+            <div class="sq-imgs">
+              <img src="./assets/q_c_orig.jpg" alt="원본"><img src="./assets/q_c_synth.jpg" alt="복원">
+            </div>
+          </figure>
+          <figure class="sq">
+            <div class="sq-imgs">
+              <img src="./assets/q_d_orig.jpg" alt="원본"><img src="./assets/q_d_synth.jpg" alt="복원">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span>03 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 02 WORKFLOW ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h1 class="t1">특정 현장 대상 데이터셋 생성 자동화<span class="sub"><a href="https://stillrot.github.io/career/hdclabs/#proj-elv">엘리베이터 내부 상황 판단<span class="ext">&#8599;</span></a></span>
+  </h1>
+  <dl class="specs" style="margin-top:5mm;">
+    <div>
+      <dt>작업 개요</dt>
+      <dd class="concept">수집이 어려운 배경과 공개 데이터에 없는 객체 조합을 인페인팅으로 만들고, 3단 자동 큐레이션으로 사용 가능한 컷만 선별</dd>
+    </div>
+    <div>
+      <dt>사용 모델</dt>
+      <dd>
+      <span>FLUX.2-dev</span>
+      <span>DualCLIP (t5 + clip_l)</span>
+      <span>ae (VAE)</span>
+      </dd>
+    </div>
+    <div>
+      <dt>적용 기법</dt>
+      <dd class="concept">매 합성마다 특정 ROI에 랜덤 위치 마스크를 적용하고 FLUX.2-dev 인페인팅 모델을 통해 배경은 고정한 채 마스크 영역에만 특정 객체를 생성</dd>
+    </div>
+    <div>
+      <dt>관련 연구</dt>
+      <dd>
+      <span>Auto-Curated Domain-Specific Dataset Generation via Diffusion Models (WACVW 2026 Oral)</span>
+      <span><a href="https://stillrot.github.io/papers/wacvw2026/">프로젝트 페이지</a></span>
+      <span><a href="https://arxiv.org/abs/2601.08095">논문 arXiv</a></span>
+      <span><a href="https://www.youtube.com/watch?v=Z2OQIBj17bM">발표 영상</a></span>
+      </dd>
+    </div>
+  </dl>
+
+  <div class="pj">
+    <figure class="fig wf-full">
+      <figcaption class="fig-t">ComfyUI 워크플로 구조</figcaption>
+      <img class="shot" src="./assets/wf-02.svg" alt="워크플로 도식">
+    </figure>
+  </div>
+
+  <div class="pg-foot roles">
+    <ul class="role-key">
+      <li class="r-model">모델 로드</li>
+      <li class="r-prompt">프롬프트 조건</li>
+      <li class="r-sampler">샘플러 스케줄</li>
+      <li class="r-latent">VAE 변환</li>
+      <li class="r-process">이미지 처리</li>
+    </ul>
+    <span>04 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 02 RESULTS ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h2 class="t2">합성 결과와 3단 큐레이션</h2>
+
+  <div class="pj">
+    <!-- 2x2 grid rather than two independent columns: the second row's line is shared,
+         so the 탈락 사례 and 합성 성공 이미지 blocks start at the same height by
+         construction and stay aligned through any later text edit. -->
+    <div class="pj-2up" style="grid-template-columns: minmax(0,41fr) minmax(0,59fr);
+         grid-template-rows: auto minmax(0,1fr); gap:5mm 7mm; align-items:start;">
+
+      <div class="qcp">
+        <h4>데이터셋 검수</h4>
+        <section class="qsec">
+          <h5>자동 선별 지표 구성</h5>
+          <table class="qtab tight">
+            <tbody>
+              <tr><td><i>S</i><sub>det</sub></td><td>합성된 객체를 검출기가 찾아낸 신뢰도</td></tr>
+              <tr><td><i>B</i><sub>det</sub></td><td>검출기가 반환한 객체 경계 박스, 이후 mask 위치와 IoU 비교</td></tr>
+              <tr><td><i>S</i><sub>aes</sub></td><td>미학 평가 모델의 생성 품질 점수</td></tr>
+              <tr><td><i>S</i><sub>vlm</sub></td><td>프롬프트 의도와 VLM이 서술한 장면의 부합 정도</td></tr>
+              <tr><td>선호도 분류기</td><td>주관적 선별 기준을 학습한 판정 모델</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <figure class="wfig bare">
+        <figcaption class="fig-t">3단 자동 큐레이션 파이프라인</figcaption>
+        <img src="./assets/w2_pipe.jpg" alt="3단 파이프라인 개요">
+      </figure>
+
+      <div class="rescol">
+        <div class="fig-t">탈락 사례</div>
+        <figure class="wfig">
+          <img src="./assets/w2_no1_tight.jpg" alt="1단 탈락 사례">
+          <p class="fig-c">Stage 1 탈락 &mdash; 객체 형태가 무너져 검출과 미학 점수 미달</p>
+        </figure>
+        <figure class="wfig" style="margin-top:3mm;">
+          <img src="./assets/w2_no2_tight.jpg" alt="2단 탈락 사례">
+          <p class="fig-c">Stage 2 탈락 &mdash; 합성은 성공했으나 시점과 자세가 CCTV 화각과 어긋남</p>
+        </figure>
+      </div>
+
+      <figure class="wfig">
+        <figcaption class="fig-t">합성 성공 이미지</figcaption>
+        <img src="./assets/w2_ok.jpg" alt="통과 샘플">
+      </figure>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span>05 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 03 WORKFLOW ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h1 class="t1">취득 불가 상황 데이터셋 구축<span class="sub"><a href="https://stillrot.github.io/career/hdclabs/#proj-fire">지하주차장 화재 감지<span class="ext">&#8599;</span></a></span>
+  </h1>
+  <dl class="specs" style="margin-top:5mm;">
+    <div>
+      <dt>작업 개요</dt>
+      <dd class="concept">지하주차장 CCTV 프레임의 차량 영역에 검은 연기와 차량 화재를 인페인팅 합성. 촬영이 불가능한 재난 상황의 탐지 학습 데이터를 보강</dd>
+    </div>
+    <div>
+      <dt>사용 모델</dt>
+      <dd>
+      <span>realisticVisionV60B1_v51HyperInpaintVAE</span>
+      <span>FLUX.1-dev (2nd pass)</span>
+      <span class="brk"></span>
+      <span>LoRA smokeanywhere, redblack, on_fire10, lcm_sd15</span>
+      <span>control_v11p_sd15_canny_fp16</span>
+      </dd>
+    </div>
+    <div>
+      <dt>적용 기법</dt>
+      <dd class="concept">Canny ControlNet으로 차량 윤곽을 고정하고 SD1.5 인페인팅 모델과 특정 LoRA를 통한 연기와 화재 질감을 주입, 그 후 FLUX.1-dev 2차 패스로 디테일을 정리</dd>
+    </div>
+  </dl>
+
+  <div class="pj">
+    <figure class="fig wf-full">
+      <figcaption class="fig-t">ComfyUI 워크플로 구조</figcaption>
+      <img class="shot" src="./assets/wf-03.svg" alt="워크플로 도식">
+    </figure>
+  </div>
+
+  <div class="pg-foot roles">
+    <ul class="role-key">
+      <li class="r-model">모델 로드</li>
+      <li class="r-prompt">프롬프트 조건</li>
+      <li class="r-sampler">샘플러 스케줄</li>
+      <li class="r-latent">VAE 변환</li>
+      <li class="r-process">이미지 처리</li>
+    </ul>
+    <span>06 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 03 RESULTS ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h2 class="t2">연기와 화재 합성 결과</h2>
+
+  <div class="pj">
+    <table class="qtab tight" style="margin-top:0; width:172mm;">
+      <tbody>
+        <tr><td>개입 범위</td><td>원본 프레임의 차량 bbox 단위로 마스크를 만들어 그 영역만 개입</td></tr>
+        <tr><td>선별 기준</td><td>연기와 화재가 실제와 같이 합성된 이미지만 라벨러가 채택, 실패본 제외</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Before→after pairs run horizontally with the seam marker; every frame is
+         pre-cropped to one shared ratio (1.581), so no object-fit cropping. -->
+    <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:3mm 7mm; margin:auto 0;">
+      <div class="fig-t">연기 합성</div>
+      <div class="fig-t">화재 합성</div>
+      <figure class="sq">
+        <div class="sq-imgs">
+          <img src="./assets/p7_s1_o.jpg" alt="연기 원본" style="height:auto;"><img src="./assets/p7_s1_s.jpg" alt="연기 합성" style="height:auto;">
+        </div>
+      </figure>
+      <figure class="sq">
+        <div class="sq-imgs">
+          <img src="./assets/p7_f1_o.jpg" alt="화재 원본" style="height:auto;"><img src="./assets/p7_f1_s.jpg" alt="화재 합성" style="height:auto;">
+        </div>
+      </figure>
+      <figure class="sq">
+        <div class="sq-imgs">
+          <img src="./assets/p7_s2_o.jpg" alt="연기 원본" style="height:auto;"><img src="./assets/p7_s2_s.jpg" alt="연기 합성" style="height:auto;">
+        </div>
+      </figure>
+      <figure class="sq">
+        <div class="sq-imgs">
+          <img src="./assets/p7_f2_o.jpg" alt="화재 원본" style="height:auto;"><img src="./assets/p7_f2_s.jpg" alt="화재 합성" style="height:auto;">
+        </div>
+      </figure>
+      <figure class="sq">
+        <div class="sq-imgs">
+          <img src="./assets/p7_s3_o.jpg" alt="연기 원본" style="height:auto;"><img src="./assets/p7_s3_s.jpg" alt="연기 합성" style="height:auto;">
+        </div>
+      </figure>
+      <figure class="sq">
+        <div class="sq-imgs">
+          <img src="./assets/p7_f3_o.jpg" alt="화재 원본" style="height:auto;"><img src="./assets/p7_f3_s.jpg" alt="화재 합성" style="height:auto;">
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span>07 / 08</span>
+  </div>
+</section>
+
+<!-- ===== 04 META ===== -->
+<section class="pg tx-lg">
+  <div class="pg-head"></div>
+
+  <h1 class="t1">특정 인물 얼굴 생성과 디테일 보정<span class="sub"><a href="https://stillrot.github.io/career/metaent/#proj-img">버추얼 인플루언서 이미지 생성<span class="ext">&#8599;</span></a></span>
+  </h1>
+  <dl class="specs" style="margin-top:5mm;">
+    <div>
+      <dt>작업 개요</dt>
+      <dd class="concept">디자이너의 SNS 콘텐츠 제작 속도 개선을 위한 맞춤형 이미지 생성 모델 제공</dd>
+    </div>
+    <div>
+      <dt>사용 모델</dt>
+      <dd>
+      <span>SD1.5 / SD2.0 / SDXL</span>
+      <span>LCM</span>
+      <span>fine-tuned LoRA</span>
+      <span>IPAdapter</span>
+      <span>Reactor</span>
+      <span>FaceDetailer</span>
+      </dd>
+    </div>
+    <div>
+      <dt>적용 기법</dt>
+      <dd class="concept">LoRA finetuning으로 인물 정체성을 고정하고 IPAdapter, Reactor, FaceDetailer 등으로 참조 이미지의 얼굴 특징을 반영</dd>
+    </div>
+  </dl>
+
+  <div class="pj">
+    <!-- Column widths solve L/1.699 = 2*((R-3)/2)/0.8622 + 3 so both columns
+         land on the same bottom edge with width-only image sizing. -->
+    <div style="display:grid; grid-template-columns:170mm 87mm;
+         grid-template-rows:auto minmax(0,1fr); gap:2mm 7mm; align-items:start; margin:auto 0;">
+      <div class="fig-t">ComfyUI 노드 그래프 (예시)</div>
+      <div class="fig-t">생성 결과<span class="cred"><a href="https://www.instagram.com/rina.8k/"
+        style="color:var(--ink); text-decoration:underline; text-decoration-color:var(--line-3);
+               text-decoration-thickness:0.2mm; text-underline-offset:0.5mm;">rina.8k 인스타그램 &#8599;</a></span></div>
+      <figure class="wfig">
+        <img src="./assets/m4_wf.jpg" alt="인플루언서 이미지 생성 ComfyUI 워크플로">
+      </figure>
+      <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:3mm;">
+        <figure class="wfig"><img src="./assets/m4_r1.jpg" alt="생성 결과 1"></figure>
+        <figure class="wfig"><img src="./assets/m4_r2.jpg" alt="생성 결과 2"></figure>
+        <figure class="wfig"><img src="./assets/m4_r3.jpg" alt="생성 결과 3"></figure>
+        <figure class="wfig"><img src="./assets/m4_r4.jpg" alt="생성 결과 4"></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span>08 / 08</span>
+  </div>
+</section>
+
+
+
+</div>
+</body>
+</html>
