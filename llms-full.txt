@@ -352,13 +352,13 @@ Motivation
 담당 업무
 Responsibilities
 
-- 지하주차장 CCTV 환경 특화 합성 데이터 생성
+- 지하주차장 CCTV 환경 특화 합성 데이터 생성 AI Works: 화재·연기 합성 데이터 생성·검수 사례
 
 - 화재/연기 탐지 YOLO 모델 재학습 및 검증
 
 - YOLOv8s + VLM(Florence2) 기반 탐지 PoC 설계
 
-- Built underground-parking CCTV-specific synthetic data
+- Built underground-parking CCTV-specific synthetic data AI Works: Fire/smoke synthetic-data generation and curation
 
 - Retrained and validated YOLO fire/smoke detectors
 
@@ -534,13 +534,13 @@ Responsibilities
 
 - 운영 시나리오 중심 판단 로직 최적화 및 CAN payload 출력 연동
 
-- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제
+- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 AI Works: 엘리베이터 합성 데이터 생성·검수 사례
 
 - Redesigned the system into a lightweight, edge-based single-detector pipeline
 
 - Optimized scenario-driven decision logic and CAN-payload output integration
 
-- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data
+- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data AI Works: Elevator synthetic-data generation and curation
 
 업무 성과
 Achievements
@@ -714,6 +714,8 @@ OverallNet: Scale-Arbitrary Lightweight SR
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/119/0003093394
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/241/0003495235
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/215/0001221815
+- AI Works: 화재·연기 합성 데이터 생성·검수 사례 -> https://ai-works/deck/
+- AI Works: Fire/smoke synthetic-data generation and curation -> https://ai-works/deck/
 - YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025) -> https://papers/iclrw2025/
 - YOLO-VLM-based indoor fire detection (ICLRW 2025) -> https://papers/iclrw2025/
 - 경량 초해상화 기술 검토 (ICCVW 2025) -> https://papers/iccvw2025/
@@ -722,6 +724,8 @@ OverallNet: Scale-Arbitrary Lightweight SR
 - Automated synthetic data generation (WACVW 2026) -> https://papers/wacvw2026/
 - HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
 - HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
+- AI Works: 엘리베이터 합성 데이터 생성·검수 사례 -> https://ai-works/deck/
+- AI Works: Elevator synthetic-data generation and curation -> https://ai-works/deck/
 - Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
 - Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://papers/ntu60-audio/
 - 홈 Publications -> https://#publications
@@ -817,13 +821,13 @@ Responsibilities
 
 - Stable Diffusion 모델 선정 및 LoRA finetuning
 
-- 고품질 이미지 생성을 위한 ComfyUI workflow 개선
+- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 AI Works: 인플루언서 이미지 생성 워크플로
 
 - 디자이너 편의를 위한 Gradio 기반 webui 사내 배포
 
 - Selected a Stable Diffusion backbone and ran LoRA fine-tuning
 
-- Improved ComfyUI workflows to produce higher-quality generations
+- Improved ComfyUI workflows to produce higher-quality generations AI Works: Influencer image-generation workflow
 
 - Internally deployed a Gradio-based web UI for the design team
 
@@ -968,6 +972,8 @@ A conversation with the chatbot trained on MAVE member SIU's persona (the "Chat 
 - PUBLICATIONS -> https://#publications
 - NEWS -> https://#news
 - RESEARCH -> https://#research
+- AI Works: 인플루언서 이미지 생성 워크플로 -> https://ai-works/deck/
+- AI Works: Influencer image-generation workflow -> https://ai-works/deck/
 - MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
 - rina.8k Instagram -> https://www.instagram.com/rina.8k/
 - IEEE Access 1저자 논문 게재 (IF=3.9)First-author paper published in IEEE Access (IF=3.9). -> https://papers/access2023/
@@ -2274,6 +2280,7 @@ PDF 다운로드
 - CV -> https://stillrot.github.io/cv/
 - Project Page -> https://stillrot.github.io/papers/ntu60-audio/
 - Project Page -> https://stillrot.github.io/papers/wacvw2026/
+- AI Works -> https://stillrot.github.io/ai-works/deck/
 - Project Page -> https://stillrot.github.io/papers/iclrw2025/
 - Project Page -> https://stillrot.github.io/papers/iccvw2025/
 - Project Page -> https://stillrot.github.io/papers/access2023/
