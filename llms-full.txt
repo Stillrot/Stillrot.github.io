@@ -714,8 +714,8 @@ OverallNet: Scale-Arbitrary Lightweight SR
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/119/0003093394
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/241/0003495235
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/215/0001221815
-- 지하주차장 CCTV 환경 특화 합성 데이터 생성 -> https://ai-works/deck/
-- Built underground-parking CCTV-specific synthetic data -> https://ai-works/deck/
+- 지하주차장 CCTV 환경 특화 합성 데이터 생성 -> https://ai-works/deck/#slide=6
+- Built underground-parking CCTV-specific synthetic data -> https://ai-works/deck/#slide=6
 - YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025) -> https://papers/iclrw2025/
 - YOLO-VLM-based indoor fire detection (ICLRW 2025) -> https://papers/iclrw2025/
 - 경량 초해상화 기술 검토 (ICCVW 2025) -> https://papers/iccvw2025/
@@ -724,8 +724,8 @@ OverallNet: Scale-Arbitrary Lightweight SR
 - Automated synthetic data generation (WACVW 2026) -> https://papers/wacvw2026/
 - HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
 - HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
-- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://ai-works/deck/
-- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://ai-works/deck/
+- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://ai-works/deck/#slide=4
+- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://ai-works/deck/#slide=4
 - Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
 - Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://papers/ntu60-audio/
 - 홈 Publications -> https://#publications
@@ -972,8 +972,8 @@ A conversation with the chatbot trained on MAVE member SIU's persona (the "Chat 
 - PUBLICATIONS -> https://#publications
 - NEWS -> https://#news
 - RESEARCH -> https://#research
-- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 -> https://ai-works/deck/
-- Improved ComfyUI workflows to produce higher-quality generations -> https://ai-works/deck/
+- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 -> https://ai-works/deck/#slide=8
+- Improved ComfyUI workflows to produce higher-quality generations -> https://ai-works/deck/#slide=8
 - MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
 - rina.8k Instagram -> https://www.instagram.com/rina.8k/
 - IEEE Access 1저자 논문 게재 (IF=3.9)First-author paper published in IEEE Access (IF=3.9). -> https://papers/access2023/

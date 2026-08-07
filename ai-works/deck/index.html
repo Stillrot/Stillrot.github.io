@@ -478,7 +478,15 @@
 (() => {
   const pages = Array.from(document.querySelectorAll('.pg'));
   const dotsEl = document.getElementById('dots');
-  let index = 0;
+
+  function indexFromHash() {
+    const value = new URLSearchParams(location.hash.slice(1)).get('slide');
+    const requested = Number.parseInt(value, 10);
+    if (!Number.isFinite(requested)) return 0;
+    return Math.min(pages.length, Math.max(1, requested)) - 1;
+  }
+
+  let index = indexFromHash();
 
   pages.forEach((page, i) => {
     page.setAttribute('aria-label', `${i + 1} / ${pages.length} 슬라이드`);
@@ -508,9 +516,13 @@
     fit();
   }
 
-  function go(nextIndex) {
+  function go(nextIndex, updateUrl = true) {
     index = Math.max(0, Math.min(pages.length - 1, nextIndex));
     render();
+    if (updateUrl) {
+      const nextHash = `#slide=${index + 1}`;
+      if (location.hash !== nextHash) history.replaceState(null, '', nextHash);
+    }
   }
 
   const isInteractive = (target) => !!target.closest('a, button, input, textarea, select');
@@ -564,6 +576,7 @@
   });
 
   window.addEventListener('resize', fit);
+  window.addEventListener('hashchange', () => go(indexFromHash(), false));
   render();
 })();
 </script>
