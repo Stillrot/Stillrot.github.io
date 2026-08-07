@@ -194,8 +194,10 @@ body.cursor-right {
   right: var(--pad-x);
   z-index: 2;
   height: 6mm;
+  padding-left: 3mm;
   display: flex;
   align-items: center;
+  background: #fff;
 }
 
 .company-brand img {
