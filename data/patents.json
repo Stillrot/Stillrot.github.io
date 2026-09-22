@@ -107,6 +107,17 @@
       "patent_no": "10-2971047",
       "application_no": "10-2025-0182191",
       "granted_date": "2026-05-26"
+    },
+    {
+      "idx": 13,
+      "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
+      "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
+      "country": "KR",
+      "patent_no": "10-3008578",
+      "application_no": "10-2026-0008565",
+      "reference_no": "DP250659",
+      "filed_date": "2026-01-16",
+      "granted_date": "2026-08-19"
     }
   ],
   "application": [
@@ -157,15 +168,6 @@
     },
     {
       "idx": 4,
-      "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
-      "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
-      "country": "KR",
-      "application_no": "10-2026-0008565",
-      "reference_no": "DP250659",
-      "filed_date": "2026-01-16"
-    },
-    {
-      "idx": 5,
       "title": "사용자 주차이력 기반의 주차공간추천방법 및 시스템",
       "title_en": "Method and System for Recommending Parking Space Based on User Parking History",
       "country": "KR",
