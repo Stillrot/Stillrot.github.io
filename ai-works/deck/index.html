@@ -79,7 +79,7 @@
     </div>
     <div>
       <dt>생성 방식</dt>
-      <dd class="concept">상품 사진을 레퍼런스로 같은 착장 프롬프트를 GPT Image와 Higgsfield 기반으로 생성해 비교하고, 채택 컷은 MiniMax H3로 영상화</dd>
+      <dd class="concept">상품 사진 레퍼런스로 GPT Image와 Higgsfield 결과를 비교하고, 채택 컷은 서버의 ComfyUI 워크플로에서 MiniMax H3로 영상화</dd>
     </div>
   </dl>
 
@@ -146,7 +146,7 @@
           <div class="stk" style="width:23mm; height:36mm;">
             <div class="vf real" style="--x:0.9mm; --y:3.4mm; --h:29mm; --r:-5deg;"><img src="./assets/nonkey/reel-1500.jpg" alt="릴스 LOOK 04 장면"></div>
             <div class="vf real" style="--x:3.3mm; --y:3mm; --h:29mm; --r:-1.5deg;"><img src="./assets/nonkey/reel-0750.jpg" alt="릴스 LOOK 05 장면"></div>
-            <div class="vf real" style="--x:5.8mm; --y:3.4mm; --h:29mm; --r:3.5deg;"><img src="./assets/nonkey/reel-0250.jpg" alt="릴스 LOOK 06 장면"><svg class="pl" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 0.8v8.4L9 5z"/></svg><i class="vl">릴스 0:02</i></div>
+            <div class="vf real" style="--x:5.8mm; --y:3.4mm; --h:29mm; --r:3.5deg;"><img src="./assets/nonkey/reel-0250.jpg" alt="릴스 LOOK 06 장면"><svg class="pl" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 0.8v8.4L9 5z"/></svg><i class="vl">릴스 0:05</i></div>
           </div>
           <div class="cn"><em>게시</em></div>
 
@@ -160,9 +160,9 @@
           <div class="sc" style="grid-column:3;"><b><em>02</em>착장 컷 생성</b><small>두 경로 비교 후 채택</small></div>
           <div class="sc" style="grid-column:5;"><b><em>03</em>생성 컷 여러 장</b><small>같은 캐릭터로 씬 A와 B</small></div>
           <div class="sc" style="grid-column:7;"><b><em>04</em>텔레그램 봇</b><small>채택 컷 전송</small></div>
-          <div class="sc" style="grid-column:9;"><b><em>05</em>영상 생성</b><small>이미지로 영상 클립</small></div>
-          <div class="sc" style="grid-column:11;"><b><em>06</em>소개 영상</b><small>3개 룩 릴스로 편집</small></div>
-          <div class="sc" style="grid-column:13;"><b><em>07</em>게시</b><small>피드 2장, 릴스 별도</small></div>
+          <div class="sc" style="grid-column:9;"><b><em>05</em>영상 생성</b><small>ComfyUI 서버 워크플로</small></div>
+          <div class="sc" style="grid-column:11;"><b><em>06</em>소개 영상</b><small>릴스로 편집</small></div>
+          <div class="sc" style="grid-column:13;"><b><em>07</em>게시</b></div>
         </div>
       </div>
     </section>
