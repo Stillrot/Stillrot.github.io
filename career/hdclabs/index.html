@@ -1240,6 +1240,7 @@
     opts = opts || {};
     if (!panel(id)) return;
     var entering = root.dataset.mode !== 'detail';
+    if (entering) armed = false;
     if (entering) {
       transition(function(){ root.dataset.mode = 'detail'; mark(id); measure(); reveal(id, false); }).then(function(){ reveal(id, false); });
     } else if (id !== current) {
@@ -1252,12 +1253,29 @@
   function close(opts){
     opts = opts || {};
     var from = current;
-    transition(function(){ root.dataset.mode = 'overview'; }).then(function(){
-      var c = cards.filter(function(x){ return x.dataset.target === from; })[0];
-      if (c) c.scrollIntoView({ block: 'center', behavior: 'auto' });
-    });
+    armed = false;
+    if (opts.stay) {
+      // the reader is at the top of the page: switch back quietly, without moving them
+      root.dataset.mode = 'overview';
+    } else {
+      transition(function(){ root.dataset.mode = 'overview'; }).then(function(){
+        var c = cards.filter(function(x){ return x.dataset.target === from; })[0];
+        if (c) c.scrollIntoView({ block: 'center', behavior: 'auto' });
+      });
+    }
     if (opts.hash !== false) setHash(null, false);
   }
+
+  // Scrolling back up to the very top of the page returns to the timeline.
+  // It only arms once the reader has scrolled down into the open project, so the
+  // jump that opens a panel (or a deep link on load) never closes it again.
+  var armed = false, TOP = 24, ARM = 200;
+  window.addEventListener('scroll', function(){
+    if (root.dataset.mode !== 'detail') return;
+    var y = window.scrollY || window.pageYOffset;
+    if (y > ARM) { if (Date.now() > keepUntil) armed = true; return; }
+    if (armed && y <= TOP) close({ stay: true });
+  }, { passive: true });
 
   cards.forEach(function(c){ c.addEventListener('click', function(){ open(c.dataset.target); }); });
   items.forEach(function(i){ i.addEventListener('click', function(){ open(i.dataset.target); }); });
