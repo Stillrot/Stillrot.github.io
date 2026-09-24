@@ -2312,8 +2312,7 @@ PDF 다운로드
 - Dongsik Yoon, Jineui Kim, Vincent Lorant, Sungku Kang. "Manipulation of Age Variation using StyleGAN inversion and fine-tuning." IEEE Access, 2023 [SCI-E] (IF=3.9) — https://stillrot.github.io/papers/access2023/
 - Dongsik Yoon, Yuanming Li, Bonwha Ku, Hanseok Ko. "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN." IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 [SCI-E] (IF=5.3) — https://stillrot.github.io/papers/grsl2023/
 
-### Conferences (14)
-- Dongsik Yoon. "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot." IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW), 2026 — https://stillrot.github.io/papers/irosw2026/
+### Conferences (13)
 - Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon. "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents." arXiv, 2026 — https://arxiv.org/abs/2604.15802
 - Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition." Under review, 2026 — https://stillrot.github.io/papers/ntu60-audio/
 - Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." Under review, 2026 — https://arxiv.org/abs/2602.10818
@@ -2381,11 +2380,8 @@ PDF 다운로드
   - 넷마블(대표 권영식,도기욱)은 메타버스엔터테인먼트(대표 서우원)와 업스테이지(대표 김성훈)가 '페르소나 AI 공동 개발'을 위한 전략적 협업을 맺었다고 21일 밝혔다.
 
 ======================================================================
-## Research / Papers (11)
+## Research / Papers (10)
 
-- "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot" (Ask Before It Tells) — IROSW 2026, 2026
-  - Authors: Dongsik Yoon
-  - Body-cue recognition can support assistive robots, but benchmark accuracy does not guarantee reliable behavior under a robot-camera viewpoint. We present Nuni, a bedside robot prototype that treats a detected distress cue as a reason to ask rather than a reason to alert. We compare two X3D-UGT RGB appearance classifiers, which reach 97.7% and 94.8% six-way accuracy on NTU RGB+D, with a pose-centric hybrid pipeline on 28 single-actor scripted clips recorded from the robot camera. The hybrid path achieved 0.71 six-way macro recall, versus 0.25 and 0.29 for the fine-tuned and from-scratch RGB variants. More importantly for interaction, it produced a question-triggering distress cue in 12/16 distress clips and would have prompted unnecessarily in 2/8 normal clips; the RGB variants yielded a question-triggering cue in only 2/16 and 3/16 distress clips. We separately tested the question-first controller through event injection. All 13 state-transition trials passed: valid responses caused stand-down, two unanswered prompts produced one alert, and three boundary conditions were handled correctly. These results are a preliminary technical evaluation, not a user study or medical validation, but they show how interaction policy can limit the consequences of uncertain perception.
 - "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition" (NTU60-AUDIO) — Under review, 2026
   - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
 - "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026 (Oral)
