@@ -8,6 +8,155 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../../assets/css/style.css?v=20260807a">
+
+<style>
+/* ===== Projects: timeline overview ⇄ rail + details (prototype) ===== */
+.career-detail .proj-badge { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 1px 8px 2px; border-radius: 999px; font-size: 10.5px; font-weight: 700; letter-spacing: .3px; background: #f3eefb; color: #5b3f8a; border: 1px solid #e2d8f3; line-height: 1.5; }
+.career-detail .project h3 .proj-badge { font-size: 11px; position: relative; top: -3px; }
+.career-detail .pc-period { display: block; margin-top: 3px; font-family: ui-monospace, monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .2px; color: var(--fg-muted); }
+.career-detail .tl[data-mode="overview"] .tl-detail,
+.career-detail .tl[data-mode="detail"] .tl-overview { display: none; }
+
+/* overview: centre line, year pills, cards alternating left / right */
+.career-detail .tl-overview { position: relative; margin-top: 18px; }
+.career-detail .tl-line { position: absolute; left: 50%; top: 10px; bottom: 60px; width: 2px; margin-left: -1px; background: var(--border); }
+.career-detail .tl-year { position: relative; z-index: 1; width: 68px; margin: 0 auto 12px; text-align: center; font-family: ui-monospace, monospace; font-size: 12px; font-weight: 800; color: var(--accent); background: #fff; border: 2px solid var(--accent); border-radius: 999px; padding: 3px 0; }
+.career-detail .tl-year.ongoing { color: #6b4fa3; border-color: #c9b8e6; }
+.career-detail .tl-row + .tl-year.ongoing { margin-top: 26px; }
+.career-detail .tl-row { position: relative; width: calc(50% - 36px); margin-bottom: -70px; }
+.career-detail .tl-row.l { margin-right: auto; }
+.career-detail .tl-row.r { margin-left: auto; }
+.career-detail .tl-row.c { width: 62%; margin: 0 auto; }
+.career-detail .tl-row:last-child, .career-detail .tl-row:has(+ .tl-year.ongoing) { margin-bottom: 0; }
+.career-detail .tl-row.l::after, .career-detail .tl-row.r::after { content: ""; position: absolute; top: 24px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2px solid #cfd6df; }
+.career-detail .tl-row.l::after { right: -43px; }
+.career-detail .tl-row.r::after { left: -43px; }
+.career-detail .tl-row:hover::after { border-color: var(--accent); }
+.career-detail .tl-card { width: 100%; }
+.career-detail .tl-card .name { margin-bottom: 6px; }
+.career-detail .tl-g { display: inline-flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 800; letter-spacing: .3px; color: var(--fg-muted); margin-bottom: 6px; }
+.career-detail .tl-g::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gc); }
+.career-detail .tl-card::after { content: "→"; opacity: 1; color: #b3bcc8; transition: color 120ms, transform 120ms; }
+.career-detail .tl-card:hover::after { color: var(--accent); transform: translateX(2px); }
+
+/* detail: sticky year rail + panels */
+/* The rail borrows the page's empty left margin on wide screens, so the panel
+   column stays as wide as possible. --shift is how far it reaches out. */
+.career-detail .tl-detail { --rail-w: 164px; --gap: 22px;
+  --shift: clamp(0px, calc((100vw - 1080px) / 2 + 8px), calc(var(--rail-w) + var(--gap)));
+  display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr); gap: var(--gap); align-items: start;
+  margin: 18px 0 0 calc(-1 * var(--shift)); }
+.career-detail .tl-rail { position: sticky; top: calc(var(--hdr, 64px) + 20px); }
+.career-detail .tl-back { font: inherit; font-size: 11.5px; font-weight: 700; color: var(--fg-muted); background: var(--bg-soft); border: 1px solid var(--border); border-radius: 999px; padding: 5px 11px; cursor: pointer; margin-bottom: 14px; white-space: nowrap; }
+.career-detail .tl-back:hover { color: var(--accent); border-color: var(--accent); }
+.career-detail .tl-rail-list { position: relative; padding-left: 18px; }
+.career-detail .tl-rail-list::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
+.career-detail .tl-ry { position: relative; font-family: ui-monospace, monospace; font-size: 11px; font-weight: 800; color: #8a94a3; margin: 10px 0 3px; }
+.career-detail .tl-ry:first-child { margin-top: 0; }
+.career-detail .tl-ry::before { content: ""; position: absolute; left: -18px; top: 2px; width: 10px; height: 10px; border-radius: 50%; background: #fff; border: 2px solid #cfd6df; }
+.career-detail .tl-item { position: relative; display: block; width: calc(100% + 8px); text-align: left; font: inherit; background: none; border: 0; border-radius: 7px; padding: 5px 7px; margin-left: -7px; cursor: pointer; transition: background 120ms; }
+.career-detail .tl-item i { position: absolute; left: -14px; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: #cfd6df; }
+.career-detail .tl-item .tl-it-t { display: block; font-size: 12px; font-weight: 600; color: var(--fg); line-height: 1.35; }
+.career-detail .tl-item .tl-it-p { display: block; font-family: ui-monospace, monospace; font-size: 9px; color: #8a94a3; margin-top: 1px; }
+.career-detail .tl-item:hover { background: var(--bg-soft); }
+.career-detail .tl-item.on { background: var(--accent-soft); }
+.career-detail .tl-item.on .tl-it-t { color: var(--accent); font-weight: 800; }
+.career-detail .tl-item.on i { background: var(--gc); width: 9px; height: 9px; left: -15.5px; top: 9.5px; box-shadow: 0 0 0 3px #fff; }
+.career-detail .tl-col { min-height: calc(100vh - var(--hdr, 64px) - 20px); }
+.career-detail .tl-panels .proj-panel { display: none; }
+/* Each panel is laid out exactly as on the live page (1032px wide) and scaled by
+   --z to the column, so the heading row, the phase grid and every line break
+   stay the same — only a little smaller. --z is set by the script. */
+.career-detail .tl-panels .project.proj-panel { zoom: var(--z, 1); }
+.career-detail .tl-panels .proj-panel.is-current { display: block; }
+.career-detail .tl-panels .project.proj-panel { margin: 0 0 16px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); scroll-margin-top: calc((var(--hdr, 64px) + 20px) / var(--z, 1));   /* zoom scales the margin too */ transition: border-color 200ms, box-shadow 200ms; }
+.career-detail .tl-panels .project.proj-panel.is-current { border-color: var(--accent); box-shadow: 0 10px 26px rgba(0,0,0,.06); }
+/* New projects: the figure is never taller than the text beside it. The image
+   column is sized as if empty (contain: size), so the text alone sets the row
+   height; the image then scales down inside that height, centred. Existing
+   panels are left alone (the elevator's paper grid must not be clipped). */
+@media (min-width: 821px) {
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-row { align-items: stretch; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-images { align-self: stretch; contain: size; min-height: 240px; justify-content: center; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-figure { display: flex; flex-direction: column; max-height: 100%; min-height: 0; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-figure img { flex: 0 1 auto; min-height: 0; object-fit: contain; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-figure figcaption { flex: none; }
+  /* vision: the screenshots are cropped to the frame ratio, so they fill it edge to edge (no white bars) */
+  .career-detail .tl-panels #proj-vision .phase:not(.phase-wide) .project-figure { height: 100%; }
+  .career-detail .tl-panels #proj-vision .phase:not(.phase-wide) .project-figure img { flex: 1 1 0; object-fit: cover; object-position: center top; background: none; }
+  /* a video thumbnail keeps its 16:9 frame instead of shrinking to the text height */
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-images:has(.video-fig) { contain: none; }
+  /* side figures under a wide diagram keep their own height (two stacked cases) */
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-images.side-images { contain: none; justify-content: flex-start; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .side-images .project-figure img { flex: none; }
+  /* vision phase 1 is allowed to run a little taller than its text so the table rows show */
+  .career-detail .tl-panels #proj-vision .project-images:has(img[src*="dify"]) { contain: none; }
+  .career-detail .tl-panels #proj-vision .project-images:has(img[src*="dify"]) .project-figure { height: auto; }
+  .career-detail .tl-panels #proj-vision .project-images:has(img[src*="dify"]) .project-figure img { flex: none; }
+}
+
+/* error cases beside the text, laid out as on the portfolio's agent page */
+.career-detail .project .agent-case { margin: 0; min-width: 0; }
+.career-detail .project .agent-case .case-label { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; font-size: 11.5px; line-height: 1.35; color: var(--fg); }
+.career-detail .project .agent-case .case-type { font-weight: 800; }
+.career-detail .project .agent-case .case-desc { padding-left: 7px; border-left: 1px solid var(--border); color: var(--fg-muted); font-weight: 600; }
+.career-detail .project .agent-case .severity { margin-left: auto; flex: none; padding: 2px 7px; border-radius: 999px; background: #fff7ed; color: #c2410c; font-size: 10px; font-weight: 800; line-height: 1; }
+.career-detail .project .agent-case .case-frame { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: #fff; }
+.career-detail .project .agent-case .case-frame img { display: block; width: 100%; height: auto; }
+.career-detail .project .agent-case figcaption { margin-top: 6px; font-size: 12px; line-height: 1.45; text-align: center; color: var(--fg-muted); }
+/* result grid (ipark phase 1): 2x2, wide left column for landscape shots, images fill their cells */
+.career-detail .project .project-figure.mg .mg-media { display: grid; grid-template-columns: 1.75fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; padding: 4px; background: #fff; aspect-ratio: 1.3; }
+.career-detail .project .project-figure.mg .mg-cell { position: relative; min-width: 0; min-height: 0; overflow: hidden; border-radius: 6px; background: #eef1f5; }
+.career-detail .project .project-figure.mg .mg-cell img { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; object-fit: cover; background: none; }
+.career-detail .project .project-figure.mg .mg-chip { position: absolute; left: 6px; bottom: 6px; padding: 2px 7px; border-radius: 999px; background: rgba(15, 26, 38, .72); color: #fff; font-size: 10.5px; font-weight: 700; line-height: 1.5; }
+/* on the timeline the grid fills the text-height cap instead of keeping a fixed ratio */
+@media (min-width: 821px) {
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-figure.mg { height: 100%; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-figure.mg .mg-media { flex: 1 1 0; min-height: 0; aspect-ratio: auto; }
+  .career-detail .tl-panels :is(#proj-ipark, #proj-vision, #proj-robot) .phase .project-figure.mg .mg-cell img { flex: none; max-height: none; object-fit: cover; }
+}
+/* an outbound main-line link gets the same arrow as the sub links */
+.career-detail .project ul li > a.inline-work-link.ext::after { content: '↗'; margin-left: 2px; font-weight: 700; }
+/* wide phase: the diagram gets the full panel width */
+.career-detail .project .phase-wide .wide-figure { margin: 2px 0 26px; }
+.career-detail .project .phase-wide .wide-figure img { max-height: none; }
+.career-detail .project .phase-wide .wide-text { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 36px; }
+.career-detail .project .phase-wide .wide-col > .blabel:first-child { margin-top: 0; }
+@media (max-width: 820px) { .career-detail .project .phase-wide .wide-text { grid-template-columns: 1fr; } }
+/* previous / next under the open project */
+.career-detail .tl-pager { display: flex; gap: 12px; margin: 0 0 8px; }
+.career-detail .tl-pg { flex: 0 1 calc(50% - 6px); min-width: 0; display: flex; flex-direction: column; gap: 3px; font: inherit; text-align: left; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; cursor: pointer; transition: border-color 120ms, box-shadow 120ms, transform 120ms; }
+.career-detail .tl-pg.next { margin-left: auto; text-align: right; align-items: flex-end; }
+.career-detail .tl-pg[hidden] { display: none; }
+.career-detail .tl-pg:hover { border-color: var(--accent); box-shadow: 0 4px 14px rgba(0,0,0,.06); transform: translateY(-1px); }
+.career-detail .tl-pg-l { font-size: 11px; font-weight: 700; color: var(--fg-muted); }
+.career-detail .tl-pg-t { font-size: 14px; font-weight: 700; color: var(--fg); line-height: 1.35; }
+.career-detail .tl-pg:hover .tl-pg-t { color: var(--accent); }
+.career-detail .tl-pg:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+::view-transition-group(*) { animation-duration: .42s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+@media (prefers-reduced-motion: reduce) { ::view-transition-group(*) { animation-duration: 0s; } }
+
+@media (max-width: 1000px) {
+  .career-detail .tl-detail { grid-template-columns: 1fr; gap: 12px; margin-left: 0; }
+  .career-detail .tl-panels .project.proj-panel { scroll-margin-top: calc(var(--hdr, 64px) + var(--rail, 90px) + 10px); }
+  .career-detail .tl-col { min-height: calc(100vh - var(--hdr, 64px) - var(--rail, 90px) - 10px); }
+  .career-detail .tl-rail { top: var(--hdr, 64px); z-index: 5; background: #fff; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .career-detail .tl-back { margin-bottom: 8px; }
+  .career-detail .tl-rail-list { display: flex; gap: 6px; overflow-x: auto; padding: 0 0 4px; scrollbar-width: none; }
+  .career-detail .tl-rail-list::-webkit-scrollbar, .career-detail .tl-rail-list::before, .career-detail .tl-ry { display: none; }
+  .career-detail .tl-item { flex: 0 0 auto; width: auto; margin: 0; border: 1px solid var(--border); }
+  .career-detail .tl-item i { display: none; }
+}
+@media (max-width: 760px) {
+  .career-detail .tl-line { left: 10px; }
+  .career-detail .tl-year { margin: 0 0 12px -4px; }
+  .career-detail .tl-row, .career-detail .tl-row.l, .career-detail .tl-row.r, .career-detail .tl-row.c { width: auto; margin: 0 0 14px 34px; }
+  .career-detail .tl-row + .tl-year { margin-top: 6px; }
+  .career-detail .tl-row.l::after, .career-detail .tl-row.r::after { left: -30px; right: auto; }
+}
+
+</style>
 </head>
 <body data-root="../../" style="--accent:#c8102e;--accent-soft:#fcecef;">
 
@@ -71,7 +220,7 @@
             </li>
             <li>
               <div class="wa-y">2026 ~</div>
-              <div class="wa-nm"><span class="wa-name"><span class="ko-only">아이파크몰 AI 방문자 분석</span><span class="en-only">IPARK Mall AI Visitor Analytics</span></span><span class="wa-role"><span class="ko-only">기술 PM</span><span class="en-only">Technical PM</span></span><a class="wa-news" href="https://n.news.naver.com/mnews/article/119/0003093394" target="_blank" rel="noopener"><span class="ko-only">기사 ↗</span><span class="en-only">News ↗</span></a></div>
+              <div class="wa-nm"><span class="wa-name"><a class="wa-goto" data-goto="ipark"><span class="ko-only">아이파크몰 AI 방문자 분석</span><span class="en-only">IPARK Mall AI Visitor Analytics</span></a></span><span class="wa-role"><span class="ko-only">기술 PM</span><span class="en-only">Technical PM</span></span><a class="wa-news" href="https://n.news.naver.com/mnews/article/119/0003093394" target="_blank" rel="noopener"><span class="ko-only">기사 ↗</span><span class="en-only">News ↗</span></a></div>
             </li>
             <li>
               <div class="wa-y">2026 ~</div>
@@ -93,458 +242,876 @@
         </div>
       </div>
 
-      <h2>Projects</h2>
+      <h2 id="projects-top">Projects</h2>
       <p style="color:var(--fg-muted);margin-top:-12px;">
-        <span class="ko-only">프로젝트를 선택하면 아래에 상세 내용이 표시됩니다</span>
-        <span class="en-only">Select a project to view its details below</span>
+        <span class="ko-only">프로젝트를 누르면 상세 보기로 바뀝니다</span>
+        <span class="en-only">Select a project to open its details</span>
       </p>
-      <div class="proj-select-grid">
-        <button type="button" class="proj-card active" data-panel="fire">
-          <div class="name">
-            <span class="ko-only">지하주차장 화재 탐지</span>
-            <span class="en-only">Underground Parking Fire Detection</span>
-          </div>
-          <ul class="ko-only">
-            <li>YOLO 및 VLM 기반 화재 탐지 솔루션 개발</li>
-            <li>Hailo-8 듀얼칩 기반 경량 구조로 재설계</li>
-            <li>광명센트럴아이파크 실적용, 논문 및 특허 확보</li>
-          </ul>
-          <ul class="en-only">
-            <li>Developed a YOLO + VLM-based fire detection solution</li>
-            <li>Redesigned to a lightweight architecture on dual Hailo-8 chips</li>
-            <li>Deployed at Gwangmyeong Central IPARK, with a paper and patent secured</li>
-          </ul>
-        </button>
-        <button type="button" class="proj-card" data-panel="elv">
-          <div class="name">
-            <span class="ko-only">엘리베이터 내부 상황 분석 시스템</span>
-            <span class="en-only">In-Elevator Situational Analysis System</span>
-          </div>
-          <ul class="ko-only">
-            <li>AI 기반 승강기 내부 상황 분석 솔루션 개발</li>
-            <li>Jetson 기반 단일 모델 구조 재설계</li>
-            <li>현대 3사 MOU 체결, 서울원 아이파크 도입 예정</li>
-          </ul>
-          <ul class="en-only">
-            <li>Developed an AI-based in-elevator situational-analysis solution</li>
-            <li>Redesigned to a single-model architecture on Jetson</li>
-            <li>Reached a three-party HDC MOU, with deployment planned at Seoul One IPARK</li>
-          </ul>
-        </button>
-        <button type="button" class="proj-card" data-panel="ip">
-          <div class="name">
-            <span class="ko-only">지적재산권 확보</span>
-            <span class="en-only">Intellectual Property Portfolio</span>
-          </div>
-          <ul class="ko-only">
-            <li>특허 13건 등록, 4건 출원 진행</li>
-            <li>국제 학회 논문 4편 게재</li>
-            <li>논문화를 위한 기술 스터디 주도</li>
-          </ul>
-          <ul class="en-only">
-            <li>13 patents granted, 4 applications in progress</li>
-            <li>4 papers published at international venues</li>
-            <li>Led a technical study group toward publications</li>
-          </ul>
-        </button>
-      </div>
-
-      <div class="project proj-panel active" data-panel="fire" id="proj-fire">
-        <div class="proj-head">
-          <h3>
-            <span class="ko-only">지하주차장 화재 감지 보조 시스템</span>
-            <span class="en-only">Underground Parking Fire Detection Assistance System</span>
-          </h3>
-          <div class="contrib-min">
-            <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
-            <div class="c-body">
-              <div class="c-role"><span class="ko-only">AI 시스템 개발 주도 (데이터, 모델 학습, 판단 구조)</span><span class="en-only">Led AI system development (data, model training, decision pipeline)</span></div>
-              <div class="c-collab"><span class="ko-only"><strong>협업</strong>PoC(팀 엔지니어 2명), 하드웨어/현장 포팅(수호이미지), 플랫폼/알람(내부 플랫폼팀)</span><span class="en-only"><strong>With</strong>PoC (2 team engineers), hardware/field porting (Suho Image), platform/alerts (internal platform team)</span></div>
-            </div>
-          </div>
+            <div class="tl" data-mode="overview">
+        <div class="tl-overview">
+          <div class="tl-line" aria-hidden="true"></div>
+          <div class="tl-year">2026</div>
+          <div class="tl-row l"><button type="button" class="proj-card tl-card" data-target="vision" style="view-transition-name:tl-vision"><span class="tl-g" style="--gc:#c8102e">AX &amp; AI Agent</span><div class="name"><span class="ko-only">비전 데이터 탐색 Agent</span><span class="en-only">Vision Data Exploration Agent</span><span class="pc-period">2026.07 ~ 2026.09</span></div><ul class="ko-only"><li>자연어와 이미지 기반 비전 데이터 탐색 Agent 개발</li><li>VLM 보조 검수와 승인 기반 GPU 학습 연결</li><li>수만 장 규모 통합 색인, 학습까지 E2E 검증</li></ul><ul class="en-only"><li>Developed an agent for natural-language and image search over vision data</li><li>Connected VLM-assisted review with approval-gated GPU training</li><li>Indexed tens of thousands of images and validated the flow through training</li></ul></button></div>
+          <div class="tl-row r"><button type="button" class="proj-card tl-card" data-target="robot" style="view-transition-name:tl-robot"><span class="tl-g" style="--gc:#6b4fa3">Research &amp; IP</span><div class="name"><span class="ko-only">비전 기반 행동 인지 케어 로봇</span><span class="en-only">Vision-Based Care Robot</span><span class="proj-badge"><span class="ko-only">개인 프로젝트</span><span class="en-only">Personal</span></span><span class="pc-period">2026.06 ~ 2026.10</span></div><ul class="ko-only"><li>경보 전 먼저 묻는 침대 옆 케어 로봇 Nuni 개발</li><li>로봇 시점 인지 평가와 질문 우선 FSM 검증</li><li>IROS 2026 워크숍 논문, RO-MAN 2026 RDC 참가</li></ul><ul class="en-only"><li>Built Nuni, a bedside care robot that asks before it alerts</li><li>Evaluated robot-view perception and validated the ask-first FSM</li><li>IROS 2026 workshop paper and RO-MAN 2026 RDC entry</li></ul></button></div>
+          <div class="tl-row l"><button type="button" class="proj-card tl-card" data-target="ipark" style="view-transition-name:tl-ipark"><span class="tl-g" style="--gc:#c8102e">AX &amp; AI Agent</span><div class="name"><span class="ko-only">아이파크몰 AI 방문자 분석</span><span class="en-only">IPARK Mall AI Visitor Analytics</span><span class="pc-period">2026.03 ~ 2026.07</span></div><ul class="ko-only"><li>22개 출입구 방문자 분석 PoC 기술 기획</li><li>온프레미스 처리 구조와 KPI 평가 체계 설계</li><li>PoC 운영 완료, 품질 관제 Agent로 확장</li></ul><ul class="en-only"><li>Planned a 22-entrance visitor-analytics PoC as technical PM</li><li>Designed the on-premises setup and the KPI and evaluation framework</li><li>Completed the PoC and extended it into a quality-monitoring agent</li></ul></button></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-row r"><button type="button" class="proj-card tl-card" data-target="elv" style="view-transition-name:tl-elv"><span class="tl-g" style="--gc:#3f6fa5">Vision AI</span><div class="name"><span class="ko-only">엘리베이터 내부 상황 분석 시스템</span><span class="en-only">In-Elevator Situational Analysis System</span><span class="pc-period">2025.01 ~ 2026.02</span></div><ul class="ko-only"><li>AI 기반 승강기 내부 상황 분석 솔루션 개발</li><li>Jetson 기반 단일 모델 구조 재설계</li><li>현대 3사 MOU 체결, 서울원 아이파크 도입 예정</li></ul><ul class="en-only"><li>Developed an AI-based in-elevator situational-analysis solution</li><li>Redesigned to a single-model architecture on Jetson</li><li>Reached a three-party HDC MOU, with deployment planned at Seoul One IPARK</li></ul></button></div>
+          <div class="tl-year">2024</div>
+          <div class="tl-row l"><button type="button" class="proj-card tl-card" data-target="fire" style="view-transition-name:tl-fire"><span class="tl-g" style="--gc:#3f6fa5">Vision AI</span><div class="name"><span class="ko-only">지하주차장 화재 탐지</span><span class="en-only">Underground Parking Fire Detection</span><span class="pc-period">2024.05 ~ 2025.10</span></div><ul class="ko-only"><li>YOLO 및 VLM 기반 화재 탐지 솔루션 개발</li><li>Hailo-8 듀얼칩 기반 경량 구조로 재설계</li><li>광명센트럴아이파크 실적용, 논문 및 특허 확보</li></ul><ul class="en-only"><li>Developed a YOLO + VLM-based fire detection solution</li><li>Redesigned to a lightweight architecture on dual Hailo-8 chips</li><li>Deployed at Gwangmyeong Central IPARK, with a paper and patent secured</li></ul></button></div>
+          <div class="tl-year ongoing"><span class="ko-only">상시</span><span class="en-only">Ongoing</span></div>
+          <div class="tl-row c"><button type="button" class="proj-card tl-card" data-target="ip" style="view-transition-name:tl-ip"><span class="tl-g" style="--gc:#6b4fa3">Research &amp; IP</span><div class="name"><span class="ko-only">지적재산권 확보</span><span class="en-only">Intellectual Property Portfolio</span></div><ul class="ko-only"><li>특허 13건 등록, 4건 출원 진행</li><li>국제 학회 논문 4편 게재</li><li>논문화를 위한 기술 스터디 주도</li></ul><ul class="en-only"><li>13 patents granted, 4 applications in progress</li><li>4 papers published at international venues</li><li>Led a technical study group toward publications</li></ul></button></div>
         </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">1</span><span class="ko-only">기술 PoC 및 연구</span><span class="en-only">Technical PoC &amp; Research</span></div>
-          <div class="project-row">
-            <div class="project-text">
-              <div class="blabel"><span class="ko-only">연구 필요성</span><span class="en-only">Motivation</span></div>
-              <ul class="ko-only">
-                <li>잇따른 지하주차장 전기차 화재 발생으로 전용 화재 감지 시스템 요구</li>
-                <li>이상온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요</li>
-              </ul>
-              <ul class="en-only">
-                <li>Recurring EV fires in underground parking lots created demand for a dedicated detection system</li>
-                <li>An auxiliary system with early thermal-anomaly detection and automatic alerts was needed</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
-              <ul class="ko-only">
-                <li><a class="inline-work-link" href="../../ai-works/deck/#slide=7">지하주차장 CCTV 환경 특화 합성 데이터 생성</a></li>
-                <li>화재/연기 탐지 YOLO 모델 재학습 및 검증</li>
-                <li>YOLOv8s + VLM(Florence2) 기반 탐지 PoC 설계</li>
-              </ul>
-              <ul class="en-only">
-                <li><a class="inline-work-link" href="../../ai-works/deck/#slide=7">Built underground-parking CCTV-specific synthetic data</a></li>
-                <li>Retrained and validated YOLO fire/smoke detectors</li>
-                <li>Designed a YOLOv8s + VLM(Florence2) detection PoC</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
-              <ul class="ko-only">
-                <li>합성 데이터 활용으로 화재/연기 탐지 정량 성능 향상<span class="sub">F1 0.82 → 0.86, 연기 recall 0.70 → 0.83</span></li>
-                <li>연구 성과를 지식재산권으로 확보 — 논문 1건 게재, 특허 1건 등록<span class="sub"><a href="../../papers/iclrw2025/">YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025)</a></span></li>
-              </ul>
-              <ul class="en-only">
-                <li>Improved fire/smoke detection accuracy using synthetic data<span class="sub">F1 0.82 → 0.86, smoke recall 0.70 → 0.83</span></li>
-                <li>Secured intellectual property from the work — 1 paper published, 1 patent granted<span class="sub"><a href="../../papers/iclrw2025/">YOLO-VLM-based indoor fire detection (ICLRW 2025)</a></span></li>
-              </ul>
+        <div class="tl-detail">
+          <nav class="tl-rail" aria-label="Projects">
+            <button type="button" class="tl-back"><span class="ko-only">← 전체 타임라인</span><span class="en-only">← All projects</span></button>
+            <div class="tl-rail-list">
+              <div class="tl-ry">2026</div>
+              <button type="button" class="tl-item" data-target="vision" style="view-transition-name:tl-vision"><i style="--gc:#c8102e"></i><span class="tl-it-t"><span class="ko-only">비전 데이터 탐색 Agent</span><span class="en-only">Vision Data Exploration Agent</span></span><span class="tl-it-p">2026.07 ~ 2026.09</span></button>
+              <button type="button" class="tl-item" data-target="robot" style="view-transition-name:tl-robot"><i style="--gc:#6b4fa3"></i><span class="tl-it-t"><span class="ko-only">비전 기반 행동 인지 케어 로봇</span><span class="en-only">Vision-Based Care Robot</span></span><span class="tl-it-p">2026.06 ~ 2026.10</span></button>
+              <button type="button" class="tl-item" data-target="ipark" style="view-transition-name:tl-ipark"><i style="--gc:#c8102e"></i><span class="tl-it-t"><span class="ko-only">아이파크몰 AI 방문자 분석</span><span class="en-only">IPARK Mall AI Visitor Analytics</span></span><span class="tl-it-p">2026.03 ~ 2026.07</span></button>
+              <div class="tl-ry">2025</div>
+              <button type="button" class="tl-item" data-target="elv" style="view-transition-name:tl-elv"><i style="--gc:#3f6fa5"></i><span class="tl-it-t"><span class="ko-only">엘리베이터 내부 상황 분석 시스템</span><span class="en-only">In-Elevator Situational Analysis System</span></span><span class="tl-it-p">2025.01 ~ 2026.02</span></button>
+              <div class="tl-ry">2024</div>
+              <button type="button" class="tl-item" data-target="fire" style="view-transition-name:tl-fire"><i style="--gc:#3f6fa5"></i><span class="tl-it-t"><span class="ko-only">지하주차장 화재 탐지</span><span class="en-only">Underground Parking Fire Detection</span></span><span class="tl-it-p">2024.05 ~ 2025.10</span></button>
+              <div class="tl-ry"><span class="ko-only">상시</span><span class="en-only">Ongoing</span></div>
+              <button type="button" class="tl-item" data-target="ip" style="view-transition-name:tl-ip"><i style="--gc:#6b4fa3"></i><span class="tl-it-t"><span class="ko-only">지적재산권 확보</span><span class="en-only">Intellectual Property Portfolio</span></span><span class="tl-it-p"></span></button>
             </div>
-            <div class="project-images">
-              <figure class="project-figure">
-                <img src="../../assets/img/projects/fire-framework.webp" alt="Fire detection framework" loading="lazy">
-                <figcaption>
-                  <span class="ko-only">ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크</span>
-                  <span class="en-only">YOLO + VLM fire detection framework published at ICLRW</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">2</span><span class="ko-only">현장 적용을 위한 재설계</span><span class="en-only">Redesign for Field Deployment</span></div>
-          <div class="project-row">
-            <div class="project-text">
-              <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
-              <ul class="ko-only">
-                <li>초기 VLM 중심 PoC 구조가 엣지 디바이스 제약으로 현장 적용에 한계</li>
-              </ul>
-              <ul class="en-only">
-                <li>The initial VLM-centric PoC hit field-deployment limits under edge-device constraints</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
-              <ul class="ko-only">
-                <li>YOLOv8n + CLIP 경량 구조 + Hailo 듀얼칩으로 재설계</li>
-                <li>단순 모델 교체가 아닌 사후 검증(Detector → VLM) 판단 구조로 설계</li>
-                <li>외부 포팅 업체, 내부 플랫폼팀과 협업해 모니터링/알람 서비스 연동</li>
-              </ul>
-              <ul class="en-only">
-                <li>Redesigned to a YOLOv8n + CLIP lightweight architecture on a dual-chip Hailo runtime</li>
-                <li>Designed a post-hoc verification (Detector → VLM) decision structure rather than a simple model swap</li>
-                <li>Connected monitoring/alert services with an external porting vendor and the internal platform team</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
-              <ul class="ko-only">
-                <li>엣지 디바이스 제약을 충족하는 현장 적용 가능 구조 확보</li>
-              </ul>
-              <ul class="en-only">
-                <li>Secured a field-deployable structure that satisfies edge-device constraints</li>
-              </ul>
-            </div>
-            <div class="project-images">
-              <figure class="project-figure">
-                <img src="../../assets/img/projects/fire-cctv.webp" alt="Detection popup alert" loading="lazy">
-                <figcaption>
-                  <span class="ko-only">AI CCTV 감시 공간 내 불꽃과 연기 감지 시 팝업 알림 예시</span>
-                  <span class="en-only">Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">3</span><span class="ko-only">실 적용 현황</span><span class="en-only">Field Deployment Status</span></div>
-          <div class="project-row">
-            <div class="project-text">
-              <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
-              <ul class="ko-only">
-                <li>화재 감지 보조 시스템 현장 시연 및 적용 작업</li>
-                <li>운영 중 모델 오탐 원인 분석 및 재학습 대응</li>
-              </ul>
-              <ul class="en-only">
-                <li>Ran on-site demonstration and deployment work for the auxiliary fire detection system</li>
-                <li>Diagnosed model false-positive causes during operation and addressed them through retraining</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
-              <ul class="ko-only">
-                <li>광명센트럴아이파크 전기차 충전구역 실적용</li>
-                <li>반복 오탐 케이스를 재학습 데이터에 반영해 현장 대응 모델 개선<span class="sub">운영 초기 대비 오탐 알람 약 88% 감소</span></li>
-                <li>현장 운영 데이터 기반 후속 고도화 연구로 논문 2건 추가 게재<span class="sub"><a href="../../papers/iccvw2025/">경량 초해상화 기술 검토 (ICCVW 2025)</a></span><span class="sub"><a href="../../papers/wacvw2026/">합성 데이터 생성 자동화 (WACVW 2026)</a></span></li>
-              </ul>
-              <ul class="en-only">
-                <li>Deployed in production at Gwangmyeong Central IPARK's EV charging zone</li>
-                <li>Improved the field-response model by folding recurring false positives back into the training data<span class="sub">~88% fewer false alarms compared with the initial operation period</span></li>
-                <li>Published 2 follow-up papers from advancement research on field-operation data<span class="sub"><a href="../../papers/iccvw2025/">Lightweight super-resolution study (ICCVW 2025)</a></span><span class="sub"><a href="../../papers/wacvw2026/">Automated synthetic data generation (WACVW 2026)</a></span></li>
-              </ul>
-            </div>
-            <div class="project-images">
-              <figure class="project-figure">
-                <img src="../../assets/img/projects/fire-deployment.webp" alt="Field deployment example" loading="lazy">
-                <figcaption>
-                  <span class="ko-only">광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황</span>
-                  <span class="en-only">AI-assisted fire detection deployed at Gwangmyeong Central IPARK</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project mint proj-panel" data-panel="elv" id="proj-elv">
-        <div class="proj-head">
-          <h3>
-            <span class="ko-only">엘리베이터 내부 상황 분석 시스템</span>
-            <span class="en-only">In-Elevator Situational Analysis System</span>
-          </h3>
-          <div class="contrib-min">
-            <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
-            <div class="c-body">
-              <div class="c-role"><span class="ko-only">AI 시스템 개발 주도 (데이터, 모델 학습, 판단 로직, 배포)</span><span class="en-only">Led AI system development (data, model training, decision logic, deployment)</span></div>
-              <div class="c-collab"><span class="ko-only"><strong>협업</strong>하드웨어(팀 엔지니어 2명, 내부 IoT팀), E/V 제어(현대엘리베이터)</span><span class="en-only"><strong>With</strong>hardware (2 team engineers, internal IoT team), E/V control (Hyundai Elevator)</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">1</span><span class="ko-only">기술 PoC 검증</span><span class="en-only">Technical PoC Validation</span></div>
-          <div class="project-row">
-            <div class="project-text">
-              <div class="blabel"><span class="ko-only">업무 목표</span><span class="en-only">Objectives</span></div>
-              <ul class="ko-only">
-                <li>AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발</li>
-                <li>점유 상태, 반려견 합승 등 특이상황 자동 탐지 및 대응</li>
-              </ul>
-              <ul class="en-only">
-                <li>Developed a real-time AI system for analyzing situations inside elevators</li>
-                <li>Automatically detect and respond to special cases such as cabin occupancy and pets boarding</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
-              <ul class="ko-only">
-                <li>기술 제휴 MOU 검토용 내부 상황 분석 PoC 설계</li>
-                <li>반려견 검출 및 점유율 추정 모델 구축</li>
-              </ul>
-              <ul class="en-only">
-                <li>Designed the in-elevator situational-analysis PoC to support a partnership MOU</li>
-                <li>Built models for pet detection and cabin-occupancy estimation</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
-              <ul class="ko-only">
-                <li>3D detector와 VLM 결합 구조로 실시간 동작 가능성 검증<span class="sub">RTX 6000 Ada 기준 약 3 FPS 실측</span></li>
-                <li>HDC랩스, HDC현대산업개발, 현대엘리베이터 기술 제휴 MOU 체결<span class="sub">PoC 검증 결과를 3사 기술 제휴 검토의 기술적 근거로 활용</span><span class="sub"><a href="https://n.news.naver.com/mnews/article/119/0002945075" target="_blank" rel="noopener">HDC현산, 서울원 아이파크에 AI 승강기 도입</a></span></li>
-              </ul>
-              <ul class="en-only">
-                <li>Verified real-time feasibility with a combined 3D-detector + VLM architecture<span class="sub">~3 FPS measured on an RTX 6000 Ada</span></li>
-                <li>Reached a three-party MOU among HDC LABS, HDC Hyundai Development, and Hyundai Elevator<span class="sub">PoC results served as the technical basis for the three-party partnership review</span><span class="sub"><a href="https://n.news.naver.com/mnews/article/119/0002945075" target="_blank" rel="noopener">HDC Hyundai Development to deploy AI elevators at Seoul One IPARK</a></span></li>
-              </ul>
-            </div>
-            <div class="project-images">
-              <figure class="project-figure">
-                <img src="../../assets/img/projects/elevator-poc.webp" alt="Elevator interior PoC" loading="lazy">
-                <figcaption>
-                  <span class="ko-only">HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시</span>
-                  <span class="en-only">PoC footage captured inside an elevator at HDC LABS headquarters</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">2</span><span class="ko-only">엣지 환경 재설계와 데이터 전략</span><span class="en-only">Edge Redesign &amp; Data Strategy</span></div>
-          <div class="project-row">
-            <div class="project-text">
-              <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
-              <ul class="ko-only">
-                <li>협력사의 10Hz 상태 송신 요구 등 실서비스 엣지 환경 제약 충족 필요</li>
-                <li>top-view 차폐 등 엘리베이터 특수 시점 대응 데이터 부족</li>
-              </ul>
-              <ul class="en-only">
-                <li>Real-service edge constraints such as a partner's 10 Hz status-streaming requirement had to be met</li>
-                <li>Data was scarce for the elevator's special viewpoint, including top-view occlusion</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
-              <ul class="ko-only">
-                <li>엣지 기반 경량 단일 파이프라인으로 재설계</li>
-                <li>운영 시나리오 중심 판단 로직 최적화 및 CAN payload 출력 연동</li>
-                <li><a class="inline-work-link" href="../../ai-works/deck/#slide=5">도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제</a></li>
-              </ul>
-              <ul class="en-only">
-                <li>Redesigned the system into a lightweight, edge-based single-detector pipeline</li>
-                <li>Optimized scenario-driven decision logic and CAN-payload output integration</li>
-                <li><a class="inline-work-link" href="../../ai-works/deck/#slide=5">Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data</a></li>
-              </ul>
-              <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
-              <ul class="ko-only">
-                <li>Jetson에서 10Hz 상태 송신 조건 충족 및 사내 엘리베이터 2대 실연동<span class="sub">전체 프로세스 10~13 FPS 실측, E/V 운행 및 도어 제어 검증</span></li>
-                <li>내부 7개 시나리오 평균 KPI 97.7% 달성으로 제품화 가능성 확인</li>
-                <li>도메인 특화 합성 데이터 생성 연구로 반려견 검출 성능 향상, 논문 1건 게재<span class="sub">반려견 검출 mAP50-95 0.47 → 0.79</span><span class="sub"><a href="../../papers/wacvw2026/">합성 데이터 생성 자동화 (WACVW 2026)</a></span></li>
-              </ul>
-              <ul class="en-only">
-                <li>Met the 10 Hz status-streaming requirement on Jetson and integrated two in-house elevators<span class="sub">~10–13 FPS end-to-end; validated E/V operation and door control</span></li>
-                <li>97.7% average KPI across 7 internal scenarios, confirming productization readiness</li>
-                <li>Domain-specific synthetic-data-generation research improving pet detection, with 1 paper published<span class="sub">Pet-detection mAP50-95 0.47 → 0.79</span><span class="sub"><a href="../../papers/wacvw2026/">Automated synthetic data generation (WACVW 2026)</a></span></li>
-              </ul>
-            </div>
-            <div class="project-images">
-              <figure class="project-figure">
-                <img src="../../assets/img/projects/elevator-arch.webp" alt="PoC architecture" loading="lazy">
-                <figcaption>
-                  <span class="ko-only">기술 검증용 PoC 아키텍처 예시</span>
-                  <span class="en-only">Example architecture used for technical PoC validation</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">3</span><span class="ko-only">현장 배포 자동화</span><span class="en-only">Field Deployment Automation</span></div>
-          <div class="project-text">
-            <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
-            <ul class="ko-only">
-              <li>코드 수정마다 현장 엘리베이터로 가서 USB로 수동 업데이트하는 운영 비효율</li>
-              <li>개발 PC와 현장 환경 차이, 버전 추적 부재로 안정적 배포 어려움</li>
-            </ul>
-            <ul class="en-only">
-              <li>Every code change required visiting the elevator for a manual USB update</li>
-              <li>Environment gaps between dev PC and field, with no version tracking, made stable deployment hard</li>
-            </ul>
-            <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
-            <ul class="ko-only">
-              <li>Jetson(ARM64) 환경의 모델 빌드 및 도커 기반 배포 파이프라인 구축</li>
-              <li>사무실 Jetson 기반 self-hosted runner로 네이티브 빌드 환경 구성</li>
-              <li>PT hash engine cache 도입으로 동일 PT 재빌드 생략</li>
-            </ul>
-            <ul class="en-only">
-              <li>Built a model-build and Docker-based deployment pipeline for the Jetson (ARM64) environment</li>
-              <li>Configured a native build environment with an in-office Jetson self-hosted runner</li>
-              <li>Introduced a PT-hash engine cache to skip rebuilds for the same PT</li>
-            </ul>
-            <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
-            <ul class="ko-only">
-              <li>수동 USB 업데이트에서 코드 변경 기반 자동 빌드 및 배포 구조로 전환<span class="sub">사내 반영까지 약 2분</span></li>
-            </ul>
-            <ul class="en-only">
-              <li>Shifted from manual USB updates to an automatic build-and-deploy flow triggered by code changes<span class="sub">~2 min to in-house rollout</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="phase">
-          <div class="phase-title"><span class="pnum">4</span><span class="ko-only">연구 확장 및 IP</span><span class="en-only">Research &amp; IP</span></div>
-          <div class="project-row">
-            <div class="project-text">
-              <div class="blabel"><span class="ko-only">연구 계기</span><span class="en-only">Background</span></div>
-              <ul class="ko-only">
-                <li>사내 사업개발팀의 추가 기술 개발 가능성 문의</li>
-              </ul>
-              <ul class="en-only">
-                <li>Inquiry from the in-house business-development team on the feasibility of additional technical development</li>
-              </ul>
-              <div class="blabel"><span class="ko-only">연구 성과</span><span class="en-only">Results</span></div>
-              <ul class="ko-only">
-                <li>가능성 검토를 위한 후속 연구 진행</li>
-                <li>관련 특허 3건 발명자 등재</li>
-              </ul>
-              <ul class="en-only">
-                <li>Conducted follow-up research to assess that feasibility</li>
-                <li>Named inventor on 3 related patents</li>
-              </ul>
-            </div>
-            <div class="project-images">
-              <div class="paper-mini-grid">
-                <a class="paper-mini" href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">
-                  <div class="paper-mini-thumb"><img src="https://arxiv.org/html/2602.10818/fig2.png" alt="" loading="lazy"></div>
-                  <div class="paper-mini-body">
-                    <div class="paper-mini-venue">Under Review</div>
-                    <div class="paper-mini-title"><span class="ko-only">엣지 배포용 경량 RGB 행동 인식</span><span class="en-only">Lightweight RGB Action Recognition for Edge Deployment</span></div>
+          </nav>
+          <div class="tl-col">
+          <div class="tl-panels">
+            <div class="project sky proj-panel" data-panel="vision" id="proj-vision">
+              <div class="proj-head">
+                <h3>
+                  <span class="ko-only">비전 데이터 탐색 Agent</span>
+                  <span class="en-only">Vision Data Exploration Agent</span>
+                </h3>
+                <div class="contrib-min">
+                  <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
+                  <div class="c-body">
+                    <div class="c-role"><span class="ko-only">Agent 시스템 개발 주도 (데이터 색인, VLM 검수, 워크플로우, 학습 연동)</span><span class="en-only">Led agent system development (data indexing, VLM review, workflow, training integration)</span></div>
+                    <div class="c-collab"><span class="ko-only"><strong>협업</strong>데이터 정리(엔지니어 1명)</span><span class="en-only"><strong>With</strong>data curation (1 engineer)</span></div>
                   </div>
-                </a>
-                <a class="paper-mini" href="../../papers/ntu60-audio/">
-                  <div class="paper-mini-thumb quad"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel1_aapq.png" alt="" loading="lazy"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel2_pam.png" alt="" loading="lazy"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel4_sync_zero_prob.png" alt="" loading="lazy"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel5_regeneration.png" alt="" loading="lazy"></div>
-                  <div class="paper-mini-body">
-                    <div class="paper-mini-venue">Under Review</div>
-                    <div class="paper-mini-title"><span class="ko-only">행동 인식 합성 데이터셋 증강</span><span class="en-only">Action-Recognition Synthetic Dataset Augmentation</span></div>
+                </div>
+              </div>
+
+              <div class="phase">
+                <div class="phase-title"><span class="pnum">1</span><span class="ko-only">추진 배경</span><span class="en-only">Background</span></div>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                    <ul class="ko-only">
+                      <li>사내 NAS의 여러 도메인 비전 데이터셋이 다양한 경로와 폴더로 분산</li>
+                      <li>탐색부터 후보 구성, GPU 학습 제출까지 데이터 구조와 Slurm 숙지 필요</li>
+                      <li>자연어 검색 결과가 실제 요청 조건과 일치하는지 확인 어려움</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Vision datasets from many domains were scattered across NAS paths and folders</li>
+                      <li>Going from search to training sets and GPU jobs required knowing the data layout and Slurm</li>
+                      <li>Hard to tell whether search results matched the request</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 목표</span><span class="en-only">Objectives</span></div>
+                    <ul class="ko-only">
+                      <li>비개발자가 보유 데이터의 종류와 규모를 빠르게 파악하는 탐색 환경 구축</li>
+                      <li>탐색, 검수, 학습 후보 구성과 승인 기반 학습을 하나의 흐름으로 연결</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Help non-developers see what data exists and how much</li>
+                      <li>Connect search, review and approved training in one flow</li>
+                    </ul>
                   </div>
-                </a>
+                  <div class="project-images">
+                    <figure class="project-figure">
+                      <img src="../../assets/img/projects/vision-agent-dify-crop.webp" alt="Asking for the data inventory in chat" loading="lazy">
+                      <figcaption>
+                        <span class="ko-only">보유 데이터 현황을 대화로 조회하는 화면</span>
+                        <span class="en-only">Asking for the data inventory in chat</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase phase-wide">
+                <div class="phase-title"><span class="pnum">2</span><span class="ko-only">Agent 워크플로우</span><span class="en-only">Agent Workflow</span></div>
+                <figure class="project-figure wide-figure">
+                  <img src="../../assets/img/projects/vision-agent-flow.webp" alt="Vision data agent workflow" loading="lazy">
+                  <figcaption>
+                    <span class="ko-only">색인부터 학습 제출, 결과와 실패 분석까지 이어지는 Agent 워크플로우</span>
+                    <span class="en-only">Agent workflow from indexing to training submission and failure analysis</span>
+                  </figcaption>
+                </figure>
+                <div class="project-text wide-text">
+                  <div class="wide-col">
+                    <div class="blabel"><span class="ko-only">처리 흐름</span><span class="en-only">Workflow</span></div>
+                    <ul class="ko-only">
+                      <li>SigLIP 임베딩으로 색인하고 자연어 및 이미지 질의로 검색<span class="sub">신규 및 변경 데이터 증분 색인</span></li>
+                      <li>VLM으로 검색 결과와 라벨을 재확인하고 원천과 분리된 영역에 후보 구성</li>
+                      <li>사람 승인 후 GPU 학습을 제출하고 오탐 사례는 다시 탐색으로 연결</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Index with SigLIP embeddings and search by text or image<span class="sub">Incremental indexing of new and changed data</span></li>
+                      <li>A VLM re-checks hits and labels; candidate sets are built apart from source data</li>
+                      <li>GPU training runs after human approval; false positives loop back to search</li>
+                    </ul>
+                  </div>
+                  <div class="wide-col">
+                    <div class="blabel"><span class="ko-only">설계 원칙</span><span class="en-only">Design principles</span></div>
+                    <ul class="ko-only">
+                      <li>의도 해석과 설명은 대화 모델, 경로 검증과 실행 조건은 결정론적 코드</li>
+                      <li>기능을 조회, 생성, 실행으로 나눠 실행 단계에만 사람 승인 적용<span class="sub">원천 데이터 읽기 전용</span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Chat model for intent and explanation; deterministic code for paths and run conditions</li>
+                      <li>Tools split into query, create and execute; only execution needs human approval<span class="sub">Source data stays read-only</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase">
+                <div class="phase-title"><span class="pnum">3</span><span class="ko-only">구현과 검증</span><span class="en-only">Build &amp; Validation</span></div>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                    <ul class="ko-only">
+                      <li>SigLIP과 LanceDB 기반 자연어 및 이미지 검색, 증분 색인 구축</li>
+                      <li>VLM 검수와 학습 후보 구성을 잇는 LangGraph 멀티모달 Agent 설계</li>
+                      <li>데이터 조회와 GPU 학습 권한을 분리하고 실제 학습에 사람 승인 적용<span class="sub">수량, 검수 상태, 경로 중복 검사와 감사 로그, 제출 잠금 적용</span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Built text and image search with incremental indexing on SigLIP and LanceDB</li>
+                      <li>Designed a LangGraph multimodal agent linking VLM review to training-set building</li>
+                      <li>Separated data-query and GPU-training permissions and required approval for real training<span class="sub">Count, review-status and path-overlap checks, audit log and submission lock</span></li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                    <ul class="ko-only">
+                      <li>수만 장 규모 비전 데이터를 통합 색인해 대화형 현황 탐색 경로 구축</li>
+                      <li>탐색부터 승인, 실제 GPU 학습과 결과 조회까지 E2E 동작 검증<span class="sub">승인 없는 실행과 동일 학습의 중복 제출 차단 확인</span></li>
+                      <li>모델 오탐 이미지를 유사 데이터 재탐색과 후속 학습 후보 구성으로 연결</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Built a conversational way to explore tens of thousands of indexed vision images</li>
+                      <li>Validated end to end from exploration and approval to real GPU training and results<span class="sub">Unapproved runs and duplicate submissions blocked</span></li>
+                      <li>Linked false-positive images to similar-data search and the next training candidates</li>
+                    </ul>
+                  </div>
+                  <div class="project-images">
+                    <figure class="project-figure">
+                      <img src="../../assets/img/projects/vision-agent-approval-crop.webp" alt="Approval card before the real GPU training run" loading="lazy">
+                      <figcaption>
+                        <span class="ko-only">실제 GPU 학습 제출 전 승인 카드</span>
+                        <span class="en-only">Approval card before the real GPU training run</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="project lemon proj-panel" data-panel="ip" id="proj-ip">
-        <h3>
-          <span class="ko-only">지적재산권 확보</span>
-          <span class="en-only">Intellectual Property Portfolio</span>
-        </h3>
-        <div class="project-row">
-          <div class="project-text">
-            <h4><span class="ko-only">업무 배경</span><span class="en-only">Background</span></h4>
-            <ul class="ko-only">
-              <li>자체 개발한 핵심 알고리즘과 시스템의 권리화</li>
-              <li>HDC 그룹의 AI 기술 자산 확보 및 경쟁력 강화</li>
-            </ul>
-            <ul class="en-only">
-              <li>Patent prosecution for core algorithms and systems developed in-house</li>
-              <li>Build the HDC Group's AI technology assets and strengthen competitiveness</li>
-            </ul>
-            <h4><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></h4>
-            <ul class="ko-only">
-              <li>주요 프로젝트 결과물에 대한 청구항 설계</li>
-              <li>특허 사무소가 작성한 명세서 검토</li>
-              <li>우선심사 신청을 위한 기술 자료 정리 및 근거 자료 작성</li>
-              <li>국제 학회 논문 작성, 투고, 심사 대응</li>
-            </ul>
-            <ul class="en-only">
-              <li>Drafted claim structures for the outputs of major projects</li>
-              <li>Reviewed patent specifications drafted by external patent attorneys</li>
-              <li>Compiled technical evidence and supporting documents for expedited examination requests</li>
-              <li>Wrote, submitted, and managed reviewer responses for international conference papers</li>
-            </ul>
-            <h4><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></h4>
-            <ul class="ko-only">
-              <li>KR 특허 13건 등록, 4건 출원 진행 (국내 3건 + 미국 1건)</li>
-              <li>국제 학회 논문 4편 게재</li>
-              <li>자세한 목록은 <a href="../../#publications">홈 Publications</a> 및 <a href="../../#patents">Patents</a> 섹션 참고</li>
-            </ul>
-            <ul class="en-only">
-              <li>13 KR patents granted, 4 applications in progress (3 KR + 1 US)</li>
-              <li>4 papers published at international venues</li>
-              <li>See the home page <a href="../../#publications">Publications</a> and <a href="../../#patents">Patents</a> sections for the full list</li>
-            </ul>
-          </div>
-          <div class="project-images">
-            <div class="paper-mini-grid">
-              <a class="paper-mini" href="../../papers/wacvw2026/">
-                <div class="paper-mini-thumb"><img src="../../assets/img/ext/6967a74701de1eca43eb3233_fig1_4.png" alt="" loading="lazy"></div>
-                <div class="paper-mini-body">
-                  <div class="paper-mini-venue">WACVW 2026 Oral</div>
-                  <div class="paper-mini-title">From Prompts to Deployment</div>
+            <div class="project lemon proj-panel" data-panel="robot" id="proj-robot">
+              <div class="proj-head">
+                <h3>
+                  <span class="ko-only">비전 기반 행동 인지 케어 로봇</span>
+                  <span class="en-only">Vision-Based Care Robot</span>
+                  <span class="proj-badge"><span class="ko-only">개인 프로젝트</span><span class="en-only">Personal</span></span>
+                </h3>
+                <div class="contrib-min">
+                  <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
+                  <div class="c-body">
+                    <div class="c-role"><span class="ko-only">케어 로봇 설계 및 개발 주도 (컨셉, 인지 평가, 질문 우선 FSM, 논문 발표)</span><span class="en-only">Led care-robot design and development (concept, perception evaluation, ask-first FSM, paper)</span></div>
+                  </div>
                 </div>
-              </a>
-              <a class="paper-mini" href="../../papers/iccvw2025/">
-                <div class="paper-mini-thumb"><img src="../../assets/img/ext/687f0956472aac22b4b599df_fig2_4.png" alt="" loading="lazy"></div>
-                <div class="paper-mini-body">
-                  <div class="paper-mini-venue">ICCVW 2025</div>
-                  <div class="paper-mini-title">Your Super Resolution Model is not Enough</div>
+              </div>
+
+              <div class="phase">
+                <div class="phase-title"><span class="pnum">1</span><span class="ko-only">추진 배경과 외형, 행동 설계</span><span class="en-only">Background, Form &amp; Behavior Design</span></div>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                    <ul class="ko-only">
+                      <li>혼자 사는 고령자는 밤에 가장 취약하지만 도움은 가장 멀리 있음</li>
+                      <li>카메라 모니터링은 감시로 느껴져 거부되는 경우가 많음</li>
+                      <li>공개 벤치마크의 높은 정확도가 로봇 카메라 시점에서 유지되는지 불확실</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Older adults living alone are most vulnerable at night, when help is farthest away</li>
+                      <li>Camera monitoring feels like surveillance and is often refused</li>
+                      <li>Unclear whether high public-benchmark accuracy holds at a robot camera's viewpoint</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 목표</span><span class="en-only">Objectives</span></div>
+                    <ul class="ko-only">
+                      <li>이상 단서를 경보 대신 질문의 계기로 쓰는 침대 옆 케어 로봇 설계</li>
+                      <li>벤치마크 성능과 로봇 시점 성능을 분리해 실제 상호작용 지표로 평가</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Design a bedside care robot that treats a distress cue as a reason to ask, not to alert</li>
+                      <li>Separate benchmark from robot-view performance and score what matters for interaction</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                    <ul class="ko-only">
+                      <li>기성 팬틸트 카메라에 종이 얼굴을 입혀 렌즈가 눈동자가 되는 외형 설계<span class="sub">Tapo C220과 Jetson Orin Nano로 1차 실물 프로토타입 제작</span></li>
+                      <li>고개 돌리기, 기울이기, 끄덕임으로 주목, 망설임, 안심을 표현하는 행동 설계<span class="sub">실제 팬틸트 구동은 이번 평가 범위에서 제외</span></li>
+                      <li>벽을 향해 눈을 감는 프라이버시 상태로 보지 않음을 확인 가능하게 설계</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Gave a stock pan-tilt camera a paper face, its lens as the pupil<span class="sub">First physical prototype on a Tapo C220 and Jetson Orin Nano</span></li>
+                      <li>Designed turns, tilts and nods that read as attention, hesitation and reassurance<span class="sub">Actual pan-tilt motion was outside this evaluation</span></li>
+                      <li>A privacy pose facing the wall with the eye shut makes not watching visible</li>
+                    </ul>
+                  </div>
+                  <div class="project-images">
+                    <figure class="project-figure">
+                      <img src="../../assets/img/projects/nuni-prototype-hd.webp" alt="Nuni prototype evolution" loading="lazy">
+                      <figcaption>
+                        <span class="ko-only">기성 부품(왼쪽)과 1차 종이 얼굴 프로토타입(오른쪽)</span>
+                        <span class="en-only">Off-the-shelf parts (left) and the first paper-face prototype (right)</span>
+                      </figcaption>
+                    </figure>
+                  </div>
                 </div>
-              </a>
-              <a class="paper-mini" href="../../papers/iclrw2025/">
-                <div class="paper-mini-thumb"><img src="../../assets/img/ext/68738cf93f954fe802db4a24_zzxc.webp" alt="" loading="lazy"></div>
-                <div class="paper-mini-body">
-                  <div class="paper-mini-venue">ICLRW 2025</div>
-                  <div class="paper-mini-title">Integrated YOLO and VLM Fire Detection</div>
+              </div>
+
+              <div class="phase phase-wide">
+                <div class="phase-title"><span class="pnum">2</span><span class="ko-only">케어 로봇의 인지와 질문 흐름 설계</span><span class="en-only">Perception &amp; Question Flow of the Care Robot</span></div>
+                <figure class="project-figure wide-figure">
+                  <img src="../../assets/img/projects/nuni-system.webp" alt="Perception paths and the question-first controller" loading="lazy">
+                  <figcaption>
+                    <span class="ko-only">두 인지 경로와 질문 우선 제어기 구성</span>
+                    <span class="en-only">Two perception paths and the question-first controller</span>
+                  </figcaption>
+                </figure>
+                <div class="project-text wide-text">
+                  <div class="wide-col">
+                    <div class="blabel"><span class="ko-only">처리 흐름</span><span class="en-only">Workflow</span></div>
+                    <ul class="ko-only">
+                      <li>로봇 카메라 640×360 영상에서 신체 단서를 인식해 ROS 2 이벤트로 전달</li>
+                      <li>확인된 단서마다 질문 2.5초와 응답 창 8초를 두 번까지 반복<span class="sub">유효 응답이나 손 흔들기 시 중단, 두 번 모두 무응답일 때만 알림 1회</span></li>
+                      <li>알림 뒤에는 사용자 곁에 머무르고 15초 쿨다운으로 중복 알림 억제</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Recognise body cues in the robot camera's 640×360 stream and pass them on as ROS 2 events</li>
+                      <li>Each confirmed cue opens up to two rounds of a 2.5 s prompt and an 8 s response window<span class="sub">A valid response or a wave stands down; one alert only after two silent windows</span></li>
+                      <li>After an alert the robot stays with the person; a 15 s cooldown blocks duplicates</li>
+                    </ul>
+                  </div>
+                  <div class="wide-col">
+                    <div class="blabel"><span class="ko-only">설계 원칙</span><span class="en-only">Design principles</span></div>
+                    <ul class="ko-only">
+                      <li>인지와 제어를 분리해 모델을 바꿔도 상위 행동 정책 유지</li>
+                      <li>RGB 외형 경로와 포즈 중심 경로를 따로 평가하고 결합하지 않음</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Perception and control are separate, so the behaviour policy survives a model swap</li>
+                      <li>The RGB appearance path and the pose-centric path are evaluated separately, never fused</li>
+                    </ul>
+                  </div>
                 </div>
-              </a>
-              <a class="paper-mini" href="../../papers/siggraph2024/">
-                <div class="paper-mini-thumb"><img src="../../assets/img/ext/687bc27386c3d9d7043935da_app_1_2.png" alt="" loading="lazy"></div>
-                <div class="paper-mini-body">
-                  <div class="paper-mini-venue">SIGGRAPH Asia 2024</div>
-                  <div class="paper-mini-title">OverallNet: Scale-Arbitrary Lightweight SR</div>
+              </div>
+
+              <div class="phase">
+                <div class="phase-title"><span class="pnum">3</span><span class="ko-only">검증과 연구 발표</span><span class="en-only">Validation &amp; Publication</span></div>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                    <ul class="ko-only">
+                      <li>로봇 카메라 1~2m 거리 단일 배우 영상 28개로 두 인지 경로 비교<span class="sub">이상 행동 16개, 손 흔들기 4개, 정상 8개</span></li>
+                      <li>카메라와 모델을 우회해 ROS 2 토픽에 이벤트를 주입하는 시험 환경 구성<span class="sub">첫 응답 5회, 무응답 5회, 경계 조건 3회</span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Compared two perception paths on 28 single-actor clips from the robot camera at 1–2 m<span class="sub">16 distress, 4 waving, 8 normal</span></li>
+                      <li>Built a harness injecting events into ROS 2 topics, bypassing camera and models<span class="sub">5 early responses, 5 no-responses, 3 boundary cases</span></li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                    <ul class="ko-only">
+                      <li>벤치마크 97.7% RGB 모델이 로봇 시점에서 질문 단서 2/16에 그침 확인<span class="sub">포즈 중심 경로는 12/16, 정상 영상의 불필요한 질문 2/8</span></li>
+                      <li>질문 우선 FSM 이벤트 주입 시험 13/13회 통과<span class="sub">무응답 시 평균 21.65초 뒤 알림 1회, 중복 알림과 교착 없음</span></li>
+                      <li>연구 성과 발표 — 워크숍 논문 1건, 로봇 디자인 대회 1건<span class="sub"><a href="../../papers/irosw2026/">로봇 시점 행동 인지 전이 평가 (IROSW 2026)</a></span><span class="sub"><a href="../../papers/nuni-roman2026/">케어 로봇 사용 시나리오와 행동 설계 (RO-MAN 2026 RDC)</a></span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>A 97.7% benchmark RGB model raised an askable cue in only 2/16 robot-view clips<span class="sub">The pose-centric path reached 12/16, with 2/8 needless questions on normal clips</span></li>
+                      <li>Passed 13/13 event-injection tests of the ask-first FSM<span class="sub">One alert on average 21.65 s after silence, no duplicates or deadlocks</span></li>
+                      <li>Presented the work — 1 workshop paper, 1 competition entry<span class="sub"><a href="../../papers/irosw2026/">Robot-view action-recognition transfer (IROSW 2026)</a></span><span class="sub"><a href="../../papers/nuni-roman2026/">Care-robot scenarios and behavior design (RO-MAN 2026 RDC)</a></span></li>
+                    </ul>
+                  </div>
+                  <div class="project-images">
+                    <figure class="project-figure">
+                      <img src="../../assets/img/projects/nuni-qualitative.webp" alt="Robot-camera clips confirmed by the pose-centric path" loading="lazy">
+                      <figcaption>
+                        <span class="ko-only">포즈 중심 경로가 단서를 확인한 로봇 시점 영상 (얼굴 흐림 처리)</span>
+                        <span class="en-only">Robot-camera clips where the pose-centric path confirmed the cue (faces blurred)</span>
+                      </figcaption>
+                    </figure>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
+
+            <div class="project cream proj-panel" data-panel="ipark" id="proj-ipark">
+              <div class="proj-head">
+                <h3>
+                  <span class="ko-only">아이파크몰 AI 방문자 분석 PoC</span>
+                  <span class="en-only">IPARK Mall AI Visitor Analytics PoC</span>
+                </h3>
+                <div class="contrib-min">
+                  <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
+                  <div class="c-body">
+                    <div class="c-role"><span class="ko-only">기술 PM (PoC 범위와 KPI 설계, 개발 실행과 현장 검증 조율)</span><span class="en-only">Technical PM (PoC scope and KPIs, delivery, field validation)</span></div>
+                    <div class="c-collab"><span class="ko-only"><strong>협업</strong>AI 엔지니어 3명, PM(내부 사업개발팀)</span><span class="en-only"><strong>With</strong>3 AI engineers, PM (in-house business development)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase">
+                <div class="phase-title"><span class="pnum">1</span><span class="ko-only">방문자 분석 PoC 설계와 현장 검증</span><span class="en-only">Visitor-Analytics PoC Design &amp; Field Validation</span></div>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">업무 목표</span><span class="en-only">Objectives</span></div>
+                    <ul class="ko-only">
+                      <li>출입구 CCTV 기반 방문자 IN/OUT 및 특성 분석의 현장 적용 가능성 검증</li>
+                      <li>실환경 데이터 기반 모델 성능과 운영 조건 확인</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Validate whether entrance-CCTV visitor IN/OUT and attribute analysis works in the field</li>
+                      <li>Check model performance and field operating conditions</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                    <ul class="ko-only">
+                      <li>온프레미스 환경과 개인정보 보호 조건을 반영한 CCTV 데이터 처리 구조 설계</li>
+                      <li>기능별 KPI와 평가 기준 수립, AI 엔지니어 3명의 실행 항목과 완료 기준 구조화</li>
+                      <li>성별과 연령 예측 모델 학습용 공개 데이터셋 RAPv2 고해상도 증강<span class="sub"><a href="../../ai-works/deck/#slide=2">Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원</a></span><span class="sub">84,928장 생성, 5종 지표 자동 검수로 10,413장 재생성</span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Designed CCTV data processing for on-premises and privacy constraints</li>
+                      <li>Set per-feature KPIs and evaluation criteria, and structured work and done criteria for 3 AI engineers</li>
+                      <li>Augmented the public RAPv2 dataset in high resolution for the gender and age models<span class="sub"><a href="../../ai-works/deck/#slide=2">Qwen-Image-Edit kept pose and clothing and restored only detail</a></span><span class="sub">84,928 generated, 10,413 regenerated after five-metric automatic QC</span></li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                    <ul class="ko-only">
+                      <li>영상과 얼굴 정보를 외부로 전송하지 않는 현장 PoC 운영<span class="sub">22개 CCTV, 3주 운영, 방문 기록 250만 건 이상 처리</span></li>
+                      <li>대표 출입구 직접 계수와 CCTV 재검수로 계수 정확도 약 95% 확인<span class="sub">외형 판정 평가 라벨 기준 성별 90.7%, 연령대 90.5% 일치</span></li>
+                      <li>Retail 챗봇 260문항 평가 정답률 83.1%<span class="sub">답변 품질 3.82/5, 사실 정확성 4.28/5</span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Ran the on-site PoC with no video or face data leaving the site<span class="sub">22 CCTV cameras, 3 weeks, 2.5M+ visit records</span></li>
+                      <li>Confirmed ~95% counting accuracy by hand counts at representative entrances, re-checked on CCTV<span class="sub">Gender 90.7% and age-group 90.5% agreement with appearance-based evaluation labels</span></li>
+                      <li>83.1% accuracy on the 260-question retail chatbot evaluation<span class="sub">Answer quality 3.82/5, factual accuracy 4.28/5</span></li>
+                    </ul>
+                  </div>
+                  <div class="project-images">
+                    <figure class="project-figure mg">
+                      <div class="mg-media"><div class="mg-cell"><img src="../../assets/img/projects/ipark-counting.webp" alt="Entrance IN/OUT counting line" style="object-position:78% center" loading="lazy"><span class="mg-chip"><span class="ko-only">계수선</span><span class="en-only">Counting line</span></span></div><div class="mg-cell"><img src="../../assets/img/projects/ipark-demographic.webp" alt="Gender and age estimates" style="object-position:center top" loading="lazy"><span class="mg-chip"><span class="ko-only">성별과 연령</span><span class="en-only">Gender and age</span></span></div><div class="mg-cell"><img src="../../assets/img/projects/ipark-dashboard.webp" alt="Visitor analytics dashboard" style="object-position:left top" loading="lazy"><span class="mg-chip"><span class="ko-only">대시보드</span><span class="en-only">Dashboard</span></span></div><div class="mg-cell"><img src="../../assets/img/projects/ipark-chatbot-one.webp" alt="Retail chatbot conversation" style="object-position:center top" loading="lazy"><span class="mg-chip"><span class="ko-only">챗봇</span><span class="en-only">Chatbot</span></span></div></div>
+                      <figcaption>
+                        <span class="ko-only">현장 PoC 결과 화면</span>
+                        <span class="en-only">Field PoC result screens</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase">
+                <div class="phase-title"><span class="pnum">2</span><span class="ko-only">KPI 평가셋 구축을 위한 라벨링 진척 자동화</span><span class="en-only">Labeling Progress Automation for the KPI Evaluation Set</span></div>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                    <ul class="ko-only">
+                      <li>비디오 라벨링 특성상 완료 영상 수와 실제 객체 처리량 간 차이 발생</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>In video labeling, completed-clip counts diverged from the objects actually processed</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                    <ul class="ko-only">
+                      <li>다중 사용자 라벨링 도구 구축 및 검수 기준 설계</li>
+                      <li>n8n으로 작업자별 객체 수와 달성률을 집계해 Dooray로 공유</li>
+                      <li>원본 작업 시트는 읽기 전용 유지, 발송 이력으로 반복 알림 억제</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Built a multi-user labeling tool and designed review criteria</li>
+                      <li>Aggregated per-worker object counts and progress with n8n and shared them to Dooray</li>
+                      <li>Kept the source sheet read-only and suppressed repeat alerts with a send log</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                    <ul class="ko-only">
+                      <li>연령대 및 성별 라벨 데이터 약 5만 장 구축</li>
+                      <li>작업자 5명의 진척을 영상 수 대신 객체 수 기준으로 자동 공유</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Built ~50k age-group and gender labels</li>
+                      <li>Shared progress for 5 workers automatically, counted in objects rather than clips</li>
+                    </ul>
+                  </div>
+                  <div class="project-images">
+                    <figure class="project-figure">
+                      <img src="../../assets/img/projects/ipark-labeling-n8n.webp" alt="n8n labeling progress workflow" loading="lazy">
+                      <figcaption>
+                        <span class="ko-only">n8n 기반 라벨링 진척 집계 및 Dooray 알림 워크플로우</span>
+                        <span class="en-only">n8n workflow aggregating labeling progress and posting Dooray alerts</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase phase-wide">
+                <div class="phase-title"><span class="pnum">3</span><span class="ko-only">품질 관제 Agent로 확장</span><span class="en-only">Extension to a Quality-Monitoring Agent</span></div>
+                <figure class="project-figure wide-figure">
+                  <img src="../../assets/img/projects/ipark-agent-flow-wide.webp" alt="Monitoring agent flow" loading="lazy">
+                  <figcaption>
+                    <span class="ko-only">통계 탐지부터 멀티모달 진단, 사람 검토까지 이어지는 관제 흐름</span>
+                    <span class="en-only">Monitoring flow from statistical detection to multimodal diagnosis and human review</span>
+                  </figcaption>
+                </figure>
+                <div class="project-row">
+                  <div class="project-text">
+                    <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                    <ul class="ko-only">
+                      <li>PoC 운영 중 녹화 기록과 방문객 지표 이상을 정기 점검할 체계 필요</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Running the PoC showed a need to routinely check camera recordings and visitor-metric anomalies</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                    <ul class="ko-only">
+                      <li>규칙과 통계로 이상과 심각도를 판정하고 GPT-5.5는 원인 진단에만 적용</li>
+                      <li>방문객 통계와 이동 궤적 이미지를 결합한 멀티모달 진단 흐름 설계</li>
+                      <li>고위험 이상은 메일 알림과 사람 검토, 운영 데이터는 읽기 전용 조회</li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Decided anomalies and severity with rules and statistics, using GPT-5.5 only to diagnose causes</li>
+                      <li>Designed a multimodal diagnosis combining visitor statistics with trajectory images</li>
+                      <li>Sent high-risk anomalies to email review and read operational data read-only</li>
+                    </ul>
+                    <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                    <ul class="ko-only">
+                      <li>실제 운영 데이터로 이상 탐지, 멀티모달 진단과 사람 검토 E2E 검증</li>
+                      <li>사람 검토를 거쳐 7개 카메라의 계수선 또는 관심 영역 설정 조정<span class="sub">조정 후 반복 동선에서 발생하던 비정상 계수의 감소 방향 확인</span></li>
+                    </ul>
+                    <ul class="en-only">
+                      <li>Validated detection, multimodal diagnosis and human review end to end on live data</li>
+                      <li>Adjusted counting lines or ROIs on 7 cameras after review<span class="sub">Abnormal counts from repeated movements declined after the change</span></li>
+                    </ul>
+                  </div>
+                  <div class="project-images side-images">
+                    <figure class="agent-case">
+                      <div class="case-label"><span class="case-type">count_inflation</span><span class="case-desc"><span class="ko-only">반복 교차 및 계수선 위치 진단</span><span class="en-only">Repeated crossings and line position</span></span><span class="severity">S2</span></div>
+                      <div class="case-frame"><img src="../../assets/img/projects/ipark-agent-count-inflation.webp" alt="count_inflation case on 3F_cam09" loading="lazy"></div>
+                      <figcaption><span class="ko-only">IN/OUT과 고유 궤적의 불일치를 탐지하고 궤적 이미지로 반복 교차 원인을 검토</span><span class="en-only">Flags IN/OUT counts that disagree with unique tracks and reviews repeated crossings on the trajectory image</span></figcaption>
+                    </figure>
+                    <figure class="agent-case">
+                      <div class="case-label"><span class="case-type">traffic_spike</span><span class="case-desc"><span class="ko-only">이동 궤적 기반 원인 추정</span><span class="en-only">Cause estimated from trajectories</span></span><span class="severity">S2</span></div>
+                      <div class="case-frame"><img src="../../assets/img/projects/ipark-agent-traffic-spike.webp" alt="traffic_spike case on 1F_cam30" loading="lazy"></div>
+                      <figcaption><span class="ko-only">기준선 대비 방문객 급증을 탐지하고 궤적의 집중과 단절 패턴을 원인 후보로 분석</span><span class="en-only">Flags visitor surges against the baseline and analyses dense or broken tracks as likely causes</span></figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project mint proj-panel" data-panel="elv" id="proj-elv">
+                    <div class="proj-head">
+                      <h3>
+                        <span class="ko-only">엘리베이터 내부 상황 분석 시스템</span>
+                        <span class="en-only">In-Elevator Situational Analysis System</span>
+                      </h3>
+                      <div class="contrib-min">
+                        <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
+                        <div class="c-body">
+                          <div class="c-role"><span class="ko-only">AI 시스템 개발 주도 (데이터, 모델 학습, 판단 로직, 배포)</span><span class="en-only">Led AI system development (data, model training, decision logic, deployment)</span></div>
+                          <div class="c-collab"><span class="ko-only"><strong>협업</strong>하드웨어(팀 엔지니어 2명, 내부 IoT팀), E/V 제어(현대엘리베이터)</span><span class="en-only"><strong>With</strong>hardware (2 team engineers, internal IoT team), E/V control (Hyundai Elevator)</span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">1</span><span class="ko-only">기술 PoC 검증</span><span class="en-only">Technical PoC Validation</span></div>
+                      <div class="project-row">
+                        <div class="project-text">
+                          <div class="blabel"><span class="ko-only">업무 목표</span><span class="en-only">Objectives</span></div>
+                          <ul class="ko-only">
+                            <li>AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발</li>
+                            <li>점유 상태, 반려견 합승 등 특이상황 자동 탐지 및 대응</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Developed a real-time AI system for analyzing situations inside elevators</li>
+                            <li>Automatically detect and respond to special cases such as cabin occupancy and pets boarding</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                          <ul class="ko-only">
+                            <li>기술 제휴 MOU 검토용 내부 상황 분석 PoC 설계</li>
+                            <li>반려견 검출 및 점유율 추정 모델 구축</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Designed the in-elevator situational-analysis PoC to support a partnership MOU</li>
+                            <li>Built models for pet detection and cabin-occupancy estimation</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                          <ul class="ko-only">
+                            <li>3D detector와 VLM 결합 구조로 실시간 동작 가능성 검증<span class="sub">RTX 6000 Ada 기준 약 3 FPS 실측</span></li>
+                            <li>HDC랩스, HDC현대산업개발, 현대엘리베이터 기술 제휴 MOU 체결<span class="sub">PoC 검증 결과를 3사 기술 제휴 검토의 기술적 근거로 활용</span><span class="sub"><a href="https://n.news.naver.com/mnews/article/119/0002945075" target="_blank" rel="noopener">HDC현산, 서울원 아이파크에 AI 승강기 도입</a></span></li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Verified real-time feasibility with a combined 3D-detector + VLM architecture<span class="sub">~3 FPS measured on an RTX 6000 Ada</span></li>
+                            <li>Reached a three-party MOU among HDC LABS, HDC Hyundai Development, and Hyundai Elevator<span class="sub">PoC results served as the technical basis for the three-party partnership review</span><span class="sub"><a href="https://n.news.naver.com/mnews/article/119/0002945075" target="_blank" rel="noopener">HDC Hyundai Development to deploy AI elevators at Seoul One IPARK</a></span></li>
+                          </ul>
+                        </div>
+                        <div class="project-images">
+                          <figure class="project-figure">
+                            <img src="../../assets/img/projects/elevator-poc.webp" alt="Elevator interior PoC" loading="lazy">
+                            <figcaption>
+                              <span class="ko-only">HDC랩스 사옥 엘리베이터 내부 PoC 영상 예시</span>
+                              <span class="en-only">PoC footage captured inside an elevator at HDC LABS headquarters</span>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">2</span><span class="ko-only">엣지 환경 재설계와 데이터 전략</span><span class="en-only">Edge Redesign &amp; Data Strategy</span></div>
+                      <div class="project-row">
+                        <div class="project-text">
+                          <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                          <ul class="ko-only">
+                            <li>협력사의 10Hz 상태 송신 요구 등 실서비스 엣지 환경 제약 충족 필요</li>
+                            <li>top-view 차폐 등 엘리베이터 특수 시점 대응 데이터 부족</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Real-service edge constraints such as a partner's 10 Hz status-streaming requirement had to be met</li>
+                            <li>Data was scarce for the elevator's special viewpoint, including top-view occlusion</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                          <ul class="ko-only">
+                            <li>엣지 기반 경량 단일 파이프라인으로 재설계</li>
+                            <li>운영 시나리오 중심 판단 로직 최적화 및 CAN payload 출력 연동</li>
+                            <li><a class="inline-work-link" href="../../ai-works/deck/#slide=5">도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제</a></li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Redesigned the system into a lightweight, edge-based single-detector pipeline</li>
+                            <li>Optimized scenario-driven decision logic and CAN-payload output integration</li>
+                            <li><a class="inline-work-link" href="../../ai-works/deck/#slide=5">Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data</a></li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                          <ul class="ko-only">
+                            <li>Jetson에서 10Hz 상태 송신 조건 충족 및 사내 엘리베이터 2대 실연동<span class="sub">전체 프로세스 10~13 FPS 실측, E/V 운행 및 도어 제어 검증</span></li>
+                            <li>내부 7개 시나리오 평균 KPI 97.7% 달성으로 제품화 가능성 확인</li>
+                            <li>도메인 특화 합성 데이터 생성 연구로 반려견 검출 성능 향상, 논문 1건 게재<span class="sub">반려견 검출 mAP50-95 0.47 → 0.79</span><span class="sub"><a href="../../papers/wacvw2026/">합성 데이터 생성 자동화 (WACVW 2026)</a></span></li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Met the 10 Hz status-streaming requirement on Jetson and integrated two in-house elevators<span class="sub">~10–13 FPS end-to-end; validated E/V operation and door control</span></li>
+                            <li>97.7% average KPI across 7 internal scenarios, confirming productization readiness</li>
+                            <li>Domain-specific synthetic-data-generation research improving pet detection, with 1 paper published<span class="sub">Pet-detection mAP50-95 0.47 → 0.79</span><span class="sub"><a href="../../papers/wacvw2026/">Automated synthetic data generation (WACVW 2026)</a></span></li>
+                          </ul>
+                        </div>
+                        <div class="project-images">
+                          <figure class="project-figure">
+                            <img src="../../assets/img/projects/elevator-arch.webp" alt="PoC architecture" loading="lazy">
+                            <figcaption>
+                              <span class="ko-only">기술 검증용 PoC 아키텍처 예시</span>
+                              <span class="en-only">Example architecture used for technical PoC validation</span>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">3</span><span class="ko-only">현장 배포 자동화</span><span class="en-only">Field Deployment Automation</span></div>
+                      <div class="project-text">
+                        <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                        <ul class="ko-only">
+                          <li>코드 수정마다 현장 엘리베이터로 가서 USB로 수동 업데이트하는 운영 비효율</li>
+                          <li>개발 PC와 현장 환경 차이, 버전 추적 부재로 안정적 배포 어려움</li>
+                        </ul>
+                        <ul class="en-only">
+                          <li>Every code change required visiting the elevator for a manual USB update</li>
+                          <li>Environment gaps between dev PC and field, with no version tracking, made stable deployment hard</li>
+                        </ul>
+                        <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                        <ul class="ko-only">
+                          <li>Jetson(ARM64) 환경의 모델 빌드 및 도커 기반 배포 파이프라인 구축</li>
+                          <li>사무실 Jetson 기반 self-hosted runner로 네이티브 빌드 환경 구성</li>
+                          <li>PT hash engine cache 도입으로 동일 PT 재빌드 생략</li>
+                        </ul>
+                        <ul class="en-only">
+                          <li>Built a model-build and Docker-based deployment pipeline for the Jetson (ARM64) environment</li>
+                          <li>Configured a native build environment with an in-office Jetson self-hosted runner</li>
+                          <li>Introduced a PT-hash engine cache to skip rebuilds for the same PT</li>
+                        </ul>
+                        <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                        <ul class="ko-only">
+                          <li>수동 USB 업데이트에서 코드 변경 기반 자동 빌드 및 배포 구조로 전환<span class="sub">사내 반영까지 약 2분</span></li>
+                        </ul>
+                        <ul class="en-only">
+                          <li>Shifted from manual USB updates to an automatic build-and-deploy flow triggered by code changes<span class="sub">~2 min to in-house rollout</span></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">4</span><span class="ko-only">연구 확장 및 IP</span><span class="en-only">Research &amp; IP</span></div>
+                      <div class="project-row">
+                        <div class="project-text">
+                          <div class="blabel"><span class="ko-only">연구 계기</span><span class="en-only">Background</span></div>
+                          <ul class="ko-only">
+                            <li>사내 사업개발팀의 추가 기술 개발 가능성 문의</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Inquiry from the in-house business-development team on the feasibility of additional technical development</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">연구 성과</span><span class="en-only">Results</span></div>
+                          <ul class="ko-only">
+                            <li>가능성 검토를 위한 후속 연구 진행</li>
+                            <li>관련 특허 3건 발명자 등재</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Conducted follow-up research to assess that feasibility</li>
+                            <li>Named inventor on 3 related patents</li>
+                          </ul>
+                        </div>
+                        <div class="project-images">
+                          <div class="paper-mini-grid">
+                            <a class="paper-mini" href="https://arxiv.org/abs/2602.10818" target="_blank" rel="noopener">
+                              <div class="paper-mini-thumb"><img src="https://arxiv.org/html/2602.10818/fig2.png" alt="" loading="lazy"></div>
+                              <div class="paper-mini-body">
+                                <div class="paper-mini-venue">Under Review</div>
+                                <div class="paper-mini-title"><span class="ko-only">엣지 배포용 경량 RGB 행동 인식</span><span class="en-only">Lightweight RGB Action Recognition for Edge Deployment</span></div>
+                              </div>
+                            </a>
+                            <a class="paper-mini" href="../../papers/ntu60-audio/">
+                              <div class="paper-mini-thumb quad"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel1_aapq.png" alt="" loading="lazy"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel2_pam.png" alt="" loading="lazy"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel4_sync_zero_prob.png" alt="" loading="lazy"><img src="https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel5_regeneration.png" alt="" loading="lazy"></div>
+                              <div class="paper-mini-body">
+                                <div class="paper-mini-venue">Under Review</div>
+                                <div class="paper-mini-title"><span class="ko-only">행동 인식 합성 데이터셋 증강</span><span class="en-only">Action-Recognition Synthetic Dataset Augmentation</span></div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="project proj-panel" data-panel="fire" id="proj-fire">
+                    <div class="proj-head">
+                      <h3>
+                        <span class="ko-only">지하주차장 화재 감지 보조 시스템</span>
+                        <span class="en-only">Underground Parking Fire Detection Assistance System</span>
+                      </h3>
+                      <div class="contrib-min">
+                        <span class="pill"><span class="ko-only">핵심 역할</span><span class="en-only">Key role</span></span>
+                        <div class="c-body">
+                          <div class="c-role"><span class="ko-only">AI 시스템 개발 주도 (데이터, 모델 학습, 판단 구조)</span><span class="en-only">Led AI system development (data, model training, decision pipeline)</span></div>
+                          <div class="c-collab"><span class="ko-only"><strong>협업</strong>PoC(팀 엔지니어 2명), 하드웨어/현장 포팅(수호이미지), 플랫폼/알람(내부 플랫폼팀)</span><span class="en-only"><strong>With</strong>PoC (2 team engineers), hardware/field porting (Suho Image), platform/alerts (internal platform team)</span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">1</span><span class="ko-only">기술 PoC 및 연구</span><span class="en-only">Technical PoC &amp; Research</span></div>
+                      <div class="project-row">
+                        <div class="project-text">
+                          <div class="blabel"><span class="ko-only">연구 필요성</span><span class="en-only">Motivation</span></div>
+                          <ul class="ko-only">
+                            <li>잇따른 지하주차장 전기차 화재 발생으로 전용 화재 감지 시스템 요구</li>
+                            <li>이상온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Recurring EV fires in underground parking lots created demand for a dedicated detection system</li>
+                            <li>An auxiliary system with early thermal-anomaly detection and automatic alerts was needed</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                          <ul class="ko-only">
+                            <li><a class="inline-work-link" href="../../ai-works/deck/#slide=7">지하주차장 CCTV 환경 특화 합성 데이터 생성</a></li>
+                            <li>화재/연기 탐지 YOLO 모델 재학습 및 검증</li>
+                            <li>YOLOv8s + VLM(Florence2) 기반 탐지 PoC 설계</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li><a class="inline-work-link" href="../../ai-works/deck/#slide=7">Built underground-parking CCTV-specific synthetic data</a></li>
+                            <li>Retrained and validated YOLO fire/smoke detectors</li>
+                            <li>Designed a YOLOv8s + VLM(Florence2) detection PoC</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                          <ul class="ko-only">
+                            <li>합성 데이터 활용으로 화재/연기 탐지 정량 성능 향상<span class="sub">F1 0.82 → 0.86, 연기 recall 0.70 → 0.83</span></li>
+                            <li>연구 성과를 지식재산권으로 확보 — 논문 1건 게재, 특허 1건 등록<span class="sub"><a href="../../papers/iclrw2025/">YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025)</a></span></li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Improved fire/smoke detection accuracy using synthetic data<span class="sub">F1 0.82 → 0.86, smoke recall 0.70 → 0.83</span></li>
+                            <li>Secured intellectual property from the work — 1 paper published, 1 patent granted<span class="sub"><a href="../../papers/iclrw2025/">YOLO-VLM-based indoor fire detection (ICLRW 2025)</a></span></li>
+                          </ul>
+                        </div>
+                        <div class="project-images">
+                          <figure class="project-figure">
+                            <img src="../../assets/img/projects/fire-framework.webp" alt="Fire detection framework" loading="lazy">
+                            <figcaption>
+                              <span class="ko-only">ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크</span>
+                              <span class="en-only">YOLO + VLM fire detection framework published at ICLRW</span>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">2</span><span class="ko-only">현장 적용을 위한 재설계</span><span class="en-only">Redesign for Field Deployment</span></div>
+                      <div class="project-row">
+                        <div class="project-text">
+                          <div class="blabel"><span class="ko-only">기존 문제점</span><span class="en-only">Problem</span></div>
+                          <ul class="ko-only">
+                            <li>초기 VLM 중심 PoC 구조가 엣지 디바이스 제약으로 현장 적용에 한계</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>The initial VLM-centric PoC hit field-deployment limits under edge-device constraints</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                          <ul class="ko-only">
+                            <li>YOLOv8n + CLIP 경량 구조 + Hailo 듀얼칩으로 재설계</li>
+                            <li>단순 모델 교체가 아닌 사후 검증(Detector → VLM) 판단 구조로 설계</li>
+                            <li>외부 포팅 업체, 내부 플랫폼팀과 협업해 모니터링/알람 서비스 연동</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Redesigned to a YOLOv8n + CLIP lightweight architecture on a dual-chip Hailo runtime</li>
+                            <li>Designed a post-hoc verification (Detector → VLM) decision structure rather than a simple model swap</li>
+                            <li>Connected monitoring/alert services with an external porting vendor and the internal platform team</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                          <ul class="ko-only">
+                            <li>엣지 디바이스 제약을 충족하는 현장 적용 가능 구조 확보</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Secured a field-deployable structure that satisfies edge-device constraints</li>
+                          </ul>
+                        </div>
+                        <div class="project-images">
+                          <figure class="project-figure">
+                            <img src="../../assets/img/projects/fire-cctv.webp" alt="Detection popup alert" loading="lazy">
+                            <figcaption>
+                              <span class="ko-only">AI CCTV 감시 공간 내 불꽃과 연기 감지 시 팝업 알림 예시</span>
+                              <span class="en-only">Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV</span>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phase">
+                      <div class="phase-title"><span class="pnum">3</span><span class="ko-only">실 적용 현황</span><span class="en-only">Field Deployment Status</span></div>
+                      <div class="project-row">
+                        <div class="project-text">
+                          <div class="blabel"><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></div>
+                          <ul class="ko-only">
+                            <li>화재 감지 보조 시스템 현장 시연 및 적용 작업</li>
+                            <li>운영 중 모델 오탐 원인 분석 및 재학습 대응</li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Ran on-site demonstration and deployment work for the auxiliary fire detection system</li>
+                            <li>Diagnosed model false-positive causes during operation and addressed them through retraining</li>
+                          </ul>
+                          <div class="blabel"><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></div>
+                          <ul class="ko-only">
+                            <li>광명센트럴아이파크 전기차 충전구역 실적용</li>
+                            <li>반복 오탐 케이스를 재학습 데이터에 반영해 현장 대응 모델 개선<span class="sub">운영 초기 대비 오탐 알람 약 88% 감소</span></li>
+                            <li>현장 운영 데이터 기반 후속 고도화 연구로 논문 2건 추가 게재<span class="sub"><a href="../../papers/iccvw2025/">경량 초해상화 기술 검토 (ICCVW 2025)</a></span><span class="sub"><a href="../../papers/wacvw2026/">합성 데이터 생성 자동화 (WACVW 2026)</a></span></li>
+                          </ul>
+                          <ul class="en-only">
+                            <li>Deployed in production at Gwangmyeong Central IPARK's EV charging zone</li>
+                            <li>Improved the field-response model by folding recurring false positives back into the training data<span class="sub">~88% fewer false alarms compared with the initial operation period</span></li>
+                            <li>Published 2 follow-up papers from advancement research on field-operation data<span class="sub"><a href="../../papers/iccvw2025/">Lightweight super-resolution study (ICCVW 2025)</a></span><span class="sub"><a href="../../papers/wacvw2026/">Automated synthetic data generation (WACVW 2026)</a></span></li>
+                          </ul>
+                        </div>
+                        <div class="project-images">
+                          <figure class="project-figure">
+                            <img src="../../assets/img/projects/fire-deployment.webp" alt="Field deployment example" loading="lazy">
+                            <figcaption>
+                              <span class="ko-only">광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황</span>
+                              <span class="en-only">AI-assisted fire detection deployed at Gwangmyeong Central IPARK</span>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="project lemon proj-panel" data-panel="ip" id="proj-ip">
+                    <h3>
+                      <span class="ko-only">지적재산권 확보</span>
+                      <span class="en-only">Intellectual Property Portfolio</span>
+                    </h3>
+                    <div class="project-row">
+                      <div class="project-text">
+                        <h4><span class="ko-only">업무 배경</span><span class="en-only">Background</span></h4>
+                        <ul class="ko-only">
+                          <li>자체 개발한 핵심 알고리즘과 시스템의 권리화</li>
+                          <li>HDC 그룹의 AI 기술 자산 확보 및 경쟁력 강화</li>
+                        </ul>
+                        <ul class="en-only">
+                          <li>Patent prosecution for core algorithms and systems developed in-house</li>
+                          <li>Build the HDC Group's AI technology assets and strengthen competitiveness</li>
+                        </ul>
+                        <h4><span class="ko-only">담당 업무</span><span class="en-only">Responsibilities</span></h4>
+                        <ul class="ko-only">
+                          <li>주요 프로젝트 결과물에 대한 청구항 설계</li>
+                          <li>특허 사무소가 작성한 명세서 검토</li>
+                          <li>우선심사 신청을 위한 기술 자료 정리 및 근거 자료 작성</li>
+                          <li>국제 학회 논문 작성, 투고, 심사 대응</li>
+                        </ul>
+                        <ul class="en-only">
+                          <li>Drafted claim structures for the outputs of major projects</li>
+                          <li>Reviewed patent specifications drafted by external patent attorneys</li>
+                          <li>Compiled technical evidence and supporting documents for expedited examination requests</li>
+                          <li>Wrote, submitted, and managed reviewer responses for international conference papers</li>
+                        </ul>
+                        <h4><span class="ko-only">업무 성과</span><span class="en-only">Achievements</span></h4>
+                        <ul class="ko-only">
+                          <li>KR 특허 13건 등록, 4건 출원 진행 (국내 3건 + 미국 1건)</li>
+                          <li>국제 학회 논문 4편 게재</li>
+                          <li>자세한 목록은 <a href="../../#publications">홈 Publications</a> 및 <a href="../../#patents">Patents</a> 섹션 참고</li>
+                        </ul>
+                        <ul class="en-only">
+                          <li>13 KR patents granted, 4 applications in progress (3 KR + 1 US)</li>
+                          <li>4 papers published at international venues</li>
+                          <li>See the home page <a href="../../#publications">Publications</a> and <a href="../../#patents">Patents</a> sections for the full list</li>
+                        </ul>
+                      </div>
+                      <div class="project-images">
+                        <div class="paper-mini-grid">
+                          <a class="paper-mini" href="../../papers/wacvw2026/">
+                            <div class="paper-mini-thumb"><img src="../../assets/img/ext/6967a74701de1eca43eb3233_fig1_4.png" alt="" loading="lazy"></div>
+                            <div class="paper-mini-body">
+                              <div class="paper-mini-venue">WACVW 2026 Oral</div>
+                              <div class="paper-mini-title">From Prompts to Deployment</div>
+                            </div>
+                          </a>
+                          <a class="paper-mini" href="../../papers/iccvw2025/">
+                            <div class="paper-mini-thumb"><img src="../../assets/img/ext/687f0956472aac22b4b599df_fig2_4.png" alt="" loading="lazy"></div>
+                            <div class="paper-mini-body">
+                              <div class="paper-mini-venue">ICCVW 2025</div>
+                              <div class="paper-mini-title">Your Super Resolution Model is not Enough</div>
+                            </div>
+                          </a>
+                          <a class="paper-mini" href="../../papers/iclrw2025/">
+                            <div class="paper-mini-thumb"><img src="../../assets/img/ext/68738cf93f954fe802db4a24_zzxc.webp" alt="" loading="lazy"></div>
+                            <div class="paper-mini-body">
+                              <div class="paper-mini-venue">ICLRW 2025</div>
+                              <div class="paper-mini-title">Integrated YOLO and VLM Fire Detection</div>
+                            </div>
+                          </a>
+                          <a class="paper-mini" href="../../papers/siggraph2024/">
+                            <div class="paper-mini-thumb"><img src="../../assets/img/ext/687bc27386c3d9d7043935da_app_1_2.png" alt="" loading="lazy"></div>
+                            <div class="paper-mini-body">
+                              <div class="paper-mini-venue">SIGGRAPH Asia 2024</div>
+                              <div class="paper-mini-title">OverallNet: Scale-Arbitrary Lightweight SR</div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+            <nav class="tl-pager" aria-label="Project navigation">
+              <button type="button" class="tl-pg prev" data-step="-1"><span class="tl-pg-l"><span class="ko-only">← 이전 프로젝트</span><span class="en-only">← Previous</span></span><span class="tl-pg-t"></span></button>
+              <button type="button" class="tl-pg next" data-step="1"><span class="tl-pg-l"><span class="ko-only">다음 프로젝트 →</span><span class="en-only">Next →</span></span><span class="tl-pg-t"></span></button>
+            </nav>
           </div>
         </div>
       </div>
@@ -581,6 +1148,137 @@
     var panel = document.getElementById('proj-' + m[1]);
     if (panel) setTimeout(function(){ panel.scrollIntoView({block:'start'}); }, 60);
   });
+})();
+</script>
+
+<script>
+(function(){
+  // Timeline overview ⇄ year rail + details. Card and panel state live here;
+  // main.js finds no .proj-card[data-panel] on this page and leaves it alone.
+  var root = document.querySelector('.tl');
+  if (!root) return;
+  var cards = Array.prototype.slice.call(root.querySelectorAll('.tl-card[data-target]'));
+  var items = Array.prototype.slice.call(root.querySelectorAll('.tl-item[data-target]'));
+  var panels = Array.prototype.slice.call(root.querySelectorAll('.tl-panels .proj-panel'));
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = null;
+  var ids = items.map(function(i){ return i.dataset.target; });      // timeline order
+  var pager = { prev: root.querySelector('.tl-pg.prev'), next: root.querySelector('.tl-pg.next') };
+
+  function panel(id){ return document.getElementById('proj-' + id); }
+  var header = document.querySelector('header.site-header'), railEl = root.querySelector('.tl-rail');
+  var col = root.querySelector('.tl-panels'), LIVE_W = 1032;   // panel width on the live page
+  var narrow = window.matchMedia('(max-width: 1000px)');
+  function measure(){
+    if (header) root.style.setProperty('--hdr', header.offsetHeight + 'px');
+    if (railEl && railEl.offsetHeight) root.style.setProperty('--rail', railEl.offsetHeight + 'px');
+    var w = col && col.clientWidth;
+    if (w) root.style.setProperty('--z', (narrow.matches ? 1 : Math.min(1, w / LIVE_W)).toFixed(4));
+  }
+  // where the open panel's top should sit: under the header, or under the chip strip on narrow screens
+  function target(){
+    var h = header ? header.offsetHeight : 64;
+    return narrow.matches ? h + (railEl ? railEl.offsetHeight : 0) + 10 : h + 20;
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  function transition(fn){
+    if (document.startViewTransition && !reduce) return document.startViewTransition(fn).finished.catch(function(){});
+    fn(); return Promise.resolve();
+  }
+  function mark(id){
+    current = id;
+    items.forEach(function(i){
+      var on = i.dataset.target === id;
+      i.classList.toggle('on', on);
+      if (on) i.setAttribute('aria-current', 'true'); else i.removeAttribute('aria-current');
+    });
+    panels.forEach(function(p){ p.classList.toggle('is-current', p.dataset.panel === id); });
+    // previous / next buttons carry the neighbouring titles, in both languages
+    var at = ids.indexOf(id);
+    [['prev', at - 1], ['next', at + 1]].forEach(function(pair){
+      var b = pager[pair[0]], nid = ids[pair[1]];
+      if (!b) return;
+      b.hidden = !nid;
+      if (!nid) return;
+      b.dataset.target = nid;
+      var src = items[pair[1]].querySelector('.tl-it-t');
+      b.querySelector('.tl-pg-t').innerHTML = src ? src.innerHTML : '';
+    });
+    // on phones the rail is a sideways chip strip: keep the current chip in view
+    var list = root.querySelector('.tl-rail-list'), on = list && list.querySelector('.tl-item.on');
+    if (on && list.scrollWidth > list.clientWidth) list.scrollLeft = on.offsetLeft - list.offsetLeft - (list.clientWidth - on.offsetWidth) / 2;
+  }
+  // Bring the open project's top just under the header (only when it is not
+  // already there), and hold it there briefly while the layout settles.
+  var keepId = null, keepUntil = 0;
+  function align(id, smooth){
+    measure();
+    var p = panel(id); if (!p) return;
+    if (Math.abs(p.getBoundingClientRect().top - target()) < 2) return;
+    var how = smooth && !reduce ? 'smooth' : 'instant';   // 'auto' would inherit the site's smooth scrolling
+    p.scrollIntoView({ block: 'start', behavior: how });
+  }
+  function reveal(id, smooth){
+    keepId = id; keepUntil = Date.now() + 1200;
+    align(id, smooth);
+  }
+  function release(){ keepUntil = 0; }
+  ['wheel', 'touchstart', 'keydown'].forEach(function(t){ window.addEventListener(t, release, { passive: true }); });
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(function(){ var z = root.style.getPropertyValue('--z'); measure(); if (root.style.getPropertyValue('--z') !== z) return; }).observe(col);
+    new ResizeObserver(function(){
+      if (keepId && Date.now() < keepUntil && root.dataset.mode === 'detail') align(keepId, false);
+    }).observe(root.querySelector('.tl-panels'));
+  }
+  function setHash(id, push){
+    var url = location.pathname + location.search + (id ? '#proj-' + id : '');
+    if (push) history.pushState(null, '', url); else history.replaceState(null, '', url);
+  }
+
+  function open(id, opts){
+    opts = opts || {};
+    if (!panel(id)) return;
+    var entering = root.dataset.mode !== 'detail';
+    if (entering) {
+      transition(function(){ root.dataset.mode = 'detail'; mark(id); measure(); reveal(id, false); }).then(function(){ reveal(id, false); });
+    } else if (id !== current) {
+      transition(function(){ mark(id); reveal(id, false); });
+    } else {
+      reveal(id, true);
+    }
+    if (opts.hash !== false) setHash(id, entering && opts.push !== false);
+  }
+  function close(opts){
+    opts = opts || {};
+    var from = current;
+    transition(function(){ root.dataset.mode = 'overview'; }).then(function(){
+      var c = cards.filter(function(x){ return x.dataset.target === from; })[0];
+      if (c) c.scrollIntoView({ block: 'center', behavior: 'auto' });
+    });
+    if (opts.hash !== false) setHash(null, false);
+  }
+
+  cards.forEach(function(c){ c.addEventListener('click', function(){ open(c.dataset.target); }); });
+  items.forEach(function(i){ i.addEventListener('click', function(){ open(i.dataset.target); }); });
+  root.querySelector('.tl-back').addEventListener('click', function(){ close(); });
+  [pager.prev, pager.next].forEach(function(b){
+    if (b) b.addEventListener('click', function(){ if (b.dataset.target) open(b.dataset.target); });
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && root.dataset.mode === 'detail') close(); });
+
+  // deep links, browser back / forward, Work & Activities jumps
+  function fromHash(){
+    var m = (location.hash || '').match(/^#proj-([a-z]+)$/);
+    if (m && panel(m[1])) open(m[1], { hash: false });
+    else if (root.dataset.mode === 'detail') close({ hash: false });
+  }
+  window.addEventListener('popstate', fromHash);
+  document.querySelectorAll('.wa-goto[data-goto]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); open(a.dataset.goto); });
+  });
+  fromHash();
+
 })();
 </script>
 </body>
