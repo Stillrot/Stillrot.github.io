@@ -42,6 +42,18 @@
   ],
   "conferences": [
     {
+      "idx": 14,
+      "authors": "Dongsik Yoon",
+      "title": "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot",
+      "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW)",
+      "year": 2026,
+      "month": 10,
+      "note": "",
+      "link": "./papers/irosw2026/",
+      "link_type": "internal",
+      "paper_slug": "irosw2026"
+    },
+    {
       "idx": 13,
       "authors": "Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon",
       "title": "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",

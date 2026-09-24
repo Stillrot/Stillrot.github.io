@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Nuni: A Bedside Care Robot that Asks Before It Tells Dongsik Yoon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pictorial proposal for the IEEE RO-MAN 2026 Robot Design Competition: Nuni, a bedside care robot that asks before it tells.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20260605e">
+<style>
+  /* Pictorial page: same frame as the paper pages, plus scene labels */
+  .paper-body .scene-title { margin: 22px 0 4px; font-size: 16px; font-weight: 700; color: var(--fg); }
+  .paper-body .scene-time { color: var(--fg-muted); font-weight: 600; }
+  .paper-body blockquote { margin: 10px 0; padding: 2px 0 2px 14px; border-left: 3px solid var(--border); color: var(--fg-muted); font-style: italic; }
+  .paper-body .credit { margin-top: 18px; color: var(--fg-muted); font-size: 13px; }
+</style>
+</head>
+<body data-root="../../">
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="../../">Dongsik Yoon</a>
+    <nav class="primary">
+      <a href="../../">HOME</a>
+      <a href="../../#career">CAREER</a>
+      <a href="../../#publications">PUBLICATIONS</a>
+      <a href="../../#news">NEWS</a>
+      <a href="../" class="active">RESEARCH</a>
+      <div class="lang-toggle" role="tablist" aria-label="Language">
+        <button type="button" data-lang="ko" aria-label="Korean">KR</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="paper-header">
+    <div class="container">
+      <h1>Nuni: A Bedside Care Robot that Asks Before It Tells</h1>
+      <div class="venue-line"><strong>IEEE RO-MAN 2026 Robot Design Competition</strong>, 2026 <span class="venue-note">Pictorial proposal</span></div>
+      <div class="authors"><span class="me">Dongsik Yoon</span></div>
+      <div class="affiliation">Korea University</div>
+      <div class="link-row">
+        <a class="btn-link" data-type="arxiv" href="../../assets/pdf/Nuni_RO-MAN2026_RDC_Pictorial.pdf" target="_blank" rel="noopener">Pictorial (PDF)</a>
+        <a class="btn-link" data-type="project_page" href="https://ro-man2026.org/robot-design-competition/" target="_blank" rel="noopener">RO-MAN 2026 Robot Design Competition</a>
+        <a class="btn-link" data-type="internal" href="../irosw2026/">Evaluated system (IROSW 2026)</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <figure class="paper-thumb">
+      <img src="../../assets/img/ext/nuni-roman2026-scene1.webp" alt="Scene 1: Nuni on the nightstand takes the night shift" loading="lazy">
+      <figcaption>Fig. 1. The watch changes hands. Nuni takes the night shift so that Soon-ja can stop keeping it herself.</figcaption>
+    </figure>
+
+    <div class="paper-body">
+      <h2>Abstract</h2>
+      <p>Night is when older adults living alone are most vulnerable, and when help is farthest away. Camera monitoring promises safety, but to many it feels like surveillance, and gets refused. Nuni is a bedside care object built from an off-the-shelf pan-tilt camera that became an eye. Through the night it keeps watch in the dark. When it senses a possible health event, such as a fall or an unusual stillness, it does not sound an alarm. It turns, leans in, and quietly asks: “Soon-ja, are you okay?” An answer settles it; only silence escalates to family. When watching is not needed, a physical eyelid closes over the lens: not seeing, and visibly so. All perception runs on-device, to be evaluated under our degraded-vision health-monitoring protocol; video never leaves the room. Nuni reframes care monitoring as a partnership: the robot keeps the vigil, the human keeps her dignity, the family keeps their peace.</p>
+
+      <h2>Design Context</h2>
+      <p>Soon-ja, 78, lives alone in a small apartment in Seoul. Her son Min-su lives an hour away; he calls every evening, and worries every night. She has refused a monitoring camera twice.</p>
+      <blockquote>“I will not be watched in my own home.”</blockquote>
+      <p>This project begins from that refusal: how might a robot earn a place at the bedside of someone who has already said no to a camera?</p>
+
+      <h2>Scenario of Use</h2>
+      <p class="scene-title">Scene 1 <span class="scene-time">(10:30 PM)</span>: The night shift</p>
+      <p>Soon-ja switches off the light. On the nightstand, Nuni turns to her and gives a small nod, its way of saying it will take the night shift. Its eye stays open in the dark so that hers can close.</p>
+
+      <p class="scene-title">Scene 2 <span class="scene-time">(3:12 AM)</span>: A question, not an alarm</p>
+      <p>On her way back from the bathroom, Soon-ja stumbles and sits down hard on the floor. Nuni reads a person on the floor, not rising. It does not sound an alarm. It turns, tilts down toward her, and asks softly: “Soon-ja, are you okay?” On most nights the story ends here (“I’m fine, I just slipped”), Nuni nods, and no one else’s night is broken.</p>
+      <figure class="paper-figure">
+        <img src="../../assets/img/ext/nuni-roman2026-scene2.webp" alt="Scene 2: Nuni asks Soon-ja whether she is okay after she sits down on the floor" loading="lazy">
+        <figcaption>Fig. 2. Low-confidence sensing is resolved by asking, not alerting. Her answer outranks the algorithm; most nights end here.</figcaption>
+      </figure>
+
+      <p class="scene-title">Scene 3: Only silence escalates</p>
+      <p>Tonight there is no answer. Nuni asks once more and waits, watching for any movement. After twenty seconds of silence and stillness, it sends Min-su a short alert, then turns back to her: “I’ve told Min-su. I’ll stay with you.” Until help arrives, it keeps talking to her, the one thing an alarm cannot do.</p>
+      <figure class="paper-figure">
+        <img src="../../assets/img/ext/nuni-roman2026-scene3.webp" alt="Scene 3: after silence Nuni alerts Min-su and stays with Soon-ja" loading="lazy">
+        <figcaption>Fig. 3. Escalation is the exception, not the default. Min-su receives one meaningful alert instead of a nightly feed, and Nuni stays.</figcaption>
+      </figure>
+
+      <p class="scene-title">Scene 4 <span class="scene-time">(the next afternoon)</span>: Seen not seeing</p>
+      <p>A nurse visits to help her wash and change. “Nuni, look away.” The head pans to the wall and a physical eyelid slides shut over the lens. Soon-ja can see that it cannot see. Privacy here is not a setting buried in an app; it is a gesture she can watch happen.</p>
+      <figure class="paper-figure">
+        <img src="../../assets/img/ext/nuni-roman2026-scene4.webp" alt="Scene 4: Nuni looks away and closes its eyelid for privacy" loading="lazy">
+        <figcaption>Fig. 4. Privacy as a visible gesture: the eyelid makes not-watching a physical, inspectable state rather than a promise in software.</figcaption>
+      </figure>
+
+      <h2>Collaboration Model: A Team of Three</h2>
+      <p>Soon-ja keeps her autonomy: she is always the first to be asked about herself, and her answer outranks the algorithm. Nuni contributes what humans cannot sustain: patient, tireless perception in the dark, and the discipline to ask before it tells. Min-su contributes what machines cannot: the response that matters, freed from the anxious checking that used to fill his evenings. The robot does not replace family care; it redistributes it, routine vigilance to the machine and meaningful response to the humans.</p>
+
+      <h2>Behavioral Design</h2>
+      <p>Nuni’s vocabulary is small and legible. With no roll axis, a quick pan double-take stands in for a head tilt.</p>
+      <ul>
+        <li><strong>Greet:</strong> slow pan sweep, nod</li>
+        <li><strong>Attend:</strong> turn, lean-in tilt</li>
+        <li><strong>Ask:</strong> forward tilt, soft voice, subtitles on the bedside monitor</li>
+        <li><strong>Stand down:</strong> nod, half-closed lid</li>
+        <li><strong>Look away:</strong> pan to the wall, lid fully shut</li>
+        <li><strong>Stay:</strong> steady gaze, slow nods while speaking</li>
+      </ul>
+
+      <h2>Technical Design</h2>
+      <p>Nuni is an off-the-shelf PTZ camera, hacked: the gimbal becomes a neck, the lens an iris, and successive paper faces its first skins. All perception will run on a Jetson Orin Nano at the bedside. Person and pose detection yields a lying-on-floor state detector, and a health-event score with a persistence rule gates the question-first policy: ask, listen and watch for a response, escalate only on silence. Offline TTS speaks; a small monitor shows status and subtitles. Nothing streams; video never leaves the device. The perception stack will be evaluated under our existing degraded-vision health-monitoring protocol (low-light stress tests with attribution-controlled baselines, established in our prior work), and during development we will log nightly false-intervention counts: the number that decides whether a bedside robot is trusted or unplugged.</p>
+
+      <h2>Development Plan</h2>
+      <p>The build proceeds in three stages, documented throughout for the design-process presentation:</p>
+      <ul>
+        <li>the bare off-the-shelf PTZ camera, verified for motion control, speed, and noise;</li>
+        <li>taped paper faces: five-minute, low-cost iterations of the eye and expression design;</li>
+        <li>a working bedside prototype with user tests and nightly false-intervention logs.</li>
+      </ul>
+      <p>Development runs July to August 2026, concluding with a working demonstration at RO-MAN 2026 in Kitakyushu, Japan.</p>
+      <p class="credit">Figures 1 to 4 are original illustrations generated with AI assistance (Claude, Anthropic) and art-directed by the author.</p>
+    </div>
+  </section>
+  <div class="container" style="margin-top:32px;">
+    <a href="../" class="btn-link">&larr; All papers</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© Dongsik Yoon <a href="../../">Home</a></div>
+</footer>
+
+<script src="../../assets/js/main.js?v=20260605e"></script>
+</body>
+</html>

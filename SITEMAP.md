@@ -14,6 +14,8 @@ All paths are relative to the site root (`/`) so the deploy works at any GitHub 
 | `/career/ku/` | Korea University M.S. career detail |
 | `/career/bu/` | Baekseok University B.S. career detail |
 | `/papers/` | Listing of paper detail pages |
+| `/papers/irosw2026/` | IROSW 2026 paper (NoC workshop) |
+| `/papers/nuni-roman2026/` | RO-MAN 2026 Robot Design Competition pictorial (standalone, not in the research list) |
 | `/papers/wacvw2026/` | WACVW 2026 paper |
 | `/papers/iccvw2025/` | ICCVW 2025 paper |
 | `/papers/iclrw2025/` | ICLRW 2025 paper |

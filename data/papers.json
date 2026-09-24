@@ -1,5 +1,98 @@
 [
   {
+    "slug": "irosw2026",
+    "title": "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot",
+    "short_title": "Ask Before It Tells",
+    "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW)",
+    "venue_short": "IROSW 2026",
+    "year": 2026,
+    "month": "October",
+    "note": "",
+    "authors": ["Dongsik Yoon"],
+    "affiliation": "HDC LABS",
+    "abstract": "Body-cue recognition can support assistive robots, but benchmark accuracy does not guarantee reliable behavior under a robot-camera viewpoint. We present Nuni, a bedside robot prototype that treats a detected distress cue as a reason to ask rather than a reason to alert. We compare two X3D-UGT RGB appearance classifiers, which reach 97.7% and 94.8% six-way accuracy on NTU RGB+D, with a pose-centric hybrid pipeline on 28 single-actor scripted clips recorded from the robot camera. The hybrid path achieved 0.71 six-way macro recall, versus 0.25 and 0.29 for the fine-tuned and from-scratch RGB variants. More importantly for interaction, it produced a question-triggering distress cue in 12/16 distress clips and would have prompted unnecessarily in 2/8 normal clips; the RGB variants yielded a question-triggering cue in only 2/16 and 3/16 distress clips. We separately tested the question-first controller through event injection. All 13 state-transition trials passed: valid responses caused stand-down, two unanswered prompts produced one alert, and three boundary conditions were handled correctly. These results are a preliminary technical evaluation, not a user study or medical validation, but they show how interaction policy can limit the consequences of uncertain perception.",
+    "video_id": "BJ8RZFAd0wU",
+    "video_title": "[NOC @ IROS 2026] Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot",
+    "thumbnail_external": "https://arxiv.org/html/2609.24099v1/nuni_system_overview.svg",
+    "thumbnail_caption": "Perception paths and the question-first controller. A confirmed distress cue opens a response window instead of directly producing an alert; a valid response in either wait window leads to stand-down.",
+    "list_thumb": "/assets/img/ext/irosw2026_prototype.webp",
+    "links": [
+      { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.24099", "type": "arxiv" },
+      { "label": "NoC Workshop @ IROS 2026", "url": "https://nocworkshop.github.io/2026-IROS/", "type": "project_page" },
+      { "label": "RO-MAN 2026 Robot Design Competition", "url": "https://ro-man2026.org/robot-design-competition/", "type": "external" },
+      { "label": "RO-MAN 2026 RDC Pictorial", "url": "../nuni-roman2026/", "type": "internal" }
+    ],
+    "sections": [
+      {
+        "title": "Presented at",
+        "bullets": [
+          "The 4th Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence (NoC) at IROS 2026, Pittsburgh, October 1, 2026.",
+          "Robot Design Competition at IEEE RO-MAN 2026, Kitakyushu: presented as \"Nuni: A Bedside Care Robot that Asks Before It Tells\", August 25, 2026."
+        ],
+        "figures": []
+      },
+      {
+        "title": "Question-First Controller",
+        "intro": "Nuni treats a confirmed distress cue as a reason to ask, not a reason to alert. A finite-state controller escalates only when the person stays silent:",
+        "bullets": [
+          "A confirmed cue moves the robot to Ask1: a 2.5 s text prompt followed by an 8 s response window (Wait1).",
+          "No response leads to a second prompt and window (Ask2, Wait2); a valid response or a wave in either window leads to stand-down.",
+          "Silence through both prompts produces a single alert (nominal 21 s) and the robot stays with the person; a 15 s cooldown suppresses duplicate alerts."
+        ],
+        "figures": []
+      },
+      {
+        "title": "Perception Paths",
+        "intro": "Two perception paths were evaluated separately on six cue classes (clutching_chest, headache, possible_collapse, staggering, waving, normal):",
+        "bullets": [
+          "RGB appearance baselines: X3D-UGT classifiers (under 1M parameters), fine-tuned or trained from scratch on NTU RGB+D, reaching 97.7% and 94.8% six-way benchmark accuracy.",
+          "Pose-centric hybrid: YOLO11-Pose keypoints, instantaneous rules for response gestures, ST-GCN++ over 48-frame windows, bounding-box geometry for collapse, and per-class persistence before a cue is confirmed."
+        ],
+        "figures": []
+      },
+      {
+        "title": "Robot-Camera Results",
+        "intro": "On 28 single-actor scripted clips recorded from the robot camera (16 distress, 4 waving, 8 normal), benchmark accuracy did not carry over:",
+        "bullets": [
+          "Pose-centric hybrid: 0.71 macro recall, question trigger in 12/16 distress clips, 4/16 silent misses, 2/8 unnecessary questions.",
+          "X3D-UGT fine-tuned: 0.25 macro recall, question trigger in 2/16, 14/16 silent misses.",
+          "X3D-UGT from scratch: 0.29 macro recall, question trigger in 3/16, 13/16 silent misses.",
+          "The hybrid handled gross motion best (staggering 4/4, possible_collapse 3/4) and was weakest on subtle upper-body cues (clutching_chest 1/4)."
+        ],
+        "figures": [
+          { "src": "https://arxiv.org/html/2609.24099v1/figure_qualitative.png", "caption": "Robot-camera clips (person-crop input, faces blurred) in which the pose-centric hybrid confirmed the distress cue. clutching_chest and staggering were silently missed by both X3D-UGT variants; possible_collapse was retained by the from-scratch variant only." }
+        ]
+      },
+      {
+        "title": "Controller Validation",
+        "intro": "The controller was tested deterministically by injecting events at the ROS 2 level, bypassing the camera and models:",
+        "bullets": [
+          "Response after the first prompt: 5/5 correct, no alerts.",
+          "Silence after both prompts: 5/5 correct, exactly one alert per trial; mean escalation time 21.65 s against a nominal 21 s.",
+          "Boundary conditions: 3/3 handled as intended; 13/13 trials passed with no duplicate alerts, deadlocks, or crashes."
+        ],
+        "figures": []
+      },
+      {
+        "title": "Prototype",
+        "intro": "Nuni is built from an off-the-shelf TP-Link Tapo C220 pan-tilt camera on a nightstand, with an NVIDIA Jetson Orin Nano as the on-device deployment target. A mechanical privacy shutter makes \"not watching\" a state the person can check.",
+        "figures": [
+          { "src": "/assets/img/ext/irosw2026_prototype.webp", "caption": "Prototype evolution. (a) The unmodified pan-tilt camera and the Jetson Orin Nano. (b) The first paper-face prototype, with the camera lens serving as the pupil." }
+        ]
+      },
+      {
+        "title": "Limitations",
+        "bullets": [
+          "A single actor and 28 scripted clips; no confidence intervals or demographic variation.",
+          "Controller events were injected at the ROS level; end-to-end autonomy was not tested.",
+          "Text prompts only, and no user study yet on the legibility of the robot's motions or on acceptance."
+        ],
+        "figures": []
+      }
+    ],
+    "bibtex": "@inproceedings{yoon2026askbefore,\n  title     = {Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot},\n  author    = {Yoon, Dongsik},\n  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems Workshops (IROSW), Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence},\n  year      = {2026},\n  note      = {arXiv:2609.24099}\n}"
+  },
+  {
     "slug": "ntu60-audio",
     "title": "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition",
     "short_title": "NTU60-AUDIO",
@@ -31,7 +124,8 @@
     "thumbnail_external": "/assets/img/ext/6967a74701de1eca43eb3233_fig1_4.png",
     "thumbnail_caption": "Overview of the proposed three-stage, diffusion-based dataset generation and auto-curation pipeline.",
     "links": [
-      { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2601.08095", "type": "arxiv" }
+      { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2601.08095", "type": "arxiv" },
+      { "label": "SAFE Workshop @ WACV 2026", "url": "https://www.safeworkshop.org/wacv-2026/", "type": "project_page" }
     ],
     "sections": [
       {
@@ -83,7 +177,8 @@
     "thumbnail_external": "/assets/img/ext/687f0956472aac22b4b599df_fig2_4.png",
     "thumbnail_caption": "Comparison between the existing feature adaptation block and the proposed SAAM block.",
     "links": [
-      { "label": "Paper (CVF Open Access)", "url": "https://openaccess.thecvf.com/content/ICCV2025W/ECLR/html/Yoon_Your_Super_Resolution_Model_is_not_Enough_for_Tackling_Real-World_ICCVW_2025_paper.html", "type": "cvf_openaccess" }
+      { "label": "Paper (CVF Open Access)", "url": "https://openaccess.thecvf.com/content/ICCV2025W/ECLR/html/Yoon_Your_Super_Resolution_Model_is_not_Enough_for_Tackling_Real-World_ICCVW_2025_paper.html", "type": "cvf_openaccess" },
+      { "label": "ECLR Workshop @ ICCV 2025", "url": "https://eclr-workshop.github.io/", "type": "project_page" }
     ],
     "sections": [
       {
@@ -122,7 +217,8 @@
     "thumbnail_external": "/assets/img/ext/68738cf93f954fe802db4a24_zzxc.webp",
     "thumbnail_caption": "Qualitative results on real-world fire comparing VLM only, YOLO only, and our proposed approach of VLM+YOLO integration.",
     "links": [
-      { "label": "Paper (PMLR)", "url": "https://proceedings.mlr.press/v296/kim25a.html", "type": "mlr" }
+      { "label": "Paper (PMLR)", "url": "https://proceedings.mlr.press/v296/kim25a.html", "type": "mlr" },
+      { "label": "ICBINB Workshop @ ICLR 2025", "url": "https://sites.google.com/view/icbinb-2025", "type": "project_page" }
     ],
     "sections": [
       {

@@ -269,192 +269,571 @@ On-site Mentor
 
 ## Projects
 
-프로젝트를 선택하면 아래에 상세 내용이 표시됩니다
+프로젝트를 누르면 상세 보기로 바뀝니다
 
-Select a project to view its details below
+Select a project to open its details
 
-지하주차장 화재 탐지
+2026
 
-Underground Parking Fire Detection
+AX & AI Agent
 
-- YOLO 및 VLM 기반 화재 탐지 솔루션 개발
+비전 데이터 탐색 Agent
+Vision Data Exploration Agent 2026.07 ~ 2026.09
 
-- Hailo-8 듀얼칩 기반 경량 구조로 재설계
+- 자연어와 이미지 기반 비전 데이터 탐색 Agent 개발
+- VLM 보조 검수와 승인 기반 GPU 학습 연결
+- 수만 장 규모 통합 색인, 학습까지 E2E 검증
 
-- 광명센트럴아이파크 실적용, 논문 및 특허 확보
+- Developed an agent for natural-language and image search over vision data
+- Connected VLM-assisted review with approval-gated GPU training
+- Indexed tens of thousands of images and validated the flow through training
 
-- Developed a YOLO + VLM-based fire detection solution
+Research & IP
 
-- Redesigned to a lightweight architecture on dual Hailo-8 chips
+비전 기반 행동 인지 케어 로봇
+Vision-Based Care Robot
+개인 프로젝트
+Personal 2026.06 ~ 2026.10
 
-- Deployed at Gwangmyeong Central IPARK, with a paper and patent secured
+- 경보 전 먼저 묻는 침대 옆 케어 로봇 Nuni 개발
+- 로봇 시점 인지 평가와 질문 우선 FSM 검증
+- IROS 2026 워크숍 논문, RO-MAN 2026 RDC 참가
+
+- Built Nuni, a bedside care robot that asks before it alerts
+- Evaluated robot-view perception and validated the ask-first FSM
+- IROS 2026 workshop paper and RO-MAN 2026 RDC entry
+
+AX & AI Agent
+
+아이파크몰 AI 방문자 분석
+IPARK Mall AI Visitor Analytics 2026.03 ~ 2026.07
+
+- 22개 출입구 방문자 분석 PoC 기술 기획
+- 온프레미스 처리 구조와 KPI 평가 체계 설계
+- PoC 운영 완료, 품질 관제 Agent로 확장
+
+- Planned a 22-entrance visitor-analytics PoC as technical PM
+- Designed the on-premises setup and the KPI and evaluation framework
+- Completed the PoC and extended it into a quality-monitoring agent
+
+2025
+
+Vision AI
 
 엘리베이터 내부 상황 분석 시스템
-
-In-Elevator Situational Analysis System
+In-Elevator Situational Analysis System 2025.01 ~ 2026.02
 
 - AI 기반 승강기 내부 상황 분석 솔루션 개발
-
 - Jetson 기반 단일 모델 구조 재설계
-
 - 현대 3사 MOU 체결, 서울원 아이파크 도입 예정
 
 - Developed an AI-based in-elevator situational-analysis solution
-
 - Redesigned to a single-model architecture on Jetson
-
 - Reached a three-party HDC MOU, with deployment planned at Seoul One IPARK
 
-지적재산권 확보
+2024
 
+Vision AI
+
+지하주차장 화재 탐지
+Underground Parking Fire Detection 2024.05 ~ 2025.10
+
+- YOLO 및 VLM 기반 화재 탐지 솔루션 개발
+- Hailo-8 듀얼칩 기반 경량 구조로 재설계
+- 광명센트럴아이파크 실적용, 논문 및 특허 확보
+
+- Developed a YOLO + VLM-based fire detection solution
+- Redesigned to a lightweight architecture on dual Hailo-8 chips
+- Deployed at Gwangmyeong Central IPARK, with a paper and patent secured
+
+상시
+Ongoing
+
+Research & IP
+
+지적재산권 확보
 Intellectual Property Portfolio
 
 - 특허 13건 등록, 4건 출원 진행
-
 - 국제 학회 논문 4편 게재
-
 - 논문화를 위한 기술 스터디 주도
 
 - 13 patents granted, 4 applications in progress
-
 - 4 papers published at international venues
-
 - Led a technical study group toward publications
 
-### 지하주차장 화재 감지 보조 시스템
+← 전체 타임라인
+← All projects
 
-Underground Parking Fire Detection Assistance System
+2026
+
+비전 데이터 탐색 Agent
+Vision Data Exploration Agent 2026.07 ~ 2026.09
+
+비전 기반 행동 인지 케어 로봇
+Vision-Based Care Robot 2026.06 ~ 2026.10
+
+아이파크몰 AI 방문자 분석
+IPARK Mall AI Visitor Analytics 2026.03 ~ 2026.07
+
+2025
+
+엘리베이터 내부 상황 분석 시스템
+In-Elevator Situational Analysis System 2025.01 ~ 2026.02
+
+2024
+
+지하주차장 화재 탐지
+Underground Parking Fire Detection 2024.05 ~ 2025.10
+
+상시
+Ongoing
+
+지적재산권 확보
+Intellectual Property Portfolio
+
+### 비전 데이터 탐색 Agent
+
+Vision Data Exploration Agent
 
 핵심 역할
 Key role
 
-AI 시스템 개발 주도 (데이터, 모델 학습, 판단 구조)
-Led AI system development (data, model training, decision pipeline)
+Agent 시스템 개발 주도 (데이터 색인, VLM 검수, 워크플로우, 학습 연동)
+Led agent system development (data indexing, VLM review, workflow, training integration)
 
-협업PoC(팀 엔지니어 2명), 하드웨어/현장 포팅(수호이미지), 플랫폼/알람(내부 플랫폼팀)
-WithPoC (2 team engineers), hardware/field porting (Suho Image), platform/alerts (internal platform team)
+협업데이터 정리(엔지니어 1명)
+Withdata curation (1 engineer)
 
 1
-기술 PoC 및 연구
-Technical PoC & Research
-
-연구 필요성
-Motivation
-
-- 잇따른 지하주차장 전기차 화재 발생으로 전용 화재 감지 시스템 요구
-
-- 이상온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요
-
-- Recurring EV fires in underground parking lots created demand for a dedicated detection system
-
-- An auxiliary system with early thermal-anomaly detection and automatic alerts was needed
-
-담당 업무
-Responsibilities
-
-- 지하주차장 CCTV 환경 특화 합성 데이터 생성
-
-- 화재/연기 탐지 YOLO 모델 재학습 및 검증
-
-- YOLOv8s + VLM(Florence2) 기반 탐지 PoC 설계
-
-- Built underground-parking CCTV-specific synthetic data
-
-- Retrained and validated YOLO fire/smoke detectors
-
-- Designed a YOLOv8s + VLM(Florence2) detection PoC
-
-업무 성과
-Achievements
-
-- 합성 데이터 활용으로 화재/연기 탐지 정량 성능 향상 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83
-
-- 연구 성과를 지식재산권으로 확보 — 논문 1건 게재, 특허 1건 등록 YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025)
-
-- Improved fire/smoke detection accuracy using synthetic data F1 0.82 → 0.86, smoke recall 0.70 → 0.83
-
-- Secured intellectual property from the work — 1 paper published, 1 patent granted YOLO-VLM-based indoor fire detection (ICLRW 2025)
-
-[image: Fire detection framework]
-
-ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크
-
-YOLO + VLM fire detection framework published at ICLRW
-
-2
-현장 적용을 위한 재설계
-Redesign for Field Deployment
+추진 배경
+Background
 
 기존 문제점
 Problem
 
-- 초기 VLM 중심 PoC 구조가 엣지 디바이스 제약으로 현장 적용에 한계
+- 사내 NAS의 여러 도메인 비전 데이터셋이 다양한 경로와 폴더로 분산
 
-- The initial VLM-centric PoC hit field-deployment limits under edge-device constraints
+- 탐색부터 후보 구성, GPU 학습 제출까지 데이터 구조와 Slurm 숙지 필요
 
-담당 업무
-Responsibilities
+- 자연어 검색 결과가 실제 요청 조건과 일치하는지 확인 어려움
 
-- YOLOv8n + CLIP 경량 구조 + Hailo 듀얼칩으로 재설계
+- Vision datasets from many domains were scattered across NAS paths and folders
 
-- 단순 모델 교체가 아닌 사후 검증(Detector → VLM) 판단 구조로 설계
+- Going from search to training sets and GPU jobs required knowing the data layout and Slurm
 
-- 외부 포팅 업체, 내부 플랫폼팀과 협업해 모니터링/알람 서비스 연동
+- Hard to tell whether search results matched the request
 
-- Redesigned to a YOLOv8n + CLIP lightweight architecture on a dual-chip Hailo runtime
+업무 목표
+Objectives
 
-- Designed a post-hoc verification (Detector → VLM) decision structure rather than a simple model swap
+- 비개발자가 보유 데이터의 종류와 규모를 빠르게 파악하는 탐색 환경 구축
 
-- Connected monitoring/alert services with an external porting vendor and the internal platform team
+- 탐색, 검수, 학습 후보 구성과 승인 기반 학습을 하나의 흐름으로 연결
 
-업무 성과
-Achievements
+- Help non-developers see what data exists and how much
 
-- 엣지 디바이스 제약을 충족하는 현장 적용 가능 구조 확보
+- Connect search, review and approved training in one flow
 
-- Secured a field-deployable structure that satisfies edge-device constraints
+[image: Asking for the data inventory in chat]
 
-[image: Detection popup alert]
+보유 데이터 현황을 대화로 조회하는 화면
 
-AI CCTV 감시 공간 내 불꽃과 연기 감지 시 팝업 알림 예시
+Asking for the data inventory in chat
 
-Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV
+2
+Agent 워크플로우
+Agent Workflow
+
+[image: Vision data agent workflow]
+
+색인부터 학습 제출, 결과와 실패 분석까지 이어지는 Agent 워크플로우
+
+Agent workflow from indexing to training submission and failure analysis
+
+처리 흐름
+Workflow
+
+- SigLIP 임베딩으로 색인하고 자연어 및 이미지 질의로 검색 신규 및 변경 데이터 증분 색인
+
+- VLM으로 검색 결과와 라벨을 재확인하고 원천과 분리된 영역에 후보 구성
+
+- 사람 승인 후 GPU 학습을 제출하고 오탐 사례는 다시 탐색으로 연결
+
+- Index with SigLIP embeddings and search by text or image Incremental indexing of new and changed data
+
+- A VLM re-checks hits and labels; candidate sets are built apart from source data
+
+- GPU training runs after human approval; false positives loop back to search
+
+설계 원칙
+Design principles
+
+- 의도 해석과 설명은 대화 모델, 경로 검증과 실행 조건은 결정론적 코드
+
+- 기능을 조회, 생성, 실행으로 나눠 실행 단계에만 사람 승인 적용 원천 데이터 읽기 전용
+
+- Chat model for intent and explanation; deterministic code for paths and run conditions
+
+- Tools split into query, create and execute; only execution needs human approval Source data stays read-only
 
 3
-실 적용 현황
-Field Deployment Status
+구현과 검증
+Build & Validation
 
 담당 업무
 Responsibilities
 
-- 화재 감지 보조 시스템 현장 시연 및 적용 작업
+- SigLIP과 LanceDB 기반 자연어 및 이미지 검색, 증분 색인 구축
 
-- 운영 중 모델 오탐 원인 분석 및 재학습 대응
+- VLM 검수와 학습 후보 구성을 잇는 LangGraph 멀티모달 Agent 설계
 
-- Ran on-site demonstration and deployment work for the auxiliary fire detection system
+- 데이터 조회와 GPU 학습 권한을 분리하고 실제 학습에 사람 승인 적용 수량, 검수 상태, 경로 중복 검사와 감사 로그, 제출 잠금 적용
 
-- Diagnosed model false-positive causes during operation and addressed them through retraining
+- Built text and image search with incremental indexing on SigLIP and LanceDB
+
+- Designed a LangGraph multimodal agent linking VLM review to training-set building
+
+- Separated data-query and GPU-training permissions and required approval for real training Count, review-status and path-overlap checks, audit log and submission lock
 
 업무 성과
 Achievements
 
-- 광명센트럴아이파크 전기차 충전구역 실적용
+- 수만 장 규모 비전 데이터를 통합 색인해 대화형 현황 탐색 경로 구축
 
-- 반복 오탐 케이스를 재학습 데이터에 반영해 현장 대응 모델 개선 운영 초기 대비 오탐 알람 약 88% 감소
+- 탐색부터 승인, 실제 GPU 학습과 결과 조회까지 E2E 동작 검증 승인 없는 실행과 동일 학습의 중복 제출 차단 확인
 
-- 현장 운영 데이터 기반 후속 고도화 연구로 논문 2건 추가 게재 경량 초해상화 기술 검토 (ICCVW 2025) 합성 데이터 생성 자동화 (WACVW 2026)
+- 모델 오탐 이미지를 유사 데이터 재탐색과 후속 학습 후보 구성으로 연결
 
-- Deployed in production at Gwangmyeong Central IPARK's EV charging zone
+- Built a conversational way to explore tens of thousands of indexed vision images
 
-- Improved the field-response model by folding recurring false positives back into the training data ~88% fewer false alarms compared with the initial operation period
+- Validated end to end from exploration and approval to real GPU training and results Unapproved runs and duplicate submissions blocked
 
-- Published 2 follow-up papers from advancement research on field-operation data Lightweight super-resolution study (ICCVW 2025) Automated synthetic data generation (WACVW 2026)
+- Linked false-positive images to similar-data search and the next training candidates
 
-[image: Field deployment example]
+[image: Approval card before the real GPU training run]
 
-광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황
+실제 GPU 학습 제출 전 승인 카드
 
-AI-assisted fire detection deployed at Gwangmyeong Central IPARK
+Approval card before the real GPU training run
+
+### 비전 기반 행동 인지 케어 로봇
+
+Vision-Based Care Robot
+
+개인 프로젝트
+Personal
+
+핵심 역할
+Key role
+
+케어 로봇 설계 및 개발 주도 (컨셉, 인지 평가, 질문 우선 FSM, 논문 발표)
+Led care-robot design and development (concept, perception evaluation, ask-first FSM, paper)
+
+1
+추진 배경과 외형, 행동 설계
+Background, Form & Behavior Design
+
+기존 문제점
+Problem
+
+- 혼자 사는 고령자는 밤에 가장 취약하지만 도움은 가장 멀리 있음
+
+- 카메라 모니터링은 감시로 느껴져 거부되는 경우가 많음
+
+- 공개 벤치마크의 높은 정확도가 로봇 카메라 시점에서 유지되는지 불확실
+
+- Older adults living alone are most vulnerable at night, when help is farthest away
+
+- Camera monitoring feels like surveillance and is often refused
+
+- Unclear whether high public-benchmark accuracy holds at a robot camera's viewpoint
+
+업무 목표
+Objectives
+
+- 이상 단서를 경보 대신 질문의 계기로 쓰는 침대 옆 케어 로봇 설계
+
+- 벤치마크 성능과 로봇 시점 성능을 분리해 실제 상호작용 지표로 평가
+
+- Design a bedside care robot that treats a distress cue as a reason to ask, not to alert
+
+- Separate benchmark from robot-view performance and score what matters for interaction
+
+담당 업무
+Responsibilities
+
+- 기성 팬틸트 카메라에 종이 얼굴을 입혀 렌즈가 눈동자가 되는 외형 설계 Tapo C220과 Jetson Orin Nano로 1차 실물 프로토타입 제작
+
+- 고개 돌리기, 기울이기, 끄덕임으로 주목, 망설임, 안심을 표현하는 행동 설계 실제 팬틸트 구동은 이번 평가 범위에서 제외
+
+- 벽을 향해 눈을 감는 프라이버시 상태로 보지 않음을 확인 가능하게 설계
+
+- Gave a stock pan-tilt camera a paper face, its lens as the pupil First physical prototype on a Tapo C220 and Jetson Orin Nano
+
+- Designed turns, tilts and nods that read as attention, hesitation and reassurance Actual pan-tilt motion was outside this evaluation
+
+- A privacy pose facing the wall with the eye shut makes not watching visible
+
+[image: Nuni prototype evolution]
+
+기성 부품(왼쪽)과 1차 종이 얼굴 프로토타입(오른쪽)
+
+Off-the-shelf parts (left) and the first paper-face prototype (right)
+
+2
+케어 로봇의 인지와 질문 흐름 설계
+Perception & Question Flow of the Care Robot
+
+[image: Perception paths and the question-first controller]
+
+두 인지 경로와 질문 우선 제어기 구성
+
+Two perception paths and the question-first controller
+
+처리 흐름
+Workflow
+
+- 로봇 카메라 640×360 영상에서 신체 단서를 인식해 ROS 2 이벤트로 전달
+
+- 확인된 단서마다 질문 2.5초와 응답 창 8초를 두 번까지 반복 유효 응답이나 손 흔들기 시 중단, 두 번 모두 무응답일 때만 알림 1회
+
+- 알림 뒤에는 사용자 곁에 머무르고 15초 쿨다운으로 중복 알림 억제
+
+- Recognise body cues in the robot camera's 640×360 stream and pass them on as ROS 2 events
+
+- Each confirmed cue opens up to two rounds of a 2.5 s prompt and an 8 s response window A valid response or a wave stands down; one alert only after two silent windows
+
+- After an alert the robot stays with the person; a 15 s cooldown blocks duplicates
+
+설계 원칙
+Design principles
+
+- 인지와 제어를 분리해 모델을 바꿔도 상위 행동 정책 유지
+
+- RGB 외형 경로와 포즈 중심 경로를 따로 평가하고 결합하지 않음
+
+- Perception and control are separate, so the behaviour policy survives a model swap
+
+- The RGB appearance path and the pose-centric path are evaluated separately, never fused
+
+3
+검증과 연구 발표
+Validation & Publication
+
+담당 업무
+Responsibilities
+
+- 로봇 카메라 1~2m 거리 단일 배우 영상 28개로 두 인지 경로 비교 이상 행동 16개, 손 흔들기 4개, 정상 8개
+
+- 카메라와 모델을 우회해 ROS 2 토픽에 이벤트를 주입하는 시험 환경 구성 첫 응답 5회, 무응답 5회, 경계 조건 3회
+
+- Compared two perception paths on 28 single-actor clips from the robot camera at 1–2 m 16 distress, 4 waving, 8 normal
+
+- Built a harness injecting events into ROS 2 topics, bypassing camera and models 5 early responses, 5 no-responses, 3 boundary cases
+
+업무 성과
+Achievements
+
+- 벤치마크 97.7% RGB 모델이 로봇 시점에서 질문 단서 2/16에 그침 확인 포즈 중심 경로는 12/16, 정상 영상의 불필요한 질문 2/8
+
+- 질문 우선 FSM 이벤트 주입 시험 13/13회 통과 무응답 시 평균 21.65초 뒤 알림 1회, 중복 알림과 교착 없음
+
+- 연구 성과 발표 — 워크숍 논문 1건, 로봇 디자인 대회 1건 로봇 시점 행동 인지 전이 평가 (IROSW 2026) 케어 로봇 사용 시나리오와 행동 설계 (RO-MAN 2026 RDC)
+
+- A 97.7% benchmark RGB model raised an askable cue in only 2/16 robot-view clips The pose-centric path reached 12/16, with 2/8 needless questions on normal clips
+
+- Passed 13/13 event-injection tests of the ask-first FSM One alert on average 21.65 s after silence, no duplicates or deadlocks
+
+- Presented the work — 1 workshop paper, 1 competition entry Robot-view action-recognition transfer (IROSW 2026) Care-robot scenarios and behavior design (RO-MAN 2026 RDC)
+
+[image: Robot-camera clips confirmed by the pose-centric path]
+
+포즈 중심 경로가 단서를 확인한 로봇 시점 영상 (얼굴 흐림 처리)
+
+Robot-camera clips where the pose-centric path confirmed the cue (faces blurred)
+
+### 아이파크몰 AI 방문자 분석 PoC
+
+IPARK Mall AI Visitor Analytics PoC
+
+핵심 역할
+Key role
+
+기술 PM (PoC 범위와 KPI 설계, 개발 실행과 현장 검증 조율)
+Technical PM (PoC scope and KPIs, delivery, field validation)
+
+협업AI 엔지니어 3명, PM(내부 사업개발팀)
+With3 AI engineers, PM (in-house business development)
+
+1
+방문자 분석 PoC 설계와 현장 검증
+Visitor-Analytics PoC Design & Field Validation
+
+업무 목표
+Objectives
+
+- 출입구 CCTV 기반 방문자 IN/OUT 및 특성 분석의 현장 적용 가능성 검증
+
+- 실환경 데이터 기반 모델 성능과 운영 조건 확인
+
+- Validate whether entrance-CCTV visitor IN/OUT and attribute analysis works in the field
+
+- Check model performance and field operating conditions
+
+담당 업무
+Responsibilities
+
+- 온프레미스 환경과 개인정보 보호 조건을 반영한 CCTV 데이터 처리 구조 설계
+
+- 기능별 KPI와 평가 기준 수립, AI 엔지니어 3명의 실행 항목과 완료 기준 구조화
+
+- 성별과 연령 예측 모델 학습용 공개 데이터셋 RAPv2 고해상도 증강 Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 84,928장 생성, 5종 지표 자동 검수로 10,413장 재생성
+
+- Designed CCTV data processing for on-premises and privacy constraints
+
+- Set per-feature KPIs and evaluation criteria, and structured work and done criteria for 3 AI engineers
+
+- Augmented the public RAPv2 dataset in high resolution for the gender and age models Qwen-Image-Edit kept pose and clothing and restored only detail 84,928 generated, 10,413 regenerated after five-metric automatic QC
+
+업무 성과
+Achievements
+
+- 영상과 얼굴 정보를 외부로 전송하지 않는 현장 PoC 운영 22개 CCTV, 3주 운영, 방문 기록 250만 건 이상 처리
+
+- 대표 출입구 직접 계수와 CCTV 재검수로 계수 정확도 약 95% 확인 외형 판정 평가 라벨 기준 성별 90.7%, 연령대 90.5% 일치
+
+- Retail 챗봇 260문항 평가 정답률 83.1% 답변 품질 3.82/5, 사실 정확성 4.28/5
+
+- Ran the on-site PoC with no video or face data leaving the site 22 CCTV cameras, 3 weeks, 2.5M+ visit records
+
+- Confirmed ~95% counting accuracy by hand counts at representative entrances, re-checked on CCTV Gender 90.7% and age-group 90.5% agreement with appearance-based evaluation labels
+
+- 83.1% accuracy on the 260-question retail chatbot evaluation Answer quality 3.82/5, factual accuracy 4.28/5
+
+[image: Entrance IN/OUT counting line]
+계수선
+Counting line
+
+[image: Gender and age estimates]
+성별과 연령
+Gender and age
+
+[image: Visitor analytics dashboard]
+대시보드
+Dashboard
+
+[image: Retail chatbot conversation]
+챗봇
+Chatbot
+
+현장 PoC 결과 화면
+
+Field PoC result screens
+
+2
+KPI 평가셋 구축을 위한 라벨링 진척 자동화
+Labeling Progress Automation for the KPI Evaluation Set
+
+기존 문제점
+Problem
+
+- 비디오 라벨링 특성상 완료 영상 수와 실제 객체 처리량 간 차이 발생
+
+- In video labeling, completed-clip counts diverged from the objects actually processed
+
+담당 업무
+Responsibilities
+
+- 다중 사용자 라벨링 도구 구축 및 검수 기준 설계
+
+- n8n으로 작업자별 객체 수와 달성률을 집계해 Dooray로 공유
+
+- 원본 작업 시트는 읽기 전용 유지, 발송 이력으로 반복 알림 억제
+
+- Built a multi-user labeling tool and designed review criteria
+
+- Aggregated per-worker object counts and progress with n8n and shared them to Dooray
+
+- Kept the source sheet read-only and suppressed repeat alerts with a send log
+
+업무 성과
+Achievements
+
+- 연령대 및 성별 라벨 데이터 약 5만 장 구축
+
+- 작업자 5명의 진척을 영상 수 대신 객체 수 기준으로 자동 공유
+
+- Built ~50k age-group and gender labels
+
+- Shared progress for 5 workers automatically, counted in objects rather than clips
+
+[image: n8n labeling progress workflow]
+
+n8n 기반 라벨링 진척 집계 및 Dooray 알림 워크플로우
+
+n8n workflow aggregating labeling progress and posting Dooray alerts
+
+3
+품질 관제 Agent로 확장
+Extension to a Quality-Monitoring Agent
+
+[image: Monitoring agent flow]
+
+통계 탐지부터 멀티모달 진단, 사람 검토까지 이어지는 관제 흐름
+
+Monitoring flow from statistical detection to multimodal diagnosis and human review
+
+기존 문제점
+Problem
+
+- PoC 운영 중 녹화 기록과 방문객 지표 이상을 정기 점검할 체계 필요
+
+- Running the PoC showed a need to routinely check camera recordings and visitor-metric anomalies
+
+담당 업무
+Responsibilities
+
+- 규칙과 통계로 이상과 심각도를 판정하고 GPT-5.5는 원인 진단에만 적용
+
+- 방문객 통계와 이동 궤적 이미지를 결합한 멀티모달 진단 흐름 설계
+
+- 고위험 이상은 메일 알림과 사람 검토, 운영 데이터는 읽기 전용 조회
+
+- Decided anomalies and severity with rules and statistics, using GPT-5.5 only to diagnose causes
+
+- Designed a multimodal diagnosis combining visitor statistics with trajectory images
+
+- Sent high-risk anomalies to email review and read operational data read-only
+
+업무 성과
+Achievements
+
+- 실제 운영 데이터로 이상 탐지, 멀티모달 진단과 사람 검토 E2E 검증
+
+- 사람 검토를 거쳐 7개 카메라의 계수선 또는 관심 영역 설정 조정 조정 후 반복 동선에서 발생하던 비정상 계수의 감소 방향 확인
+
+- Validated detection, multimodal diagnosis and human review end to end on live data
+
+- Adjusted counting lines or ROIs on 7 cameras after review Abnormal counts from repeated movements declined after the change
+
+count_inflation
+반복 교차 및 계수선 위치 진단
+Repeated crossings and line position S2
+
+[image: count_inflation case on 3F_cam09]
+
+IN/OUT과 고유 궤적의 불일치를 탐지하고 궤적 이미지로 반복 교차 원인을 검토
+Flags IN/OUT counts that disagree with unique tracks and reviews repeated crossings on the trajectory image
+
+traffic_spike
+이동 궤적 기반 원인 추정
+Cause estimated from trajectories S2
+
+[image: traffic_spike case on 1F_cam30]
+
+기준선 대비 방문객 급증을 탐지하고 궤적의 집중과 단절 패턴을 원인 후보로 분석
+Flags visitor surges against the baseline and analyses dense or broken tracks as likely causes
 
 ### 엘리베이터 내부 상황 분석 시스템
 
@@ -632,6 +1011,141 @@ Under Review
 행동 인식 합성 데이터셋 증강
 Action-Recognition Synthetic Dataset Augmentation
 
+### 지하주차장 화재 감지 보조 시스템
+
+Underground Parking Fire Detection Assistance System
+
+핵심 역할
+Key role
+
+AI 시스템 개발 주도 (데이터, 모델 학습, 판단 구조)
+Led AI system development (data, model training, decision pipeline)
+
+협업PoC(팀 엔지니어 2명), 하드웨어/현장 포팅(수호이미지), 플랫폼/알람(내부 플랫폼팀)
+WithPoC (2 team engineers), hardware/field porting (Suho Image), platform/alerts (internal platform team)
+
+1
+기술 PoC 및 연구
+Technical PoC & Research
+
+연구 필요성
+Motivation
+
+- 잇따른 지하주차장 전기차 화재 발생으로 전용 화재 감지 시스템 요구
+
+- 이상온도 조기 감지 및 자동 알림이 가능한 화재 감지 보조 시스템 구축 필요
+
+- Recurring EV fires in underground parking lots created demand for a dedicated detection system
+
+- An auxiliary system with early thermal-anomaly detection and automatic alerts was needed
+
+담당 업무
+Responsibilities
+
+- 지하주차장 CCTV 환경 특화 합성 데이터 생성
+
+- 화재/연기 탐지 YOLO 모델 재학습 및 검증
+
+- YOLOv8s + VLM(Florence2) 기반 탐지 PoC 설계
+
+- Built underground-parking CCTV-specific synthetic data
+
+- Retrained and validated YOLO fire/smoke detectors
+
+- Designed a YOLOv8s + VLM(Florence2) detection PoC
+
+업무 성과
+Achievements
+
+- 합성 데이터 활용으로 화재/연기 탐지 정량 성능 향상 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83
+
+- 연구 성과를 지식재산권으로 확보 — 논문 1건 게재, 특허 1건 등록 YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025)
+
+- Improved fire/smoke detection accuracy using synthetic data F1 0.82 → 0.86, smoke recall 0.70 → 0.83
+
+- Secured intellectual property from the work — 1 paper published, 1 patent granted YOLO-VLM-based indoor fire detection (ICLRW 2025)
+
+[image: Fire detection framework]
+
+ICLRW에 게재한 YOLO 및 VLM이 결합된 화재 감지 프레임워크
+
+YOLO + VLM fire detection framework published at ICLRW
+
+2
+현장 적용을 위한 재설계
+Redesign for Field Deployment
+
+기존 문제점
+Problem
+
+- 초기 VLM 중심 PoC 구조가 엣지 디바이스 제약으로 현장 적용에 한계
+
+- The initial VLM-centric PoC hit field-deployment limits under edge-device constraints
+
+담당 업무
+Responsibilities
+
+- YOLOv8n + CLIP 경량 구조 + Hailo 듀얼칩으로 재설계
+
+- 단순 모델 교체가 아닌 사후 검증(Detector → VLM) 판단 구조로 설계
+
+- 외부 포팅 업체, 내부 플랫폼팀과 협업해 모니터링/알람 서비스 연동
+
+- Redesigned to a YOLOv8n + CLIP lightweight architecture on a dual-chip Hailo runtime
+
+- Designed a post-hoc verification (Detector → VLM) decision structure rather than a simple model swap
+
+- Connected monitoring/alert services with an external porting vendor and the internal platform team
+
+업무 성과
+Achievements
+
+- 엣지 디바이스 제약을 충족하는 현장 적용 가능 구조 확보
+
+- Secured a field-deployable structure that satisfies edge-device constraints
+
+[image: Detection popup alert]
+
+AI CCTV 감시 공간 내 불꽃과 연기 감지 시 팝업 알림 예시
+
+Example of a pop-up alert raised when flame/smoke is detected by an AI-monitored CCTV
+
+3
+실 적용 현황
+Field Deployment Status
+
+담당 업무
+Responsibilities
+
+- 화재 감지 보조 시스템 현장 시연 및 적용 작업
+
+- 운영 중 모델 오탐 원인 분석 및 재학습 대응
+
+- Ran on-site demonstration and deployment work for the auxiliary fire detection system
+
+- Diagnosed model false-positive causes during operation and addressed them through retraining
+
+업무 성과
+Achievements
+
+- 광명센트럴아이파크 전기차 충전구역 실적용
+
+- 반복 오탐 케이스를 재학습 데이터에 반영해 현장 대응 모델 개선 운영 초기 대비 오탐 알람 약 88% 감소
+
+- 현장 운영 데이터 기반 후속 고도화 연구로 논문 2건 추가 게재 경량 초해상화 기술 검토 (ICCVW 2025) 합성 데이터 생성 자동화 (WACVW 2026)
+
+- Deployed in production at Gwangmyeong Central IPARK's EV charging zone
+
+- Improved the field-response model by folding recurring false positives back into the training data ~88% fewer false alarms compared with the initial operation period
+
+- Published 2 follow-up papers from advancement research on field-operation data Lightweight super-resolution study (ICCVW 2025) Automated synthetic data generation (WACVW 2026)
+
+[image: Field deployment example]
+
+광명센트럴아이파크 AI 화재감지 보조 시스템 적용 현황
+
+AI-assisted fire detection deployed at Gwangmyeong Central IPARK
+
 ### 지적재산권 확보
 
 Intellectual Property Portfolio
@@ -697,6 +1211,12 @@ SIGGRAPH Asia 2024
 
 OverallNet: Scale-Arbitrary Lightweight SR
 
+← 이전 프로젝트
+← Previous
+
+다음 프로젝트 →
+Next →
+
 © Dongsik Yoon Home
 
 
@@ -714,20 +1234,26 @@ OverallNet: Scale-Arbitrary Lightweight SR
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/119/0003093394
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/241/0003495235
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/215/0001221815
+- 로봇 시점 행동 인지 전이 평가 (IROSW 2026) -> https://papers/irosw2026/
+- 케어 로봇 사용 시나리오와 행동 설계 (RO-MAN 2026 RDC) -> https://papers/nuni-roman2026/
+- Robot-view action-recognition transfer (IROSW 2026) -> https://papers/irosw2026/
+- Care-robot scenarios and behavior design (RO-MAN 2026 RDC) -> https://papers/nuni-roman2026/
+- Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 -> https://ai-works/deck/#slide=2
+- Qwen-Image-Edit kept pose and clothing and restored only detail -> https://ai-works/deck/#slide=2
+- HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
+- HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
+- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://ai-works/deck/#slide=5
+- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://ai-works/deck/#slide=5
+- 합성 데이터 생성 자동화 (WACVW 2026) -> https://papers/wacvw2026/
+- Automated synthetic data generation (WACVW 2026) -> https://papers/wacvw2026/
+- Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
+- Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://papers/ntu60-audio/
 - 지하주차장 CCTV 환경 특화 합성 데이터 생성 -> https://ai-works/deck/#slide=7
 - Built underground-parking CCTV-specific synthetic data -> https://ai-works/deck/#slide=7
 - YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025) -> https://papers/iclrw2025/
 - YOLO-VLM-based indoor fire detection (ICLRW 2025) -> https://papers/iclrw2025/
 - 경량 초해상화 기술 검토 (ICCVW 2025) -> https://papers/iccvw2025/
-- 합성 데이터 생성 자동화 (WACVW 2026) -> https://papers/wacvw2026/
 - Lightweight super-resolution study (ICCVW 2025) -> https://papers/iccvw2025/
-- Automated synthetic data generation (WACVW 2026) -> https://papers/wacvw2026/
-- HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
-- HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
-- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://ai-works/deck/#slide=5
-- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://ai-works/deck/#slide=5
-- Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
-- Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://papers/ntu60-audio/
 - 홈 Publications -> https://#publications
 - Patents -> https://#patents
 - Publications -> https://#publications
@@ -2312,7 +2838,8 @@ PDF 다운로드
 - Dongsik Yoon, Jineui Kim, Vincent Lorant, Sungku Kang. "Manipulation of Age Variation using StyleGAN inversion and fine-tuning." IEEE Access, 2023 [SCI-E] (IF=3.9) — https://stillrot.github.io/papers/access2023/
 - Dongsik Yoon, Yuanming Li, Bonwha Ku, Hanseok Ko. "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN." IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 [SCI-E] (IF=5.3) — https://stillrot.github.io/papers/grsl2023/
 
-### Conferences (13)
+### Conferences (14)
+- Dongsik Yoon. "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot." IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW), 2026 — https://stillrot.github.io/papers/irosw2026/
 - Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon. "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents." arXiv, 2026 — https://arxiv.org/abs/2604.15802
 - Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition." Under review, 2026 — https://stillrot.github.io/papers/ntu60-audio/
 - Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." Under review, 2026 — https://arxiv.org/abs/2602.10818
@@ -2380,8 +2907,11 @@ PDF 다운로드
   - 넷마블(대표 권영식,도기욱)은 메타버스엔터테인먼트(대표 서우원)와 업스테이지(대표 김성훈)가 '페르소나 AI 공동 개발'을 위한 전략적 협업을 맺었다고 21일 밝혔다.
 
 ======================================================================
-## Research / Papers (10)
+## Research / Papers (11)
 
+- "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot" (Ask Before It Tells) — IROSW 2026, 2026
+  - Authors: Dongsik Yoon
+  - Body-cue recognition can support assistive robots, but benchmark accuracy does not guarantee reliable behavior under a robot-camera viewpoint. We present Nuni, a bedside robot prototype that treats a detected distress cue as a reason to ask rather than a reason to alert. We compare two X3D-UGT RGB appearance classifiers, which reach 97.7% and 94.8% six-way accuracy on NTU RGB+D, with a pose-centric hybrid pipeline on 28 single-actor scripted clips recorded from the robot camera. The hybrid path achieved 0.71 six-way macro recall, versus 0.25 and 0.29 for the fine-tuned and from-scratch RGB variants. More importantly for interaction, it produced a question-triggering distress cue in 12/16 distress clips and would have prompted unnecessarily in 2/8 normal clips; the RGB variants yielded a question-triggering cue in only 2/16 and 3/16 distress clips. We separately tested the question-first controller through event injection. All 13 state-transition trials passed: valid responses caused stand-down, two unanswered prompts produced one alert, and three boundary conditions were handled correctly. These results are a preliminary technical evaluation, not a user study or medical validation, but they show how interaction policy can limit the consequences of uncertain perception.
 - "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition" (NTU60-AUDIO) — Under review, 2026
   - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
 - "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026 (Oral)
