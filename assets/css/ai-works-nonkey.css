@@ -16,7 +16,7 @@
   --eng-wash: #e4efec;
   --eng-ink: #3d6a5f;
 
-  --card-sh: 0 0.25mm 0.7mm rgba(26, 44, 68, 0.10);
+  --card-sh: 0.2mm 0.35mm 0 rgba(26, 44, 68, 0.10);
 }
 
 .pg.nonkey .chk {
@@ -1022,7 +1022,12 @@
 }
 
 .pg.nonkey .gen.real {
- overflow: hidden; border-color: var(--line); background: #fff;
+ border-color: var(--line); background: #fff;
+}
+
+.pg.nonkey .gen.real img,
+.pg.nonkey .vf.real img {
+ border-radius: inherit;
 }
 
 .pg.nonkey .gen.real img {
@@ -1096,9 +1101,7 @@
   white-space: nowrap;
 }
 
-.pg.nonkey .stk .vf.real {
- overflow: hidden;
-}
+.pg.nonkey .stk .vf.real .vl { z-index: 1; }
 
 .pg.nonkey .vf.real img {
  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
