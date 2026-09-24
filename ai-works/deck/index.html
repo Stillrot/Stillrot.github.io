@@ -148,7 +148,7 @@
             <div class="vf real" style="--x:3.3mm; --y:3mm; --h:29mm; --r:-1.5deg;"><img src="./assets/nonkey/reel-0750.jpg" alt="릴스 LOOK 05 장면"></div>
             <div class="vf real" style="--x:5.8mm; --y:3.4mm; --h:29mm; --r:3.5deg;"><img src="./assets/nonkey/reel-0250.jpg" alt="릴스 LOOK 06 장면"><svg class="pl" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 0.8v8.4L9 5z"/></svg><i class="vl">릴스 0:05</i></div>
           </div>
-          <div class="cn"><em>게시</em></div>
+          <div class="cn"><em>보정</em></div>
 
           <!-- 7. post -->
           <div class="post-cap" aria-label="인스타그램 게시">
@@ -307,7 +307,7 @@
           <h5>재생성 대상 판정 사례</h5>
           <!-- Flexes between these bounds so the column always reaches the same depth
                as the results grid; text edits above are absorbed here, not left as a gap. -->
-          <div class="fq2" style="grid-template-rows: minmax(0,1fr); flex:1 1 auto; min-height:24mm; max-height:36mm; margin-top:0;">
+          <div class="fq2" style="grid-template-rows: minmax(0,1fr); flex:none; height:29.57mm; margin-top:0;">
             <figure>
               <div class="sq-imgs">
                 <img src="./assets/f_b_orig.jpg" alt="원본"><img src="./assets/f_b_fail.jpg" alt="실패본">
@@ -326,7 +326,9 @@
       <div class="rescol">
         <h4>최종 복원 결과</h4>
         <p class="rsub">세로 197~515px 원본을 1522~1568px로 복원 &mdash; 픽셀 수 기준 9~59배</p>
-        <div class="sq2">
+        <!-- Fixed track heights: in page.pdf() the 1fr rows went indefinite and the
+             photos grew to their natural height, pushing the footer off the page. -->
+        <div class="sq2" style="flex:none; height:148.95mm; grid-template-rows:repeat(2, minmax(0, 72.48mm));">
           <figure class="sq">
             <div class="sq-imgs">
               <img src="./assets/q_a_orig.jpg" alt="원본"><img src="./assets/q_a_synth.jpg" alt="복원">
