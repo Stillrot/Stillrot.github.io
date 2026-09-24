@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="stylesheet" href="../../assets/css/ai-works-deck.css?v=20260807c">
+<link rel="stylesheet" href="../../assets/css/ai-works-nonkey.css?v=20260924a">
 </head>
 <body class="deck">
 
@@ -33,16 +34,19 @@
       <div class="plist">
         <p class="cv-kick">수록 작업</p>
         <div class="prj">
-          <h3><span class="cv-num">01</span>보행자 성별/연령 데이터셋 증강<span class="mtail">Qwen-Image-Edit</span><span class="pgno">02&ndash;03</span></h3>
+          <h3><span class="cv-num">01</span>상품 이미지 기반 캐릭터 룩북 생성<span class="mtail">GPT Image, Higgsfield, MiniMax H3</span><span class="pgno">02</span></h3>
         </div>
         <div class="prj">
-          <h3><span class="cv-num">02</span>특정 현장 대상 데이터셋 생성 자동화<span class="mtail">FLUX.2</span><span class="pgno">04&ndash;05</span></h3>
+          <h3><span class="cv-num">02</span>보행자 성별/연령 데이터셋 증강<span class="mtail">Qwen-Image-Edit</span><span class="pgno">03&ndash;04</span></h3>
         </div>
         <div class="prj">
-          <h3><span class="cv-num">03</span>현장 수집 제약 데이터셋 생성<span class="mtail">SD1.5 + FLUX.1, ControlNet</span><span class="pgno">06&ndash;07</span></h3>
+          <h3><span class="cv-num">03</span>특정 현장 대상 데이터셋 생성 자동화<span class="mtail">FLUX.2</span><span class="pgno">05&ndash;06</span></h3>
         </div>
         <div class="prj">
-          <h3><span class="cv-num">04</span>특정 인물 얼굴 생성과 디테일 보정<span class="mtail">SD1.5, SD2.0, SDXL, LCM, IPAdapter</span><span class="pgno">08</span></h3>
+          <h3><span class="cv-num">04</span>현장 수집 제약 데이터셋 생성<span class="mtail">SD1.5 + FLUX.1, ControlNet</span><span class="pgno">07&ndash;08</span></h3>
+        </div>
+        <div class="prj">
+          <h3><span class="cv-num">05</span>특정 인물 얼굴 생성과 디테일 보정<span class="mtail">SD1.5, SD2.0, SDXL, LCM, IPAdapter</span><span class="pgno">09</span></h3>
         </div>
       </div>
     </div>
@@ -54,7 +58,168 @@
   </div>
 
   <div class="pg-foot">
-    <span>01 / 08</span>
+    <span>01 / 09</span>
+  </div>
+</section>
+
+<!-- ===== 01 PERSONAL: 상품 이미지 기반 캐릭터 룩북 생성 (@fashionnonkey) ===== -->
+<section class="pg tx-lg nonkey">
+  <div class="pg-head"></div>
+  <div class="company-brand personal" aria-label="개인 프로젝트">
+    <b>PERSONAL PROJECT</b>
+    <small>INSTAGRAM</small>
+  </div>
+
+  <h1 class="t1">상품 이미지 기반 캐릭터 룩북 생성<span class="sub"><a href="https://www.instagram.com/fashionnonkey/">@fashionnonkey 인스타그램<span class="ext">&#8599;</span></a></span>
+  </h1>
+  <dl class="specs" style="margin-top:5mm;">
+    <div>
+      <dt>작업 개요</dt>
+      <dd class="concept">모델 촬영 없이 상품 이미지만으로 고정 캐릭터의 착용 컷과 릴스를 만드는 제작 파이프라인</dd>
+    </div>
+    <div>
+      <dt>생성 방식</dt>
+      <dd class="concept">상품 사진을 레퍼런스로 같은 착장 프롬프트를 GPT Image와 Higgsfield 기반으로 생성해 비교하고, 채택 컷은 MiniMax H3로 영상화</dd>
+    </div>
+  </dl>
+
+  <div class="nk">
+
+    <!-- ===== upper band: one look, left to right ===== -->
+    <section>
+      <div class="fig-t">제작 흐름<span class="cred">LOOK 06 게시물 기준</span></div>
+      <div class="lane">
+        <div class="flow11">
+
+          <!-- 1. product stack: numbers key into 착장 구성 below -->
+          <div class="stk" style="width:41mm; height:36mm;">
+            <figure class="pc" style="--x:17.6mm; --y:1mm; --w:20.5mm; --r:4.5deg; z-index:1;"><img src="./assets/nonkey/projectgr-denim.jpg" alt="Project G/R 레트로 배기 데님"><i class="n">3</i></figure>
+            <figure class="pc" style="--x:0.9mm; --y:0.6mm; --w:22mm; --r:-5deg; z-index:2;"><img src="./assets/nonkey/palace-oakley-fleece.jpg" alt="Palace x Oakley 플리스"><i class="n">1</i></figure>
+            <figure class="pc" style="--x:3mm; --y:15.2mm; --w:19.6mm; --r:3deg; z-index:3;"><img src="./assets/nonkey/timberland-6inch.jpg" alt="Timberland 6인치 부츠"><i class="n" style="right:auto; left:1mm;">4</i></figure>
+            <figure class="pc zoom" style="--x:19.8mm; --y:17.2mm; --w:17.6mm; --r:-3deg; z-index:4;"><img src="./assets/nonkey/prada-symbole.jpg" alt="Prada Symbole 선글라스"><i class="n">2</i></figure>
+          </div>
+          <div class="cn"><em>입력</em></div>
+
+          <!-- 2. image engine -->
+          <div class="eng">
+            <small>IMAGE A/B</small>
+            <b>GPT Image</b>
+            <i>vs</i>
+            <b>Higgsfield</b>
+            <small class="mcp">MCP 연결</small>
+          </div>
+          <div class="cn"><em>출력</em></div>
+
+          <!-- 3. generated stills stack: back cards peek up-left, GEN chips stay visible -->
+          <div class="stk" style="width:34mm; height:36mm;">
+            <div class="gen real rjk" style="--x:0.8mm; --y:0.9mm; --h:27.6mm; --r:-4deg;"><img src="./assets/nonkey/look06-reject-glasses.jpg" alt="LOOK 06 반려 컷" style="object-position:50% 30%"><i class="gt">반려</i></div>
+            <div class="gen real" style="--x:6.2mm; --y:4.1mm; --h:27.6mm; --r:-1deg;"><img src="./assets/nonkey/look06-b.jpg" alt="LOOK 06 생성 컷 씬 B"><i class="gt">GEN</i></div>
+            <div class="gen real" style="--x:11.6mm; --y:7.2mm; --h:27.6mm; --r:3deg;"><img src="./assets/nonkey/look06-a.jpg" alt="LOOK 06 생성 컷 씬 A"><i class="gt">GEN</i></div>
+          </div>
+          <div class="cn"><em>전송</em><i class="ghost"></i></div>
+
+          <!-- 4. Telegram hand-off -->
+          <div class="tg" style="width:40mm;">
+            <div class="tg-hd">
+              <i class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.3 20.2 4.6c.8-.3 1.5.2 1.3 1.3l-2.9 13.7c-.2 1-.8 1.2-1.6.8l-4.4-3.3-2.1 2c-.2.2-.4.4-.9.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.4 13.8 3 12.4c-.9-.3-1-.9 0-1.1z"/></svg></i>
+              <b>nonkey bot</b>
+              <em>재구성 예시</em>
+            </div>
+            <div class="tg-bd">
+              <div class="bb out album real"><i style="background-image:url(./assets/nonkey/look06-a.jpg)"></i><i style="background-image:url(./assets/nonkey/look06-b.jpg)"></i></div>
+              <div class="bb out txt"><span class="mono">LOOK 06</span></div>
+              <div class="bb in txt"><span class="mono">MiniMax H3</span>로 전달<span class="typing"><s></s><s></s><s></s></span></div>
+            </div>
+            <div class="tg-in"><span></span><i></i></div>
+          </div>
+          <div class="cn"><em>요청</em></div>
+
+          <!-- 5. video engine -->
+          <div class="eng">
+            <small>VIDEO</small>
+            <b>MiniMax</b>
+            <b>H3</b>
+          </div>
+          <div class="cn"><em>출력</em><i class="ghost v"></i></div>
+
+          <!-- 6. video frames stack -->
+          <div class="stk" style="width:23mm; height:36mm;">
+            <div class="vf real" style="--x:0.9mm; --y:3.4mm; --h:29mm; --r:-5deg;"><img src="./assets/nonkey/reel-1500.jpg" alt="릴스 LOOK 04 장면"></div>
+            <div class="vf real" style="--x:3.3mm; --y:3mm; --h:29mm; --r:-1.5deg;"><img src="./assets/nonkey/reel-0750.jpg" alt="릴스 LOOK 05 장면"></div>
+            <div class="vf real" style="--x:5.8mm; --y:3.4mm; --h:29mm; --r:3.5deg;"><img src="./assets/nonkey/reel-0250.jpg" alt="릴스 LOOK 06 장면"><svg class="pl" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 0.8v8.4L9 5z"/></svg><i class="vl">릴스 0:02</i></div>
+          </div>
+          <div class="cn"><em>게시</em></div>
+
+          <!-- 7. post -->
+          <div class="post-cap" aria-label="인스타그램 게시">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#1a2c44" stroke-width="1.7"><rect x="3" y="3" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1"/></svg>
+          </div>
+
+          <!-- captions -->
+          <div class="sc" style="grid-column:1;"><b><em>01</em>상품 이미지</b><small>상품 4점 + 후디 레이어</small></div>
+          <div class="sc" style="grid-column:3;"><b><em>02</em>착장 컷 생성</b><small>두 경로 비교 후 채택</small></div>
+          <div class="sc" style="grid-column:5;"><b><em>03</em>생성 컷 여러 장</b><small>같은 캐릭터로 씬 A와 B</small></div>
+          <div class="sc" style="grid-column:7;"><b><em>04</em>텔레그램 봇</b><small>채택 컷 전송</small></div>
+          <div class="sc" style="grid-column:9;"><b><em>05</em>영상 생성</b><small>이미지로 영상 클립</small></div>
+          <div class="sc" style="grid-column:11;"><b><em>06</em>소개 영상</b><small>3개 룩 릴스로 편집</small></div>
+          <div class="sc" style="grid-column:13;"><b><em>07</em>게시</b><small>피드 2장, 릴스 별도</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== lower band: result, then how a failed cut became the kept one ===== -->
+    <div class="pay">
+
+      <section>
+        <div class="fig-t">실패 → 수정 → 채택<span class="fxcap cred">LOOK 06 실제 반려본 기준</span></div>
+        <div class="fx">
+          <div class="fxhd"><span>사례</span><span>반려 컷</span><span>실물 REF</span><span>조치</span><span>채택 컷</span></div>
+
+          <div class="fxrow">
+            <div class="fxl th">
+              <div class="tx">
+                <div class="cs"><em>CASE 01</em></div>
+                <b><i class="n9">1</i>가슴 로고 누락</b>
+                <span>Palace × Oakley 플리스</span>
+              </div>
+              <figure class="thumb"><img src="./assets/nonkey/look06-reject-glasses.jpg" alt="CASE 01 반려본 전체 프레임"><i class="mk" style="--mx:53.7%; --my:28.1%;"></i></figure>
+            </div>
+            <div class="fxc cut rj vs"><div class="crop" style="--z:1.9; --fx:53.7%; --fy:28.1%;"><img src="./assets/nonkey/look06-reject-glasses.jpg" alt="반려 컷: 가슴 로고가 빠진 플리스"></div><i class="gt">GEN</i><i class="ring" style="--rd:8mm;"></i><em class="vd rej">반려</em></div>
+            <div class="fxc ref" style="--z:4; --fx:60%; --fy:40%;"><img src="./assets/nonkey/palace-oakley-fleece.jpg" alt="Palace x Oakley 플리스 가슴 로고"><i class="gt">REF</i><i class="n9">1</i></div>
+            <div class="act to done"><b>프롬프트 수정</b><b><em>→</em>재생성</b><span><i class="n9">1</i> 로고 보완</span></div>
+            <div class="fxc cut ok to"><div class="crop" style="--z:3.4; --fx:52.9%; --fy:40.1%;"><img src="./assets/nonkey/look06-a.jpg" alt="채택 컷: 가슴 로고 확대"></div><i class="gt">게시본</i><i class="ring" style="--rd:8mm;"></i><em class="vd ok">채택</em></div>
+          </div>
+
+          <div class="fxrow">
+            <div class="fxl th">
+              <div class="tx">
+                <div class="cs"><em>CASE 02</em></div>
+                <b><i class="n9">2</i>선글라스 디테일 누락</b>
+                <span>Prada Symbole 선글라스</span>
+              </div>
+              <figure class="thumb"><img src="./assets/nonkey/look06-reject-logo.jpg" alt="CASE 02 반려본 전체 프레임"><i class="mk" style="--mx:49%; --my:14.5%;"></i></figure>
+            </div>
+            <div class="fxc cut rj vs"><div class="crop" style="--z:3.1; --fx:49%; --fy:14.5%;"><img src="./assets/nonkey/look06-reject-logo.jpg" alt="반려 컷: Prada 디테일이 없는 선글라스"></div><i class="gt">GEN</i><i class="ring oval" style="--rd:16mm;"></i><em class="vd rej">반려</em></div>
+            <div class="fxc ref" style="--z:2.2; --fx:35%; --fy:57%;"><img src="./assets/nonkey/prada-symbole.jpg" alt="Prada Symbole 선글라스 템플 로고"><i class="gt">REF</i><i class="n9">2</i></div>
+            <div class="act to done"><b>프롬프트 수정</b><b><em>→</em>재생성</b><span><i class="n9">2</i> 디테일 보완</span></div>
+            <div class="fxc cut ok to"><div class="crop" style="--z:3.0; --fx:50.6%; --fy:27.1%;"><img src="./assets/nonkey/look06-a.jpg" alt="채택 컷: 선글라스 확대"></div><i class="gt">게시본</i><i class="ring oval" style="--rd:13mm;"></i><em class="vd ok">채택</em></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="fig-t">생성 결과<span class="cred">게시본, 같은 착장의 두 장면</span></div>
+        <div class="scn2">
+          <figure class="shot"><img src="./assets/nonkey/look06-a.jpg" alt="LOOK 06 생성 결과 씬 A, 정면"><i class="gt">씬 A</i></figure>
+          <figure class="shot"><img src="./assets/nonkey/look06-b.jpg" alt="LOOK 06 생성 결과 씬 B, 뒷모습"><i class="gt">씬 B</i></figure>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span class="fn">이미지 속 상표는 각 권리자 소유이며 해당 브랜드와 무관</span>
+    <span>02 / 09</span>
   </div>
 </section>
 
@@ -100,7 +265,7 @@
       <li class="r-latent">VAE 변환</li>
       <li class="r-process">이미지 처리</li>
     </ul>
-    <span>02 / 08</span>
+    <span>03 / 09</span>
   </div>
 </section>
 
@@ -188,7 +353,7 @@
   </div>
 
   <div class="pg-foot">
-    <span>03 / 08</span>
+    <span>04 / 09</span>
   </div>
 </section>
 
@@ -242,7 +407,7 @@
       <li class="r-latent">VAE 변환</li>
       <li class="r-process">이미지 처리</li>
     </ul>
-    <span>04 / 08</span>
+    <span>05 / 09</span>
   </div>
 </section>
 
@@ -301,7 +466,7 @@
   </div>
 
   <div class="pg-foot">
-    <span>05 / 08</span>
+    <span>06 / 09</span>
   </div>
 </section>
 
@@ -348,7 +513,7 @@
       <li class="r-latent">VAE 변환</li>
       <li class="r-process">이미지 처리</li>
     </ul>
-    <span>06 / 08</span>
+    <span>07 / 09</span>
   </div>
 </section>
 
@@ -406,7 +571,7 @@
   </div>
 
   <div class="pg-foot">
-    <span>07 / 08</span>
+    <span>08 / 09</span>
   </div>
 </section>
 
@@ -461,7 +626,7 @@
   </div>
 
   <div class="pg-foot">
-    <span>08 / 08</span>
+    <span>09 / 09</span>
   </div>
 </section>
 
