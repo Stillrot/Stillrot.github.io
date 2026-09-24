@@ -2706,7 +2706,7 @@ Patents Applications (3 KR / 1 US) 4
 
 로봇 시점 행동 인지 전이 평가
 
-Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer (IROSW 2026) Sole Author
+Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer (IROSW 2026) 1st Author
 
 행동인식을 위한 합성 데이터셋 증강
 
