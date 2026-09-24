@@ -6,7 +6,7 @@ Source of truth: the repository at github.com/Stillrot/Stillrot.github.io . Rege
 
 ## Site map
 - https://stillrot.github.io/ — Home: Profile, career overview, and tabbed publications / patents / news / research
-- https://stillrot.github.io/career/hdclabs/ — Career — HDC LABS: Work & Activities timeline + fire / elevator / IP project deep-dives
+- https://stillrot.github.io/career/hdclabs/ — Career — HDC LABS: Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)
 - https://stillrot.github.io/career/metaent/ — Career — Metaverse Entertainment: TD Team, AI Part
 - https://stillrot.github.io/career/ku/ — Career — Korea University: M.S. in Electrical Engineering
 - https://stillrot.github.io/career/bu/ — Career — Baekseok University: B.S. in Multimedia Engineering
@@ -177,7 +177,7 @@ Research
 
 ======================================================================
 ## Page: Career — HDC LABS  (https://stillrot.github.io/career/hdclabs/)
-_Work & Activities timeline + fire / elevator / IP project deep-dives_
+_Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)_
 
 Dongsik Yoon
 
@@ -355,11 +355,11 @@ Research & IP
 Intellectual Property Portfolio
 
 - 특허 13건 등록, 4건 출원 진행
-- 국제 학회 논문 4편 게재
+- 국제 학회 논문 5편 게재
 - 논문화를 위한 기술 스터디 주도
 
 - 13 patents granted, 4 applications in progress
-- 4 papers published at international venues
+- 5 papers published at international venues
 - Led a technical study group toward publications
 
 ← 전체 타임라인
@@ -527,8 +527,8 @@ Personal
 핵심 역할
 Key role
 
-케어 로봇 설계 및 개발 주도 (컨셉, 인지 평가, 질문 우선 FSM, 논문 발표)
-Led care-robot design and development (concept, perception evaluation, ask-first FSM, paper)
+케어 로봇 기획 및 개발 (시나리오, 인지 평가, 질문 우선 FSM, 논문)
+Planned and built the care robot (scenarios, perception, ask-first FSM, paper)
 
 1
 추진 배경과 외형, 행동 설계
@@ -1185,15 +1185,19 @@ Achievements
 
 - KR 특허 13건 등록, 4건 출원 진행 (국내 3건 + 미국 1건)
 
-- 국제 학회 논문 4편 게재
+- 국제 학회 논문 5편 게재
 
 - 자세한 목록은 홈 Publications 및 Patents 섹션 참고
 
 - 13 KR patents granted, 4 applications in progress (3 KR + 1 US)
 
-- 4 papers published at international venues
+- 5 papers published at international venues
 
 - See the home page Publications and Patents sections for the full list
+
+IROSW 2026
+
+Ask Before It Tells
 
 WACVW 2026 Oral
 
@@ -1219,14 +1223,41 @@ Next →
 
 © Dongsik Yoon Home
 
+### Internal links
+- Dongsik Yoon -> https://stillrot.github.io/
+- HOME -> https://stillrot.github.io/
+- CAREER -> https://stillrot.github.io/#career
+- PUBLICATIONS -> https://stillrot.github.io/#publications
+- NEWS -> https://stillrot.github.io/#news
+- RESEARCH -> https://stillrot.github.io/#research
+- 로봇 시점 행동 인지 전이 평가 (IROSW 2026) -> https://stillrot.github.io/papers/irosw2026/
+- 케어 로봇 사용 시나리오와 행동 설계 (RO-MAN 2026 RDC) -> https://stillrot.github.io/papers/nuni-roman2026/
+- Robot-view action-recognition transfer (IROSW 2026) -> https://stillrot.github.io/papers/irosw2026/
+- Care-robot scenarios and behavior design (RO-MAN 2026 RDC) -> https://stillrot.github.io/papers/nuni-roman2026/
+- Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 -> https://stillrot.github.io/ai-works/deck/#slide=2
+- Qwen-Image-Edit kept pose and clothing and restored only detail -> https://stillrot.github.io/ai-works/deck/#slide=2
+- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://stillrot.github.io/ai-works/deck/#slide=5
+- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://stillrot.github.io/ai-works/deck/#slide=5
+- 합성 데이터 생성 자동화 (WACVW 2026) -> https://stillrot.github.io/papers/wacvw2026/
+- Automated synthetic data generation (WACVW 2026) -> https://stillrot.github.io/papers/wacvw2026/
+- Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://stillrot.github.io/papers/ntu60-audio/
+- 지하주차장 CCTV 환경 특화 합성 데이터 생성 -> https://stillrot.github.io/ai-works/deck/#slide=7
+- Built underground-parking CCTV-specific synthetic data -> https://stillrot.github.io/ai-works/deck/#slide=7
+- YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025) -> https://stillrot.github.io/papers/iclrw2025/
+- YOLO-VLM-based indoor fire detection (ICLRW 2025) -> https://stillrot.github.io/papers/iclrw2025/
+- 경량 초해상화 기술 검토 (ICCVW 2025) -> https://stillrot.github.io/papers/iccvw2025/
+- Lightweight super-resolution study (ICCVW 2025) -> https://stillrot.github.io/papers/iccvw2025/
+- 홈 Publications -> https://stillrot.github.io/#publications
+- Patents -> https://stillrot.github.io/#patents
+- Publications -> https://stillrot.github.io/#publications
+- IROSW 2026 Ask Before It Tells -> https://stillrot.github.io/papers/irosw2026/
+- WACVW 2026 Oral From Prompts to Deployment -> https://stillrot.github.io/papers/wacvw2026/
+- ICCVW 2025 Your Super Resolution Model is not Enough -> https://stillrot.github.io/papers/iccvw2025/
+- ICLRW 2025 Integrated YOLO and VLM Fire Detection -> https://stillrot.github.io/papers/iclrw2025/
+- SIGGRAPH Asia 2024 OverallNet: Scale-Arbitrary Lightweight SR -> https://stillrot.github.io/papers/siggraph2024/
+- Home -> https://stillrot.github.io/
 
 ### External links
-- Dongsik Yoon -> https://
-- HOME -> https://
-- CAREER -> https://#career
-- PUBLICATIONS -> https://#publications
-- NEWS -> https://#news
-- RESEARCH -> https://#research
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/277/0005646517
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/421/0008160290
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/018/0006142307
@@ -1234,34 +1265,9 @@ Next →
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/119/0003093394
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/241/0003495235
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/215/0001221815
-- 로봇 시점 행동 인지 전이 평가 (IROSW 2026) -> https://papers/irosw2026/
-- 케어 로봇 사용 시나리오와 행동 설계 (RO-MAN 2026 RDC) -> https://papers/nuni-roman2026/
-- Robot-view action-recognition transfer (IROSW 2026) -> https://papers/irosw2026/
-- Care-robot scenarios and behavior design (RO-MAN 2026 RDC) -> https://papers/nuni-roman2026/
-- Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 -> https://ai-works/deck/#slide=2
-- Qwen-Image-Edit kept pose and clothing and restored only detail -> https://ai-works/deck/#slide=2
 - HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
 - HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
-- 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://ai-works/deck/#slide=5
-- Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://ai-works/deck/#slide=5
-- 합성 데이터 생성 자동화 (WACVW 2026) -> https://papers/wacvw2026/
-- Automated synthetic data generation (WACVW 2026) -> https://papers/wacvw2026/
 - Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
-- Under Review 행동 인식 합성 데이터셋 증강Action-Recognition Synthetic Dataset Augmentation -> https://papers/ntu60-audio/
-- 지하주차장 CCTV 환경 특화 합성 데이터 생성 -> https://ai-works/deck/#slide=7
-- Built underground-parking CCTV-specific synthetic data -> https://ai-works/deck/#slide=7
-- YOLO-VLM 기반 실내 화재 감지 (ICLRW 2025) -> https://papers/iclrw2025/
-- YOLO-VLM-based indoor fire detection (ICLRW 2025) -> https://papers/iclrw2025/
-- 경량 초해상화 기술 검토 (ICCVW 2025) -> https://papers/iccvw2025/
-- Lightweight super-resolution study (ICCVW 2025) -> https://papers/iccvw2025/
-- 홈 Publications -> https://#publications
-- Patents -> https://#patents
-- Publications -> https://#publications
-- WACVW 2026 Oral From Prompts to Deployment -> https://papers/wacvw2026/
-- ICCVW 2025 Your Super Resolution Model is not Enough -> https://papers/iccvw2025/
-- ICLRW 2025 Integrated YOLO and VLM Fire Detection -> https://papers/iclrw2025/
-- SIGGRAPH Asia 2024 OverallNet: Scale-Arbitrary Lightweight SR -> https://papers/siggraph2024/
-- Home -> https://
 
 ======================================================================
 ## Page: Career — Metaverse Entertainment  (https://stillrot.github.io/career/metaent/)
@@ -1484,23 +1490,24 @@ A conversation with the chatbot trained on MAVE member SIU's persona (the "Chat 
 
 © Dongsik Yoon Home
 
+### Internal links
+- Dongsik Yoon -> https://stillrot.github.io/
+- HOME -> https://stillrot.github.io/
+- CAREER -> https://stillrot.github.io/#career
+- PUBLICATIONS -> https://stillrot.github.io/#publications
+- NEWS -> https://stillrot.github.io/#news
+- RESEARCH -> https://stillrot.github.io/#research
+- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 ↗ -> https://stillrot.github.io/ai-works/deck/#slide=9
+- Improved ComfyUI workflows to produce higher-quality generations ↗ -> https://stillrot.github.io/ai-works/deck/#slide=9
+- IEEE Access 1저자 논문 게재 (IF=3.9)First-author paper published in IEEE Access (IF=3.9). -> https://stillrot.github.io/papers/access2023/
+- Home -> https://stillrot.github.io/
 
 ### External links
-- Dongsik Yoon -> https://
-- HOME -> https://
-- CAREER -> https://#career
-- PUBLICATIONS -> https://#publications
-- NEWS -> https://#news
-- RESEARCH -> https://#research
-- 고품질 이미지 생성을 위한 ComfyUI workflow 개선 ↗ -> https://ai-works/deck/#slide=9
-- Improved ComfyUI workflows to produce higher-quality generations ↗ -> https://ai-works/deck/#slide=9
 - MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
 - rina.8k Instagram -> https://www.instagram.com/rina.8k/
-- IEEE Access 1저자 논문 게재 (IF=3.9)First-author paper published in IEEE Access (IF=3.9). -> https://papers/access2023/
 - MAVE 만우절 특집 영상을 유튜브에서 보기 -> https://www.youtube.com/watch?v=UoWzaH7a8C0
 - 메타버스엔터테인먼트, 업스테이지와 '페르소나AI' 공동 개발 위한 전략적 협업Metaverse Entertainment partners with Upstage to co-develop "Persona AI" -> https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4221&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8
 - 메타버스엔터테인먼트, 페르소나 AI 적용한 채팅 서비스 '챗 시우' 오픈Metaverse Entertainment launches "Chat SIU:", a chat service powered by Persona AI -> https://ch.netmarble.com/Newsroom/PressRelease/Detail?post_seq=4559&bbs_code=1014&post_tag=%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8
-- Home -> https://
 
 ======================================================================
 ## Page: Career — Korea University  (https://stillrot.github.io/career/ku/)
@@ -1759,23 +1766,24 @@ Example results from the ECCV 2022 paper
 
 © Dongsik Yoon Home
 
+### Internal links
+- Dongsik Yoon -> https://stillrot.github.io/
+- HOME -> https://stillrot.github.io/
+- CAREER -> https://stillrot.github.io/#career
+- PUBLICATIONS -> https://stillrot.github.io/#publications
+- NEWS -> https://stillrot.github.io/#news
+- RESEARCH -> https://stillrot.github.io/#research
+- IEEE GRSL 1저자 게재 (IF=5.3)First-author paper in IEEE GRSL (IF=5.3) -> https://stillrot.github.io/papers/grsl2023/
+- BMVC 2021 1저자 게재First-author paper at BMVC 2021 -> https://stillrot.github.io/papers/bmvc2021/
+- ICIP 2022 1저자 게재First-author paper at ICIP 2022 -> https://stillrot.github.io/papers/icip2022/
+- BMVC 2021 논문 페이지로 이동 -> https://stillrot.github.io/papers/bmvc2021/
+- Home -> https://stillrot.github.io/
 
 ### External links
-- Dongsik Yoon -> https://
-- HOME -> https://
-- CAREER -> https://#career
-- PUBLICATIONS -> https://#publications
-- NEWS -> https://#news
-- RESEARCH -> https://#research
 - Paper -> https://dcollection.korea.ac.kr/srch/srchDetail/000000270183
-- IEEE GRSL 1저자 게재 (IF=5.3)First-author paper in IEEE GRSL (IF=5.3) -> https://papers/grsl2023/
 - 데모 페이지Demo page -> https://sites.google.com/view/silhouetts-samples/%ED%99%88
-- BMVC 2021 1저자 게재First-author paper at BMVC 2021 -> https://papers/bmvc2021/
-- ICIP 2022 1저자 게재First-author paper at ICIP 2022 -> https://papers/icip2022/
 - ECCV 2022 3저자 게재Third-author paper at ECCV 2022 -> https://jgkwak95.github.io/surfgan/
-- BMVC 2021 논문 페이지로 이동 -> https://papers/bmvc2021/
 - ECCV 2022 프로젝트 페이지로 이동 -> https://jgkwak95.github.io/surfgan/
-- Home -> https://
 
 ======================================================================
 ## Page: Career — Baekseok University  (https://stillrot.github.io/career/bu/)
@@ -2048,17 +2056,18 @@ Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 131-138, 2023.02
 
 © Dongsik Yoon Home
 
+### Internal links
+- Dongsik Yoon -> https://stillrot.github.io/
+- HOME -> https://stillrot.github.io/
+- CAREER -> https://stillrot.github.io/#career
+- PUBLICATIONS -> https://stillrot.github.io/#publications
+- NEWS -> https://stillrot.github.io/#news
+- RESEARCH -> https://stillrot.github.io/#research
+- Home -> https://stillrot.github.io/
 
 ### External links
-- Dongsik Yoon -> https://
-- HOME -> https://
-- CAREER -> https://#career
-- PUBLICATIONS -> https://#publications
-- NEWS -> https://#news
-- RESEARCH -> https://#research
 - [2] KCI 윤동식, 곽노윤 Dongsik Yoon, Noyoon Kwak, "ESRGAN과 Semantic Soft Segmentation을 이용한 객체 분할""Object Segmentation using ESRGAN and Semantic Soft Segmentation", 사물인터넷융복합논문지 Vol. 9, No. 1, pp. 97-104Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 97-104, 2023.02 -> https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002935586
 - [1] KCI 윤동식, 곽노윤 Dongsik Yoon, Noyoon Kwak, "RAPGAN와 RRDB를 이용한 Image-to-Image Translation의 성능 개선""Improving Image-to-Image Translation Performance using RAPGAN and RRDB", 사물인터넷융복합논문지 Vol. 9, No. 1, pp. 131-138Journal of Internet of Things Convergence, Vol. 9, No. 1, pp. 131-138, 2023.02 -> https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002935590
-- Home -> https://
 
 ======================================================================
 ## Page: CV  (https://stillrot.github.io/cv/)
@@ -2129,6 +2138,10 @@ Jan. 2023 - May 2024
 Publications
 
 International Conference
+
+D. Yoon,
+"Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot",
+IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW), 2026
 
 H. Park, J. Kim, J. Kim, D. Yoon,
 "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",
@@ -2288,12 +2301,10 @@ Encouragement Award
 Korean Institute of Communications and Information Sciences (KICS) Winter Annual Conference
 
 ### Internal links
+- ← Portfolio -> https://stillrot.github.io/
+- Download PDF -> https://stillrot.github.io/assets/pdf/Dongsik_Yoon_CV.pdf
 - https://stillrot.github.io/ -> https://stillrot.github.io/
 - stillrot.github.io/#patents -> https://stillrot.github.io/#patents
-
-### External links
-- ← Portfolio -> https://
-- Download PDF -> https://assets/pdf/Dongsik_Yoon_CV.pdf
 
 ======================================================================
 ## Page: Portfolio Deck (2026)  (https://stillrot.github.io/portfolio2026/)
@@ -2685,13 +2696,17 @@ Domestic Journal (KCI) 2
 
 Patents Granted 13
 
-International Conference 10
+International Conference 11
 
 Domestic Conference 10
 
 Patents Applications (3 KR / 1 US) 4
 
 직무 연관 주요 연구
+
+로봇 시점 행동 인지 전이 평가
+
+Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer (IROSW 2026) Sole Author
 
 행동인식을 위한 합성 데이터셋 증강
 
@@ -2804,6 +2819,7 @@ PDF 다운로드
 - Project Page -> https://stillrot.github.io/papers/iccvw2025/
 - AI Works -> https://stillrot.github.io/ai-works/deck/
 - Project Page -> https://stillrot.github.io/papers/access2023/
+- Project Page -> https://stillrot.github.io/papers/irosw2026/
 - Project Page -> https://stillrot.github.io/papers/bmvc2021/
 - 합성 데이터 생성 자동화 WACVW 2026 Oral Auto-Curated Domain-Specific Dataset Generation via Diffusion Models 도메인 특화 데이터의 수집 난이도와 높은 구축 비용 이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계 실수집 데이터 의존도 낮추며 특정 객체 검출 mAP 0.47 → 0.79 향상 →엘리베이터, 화재 감지 데이터 전략 -> https://stillrot.github.io/papers/wacvw2026/
 - YOLO-VLM 기반 실내 화재 감지 ICLRW 2025 An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments 모호한 화재와 연기 경계로 YOLO 단독 검출의 오탐 빈발 객체 검출(YOLO)과 문맥 추론(VLM)을 결합한 end-to-end 감지 구조 설계 VLM 결합으로 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83 향상 →화재 감지 PoC -> https://stillrot.github.io/papers/iclrw2025/
@@ -2823,6 +2839,8 @@ PDF 다운로드
 - MAVE: YouTube -> https://www.youtube.com/@mave_official/videos
 - Paper (IEEE Xplore) -> https://ieeexplore.ieee.org/document/10328572
 - MAVE: April Fool YouTube -> https://www.youtube.com/watch?v=UoWzaH7a8C0
+- Paper (arXiv) -> https://arxiv.org/abs/2609.24099
+- YouTube -> https://www.youtube.com/watch?v=BJ8RZFAd0wU
 - Paper (Project Page) -> https://jgkwak95.github.io/surfgan/
 - Project Page -> https://jgkwak95.github.io/surfgan/
 - GitHub Code -> https://github.com/jgkwak95/SurfGAN

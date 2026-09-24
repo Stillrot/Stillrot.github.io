@@ -4,7 +4,7 @@
 
 ## Pages
 - [Home](https://stillrot.github.io/): Profile, career overview, and tabbed publications / patents / news / research
-- [Career — HDC LABS](https://stillrot.github.io/career/hdclabs/): Work & Activities timeline + fire / elevator / IP project deep-dives
+- [Career — HDC LABS](https://stillrot.github.io/career/hdclabs/): Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)
 - [Career — Metaverse Entertainment](https://stillrot.github.io/career/metaent/): TD Team, AI Part
 - [Career — Korea University](https://stillrot.github.io/career/ku/): M.S. in Electrical Engineering
 - [Career — Baekseok University](https://stillrot.github.io/career/bu/): B.S. in Multimedia Engineering

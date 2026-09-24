@@ -29,7 +29,7 @@ PAGES = [
     ("index.html", "/", "Home",
      "Profile, career overview, and tabbed publications / patents / news / research"),
     ("career/hdclabs/index.html", "/career/hdclabs/", "Career — HDC LABS",
-     "Work & Activities timeline + fire / elevator / IP project deep-dives"),
+     "Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)"),
     ("career/metaent/index.html", "/career/metaent/", "Career — Metaverse Entertainment",
      "TD Team, AI Part"),
     ("career/ku/index.html", "/career/ku/", "Career — Korea University",
@@ -163,10 +163,11 @@ def resolve(url_path, href):
     if href.startswith("./"):
         return base + href[2:]
     if href.startswith("../"):
-        # collapse one directory level per ../
-        cur = base.rstrip("/").rsplit("/", 1)[0]
+        # url_path is a directory: go up one level per ../, never above the site root
+        cur = base.rstrip("/")
         while href.startswith("../"):
-            cur = cur.rsplit("/", 1)[0]
+            if cur != SITE:
+                cur = cur.rsplit("/", 1)[0]
             href = href[3:]
         return cur + "/" + href
     return base + href
