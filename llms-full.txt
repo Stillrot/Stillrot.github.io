@@ -2079,7 +2079,7 @@ Download PDF
 # Dongsik Yoon
 
 Curriculum Vitae
-Last updated May 2026
+Last updated October 2026
 
 kevinds1106@korea.ac.kr
 
@@ -2726,7 +2726,7 @@ Your Super Resolution Model is not Enough for Tackling Real-World Scenarios (ICC
 
 YOLO-VLM 기반 실내 화재 감지
 
-An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments (ICLRW, 2025) 1st Author
+An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments (ICLRW, 2025) Co-first Author
 
 3D 인식 기반 인물 이미지 생성 및 편집
 
