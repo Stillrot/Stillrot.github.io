@@ -2153,7 +2153,7 @@ Under review, 2026
 
 D. Yoon *, J. Kim *, D. Lee *,
 "Resource-Efficient RGB-Only Action Recognition for Edge Deployment",
-Under review, 2026
+arXiv preprint, 2026
 
 D. Yoon, J. Kim,
 "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
@@ -2454,7 +2454,7 @@ AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발
 
 Technical Exploration
 
-엣지 배포형 RGB-only 행동 인식 (Under Review)
+엣지 배포형 RGB-only 행동 인식 (arXiv)
 
 Technical Exploration
 
@@ -2714,7 +2714,7 @@ Synthesized Audio Dataset Augmentation for Multimodal Action Recognition (Under 
 
 엣지 배포용 경량 RGB 행동인식
 
-Resource-Efficient RGB-Only Action Recognition for Edge Deployment (Under Review, 2026) 1st Author
+Resource-Efficient RGB-Only Action Recognition for Edge Deployment (arXiv, 2026) 1st Author
 
 합성 데이터 생성 자동화
 
@@ -2772,7 +2772,7 @@ VLM 결합으로 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83 향상
 
 엣지 배포용 경량 행동인식
 
-Under Review 2026
+arXiv 2026
 
 Resource-Efficient RGB-Only Action Recognition for Edge Deployment
 
@@ -2846,7 +2846,7 @@ PDF 다운로드
 - GitHub Code -> https://github.com/jgkwak95/SurfGAN
 - Paper (arXiv) -> https://arxiv.org/abs/2301.08044
 - GitHub Code -> https://github.com/Stillrot/RGINP
-- 엣지 배포용 경량 행동인식 Under Review 2026 Resource-Efficient RGB-Only Action Recognition for Edge Deployment 깊이나 스켈레톤 기반 행동인식은 별도 센서나 무거운 포즈 추정이 필요 RGB 입력만으로 동작하는 경량 행동인식 네트워크 설계 최소 파라미터 0.96M로 SOTA 정확도 달성, Jetson Orin Nano 10.3 FPS 추론 →엘리베이터 이상행동 인식 -> https://arxiv.org/abs/2602.10818
+- 엣지 배포용 경량 행동인식 arXiv 2026 Resource-Efficient RGB-Only Action Recognition for Edge Deployment 깊이나 스켈레톤 기반 행동인식은 별도 센서나 무거운 포즈 추정이 필요 RGB 입력만으로 동작하는 경량 행동인식 네트워크 설계 최소 파라미터 0.96M로 SOTA 정확도 달성, Jetson Orin Nano 10.3 FPS 추론 →엘리베이터 이상행동 인식 -> https://arxiv.org/abs/2602.10818
 
 ======================================================================
 ## Publications
@@ -2860,7 +2860,7 @@ PDF 다운로드
 - Dongsik Yoon. "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot." IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW), 2026 — https://stillrot.github.io/papers/irosw2026/
 - Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon. "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents." arXiv, 2026 — https://arxiv.org/abs/2604.15802
 - Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition." Under review, 2026 — https://stillrot.github.io/papers/ntu60-audio/
-- Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." Under review, 2026 — https://arxiv.org/abs/2602.10818
+- Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." arXiv, 2026 — https://arxiv.org/abs/2602.10818
 - Dongsik Yoon, Jongeun Kim. "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models." IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 (Oral) — https://stillrot.github.io/papers/wacvw2026/
 - Dongsik Yoon, Jongeun Kim. "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios." International Conference on Computer Vision Workshop (ICCVW), 2025 — https://stillrot.github.io/papers/iccvw2025/
 - Jongeun Kim*, Yejin Lee*, Dongsik Yoon*, Chansung Jung, Gunhee Lee. "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments." International Conference on Learning Representations Workshop (ICLRW), 2025 — https://stillrot.github.io/papers/iclrw2025/
