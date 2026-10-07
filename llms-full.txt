@@ -232,7 +232,7 @@ In-Elevator Situational Analysis AI Engineer
 기사 ↗
 News ↗
 
-- 2026 ~
+- 2026
 
 아이파크몰 AI 방문자 분석
 IPARK Mall AI Visitor Analytics
@@ -241,7 +241,7 @@ Technical PM
 기사 ↗
 News ↗
 
-- 2026 ~
+- 2026
 
 독자 AI 파운데이션 모델
 Sovereign AI Foundation Model
@@ -289,11 +289,11 @@ Vision Data Exploration Agent 2026.07 ~ 2026.09
 - Indexed tens of thousands of images and validated the flow through training
 
 Research & IP
+개인 프로젝트
+Personal
 
 비전 기반 행동 인지 케어 로봇
-Vision-Based Care Robot
-개인 프로젝트
-Personal 2026.06 ~ 2026.10
+Vision-Based Care Robot 2026.06 ~ 2026.10
 
 - 경보 전 먼저 묻는 침대 옆 케어 로봇 Nuni 개발
 - 로봇 시점 인지 평가와 질문 우선 FSM 검증
