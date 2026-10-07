@@ -1199,7 +1199,7 @@ IROSW 2026
 
 Ask Before It Tells
 
-WACVW 2026 Oral
+WACVW 2026
 
 From Prompts to Deployment
 
@@ -1251,7 +1251,7 @@ Next →
 - Patents -> https://stillrot.github.io/#patents
 - Publications -> https://stillrot.github.io/#publications
 - IROSW 2026 Ask Before It Tells -> https://stillrot.github.io/papers/irosw2026/
-- WACVW 2026 Oral From Prompts to Deployment -> https://stillrot.github.io/papers/wacvw2026/
+- WACVW 2026 From Prompts to Deployment -> https://stillrot.github.io/papers/wacvw2026/
 - ICCVW 2025 Your Super Resolution Model is not Enough -> https://stillrot.github.io/papers/iccvw2025/
 - ICLRW 2025 Integrated YOLO and VLM Fire Detection -> https://stillrot.github.io/papers/iclrw2025/
 - SIGGRAPH Asia 2024 OverallNet: Scale-Arbitrary Lightweight SR -> https://stillrot.github.io/papers/siggraph2024/
@@ -2157,7 +2157,7 @@ arXiv preprint, 2026
 
 D. Yoon, J. Kim,
 "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models",
-IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 (Oral)
+IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026
 
 D. Yoon, J. Kim,
 "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios",
@@ -2718,7 +2718,7 @@ Resource-Efficient RGB-Only Action Recognition for Edge Deployment (arXiv, 2026)
 
 합성 데이터 생성 자동화
 
-Auto-Curated Domain-Specific Dataset Generation via Diffusion Models (WACVW 2026, Oral) 1st Author
+Auto-Curated Domain-Specific Dataset Generation via Diffusion Models (WACVW 2026) 1st Author
 
 실환경 대응 경량 초해상도 성능 개선
 
@@ -2744,7 +2744,7 @@ Publications
 
 합성 데이터 생성 자동화
 
-WACVW 2026 Oral
+WACVW 2026
 
 Auto-Curated Domain-Specific Dataset Generation via Diffusion Models
 
@@ -2821,7 +2821,7 @@ PDF 다운로드
 - Project Page -> https://stillrot.github.io/papers/access2023/
 - Project Page -> https://stillrot.github.io/papers/irosw2026/
 - Project Page -> https://stillrot.github.io/papers/bmvc2021/
-- 합성 데이터 생성 자동화 WACVW 2026 Oral Auto-Curated Domain-Specific Dataset Generation via Diffusion Models 도메인 특화 데이터의 수집 난이도와 높은 구축 비용 이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계 실수집 데이터 의존도 낮추며 특정 객체 검출 mAP 0.47 → 0.79 향상 →엘리베이터, 화재 감지 데이터 전략 -> https://stillrot.github.io/papers/wacvw2026/
+- 합성 데이터 생성 자동화 WACVW 2026 Auto-Curated Domain-Specific Dataset Generation via Diffusion Models 도메인 특화 데이터의 수집 난이도와 높은 구축 비용 이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계 실수집 데이터 의존도 낮추며 특정 객체 검출 mAP 0.47 → 0.79 향상 →엘리베이터, 화재 감지 데이터 전략 -> https://stillrot.github.io/papers/wacvw2026/
 - YOLO-VLM 기반 실내 화재 감지 ICLRW 2025 An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments 모호한 화재와 연기 경계로 YOLO 단독 검출의 오탐 빈발 객체 검출(YOLO)과 문맥 추론(VLM)을 결합한 end-to-end 감지 구조 설계 VLM 결합으로 F1 0.82 → 0.86, 연기 recall 0.70 → 0.83 향상 →화재 감지 PoC -> https://stillrot.github.io/papers/iclrw2025/
 - 실환경 대응 경량 초해상도 성능 개선 ICCVW 2025 Your Super Resolution Model is not Enough for Tackling Real-World Scenarios 고정 배율로 학습된 기존 초해상화 모델은 미학습 배율에서 추론 불가 기존 초해상화 백본에 이식 가능한 다중 배율 플러그인 모듈 설계 정수 및 소수 배율을 단일 가중치로 대응, 평균 PSNR +4.3 dB 향상 →화재 감지 입력 품질 -> https://stillrot.github.io/papers/iccvw2025/
 - 홈페이지 바로가기 -> https://stillrot.github.io/
@@ -2861,7 +2861,7 @@ PDF 다운로드
 - Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon. "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents." arXiv, 2026 — https://arxiv.org/abs/2604.15802
 - Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition." Under review, 2026 — https://stillrot.github.io/papers/ntu60-audio/
 - Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." arXiv, 2026 — https://arxiv.org/abs/2602.10818
-- Dongsik Yoon, Jongeun Kim. "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models." IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 (Oral) — https://stillrot.github.io/papers/wacvw2026/
+- Dongsik Yoon, Jongeun Kim. "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models." IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 — https://stillrot.github.io/papers/wacvw2026/
 - Dongsik Yoon, Jongeun Kim. "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios." International Conference on Computer Vision Workshop (ICCVW), 2025 — https://stillrot.github.io/papers/iccvw2025/
 - Jongeun Kim*, Yejin Lee*, Dongsik Yoon*, Chansung Jung, Gunhee Lee. "An Integrated YOLO and VLM System for Fire Detection in Enclosed Environments." International Conference on Learning Representations Workshop (ICLRW), 2025 — https://stillrot.github.io/papers/iclrw2025/
 - Dongsik Yoon, Jongeun Kim, Seonggeun Song, Yejin Lee, Gunhee Lee. "OverallNet: Scale-Arbitrary Lightweight SR Model for handling 360 Panoramic Images." SIGGRAPH Asia Posters, 2024 — https://stillrot.github.io/papers/siggraph2024/
@@ -2932,7 +2932,7 @@ PDF 다운로드
   - Body-cue recognition can support assistive robots, but benchmark accuracy does not guarantee reliable behavior under a robot-camera viewpoint. We present Nuni, a bedside robot prototype that treats a detected distress cue as a reason to ask rather than a reason to alert. We compare two X3D-UGT RGB appearance classifiers, which reach 97.7% and 94.8% six-way accuracy on NTU RGB+D, with a pose-centric hybrid pipeline on 28 single-actor scripted clips recorded from the robot camera. The hybrid path achieved 0.71 six-way macro recall, versus 0.25 and 0.29 for the fine-tuned and from-scratch RGB variants. More importantly for interaction, it produced a question-triggering distress cue in 12/16 distress clips and would have prompted unnecessarily in 2/8 normal clips; the RGB variants yielded a question-triggering cue in only 2/16 and 3/16 distress clips. We separately tested the question-first controller through event injection. All 13 state-transition trials passed: valid responses caused stand-down, two unanswered prompts produced one alert, and three boundary conditions were handled correctly. These results are a preliminary technical evaluation, not a user study or medical validation, but they show how interaction policy can limit the consequences of uncertain perception.
 - "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition" (NTU60-AUDIO) — Under review, 2026
   - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
-- "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026 (Oral)
+- "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026
   - Authors: Dongsik Yoon, Jongeun Kim
   - In this paper, we present an automated pipeline for generating domain-specific synthetic datasets with diffusion models, addressing the distribution shift between pre-trained models and real-world deployment environments. Our three-stage framework first synthesizes target objects within domain-specific backgrounds through controlled inpainting. The generated outputs are then validated via a multi-modal assessment that integrates object detection, aesthetic scoring, and vision-language alignment. Finally, a user-preference classifier is employed to capture subjective selection criteria. This pipeline enables the efficient construction of high-quality, deployable datasets while reducing reliance on extensive real-world data collection.
 - "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios" (Your Super Resolution Model is not Enough) — ICCVW 2025, 2025
