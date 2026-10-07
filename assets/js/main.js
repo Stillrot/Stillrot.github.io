@@ -33,7 +33,6 @@
   function venueBadge(item) {
     if (item.category === 'SCI-E') return '<span class="badge sci">SCI-E</span>';
     if (item.note === 'Oral') return '<span class="badge oral">Oral</span>';
-    if (item.venue === 'Under review') return '<span class="badge review">Under review</span>';
     return '';
   }
 

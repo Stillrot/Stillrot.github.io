@@ -1001,7 +1001,7 @@ Results
 
 - Named inventor on 3 related patents
 
-Under Review
+arXiv
 
 엣지 배포용 경량 RGB 행동 인식
 Lightweight RGB Action Recognition for Edge Deployment
@@ -1267,7 +1267,7 @@ Next →
 - 기사 ↗News ↗ -> https://n.news.naver.com/mnews/article/215/0001221815
 - HDC현산, 서울원 아이파크에 AI 승강기 도입 -> https://n.news.naver.com/mnews/article/119/0002945075
 - HDC Hyundai Development to deploy AI elevators at Seoul One IPARK -> https://n.news.naver.com/mnews/article/119/0002945075
-- Under Review 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
+- arXiv 엣지 배포용 경량 RGB 행동 인식Lightweight RGB Action Recognition for Edge Deployment -> https://arxiv.org/abs/2602.10818
 
 ======================================================================
 ## Page: Career — Metaverse Entertainment  (https://stillrot.github.io/career/metaent/)

@@ -58,8 +58,6 @@ def render_publications():
             return '<span class="badge sci">SCI-E</span>'
         if p.get("note") == "Oral":
             return '<span class="badge oral">Oral</span>'
-        if p.get("venue") == "Under review":
-            return '<span class="badge review">Under review</span>'
         return ""
 
     def item(p):
