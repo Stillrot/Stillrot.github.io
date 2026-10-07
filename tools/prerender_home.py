@@ -55,7 +55,7 @@ def render_publications():
 
     def badge(p):
         if p.get("category") == "SCI-E":
-            return '<span class="badge sci">SCI-E</span>'
+            return '<span class="idx">[SCI-E]</span>'
         if p.get("note") == "Oral":
             return '<span class="badge oral">Oral</span>'
         return ""
