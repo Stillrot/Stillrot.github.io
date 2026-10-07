@@ -336,7 +336,7 @@ In-Elevator Situational Analysis System 2025.01 ~ 2026.02
 Vision AI
 
 지하주차장 화재 탐지
-Underground Parking Fire Detection 2024.05 ~ 2025.10
+Underground Parking Fire Detection 2024.10 ~ 2025.10
 
 - YOLO 및 VLM 기반 화재 탐지 솔루션 개발
 - Hailo-8 듀얼칩 기반 경량 구조로 재설계
@@ -384,7 +384,7 @@ In-Elevator Situational Analysis System 2025.01 ~ 2026.02
 2024
 
 지하주차장 화재 탐지
-Underground Parking Fire Detection 2024.05 ~ 2025.10
+Underground Parking Fire Detection 2024.10 ~ 2025.10
 
 상시
 Ongoing
@@ -1195,10 +1195,6 @@ Achievements
 
 - See the home page Publications and Patents sections for the full list
 
-IROSW 2026
-
-Ask Before It Tells
-
 WACVW 2026
 
 From Prompts to Deployment
@@ -1250,7 +1246,6 @@ Next →
 - 홈 Publications -> https://stillrot.github.io/#publications
 - Patents -> https://stillrot.github.io/#patents
 - Publications -> https://stillrot.github.io/#publications
-- IROSW 2026 Ask Before It Tells -> https://stillrot.github.io/papers/irosw2026/
 - WACVW 2026 From Prompts to Deployment -> https://stillrot.github.io/papers/wacvw2026/
 - ICCVW 2025 Your Super Resolution Model is not Enough -> https://stillrot.github.io/papers/iccvw2025/
 - ICLRW 2025 Integrated YOLO and VLM Fire Detection -> https://stillrot.github.io/papers/iclrw2025/
@@ -2526,7 +2521,7 @@ PROJECT 02
 
 지하주차장 CCTV 환경에 맞춰 PoC 설계부터 현장 배포까지 전 과정 수행
 
-HDC LABS 2024.05 – 2025.10
+HDC LABS 2024.10 – 2025.10
 
 YOLO
 Florence2
@@ -2538,7 +2533,7 @@ Hailo
 
 ## 지하주차장 화재 감지 보조 시스템
 
-HDC LABS 2024.05 – 2025.10 Deployed
+HDC LABS 2024.10 – 2025.10 Deployed
 
 연구 필요성
 
