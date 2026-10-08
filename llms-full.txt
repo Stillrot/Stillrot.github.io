@@ -693,9 +693,9 @@ Achievements
 
 Robot-camera clips where the pose-centric path confirmed the cue (faces blurred)
 
-### 아이파크몰 AI 방문자 분석 PoC
+### 용산 아이파크몰 AI 방문자 분석
 
-IPARK Mall AI Visitor Analytics PoC
+Yongsan IPARK Mall AI Visitor Analytics
 
 핵심 역할
 Key role
@@ -1270,8 +1270,8 @@ Next →
 - 케어 로봇 사용 시나리오와 행동 설계 (RO-MAN 2026 RDC) -> https://stillrot.github.io/papers/nuni-roman2026/
 - Robot-view action-recognition transfer (IROSW 2026) -> https://stillrot.github.io/papers/irosw2026/
 - Care-robot scenarios and behavior design (RO-MAN 2026 RDC) -> https://stillrot.github.io/papers/nuni-roman2026/
-- Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 -> https://stillrot.github.io/ai-works/deck/#slide=2
-- Qwen-Image-Edit kept pose and clothing and restored only detail -> https://stillrot.github.io/ai-works/deck/#slide=2
+- Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 -> https://stillrot.github.io/ai-works/deck/#slide=3
+- Qwen-Image-Edit kept pose and clothing and restored only detail -> https://stillrot.github.io/ai-works/deck/#slide=3
 - 도메인 특화 합성 데이터 생성 체계와 실환경 데이터 확보 및 정제 -> https://stillrot.github.io/ai-works/deck/#slide=5
 - Built a domain-specific synthetic-data pipeline and collected/cleaned real-world data -> https://stillrot.github.io/ai-works/deck/#slide=5
 - 합성 데이터 생성 자동화 (WACVW 2026) -> https://stillrot.github.io/papers/wacvw2026/
