@@ -2839,6 +2839,20 @@
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
+
+  .personal-brand { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #6b7280; }
+  .robot-detail .tab-section { margin-bottom: 22px; }
+  .robot-detail .tab-body .line { font-size: 16px; line-height: 1.55; margin: 5px 0; }
+  .robot-detail .tab-body .sub { font-size: 14px; }
+  .robot-detail .visual { justify-content: flex-start; gap: 28px; padding-top: 4px; }
+  .robot-figure { width: 100%; margin: 0; }
+  .robot-figure img { display: block; width: 100%; height: auto; max-height: none; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; }
+  .robot-figure-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; width: 100%; }
+  .robot-figure-row .robot-figure img { height: 168px; object-fit: cover; }
+  .robot-figure-row .robot-figure img.top { object-position: center top; }
+  .robot-figure-row .robot-figure img.fit { object-fit: contain; padding: 6px; }
+  .paper-text-link { color: #2c3a6c; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .robot-figure figcaption { padding: 10px 4px 0; text-align: center; font-size: 13px; font-weight: 500; color: var(--ink-2); }
 </style>
 </head>
 <body>
@@ -3765,6 +3779,71 @@
   <!-- Slide 11: Publications & Patents -->
   <section class="stage" data-slide="17">
     <div class="slide">
+      <div class="pad ipark-classic robot-detail">
+        <div class="project-header project-header-row">
+          <div>
+            <h2 class="h2">비전 기반 행동 인지 케어 로봇</h2>
+            <p class="meta">개인 프로젝트 2026.06 - 2026.10</p>
+          </div>
+        </div>
+
+        <div class="project-detail-grid">
+          <div>
+            <div class="tab-section">
+              <div class="tab-head">업무 목표</div>
+              <div class="tab-body">
+                <p class="line">이상 단서를 경보 대신 질문의 계기로 쓰는 침대 옆 케어 로봇 설계</p>
+                <p class="line">벤치마크 성능과 로봇 시점 성능을 분리해 실제 상호작용 지표로 평가</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head">담당 업무</div>
+              <div class="tab-body">
+                <p class="line">Tapo C220과 Jetson Orin Nano로 1차 실물 프로토타입 제작</p>
+                <p class="line">로봇 카메라 영상의 신체 단서를 ROS 2 이벤트로 전달하는 두 인지 경로 구성</p>
+                <p class="line">단서마다 질문과 응답 창을 두 번까지 반복하고, 무응답일 때만 알림 1회</p>
+                <p class="line">로봇 카메라 1~2m 거리 영상 28개로 RGB 외형 경로와 포즈 중심 경로 비교</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head">주요 성과</div>
+              <div class="tab-body">
+                <p class="line">벤치마크 97.7% RGB 모델이 로봇 시점에서 질문 단서 2/16에 그침 확인</p>
+                <p class="sub">포즈 중심 경로는 12/16, 정상 영상의 불필요한 질문 2/8</p>
+                <p class="line">질문 우선 FSM 이벤트 주입 시험 13/13회 통과</p>
+                <p class="line"><a class="paper-text-link" href="https://stillrot.github.io/papers/irosw2026/">IROS 2026 워크숍 논문</a>, <a class="paper-text-link" href="https://stillrot.github.io/papers/nuni-roman2026/">RO-MAN 2026 RDC 발표</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual">
+            <figure class="robot-figure wide">
+              <img src="../assets/img/projects/nuni-system.webp" alt="두 인지 경로와 질문 우선 제어기 구성"/>
+              <figcaption>두 인지 경로와 질문 우선 제어기 구성</figcaption>
+            </figure>
+            <div class="robot-figure-row">
+              <figure class="robot-figure">
+                <img class="top" src="../assets/img/projects/nuni-prototype-hd.webp" alt="기성 부품과 1차 종이 얼굴 프로토타입"/>
+                <figcaption>기성 부품과 1차 프로토타입</figcaption>
+              </figure>
+              <figure class="robot-figure">
+                <img class="fit" src="../assets/img/projects/nuni-qualitative.webp" alt="포즈 중심 경로가 단서를 확인한 로봇 시점 영상"/>
+                <figcaption>로봇 시점 영상</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-brand personal-brand">PERSONAL PROJECT</div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="stage" data-slide="18">
+    <div class="slide">
       <div class="pad">
         <p class="pub-header">PUBLICATIONS &amp; PATENTS</p>
 
@@ -3825,7 +3904,7 @@
   </section>
 
   <!-- Slide 12: Research Highlights -->
-  <section class="stage" data-slide="18">
+  <section class="stage" data-slide="19">
     <div class="slide">
       <div class="pad" style="padding:48px 80px;">
         <p class="eyebrow">Publications</p>
@@ -3898,7 +3977,7 @@
   </section>
 
   <!-- Slide 13: Thank You -->
-  <section class="stage" data-slide="19">
+  <section class="stage" data-slide="20">
     <div class="slide">
       <div class="thanks">
         <div class="h1">Thank You</div>
@@ -3938,9 +4017,9 @@
   });
 
   // Inject page indicator at bottom-right of each slide
-  // (Slide 17 - Publications & Patents - intentionally omits the indicator.)
+  // (Slide 18 - Publications & Patents - intentionally omits the indicator.)
   stages.forEach((stage, i) => {
-    if (stage.dataset.slide === '17') return;
+    if (stage.dataset.slide === '18') return;
     const slide = stage.querySelector('.slide');
     const ind = document.createElement('div');
     ind.className = 'page-indicator';

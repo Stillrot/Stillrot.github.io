@@ -2938,6 +2938,50 @@ Retrieval-based VC, VITS, Gradio WebUI
 
 [image: METAVERSE Entertainment]
 
+## 비전 기반 행동 인지 케어 로봇
+
+개인 프로젝트 2026.06 - 2026.10
+
+업무 목표
+
+이상 단서를 경보 대신 질문의 계기로 쓰는 침대 옆 케어 로봇 설계
+
+벤치마크 성능과 로봇 시점 성능을 분리해 실제 상호작용 지표로 평가
+
+담당 업무
+
+Tapo C220과 Jetson Orin Nano로 1차 실물 프로토타입 제작
+
+로봇 카메라 영상의 신체 단서를 ROS 2 이벤트로 전달하는 두 인지 경로 구성
+
+단서마다 질문과 응답 창을 두 번까지 반복하고, 무응답일 때만 알림 1회
+
+로봇 카메라 1~2m 거리 영상 28개로 RGB 외형 경로와 포즈 중심 경로 비교
+
+주요 성과
+
+벤치마크 97.7% RGB 모델이 로봇 시점에서 질문 단서 2/16에 그침 확인
+
+포즈 중심 경로는 12/16, 정상 영상의 불필요한 질문 2/8
+
+질문 우선 FSM 이벤트 주입 시험 13/13회 통과
+
+IROS 2026 워크숍 논문, RO-MAN 2026 RDC 발표
+
+[image: 두 인지 경로와 질문 우선 제어기 구성]
+
+두 인지 경로와 질문 우선 제어기 구성
+
+[image: 기성 부품과 1차 종이 얼굴 프로토타입]
+
+기성 부품과 1차 프로토타입
+
+[image: 포즈 중심 경로가 단서를 확인한 로봇 시점 영상]
+
+로봇 시점 영상
+
+PERSONAL PROJECT
+
 PUBLICATIONS & PATENTS
 
 International Journal (SCI-E) 3
@@ -3071,6 +3115,8 @@ PDF 다운로드
 - Project Page -> https://stillrot.github.io/papers/iccvw2025/
 - AI Works -> https://stillrot.github.io/ai-works/deck/
 - Project Page -> https://stillrot.github.io/papers/access2023/
+- IROS 2026 워크숍 논문 -> https://stillrot.github.io/papers/irosw2026/
+- RO-MAN 2026 RDC 발표 -> https://stillrot.github.io/papers/nuni-roman2026/
 - Project Page -> https://stillrot.github.io/papers/irosw2026/
 - Project Page -> https://stillrot.github.io/papers/bmvc2021/
 - 합성 데이터 생성 자동화 WACVW 2026 Auto-Curated Domain-Specific Dataset Generation via Diffusion Models 도메인 특화 데이터의 수집 난이도와 높은 구축 비용 이미지 생성부터 품질 평가, 선호도 분류까지 잇는 3단계 자동 생성 파이프라인 설계 실수집 데이터 의존도 낮추며 특정 객체 검출 mAP 0.47 → 0.79 향상 →엘리베이터, 화재 감지 데이터 전략 -> https://stillrot.github.io/papers/wacvw2026/
