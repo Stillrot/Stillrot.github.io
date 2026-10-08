@@ -68,6 +68,10 @@ def launch(pw):
 
 def _open(page, src):
     page.goto(src.as_uri(), wait_until="networkidle")
+    # portfolio IPARK slides draw their privacy mosaics on canvases after load
+    page.wait_for_function(
+        "!document.querySelector('.privacy-mosaic-canvas')"
+        " || document.documentElement.dataset.privacyReady === 'true'", timeout=15000)
     page.evaluate("() => document.fonts.ready")   # let web fonts settle
     page.wait_for_timeout(250)
 

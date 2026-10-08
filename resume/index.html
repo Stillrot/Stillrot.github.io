@@ -700,6 +700,139 @@
   .dl-bar a { display: inline-block; font-family: 'Noto Sans KR', 'Inter', sans-serif; font-size: 10pt; font-weight: 600; color: #333; background: #fff; border: 1px solid #c8c8c8; border-radius: 6px; padding: 7px 14px; text-decoration: none; }
   .dl-bar a:hover { background: #f5f5f5; }
   @media print { .dl-bar { display: none; } }
+
+
+  /* Three newer HDC LABS projects on one page (from the AG resume) */
+  .project-list li.single-line::before {
+    top: 2px;
+  }
+
+  .compact-projects-page {
+    padding-top: 16mm;
+    padding-bottom: 14mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .compact-projects-page .project-vision { order: 2; }
+
+  .compact-projects-page .project-cctv {
+    order: 3;
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 20px;
+  }
+
+  .compact-projects-page .project-ipark {
+    order: 4;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .compact-projects-page .project-vision {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 20px;
+  }
+
+  .compact-projects-page .projects-header {
+    font-size: 18pt;
+    margin-bottom: 8px;
+  }
+
+  .compact-projects-page .company-header {
+    margin: 12px 0 16px 0;
+  }
+
+  .compact-projects-page .company-header .name {
+    font-size: 17pt;
+  }
+
+  .compact-projects-page .company-header .period {
+    font-size: 10pt;
+  }
+
+  .compact-projects-page .project-block {
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+  }
+
+  .compact-projects-page .project-left {
+    width: 260px;
+  }
+
+  .compact-projects-page .project-meta {
+    font-size: 8.5pt;
+    margin-bottom: 3px;
+  }
+
+  .compact-projects-page .project-title {
+    font-size: 14pt;
+    line-height: 1.24;
+    margin-bottom: 7px;
+  }
+
+  .compact-projects-page .project-tags {
+    margin-bottom: 8px;
+  }
+
+  .compact-projects-page .tag {
+    font-size: 7.5pt;
+    padding: 1px 7px;
+    margin-bottom: 3px;
+  }
+
+  .compact-projects-page .tech-stack-label,
+  .compact-projects-page .ref-label {
+    font-size: 9pt;
+    margin-top: 9px;
+    margin-bottom: 3px;
+  }
+
+  .compact-projects-page .tech-items,
+  .compact-projects-page .tech-items .tech {
+    font-size: 8.2pt;
+    line-height: 1.9;
+  }
+
+  .compact-projects-page .ref-numbers {
+    gap: 4px 9px;
+    margin-top: 2px;
+  }
+
+  .compact-projects-page .ref-num {
+    font-size: 8.6pt;
+  }
+
+  .compact-projects-page .project-section-title {
+    font-size: 10.5pt;
+    margin-bottom: 4px;
+  }
+
+  .compact-projects-page .project-section-title:not(:first-child) {
+    margin-top: 14px;
+  }
+
+  .compact-projects-page .project-list {
+    margin-bottom: 4px;
+  }
+
+  .compact-projects-page .project-list li {
+    font-size: 9pt;
+    line-height: 1.65;
+    letter-spacing: -0.2px;
+    margin-bottom: 4px;
+    padding-left: 13px;
+  }
+
+  .compact-projects-page .project-list li::before {
+    font-size: 10pt;
+    top: 6px;
+  }
+
+  .compact-projects-page .project-list li.single-line::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 </style>
 </head>
 <body class="resume-variant-patents">
@@ -748,7 +881,7 @@
 
   <div class="section-header">
     <div class="section-title">Work Experience</div>
-    <div class="section-sub">총 3년 5개월 간의 경력</div>
+    <div class="section-sub">총 3년 9개월 간의 경력</div>
   </div>
   <hr class="section-divider">
 
@@ -787,14 +920,138 @@
   </div>
 </div>
 
-<!-- ===== Page 2 - Projects ===== -->
-<div class="page">
+<!-- ===== Page 2 - Newer HDC LABS Projects ===== -->
+<div class="page compact-projects-page">
   <div class="projects-header">Projects</div>
 
   <div class="company-header">
     <span class="name hdc">HDC LABS</span>
     <span class="period">2024.05 - (재직 중)</span>
   </div>
+
+  <!-- Project 1 -->
+  <div class="project-block project-ipark">
+    <div class="project-left">
+      <div class="project-meta">R&amp;D Center, AI LAB | 2026.03 ~ 2026.07</div>
+      <div class="project-title">아이파크몰 AI 방문자 분석 기술기획</div>
+      <div class="project-tags">
+        <span class="tag">Technical PM</span>
+        <span class="tag">On-prem AI</span>
+        <span class="tag">PoC</span>
+      </div>
+      <div class="project-bottom-fixed">
+        <div class="tech-stack-label">Project Tools</div>
+        <div class="tech-items">
+          <span class="tech">Notion</span>
+          <span class="tech">Bitbucket</span>
+          <span class="tech">Gradio</span>
+          <span class="tech">n8n</span>
+        </div>
+        <div class="ref-label">참조 사이트</div>
+        <div class="ref-numbers">
+          <a class="ref-num" href="https://stillrot.github.io/assets/pdf/Dongsik_Yoon_Portfolio_PM.pdf#page=4" target="_blank" rel="noopener">Project</a>
+          <a class="ref-num" href="https://n.news.naver.com/mnews/article/119/0003093394" target="_blank" rel="noopener">News</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-right">
+      <div class="project-section-title">주요 업무 내용</div>
+      <ul class="project-list">
+        <li>고객의 방문자 분석 요구를 기술 타당성, 데이터 확보 가능성과 검증 난이도로 분석해 PoC 범위와 성공 기준 수립</li>
+        <li>AI 엔지니어 3명의 실행 항목, 기술 의존성, 일정과 인수인계 문서 관리</li>
+        <li>다중 사용자 라벨링 도구와 n8n 기반 진척 집계 및 Dooray 알림 자동화</li>
+        <li>영상과 얼굴 정보의 외부 전송을 제한하는 온프레미스 처리 구조 검토</li>
+      </ul>
+      <div class="project-section-title">프로젝트 성과</div>
+      <ul class="project-list">
+        <li>연령 및 성별 라벨 약 5만 장 구축, 22개 출입구 데이터 250만 건 이상 처리</li>
+        <li>대표 출입구 직접 계수와 CCTV 재검수를 통해 계수 정확도 약 95% 확인</li>
+        <li>Retail 챗봇 260문항 평가에서 정답률 83.1%, 사실 정확성 4.28/5 확인</li>
+        <li>외형 판정 평가 라벨 기준 성별 90.7%, 연령대 90.5% 일치 확인</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-block project-cctv">
+    <div class="project-left">
+      <div class="project-meta">R&amp;D Center, AI LAB | 2026.06 - 2026.07</div>
+      <div class="project-title">CCTV 상태 및 방문객 지표<br>통합 관제 Agent</div>
+      <div class="project-tags">
+        <span class="tag">Agent Workflow</span>
+        <span class="tag">AI Observability</span>
+      </div>
+      <div class="project-bottom-fixed">
+        <div class="tech-stack-label">Tech Stack</div>
+        <div class="tech-items">
+          <span class="tech">LangGraph</span>
+          <span class="tech">OpenAI API</span>
+          <span class="tech">TimescaleDB</span>
+        </div>
+        <div class="ref-label">참조 사이트</div>
+        <div class="ref-numbers">
+          <a class="ref-num" href="https://stillrot.github.io/assets/pdf/Dongsik_Yoon_Portfolio_PM.pdf#page=7" target="_blank" rel="noopener">Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-right">
+      <div class="project-section-title">주요 업무 내용</div>
+      <ul class="project-list">
+        <li>녹화 세그먼트 기반 카메라 상태와 영상 갱신 헬스체크 구성</li>
+        <li>방문객 통계와 이동 궤적 이미지를 결합한 멀티모달 진단 흐름 설계</li>
+        <li>고위험 이상 메일 알림과 설정 변경 전 사람 검토 흐름 구성</li>
+        <li>운영 데이터는 읽기 전용으로 조회하고 검수 이력은 별도 QA 영역에 저장</li>
+      </ul>
+      <div class="project-section-title">프로젝트 성과</div>
+      <ul class="project-list">
+        <li>이상 사건별 증거와 사람 판단을 중복 없이 보존하는 품질 검수 이력 확보</li>
+        <li>실제 운영 데이터로 이상 탐지, 멀티모달 진단과 사람 검토 E2E 검증</li>
+        <li>사람 검토를 거쳐 약 7대 카메라에서 계수선 또는 관심 영역 설정 조정</li>
+        <li>설정 조정 후 반복 동선에서 발생하던 비정상 계수의 감소 방향 확인</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-block project-vision">
+    <div class="project-left">
+      <div class="project-meta">R&amp;D Center, AI LAB | 2026.07 - 2026.09</div>
+      <div class="project-title">비전 데이터 탐색 및 학습 운영 Agent</div>
+      <div class="project-tags">
+        <span class="tag">Agentic Workflow</span>
+        <span class="tag">Vision DataOps</span>
+      </div>
+      <div class="project-bottom-fixed">
+        <div class="tech-stack-label">Tech Stack</div>
+        <div class="tech-items">
+          <span class="tech">LangGraph</span>
+          <span class="tech">Dify</span>
+          <span class="tech">SigLIP</span>
+          <span class="tech">LanceDB</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-right">
+      <div class="project-section-title">주요 업무 내용</div>
+      <ul class="project-list">
+        <li>자연어와 이미지 기반 비전 데이터셋 탐색, 신규 및 변경분 갱신 흐름 구성</li>
+        <li>VLM 보조 검수와 학습 후보 구성을 연결한 LangGraph 멀티모달 Agent 설계</li>
+        <li>데이터 조회와 GPU 학습 권한을 분리하고 실제 학습에 사람 승인 적용</li>
+        <li>검색 결과에 출처와 라벨 보유 현황을 함께 반환하도록 설계</li>
+      </ul>
+      <div class="project-section-title">프로젝트 성과</div>
+      <ul class="project-list">
+        <li>탐색부터 승인, 실제 GPU 학습과 결과 조회까지 E2E 동작 검증</li>
+        <li>수만 장 규모 임베딩 색인을 완료하고 자연어 및 이미지 검색 동작 확인</li>
+        <li>모델 오탐 이미지를 유사 데이터 재탐색과 후속 학습 후보 구성으로 연결</li>
+        <li>승인 없는 학습 실행과 동일 학습의 중복 제출 차단 동작 확인</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Page 3 - Projects ===== -->
+<div class="page">
 
   <!-- Project 1 -->
   <div class="project-block">

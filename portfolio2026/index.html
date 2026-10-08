@@ -279,6 +279,7 @@
     color: #111827;
     font-weight: 800;
   }
+  .cover h1 .nowrap { white-space: nowrap; }
   .cover .lead {
     margin: 28px 0 0;
     font-size: 24px;
@@ -401,6 +402,1896 @@
   }
   .project-detail-grid > .visual img { max-height: 460px; }
   .outcomes > .visual img { max-height: 460px; }
+
+  /* ===== Project 01 detail: privacy-safe PoC summary ===== */
+  .ipark-detail .project-detail-grid { gap: 46px; }
+  .ipark-detail .tab-section { margin-bottom: 20px; }
+  .ipark-detail .tab-head { margin-bottom: 8px; }
+  .ipark-detail .tab-body .line {
+    font-size: 16px;
+    line-height: 1.52;
+    margin: 5px 0;
+  }
+  .ipark-detail .ipark-operation { padding-left: 0; }
+  .ipark-detail .ipark-operation .ref-row {
+    grid-template-columns: 104px 1fr;
+    gap: 10px;
+    padding: 9px 11px;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+  .ipark-detail .ipark-operation .kind {
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+  .ipark-summary {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg-soft);
+  }
+  .ipark-summary-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .ipark-summary-sub {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .ipark-validation-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .ipark-validation-step {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 11px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  .ipark-validation-step.future {
+    border-style: dashed;
+    background: #f3f4f6;
+  }
+  .ipark-validation-step .step-num {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+  .ipark-validation-step.future .step-num {
+    background: #fff;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+  }
+  .ipark-validation-step .step-title {
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .ipark-validation-step .step-copy {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.42;
+    color: var(--ink-2);
+  }
+  .ipark-validation-step .step-change {
+    display: grid;
+    grid-template-columns: 1fr 18px 1fr;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+  }
+  .ipark-validation-step .change-box {
+    padding: 5px 7px;
+    border-radius: 5px;
+    background: var(--bg-soft);
+    font-size: 11px;
+    line-height: 1.35;
+    color: var(--ink-2);
+  }
+  .ipark-validation-step .change-arrow {
+    color: var(--muted-2);
+    text-align: center;
+    font-size: 15px;
+  }
+  .ipark-validation-list {
+    display: grid;
+    gap: 3px;
+    margin-top: 5px;
+  }
+  .ipark-validation-list .item {
+    display: grid;
+    grid-template-columns: 94px 1fr;
+    gap: 6px;
+    font-size: 10.5px;
+    line-height: 1.35;
+    color: var(--ink-2);
+  }
+  .ipark-validation-list .item strong {
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .ipark-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .ipark-metric {
+    min-height: 77px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  .ipark-metric .value {
+    font-size: 25px;
+    line-height: 1.12;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .ipark-metric .label {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+  .ipark-scope {
+    display: grid;
+    grid-template-columns: 1fr 24px 1fr;
+    align-items: stretch;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .ipark-scope-box {
+    padding: 10px 12px;
+    border-radius: 7px;
+    background: #fff;
+    border: 1px solid var(--line);
+  }
+  .ipark-scope-box .scope-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .ipark-scope-box .scope-text {
+    margin-top: 4px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--ink-2);
+  }
+  .ipark-scope-arrow {
+    display: grid;
+    place-items: center;
+    color: var(--muted-2);
+    font-size: 20px;
+  }
+  .ipark-agent-flow {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 3px solid var(--ink);
+    background: #fff;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+  .ipark-agent-flow strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--ink);
+    font-size: 11px;
+  }
+
+  /* ===== Project 01: standalone product case study ===== */
+  .ipark-case {
+    padding: 44px 64px 46px;
+    background: #fff;
+  }
+  .case-top {
+    min-height: 55px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .case-top .case-kicker {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: #2456a6;
+  }
+  .case-top .case-project {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .case-top .case-meta {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding-top: 5px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .case-top .case-logo { height: 22px; width: auto; }
+  .case-hero {
+    margin-top: 19px;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .case-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .case-hero-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .case-hero h2 {
+    margin: 7px 0 0;
+    font-size: 38px;
+    line-height: 1.24;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+  .case-hero h2 .accent { color: #2456a6; }
+  .case-hero-copy p {
+    margin: 7px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .case-hero-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.17);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  }
+  .case-hero-metric {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    background: #172033;
+  }
+  .case-hero-metric .value {
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 800;
+  }
+  .case-hero-metric .label {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1.35;
+    color: #cbd5e1;
+  }
+  .case-core-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr 1.15fr;
+    gap: 16px;
+    height: 282px;
+  }
+  .case-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 19px 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .case-panel.problem {
+    border-color: #172033;
+    background: #172033;
+    color: #fff;
+  }
+  .case-panel.decision {
+    border-color: #cbdaf3;
+    background: #eef4ff;
+  }
+  .case-panel .panel-kicker {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #2456a6;
+  }
+  .case-panel.problem .panel-kicker { color: #9fb8e4; }
+  .case-panel h3 {
+    margin: 6px 0 0;
+    font-size: 21px;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+  .case-problem-quote {
+    margin-top: 18px;
+    font-size: 20px;
+    line-height: 1.48;
+    font-weight: 700;
+    color: #fff;
+  }
+  .case-reason-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 18px;
+  }
+  .case-reason-row span {
+    padding: 5px 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px;
+    font-size: 10px;
+    color: #cbd5e1;
+  }
+  .case-problem-note {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.16);
+    font-size: 11px;
+    line-height: 1.4;
+    color: #aeb9ca;
+  }
+  .case-decision-change {
+    display: grid;
+    grid-template-columns: 1fr 22px 1fr;
+    gap: 7px;
+    align-items: center;
+    margin-top: 14px;
+  }
+  .case-decision-change .from,
+  .case-decision-change .to {
+    padding: 9px 10px;
+    border-radius: 7px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .case-decision-change .from {
+    color: var(--muted);
+    background: rgba(255,255,255,0.6);
+    text-decoration: line-through;
+  }
+  .case-decision-change .to {
+    color: #173f82;
+    background: #fff;
+    font-weight: 800;
+  }
+  .case-decision-change .arrow {
+    text-align: center;
+    color: #6686ba;
+    font-size: 18px;
+  }
+  .case-scope-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-top: 13px;
+  }
+  .case-scope-list div {
+    padding: 7px 9px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.72);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-2);
+  }
+  .case-camera-visual {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+  .case-camera-visual .camera-label {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #53709f;
+    font-weight: 700;
+  }
+  .case-camera-array {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 4px;
+  }
+  .case-camera-array i {
+    width: 100%;
+    height: 8px;
+    border-radius: 2px;
+    background: #7898ca;
+  }
+  .case-evidence-main {
+    margin-top: 11px;
+    padding: 12px 13px;
+    border-radius: 8px;
+    background: var(--bg-soft);
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+  .case-evidence-main .metric {
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 800;
+    color: #2456a6;
+  }
+  .case-evidence-main .detail {
+    font-size: 11px;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+  .case-evidence-main .detail strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+    font-size: 12px;
+  }
+  .case-evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    margin-top: 10px;
+  }
+  .case-evidence-stat {
+    min-height: 72px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+  }
+  .case-evidence-stat .value {
+    font-size: 21px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .case-evidence-stat .label {
+    margin-top: 5px;
+    font-size: 9.5px;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+  .case-evidence-foot {
+    margin-top: 9px;
+    font-size: 10px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  .case-bottom {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1.62fr 1fr;
+    gap: 16px;
+    height: 96px;
+  }
+  .case-execution,
+  .case-followup {
+    padding: 14px 17px;
+    border-radius: 11px;
+  }
+  .case-execution {
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  .case-followup {
+    background: #2456a6;
+    color: #fff;
+  }
+  .case-bottom-label {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .case-followup .case-bottom-label { color: #cbdaf3; }
+  .case-execution-flow {
+    margin-top: 9px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .case-execution-flow .case-step {
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: var(--bg-soft);
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--ink-2);
+    white-space: nowrap;
+  }
+  .case-execution-flow .case-arrow {
+    color: var(--muted-2);
+    font-size: 13px;
+  }
+  .case-followup .title {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .case-followup .flow {
+    margin-top: 7px;
+    font-size: 10.5px;
+    line-height: 1.45;
+    color: #e6eefb;
+  }
+
+  /* ===== Project 01: key outcomes with operational dashboard ===== */
+  .ipark-outcome {
+    padding: 44px 64px 46px;
+    background: #fff;
+  }
+  .outcome-intro {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 470px;
+    gap: 34px;
+    align-items: end;
+  }
+  .outcome-intro .label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    color: #2456a6;
+  }
+  .outcome-intro h2 {
+    margin: 5px 0 0;
+    font-size: 33px;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+  .outcome-intro p {
+    margin: 0 0 2px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .outcome-main {
+    margin-top: 17px;
+    display: grid;
+    grid-template-columns: 395px 1fr;
+    gap: 18px;
+    height: 401px;
+  }
+  .outcome-results {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 9px;
+  }
+  .outcome-result-card {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 15px 17px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+  }
+  .outcome-result-card.primary {
+    border-color: #172033;
+    background: #172033;
+    color: #fff;
+  }
+  .outcome-result-card.soft {
+    border-color: #cbdaf3;
+    background: #eef4ff;
+  }
+  .outcome-result-card .idx {
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    font-size: 8.5px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--muted-2);
+  }
+  .outcome-result-card.primary .idx { color: #8fa6ca; }
+  .outcome-result-card .metric {
+    padding-top: 6px;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 800;
+    color: #2456a6;
+  }
+  .outcome-result-card.primary .metric { color: #fff; }
+  .outcome-result-card .copy {
+    padding-top: 6px;
+    font-size: 11px;
+    line-height: 1.48;
+    color: var(--ink-2);
+  }
+  .outcome-result-card.primary .copy { color: #d5deea; }
+  .outcome-result-card .copy strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 12px;
+    color: var(--ink);
+  }
+  .outcome-result-card.primary .copy strong { color: #fff; }
+  .dashboard-figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .dashboard-frame {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    border: 1px solid #d7dee8;
+    border-radius: 12px;
+    background: #eef2f7;
+    box-shadow: 0 8px 24px rgba(31,41,55,0.09);
+  }
+  .dashboard-frame img {
+    position: absolute;
+    width: 122%;
+    height: auto;
+    right: 0;
+    top: 54%;
+    transform: translateY(-50%);
+    display: block;
+  }
+  .dashboard-frame .live-badge {
+    position: absolute;
+    right: 14px;
+    top: 13px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 3px 10px rgba(31,41,55,0.12);
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--ink-2);
+  }
+  .dashboard-frame .live-badge::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #34c38f;
+  }
+  .dashboard-figure figcaption {
+    padding: 8px 3px 0;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  .outcome-bottom {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr;
+    gap: 14px;
+    height: 81px;
+  }
+  .outcome-value,
+  .outcome-impact {
+    padding: 13px 16px;
+    border-radius: 10px;
+  }
+  .outcome-value {
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  .outcome-impact {
+    background: #2456a6;
+    color: #fff;
+  }
+  .outcome-bottom .bottom-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    color: var(--muted);
+  }
+  .outcome-impact .bottom-label { color: #cbdaf3; }
+  .outcome-value .chips {
+    margin-top: 8px;
+    display: flex;
+    gap: 7px;
+  }
+  .outcome-value .chips span {
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: var(--bg-soft);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ink-2);
+  }
+  .outcome-impact .impact-flow {
+    margin-top: 9px;
+    font-size: 11px;
+    line-height: 1.45;
+    color: #edf3fc;
+  }
+
+  /* ===== Project 01: original-deck aligned hybrid pages ===== */
+  .ipark-classic .project-detail-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .ipark-classic .tab-section { margin-bottom: 26px; }
+  .ipark-classic .tab-section:last-child { margin-bottom: 0; }
+  .ipark-classic .tab-head { margin-bottom: 12px; }
+  .ipark-classic .tab-body .line {
+    margin: 6px 0;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .ipark-classic .scope-rows { padding-left: 0; }
+  .ipark-classic .scope-rows .ref-row {
+    grid-template-columns: 132px 1fr;
+    gap: 10px;
+    padding: 8px 10px;
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+  .ipark-classic .scope-rows .kind {
+    padding: 5px 7px;
+    font-size: 11px;
+  }
+  .ipark-decision-visual {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg-soft);
+  }
+  .ipark-decision-visual .visual-kicker {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #2456a6;
+  }
+  .ipark-decision-visual .visual-title {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .decision-stack {
+    display: grid;
+    gap: 7px;
+    margin-top: 15px;
+  }
+  .decision-node {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 12px;
+    align-items: center;
+    min-height: 62px;
+    padding: 11px 13px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  .decision-node.judgement {
+    border-color: #cbdaf3;
+    background: #eef4ff;
+  }
+  .decision-node.scope {
+    border-color: #172033;
+    background: #172033;
+  }
+  .decision-node .node-label {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+  }
+  .decision-node.judgement .node-label { color: #4e70aa; }
+  .decision-node.scope .node-label { color: #9fb8e4; }
+  .decision-node .node-copy {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--ink-2);
+  }
+  .decision-node.scope .node-copy { color: #fff; }
+  .decision-arrow {
+    height: 12px;
+    display: grid;
+    place-items: center;
+    color: var(--muted-2);
+    font-size: 13px;
+  }
+  .decision-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .decision-metric {
+    padding: 10px 12px;
+    border-radius: 7px;
+    background: #fff;
+    border: 1px solid var(--line);
+  }
+  .decision-metric strong {
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .decision-metric span {
+    margin-left: 7px;
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .ipark-classic .contrib-banner {
+    width: 100%;
+    align-self: stretch;
+    margin-top: 34px;
+  }
+  .ipark-classic .dashboard-classic-figure {
+    width: 100%;
+    margin: 0;
+  }
+  .ipark-classic .dashboard-classic-frame {
+    height: 360px;
+  }
+  .ipark-classic .dashboard-classic-frame img {
+    width: 126%;
+  }
+  .ipark-outcomes-classic .outcomes {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .ipark-outcomes-classic .tab-section { margin-bottom: 26px; }
+  .ipark-outcomes-classic .tab-section:last-child { margin-bottom: 0; }
+  .ipark-outcomes-classic .tab-head {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+  .ipark-outcomes-classic .tab-body .line {
+    margin: 6px 0;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .ipark-outcomes-classic .tab-body .sub {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .dashboard-classic-figure {
+    width: 100%;
+    margin: 0;
+  }
+  .dashboard-classic-frame {
+    position: relative;
+    width: 100%;
+    height: 392px;
+    overflow: hidden;
+    border: 1px solid #d7dee8;
+    border-radius: 8px;
+    background: #eef2f7;
+  }
+  .dashboard-classic-frame img {
+    position: absolute;
+    width: 122%;
+    height: auto;
+    right: 0;
+    top: 54%;
+    transform: translateY(-50%);
+    display: block;
+  }
+  .dashboard-classic-figure figcaption {
+    padding: 12px 8px 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 500;
+    color: var(--ink-2);
+  }
+  .agent-extension-note {
+    width: 100%;
+    margin-top: 13px;
+    padding: 11px 13px;
+    border-left: 3px solid #2456a6;
+    background: #f4f7fb;
+  }
+  .agent-extension-note .label {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    color: #2456a6;
+  }
+  .agent-extension-note .title {
+    margin-top: 3px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .agent-extension-note .flow {
+    margin-top: 4px;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+
+  /* ===== Project 01 outcomes: evidence table and Agent follow-up ===== */
+  .ipark-evidence-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-self: start;
+  }
+  .validation-result-panel,
+  .agent-result-panel {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .result-panel-head {
+    padding: 16px 18px 13px;
+    border-bottom: 1px solid var(--line);
+  }
+  .result-panel-title {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .result-panel-sub {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  .result-table-head,
+  .result-table-row {
+    display: grid;
+    grid-template-columns: 98px 1fr 130px;
+    column-gap: 12px;
+    align-items: center;
+  }
+  .result-table-head {
+    padding: 8px 18px;
+    background: var(--bg-soft);
+    color: var(--muted);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .result-table-head span:last-child { text-align: right; }
+  .result-table-row {
+    min-height: 68px;
+    padding: 10px 18px;
+    border-top: 1px solid var(--line);
+  }
+  .result-table-row .item {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ink-2);
+  }
+  .result-table-row .scope {
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+  .result-table-row .result { text-align: right; }
+  .result-table-row .result strong {
+    display: block;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .result-table-row .result span {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    line-height: 1.3;
+    color: var(--muted);
+  }
+  .agent-result-panel { padding: 16px 18px 18px; }
+  .agent-result-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .agent-result-title {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .agent-result-flow {
+    display: grid;
+    grid-template-columns: 1fr 13px 1fr 13px 1fr 13px 1fr 13px 1fr;
+    align-items: center;
+    gap: 4px;
+    margin-top: 14px;
+  }
+  .agent-step {
+    min-height: 45px;
+    display: grid;
+    place-items: center;
+    padding: 6px 4px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg-soft);
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: var(--ink-2);
+  }
+  .agent-step.final {
+    border-color: var(--ink);
+    background: #fff;
+    color: var(--ink);
+  }
+  .agent-arrow {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted-2);
+  }
+  .agent-result-note {
+    margin-top: 10px;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+
+  /* ===== Project 01 outcomes: evidence-first text layout ===== */
+  .ipark-outcomes-classic.ipark-outcomes-list .outcomes {
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+    gap: 28px;
+    margin-top: 22px;
+    align-items: start;
+  }
+  .ipark-outcomes-list .ipark-outcome-list {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+  .ipark-outcomes-list .tab-section {
+    margin: 0 0 18px;
+  }
+  .ipark-outcomes-list .tab-head {
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+  .ipark-outcomes-list .tab-head .num {
+    flex: 0 0 auto;
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .ipark-outcomes-list .tab-body {
+    padding-left: 40px;
+  }
+  .ipark-outcomes-list .tab-body .line {
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 6px 0;
+  }
+  .ipark-outcomes-list .tab-body .sub {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 4px 0 4px 20px;
+    padding-left: 14px;
+  }
+  .ipark-outcomes-list .agent-highlight {
+    margin-top: 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .ipark-outcomes-list .agent-highlight .line {
+    word-break: keep-all;
+  }
+  .ipark-report-collage {
+    min-width: 0;
+    margin: 0;
+  }
+  .ipark-report-collage-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .ipark-report-figure {
+    min-width: 0;
+    margin: 0;
+  }
+  .ipark-report-figure.retail-eval {
+    grid-column: 1 / -1;
+  }
+  .ipark-report-figure.flow-probability,
+  .ipark-report-figure.retail-chatbot {
+    display: none;
+  }
+  .ipark-report-collage.option-2 .ipark-report-collage-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.counting {
+    grid-column: 1 / -1;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.counting .ipark-report-frame {
+    height: 280px;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.demographic,
+  .ipark-report-collage.option-2 .ipark-report-figure.retail-chatbot {
+    display: block;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.demographic .ipark-report-frame,
+  .ipark-report-collage.option-2 .ipark-report-figure.retail-chatbot .ipark-report-frame {
+    height: 205px;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.retail-chatbot img {
+    object-position: left center;
+    transform: translateY(2px) scale(1.22);
+    transform-origin: left center;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.demographic .ipark-report-frame {
+    background: #fff;
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.demographic .ipark-report-frame > img,
+  .ipark-report-collage.option-2 .ipark-report-figure.demographic .privacy-mosaic-canvas {
+    transform: translateX(9.5%);
+  }
+  .ipark-report-collage.option-2 .ipark-report-figure.retail-eval,
+  .ipark-report-collage.option-2 .ipark-report-figure.flow-probability {
+    display: none;
+  }
+  .ipark-report-frame {
+    width: 100%;
+    height: 252px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #f5f7fa;
+  }
+  .ipark-report-figure.retail-eval .ipark-report-frame {
+    height: 140px;
+    background: #fff;
+  }
+  .ipark-report-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ipark-report-figure.counting .ipark-report-frame img {
+    object-position: center center;
+  }
+  .ipark-report-figure.counting .ipark-report-frame,
+  .ipark-report-figure.demographic .ipark-report-frame {
+    position: relative;
+  }
+  .privacy-mosaic-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .ipark-report-figure.demographic .ipark-report-frame img {
+    object-position: center top;
+  }
+  .ipark-report-figure.retail-eval .ipark-report-frame img {
+    object-fit: contain;
+  }
+  .ipark-report-figure figcaption {
+    margin-top: 7px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+  .ipark-report-source {
+    margin-top: 8px;
+    text-align: right;
+    font-size: 10.5px;
+    color: var(--muted-2);
+  }
+
+  /* ===== Project 01 Agent workflow and detail pages ===== */
+  .agent-flow-page .project-header-row,
+  .agent-detail-page .project-header-row {
+    padding-bottom: 16px;
+  }
+  .agent-flow-page .project-header .h2,
+  .agent-detail-page .project-header .h2 {
+    font-size: 36px;
+  }
+  .agent-flow-page .project-header .meta,
+  .agent-detail-page .project-header .meta {
+    margin: 8px 0 0;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .agent-flow-figure {
+    margin: 24px 0 0;
+    width: 100%;
+  }
+  .agent-flow-frame {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .agent-flow-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ===== Project 01 labeling progress automation ===== */
+  .labeling-auto-page .project-header-row {
+    padding-bottom: 16px;
+  }
+  .labeling-auto-page .project-header .h2 {
+    font-size: 36px;
+  }
+  .labeling-auto-page .project-header .meta {
+    margin: 8px 0 0;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .labeling-auto-grid {
+    display: grid;
+    grid-template-columns: .86fr 1.14fr;
+    gap: 44px;
+    margin-top: 24px;
+    flex: 1;
+    min-height: 0;
+  }
+  .labeling-auto-copy {
+    padding-top: 2px;
+  }
+  .labeling-auto-copy .tab-section {
+    margin-bottom: 22px;
+  }
+  .labeling-auto-copy .tab-head {
+    margin-bottom: 9px;
+    font-size: 23px;
+    line-height: 1.25;
+  }
+  .labeling-auto-copy .tab-head .num {
+    font-size: 15px;
+  }
+  .labeling-auto-copy .tab-body {
+    padding-left: 39px;
+  }
+  .labeling-auto-copy .tab-body .line {
+    margin: 5px 0;
+    font-size: 16.5px;
+    line-height: 1.62;
+  }
+  .labeling-auto-note {
+    margin: 18px 0 0 39px;
+    padding-top: 13px;
+    border-top: 1px solid var(--line);
+    color: #858d99;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+  .labeling-auto-visuals {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    min-height: 0;
+  }
+  .labeling-auto-visuals figure {
+    margin: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .labeling-auto-frame {
+    overflow: hidden;
+    border: 1px solid #d9dee7;
+    border-radius: 9px;
+    background: #fff;
+  }
+  .labeling-auto-frame.workflow {
+    width: 659px;
+    height: 218px;
+  }
+  .labeling-auto-frame.dooray {
+    width: 549px;
+    height: 280px;
+    background: #f8fafc;
+  }
+  .labeling-auto-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .labeling-auto-visuals figcaption {
+    margin-top: 7px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .agent-flow-figure figcaption {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .agent-detail-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+  }
+  .agent-detail-page .tab-section {
+    margin-bottom: 26px;
+  }
+  .agent-detail-page .tab-head {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .agent-detail-page .tab-head .num {
+    font-size: 16px;
+  }
+  .agent-detail-page .tab-body {
+    padding-left: 40px;
+  }
+  .agent-detail-page .tab-body .line {
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 6px 0;
+  }
+  .agent-detail-page .tab-body .sub {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 4px 0 4px 20px;
+  }
+  .agent-output-card {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .agent-output-head {
+    padding: 16px 18px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .agent-output-eyebrow {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--muted-2);
+  }
+  .agent-output-title-row {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .agent-output-title {
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .agent-output-severity {
+    flex: 0 0 auto;
+    min-width: 42px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #fff7ed;
+    color: #c2410c;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    text-align: center;
+  }
+  .agent-output-meta {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .agent-output-meta span {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #f3f4f6;
+    color: var(--muted);
+    font-size: 11.5px;
+    line-height: 1.2;
+  }
+  .agent-trajectory-figure {
+    margin: 0;
+    padding: 14px 16px 10px;
+  }
+  .agent-trajectory-frame {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #f5f7fa;
+  }
+  .agent-trajectory-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .agent-trajectory-figure figcaption {
+    margin-top: 7px;
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: center;
+    color: var(--muted);
+  }
+  .agent-output-steps {
+    margin: 0 16px;
+    border-top: 1px solid var(--line);
+  }
+  .agent-output-step {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #eef0f3;
+  }
+  .agent-output-step:last-child {
+    border-bottom: 0;
+  }
+  .agent-output-step .label {
+    font-size: 12.5px;
+    line-height: 1.45;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .agent-output-step p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+  .agent-output-s3 {
+    margin: 10px 16px 14px;
+    padding: 10px 12px;
+    border-left: 3px solid #991b1b;
+    background: #fef2f2;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+  .agent-output-s3 strong {
+    display: inline-block;
+    margin-right: 9px;
+    color: #991b1b;
+    font-weight: 800;
+  }
+  .agent-screen-stack {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+  }
+  .agent-screen-case {
+    margin: 0;
+    min-width: 0;
+  }
+  .agent-screen-label {
+    width: 100%;
+    min-height: 25px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14.5px;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .agent-screen-label .case-type {
+    font-weight: 800;
+  }
+  .agent-screen-label .case-desc {
+    padding-left: 10px;
+    border-left: 1px solid #d7dee8;
+    color: var(--ink-2);
+    font-weight: 600;
+  }
+  .agent-screen-label .severity {
+    margin-left: auto;
+    flex: 0 0 auto;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #fff7ed;
+    color: #c2410c;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 800;
+  }
+  .agent-screen-frame {
+    position: relative;
+    width: 100%;
+    height: 216px;
+    overflow: hidden;
+    border: 1px solid #d7dee8;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .agent-screen-frame img {
+    position: absolute;
+    display: block;
+    width: 102.3%;
+    height: auto;
+    left: -1.15%;
+    top: 0;
+  }
+  .agent-screen-frame.count-inflation img {
+    transform: translateY(-14.6%);
+  }
+  .agent-screen-frame.traffic-spike img {
+    transform: translateY(-28%);
+  }
+  .agent-screen-case figcaption {
+    min-height: 36px;
+    margin-top: 7px;
+    font-size: 12.5px;
+    line-height: 1.45;
+    text-align: center;
+    color: var(--muted);
+  }
+  .agent-principles {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 120px repeat(3, 1fr);
+    gap: 0;
+    align-items: stretch;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-soft);
+  }
+  .agent-principles .label,
+  .agent-principles .principle {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+  }
+  .agent-principles .label {
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--ink);
+    background: #eef2f7;
+  }
+  .agent-principles .principle {
+    padding: 0 18px;
+    border-left: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-2);
+  }
+  .agent-principles .principle strong {
+    margin-right: 9px;
+    color: var(--ink);
+    font-weight: 800;
+  }
+
+  /* ===== AG Project 01: Vision Dataset Agent ===== */
+  .vision-flow-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+  }
+  .vision-flow-page > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .vision-flow-page .footer-brand {
+    z-index: 2;
+  }
+  .vision-agent-detail .agent-detail-grid {
+    grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr);
+    gap: 50px;
+    margin-top: 24px;
+  }
+  .vision-agent-detail .tab-section {
+    margin-bottom: 23px;
+  }
+  .vision-agent-detail .tab-head {
+    margin-bottom: 9px;
+  }
+  .vision-agent-detail .tab-body .line {
+    font-size: 16.5px;
+    line-height: 1.58;
+    margin: 5px 0;
+  }
+  .vision-evidence-stack {
+    --vision-column-height: 460px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+    min-width: 0;
+  }
+  .vision-evidence {
+    margin: 0;
+    min-width: 0;
+  }
+  .vision-evidence-head {
+    min-height: 28px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .vision-evidence-head strong {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .vision-evidence-head .recommended {
+    margin-left: auto;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #eef4ff;
+    color: #1b3a6b;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .vision-evidence-frame {
+    height: var(--vision-column-height);
+    overflow: hidden;
+    border: 0;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .vision-chat-stack {
+    display: grid;
+    gap: 6px;
+    width: 100%;
+    height: var(--vision-column-height);
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+  }
+  .vision-chat-shot {
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
+    border: 1px solid #cbd4e0;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .vision-chat-stack.data {
+    grid-template-rows: 39fr 61fr;
+  }
+  .vision-chat-stack.training {
+    grid-template-rows: 51fr 49fr;
+  }
+  .vision-chat-stack.data .vision-chat-shot.overview {
+    min-height: 0;
+  }
+  .vision-chat-stack.data .vision-chat-shot.samples {
+    min-height: 0;
+  }
+  .vision-chat-stack.training .vision-chat-shot.candidate {
+    min-height: 0;
+  }
+  .vision-chat-stack.training .vision-chat-shot.approval {
+    min-height: 0;
+  }
+  .vision-chat-shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    background: #fff;
+  }
+  .vision-shot-source {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    transform: translateX(-50%);
+  }
+  .vision-chat-shot.overview .vision-shot-source {
+    aspect-ratio: 740 / 430;
+  }
+  .vision-chat-shot.samples .vision-shot-source {
+    aspect-ratio: 742 / 732;
+  }
+  .vision-chat-shot.candidate .vision-shot-source {
+    aspect-ratio: 740 / 672;
+  }
+  .vision-chat-shot.approval .vision-shot-source {
+    aspect-ratio: 744 / 664;
+  }
+  .vision-mock-browser {
+    height: 100%;
+    background: #fff;
+  }
+  .vision-mock-bar {
+    height: 29px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    background: #1f427e;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .vision-mock-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff7c70;
+    box-shadow: 12px 0 #ffca57, 24px 0 #5fd07c;
+    margin-right: 24px;
+  }
+  .vision-search-body {
+    display: grid;
+    grid-template-columns: .72fr 1.28fr;
+    gap: 12px;
+    height: calc(100% - 29px);
+    padding: 13px;
+  }
+  .vision-query-panel {
+    padding: 12px;
+    border-radius: 8px;
+    background: #f1f5fb;
+    color: #38475c;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+  .vision-query-panel strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #1f2937;
+    font-size: 12px;
+  }
+  .vision-query-chip {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 7px;
+    border: 1px solid #cbd6e5;
+    border-radius: 999px;
+    background: #fff;
+    color: #1f427e;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .vision-result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    align-content: center;
+  }
+  .vision-result-thumb {
+    position: relative;
+    height: 66px;
+    overflow: hidden;
+    border: 1px solid #d9e0e9;
+    border-radius: 7px;
+    background:
+      linear-gradient(150deg, rgba(31,66,126,.10), rgba(107,78,155,.06)),
+      repeating-linear-gradient(45deg, #edf1f6 0 10px, #f8fafc 10px 20px);
+  }
+  .vision-result-thumb::after {
+    content: "유사 이미지";
+    position: absolute;
+    left: 6px;
+    bottom: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: rgba(255,255,255,.9);
+    color: #6b7280;
+    font-size: 8px;
+    font-weight: 700;
+  }
+  .vision-approval-card {
+    height: 100%;
+    padding: 15px 17px;
+    background: #fff;
+  }
+  .vision-approval-alert {
+    padding: 9px 11px;
+    border-left: 3px solid #b83a2c;
+    background: #fff3f1;
+    color: #a52d22;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .vision-approval-info {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 8px 12px;
+    margin-top: 13px;
+    color: #4b5563;
+    font-size: 11px;
+  }
+  .vision-approval-info strong { color: #1f2937; }
+  .vision-approval-actions {
+    display: flex;
+    gap: 9px;
+    margin-top: 15px;
+  }
+  .vision-approval-actions span {
+    min-width: 76px;
+    padding: 7px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    text-align: center;
+    color: #667085;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .vision-approval-actions .approve {
+    border-color: #2e7d5b;
+    background: #2e7d5b;
+    color: #fff;
+  }
+  .vision-evidence figcaption {
+    min-height: 34px;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+  }
 
   /* Tab-style section heading + indented content block */
   .tab-section { margin-bottom: 26px; }
@@ -939,6 +2830,15 @@
       height: 810px !important;
     }
   }
+
+  .flow-link {
+    margin-left: 14px;
+    font-weight: 600;
+    color: #2c3a6c;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
 </style>
 </head>
 <body>
@@ -1124,6 +3024,364 @@
     <div class="slide">
       <div class="pad project-title">
         <p class="eyebrow">PROJECT 01</p>
+        <h1 class="h1">비전 데이터 탐색 및 학습 운영 Agent</h1>
+        <p class="lead">자연어와 이미지 기반 데이터 탐색부터 VLM 보조 검수, 사람 승인 기반 학습까지 연결</p>
+        <p class="meta-line">HDC LABS 2026.07 - 2026.09</p>
+        <div class="tag-row">
+          <span class="tag">Agentic Workflow</span>
+          <span class="tag">Multimodal Retrieval</span>
+          <span class="tag">Vision DataOps</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">Dify</span>
+        </div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 4: AG Project 01 Workflow -->
+  <section class="stage" data-slide="4">
+    <div class="slide">
+      <div class="pad agent-detail-page vision-agent-detail">
+        <div class="project-header project-header-row">
+          <div>
+            <h2 class="h2">비전 데이터 탐색 및 학습 운영 Agent</h2>
+            <p class="meta">비개발자의 데이터 현황 파악과 개발자의 데이터 운영을 연결<a class="flow-link" href="https://stillrot.github.io/career/hdclabs/#proj-vision">전체 흐름도 보기 →</a></p>
+          </div>
+        </div>
+
+        <div class="agent-detail-grid">
+          <div class="agent-detail-copy">
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">01</span>업무 목표</div>
+              <div class="tab-body">
+                <p class="line">비개발자가 보유 데이터의 종류와 규모를 빠르게 파악하는 탐색 환경 구축</p>
+                <p class="line">지속 추가되는 데이터를 일관된 기준으로 관리하고 탐색, 검수 및 학습 후보로 연결</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">02</span>데이터 탐색 및 관리</div>
+              <div class="tab-body">
+                <p class="line">자연어 및 이미지 질의로 데이터 유형, 규모, 출처와 라벨 상태 조회</p>
+                <p class="line">신규 및 변경 데이터를 증분 색인해 최신 데이터 현황과 검색 결과에 반영</p>
+                <p class="line">VLM 보조 검수로 검색 결과와 객체 라벨의 일치 여부 및 판단 근거 제공</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">03</span>운영 성과</div>
+              <div class="tab-body">
+                <p class="line">수만 장 규모의 비전 데이터를 통합 색인해 대화형 현황 탐색 경로 구축</p>
+                <p class="line">탐색부터 VLM 검수, 사람 승인 기반 GPU 학습과 결과 조회까지 E2E 흐름 검증</p>
+                <p class="line">모델 오탐 이미지를 유사 데이터 재탐색과 후속 학습 후보 구성으로 연결</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="vision-evidence-stack" aria-label="실제 Agent 대화 화면">
+            <figure class="vision-evidence">
+              <div class="vision-evidence-head">
+                <strong>데이터 현황 및 샘플 조회</strong>
+              </div>
+              <div class="vision-evidence-frame vision-chat-stack data">
+                <div class="vision-chat-shot overview">
+                  <div class="vision-shot-source">
+                    <img src="assets/img/vision-dataset-dify-overview-redacted.png" alt="데이터 장수를 모자이크한 도메인별 비전 데이터 현황 조회 화면"/>
+                  </div>
+                </div>
+                <div class="vision-chat-shot samples">
+                  <div class="vision-shot-source">
+                    <img src="assets/img/vision-dataset-sample-images-redacted.png" alt="표시 장수를 모자이크한 데이터 폴더별 대표 샘플 조회 화면"/>
+                  </div>
+                </div>
+              </div>
+            </figure>
+
+            <figure class="vision-evidence">
+              <div class="vision-evidence-head">
+                <strong>학습 후보 구성 및 승인 전 검토</strong>
+              </div>
+              <div class="vision-evidence-frame vision-chat-stack training">
+                <div class="vision-chat-shot candidate">
+                  <div class="vision-shot-source">
+                    <img src="assets/img/vision-dataset-candidate-summary-redacted.png" alt="학습 및 검증 데이터 장수를 모자이크한 학습 후보 구성 화면"/>
+                  </div>
+                </div>
+                <div class="vision-chat-shot approval">
+                  <div class="vision-shot-source">
+                    <img src="assets/img/vision-dataset-training-approval-redacted.png" alt="학습 및 검증 데이터 장수를 모자이크한 GPU 학습 승인 전 검토 화면"/>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 6: Project 02 Title -->
+  <section class="stage" data-slide="5">
+    <div class="slide">
+      <div class="pad project-title">
+        <p class="eyebrow">PROJECT 02</p>
+        <h1 class="h1">아이파크몰 AI 방문자 분석</h1>
+        <p class="lead">방문자 분석 요구의 타당성을 판단하고 PoC 범위와 KPI를 정의, Vision Agent 기반 품질 관제로 확장</p>
+        <p class="meta-line">HDC LABS 2026.03 - 2026.07</p>
+        <div class="tag-row">
+          <span class="tag">Technical PM</span>
+          <span class="tag">On-prem AI</span>
+          <span class="tag">PoC</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">Vision Agent</span>
+          <span class="tag">n8n</span>
+        </div>
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 4: Project 01 Detail -->
+  <section class="stage" data-slide="6">
+    <div class="slide">
+      <div class="pad ipark-classic">
+        <div class="project-header project-header-row">
+          <div>
+            <h2 class="h2">아이파크몰 AI 방문자 분석</h2>
+            <p class="meta">HDC LABS 2026.03 - 2026.07</p>
+          </div>
+        </div>
+
+        <div class="project-detail-grid">
+          <div>
+            <div class="tab-section">
+              <div class="tab-head">업무 목표</div>
+              <div class="tab-body">
+                <p class="line">출입구 CCTV 기반 방문자 IN/OUT 및 특성 분석의 현장 적용 가능성 검증</p>
+                <p class="line">실환경 데이터 기반 모델 성능과 운영 조건의 확인</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head">담당 업무</div>
+              <div class="tab-body">
+                <p class="line">온프레미스 환경과 개인정보 보호 조건을 반영한 CCTV 데이터 처리 구조 설계</p>
+                <p class="line">기능별 KPI와 평가 기준을 수립하고 데이터 수집, 라벨링과 검수 체계 설계</p>
+                <p class="line">다중 사용자 라벨링 도구 구축 및 검수 기준 설계</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head">프로젝트 운영</div>
+              <div class="tab-body">
+                <p class="line">요구 분석, 평가 설계, 개발 실행과 현장 검증을 연결한 단계별 추진 체계 수립</p>
+                <p class="line">내부 사업개발 PM과 AI 엔지니어 3명의 역할, 실행 항목과 완료 기준 구조화</p>
+                <p class="line">기술 타당성, 데이터 확보 가능성과 검증 결과 기반의 우선순위 및 개발 방향 결정</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual">
+            <figure class="dashboard-classic-figure">
+              <div class="dashboard-classic-frame">
+                <img src="assets/img/ipark-dashboard-masked.png" alt="수치가 마스킹된 아이파크몰 방문자 분석 운영 대시보드"/>
+              </div>
+              <figcaption>PoC 산출 데이터가 연동된 방문자 분석 운영 대시보드</figcaption>
+            </figure>
+
+            <div class="contrib-banner">
+              <div class="contrib-donut-wrap"><svg class="donut-mini" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/><circle cx="50" cy="50" r="40" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="75.4 251.3" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937" font-family="inherit">30%</text></svg></div>
+              <div class="contrib-text">
+                <div class="contrib-eyebrow">기여도</div>
+                <div class="contrib-title">Technical Product Manager</div>
+                <div class="contrib-desc">PoC 범위와 KPI 설계, 개발 실행과 현장 검증 조율</div>
+                <hr class="contrib-divider"/>
+                <div class="contrib-collab"><strong>협업</strong>AI 엔지니어 3명, PM(내부 사업개발팀)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 5: Project 01 Key Outcomes -->
+  <section class="stage" data-slide="7">
+    <div class="slide">
+      <div class="pad ipark-outcomes-classic ipark-outcomes-list">
+        <div class="project-header-row">
+          <h2 class="h2">아이파크몰 AI 방문자 분석 <span class="h2-sub">주요 성과</span></h2>
+        </div>
+
+        <div class="outcomes">
+          <div class="ipark-outcome-list">
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">01</span>온프레미스 현장 PoC 운영</div>
+              <div class="tab-body">
+                <p class="line">영상과 얼굴 정보를 외부로 전송하지 않는 현장 분석 환경 운영</p>
+                <p class="sub">22개 CCTV, 3주 운영, 방문 기록 250만 건 이상 처리</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">02</span>데이터 및 평가셋 확보</div>
+              <div class="tab-body">
+                <p class="line">라벨 데이터 구축과 n8n 기반 진척 관리 자동화 구성</p>
+                <p class="sub">연령대 및 성별 라벨 데이터 약 5만 장 구축</p>
+                <p class="sub">작업자 5명의 객체 수와 달성률을 집계해 업무 메신저로 공유</p>
+                <p class="line">Retail 챗봇 260문항 평가셋을 두 가지 기준으로 검증</p>
+                <p class="sub">정답 일치 여부와 응답 품질을 함께 평가</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">03</span>분석 기능별 성능 검증</div>
+              <div class="tab-body">
+                <p class="line">현장 표본과 분리된 평가 세트 기반 기능별 성능 확인</p>
+                <p class="sub">대표 출입구 직접 계수 및 CCTV 재검수를 통한 정확도 약 95% 확인</p>
+                <p class="sub">외형 판정 평가 라벨 기준 성별 90.7%, 연령대 90.5% 일치</p>
+                <p class="sub">Retail 챗봇 260문항에서 정답률 83.1%, 답변 품질 3.82/5, 사실 정확성 4.28/5 확인</p>
+              </div>
+            </div>
+
+            <div class="tab-section agent-highlight">
+              <div class="tab-head"><span class="num">04</span>PoC 운영 과정에서 품질 관리 필요성 도출</div>
+              <div class="tab-body">
+                <p class="line">카메라 녹화 기록과 방문객 지표 이상을 정기적으로 점검할 관리 체계의 필요성 확인</p>
+                <p class="sub">후속 통합 관제 Agent 구현 및 사람 검토를 통한 7개 카메라 설정 조정</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ipark-report-collage option-2">
+            <div class="ipark-report-collage-grid">
+              <figure class="ipark-report-figure counting">
+                <div class="ipark-report-frame">
+                  <img src="assets/img/ipark-result-counting.png" alt="출입구별 방문자 IN OUT 계수선 설정 예시"/>
+                  <canvas class="privacy-mosaic-canvas" data-mosaic="counting" aria-hidden="true"></canvas>
+                </div>
+                <figcaption>출입구별 IN/OUT 계수선 설정 예시</figcaption>
+              </figure>
+
+              <figure class="ipark-report-figure demographic">
+                <div class="ipark-report-frame">
+                  <img src="assets/img/ipark-result-demographic.png" alt="외형 기준 연령대 및 성별 추정 예시"/>
+                  <canvas class="privacy-mosaic-canvas" data-mosaic="demographic" aria-hidden="true"></canvas>
+                </div>
+                <figcaption>외형 기준 연령대 및 성별 추정 예시</figcaption>
+              </figure>
+
+              <figure class="ipark-report-figure retail-eval">
+                <div class="ipark-report-frame">
+                  <img src="assets/img/ipark-result-retail-eval.png" alt="Retail 챗봇 성능 평가 결과표"/>
+                </div>
+                <figcaption>Retail 챗봇 260문항 평가 결과</figcaption>
+              </figure>
+
+              <figure class="ipark-report-figure flow-probability">
+                <div class="ipark-report-frame">
+                  <img src="assets/img/ipark-result-flow-probability.png" alt="출입구별 이동 확률 기반 구역 분석 확장안"/>
+                </div>
+                <figcaption>이동 확률 기반 구역 분석 확장안</figcaption>
+              </figure>
+
+              <figure class="ipark-report-figure retail-chatbot">
+                <div class="ipark-report-frame">
+                  <img src="assets/img/ipark-result-retail-chatbot-mosaic.png" alt="Retail 챗봇 운영 데이터 질의 화면"/>
+                </div>
+                <figcaption>Retail 챗봇 운영 데이터 질의 화면</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 6: Project 01 Labeling Progress Automation -->
+  <section class="stage" data-slide="8">
+    <div class="slide">
+      <div class="pad agent-detail-page">
+        <div class="project-header project-header-row">
+          <div>
+            <h2 class="h2">CCTV 상태 및 방문객 지표 통합 관제 Agent</h2>
+            <p class="meta">LangGraph 기반 판단 분리와 운영 품질 관제<a class="flow-link" href="https://stillrot.github.io/career/hdclabs/#proj-ipark">전체 흐름도 보기 →</a></p>
+          </div>
+        </div>
+
+        <div class="agent-detail-grid">
+          <div class="agent-detail-copy">
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">01</span>업무 목표</div>
+              <div class="tab-body">
+                <p class="line">카메라 및 시간대별 방문객 지표의 이상 탐지와 사후 원인 검토 근거 확보</p>
+                <p class="line">원본 방문객 지표를 변경하지 않는 운영 품질 검수 구조 구축</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">02</span>판단 및 진단 구조</div>
+              <div class="tab-body">
+                <p class="line">규칙 및 통계 탐지기로 이상 여부와 S0부터 S3까지 심각도 판정</p>
+                  <p class="line">GPT-5.5를 수치 기반 원인 설명과 궤적 이미지의 원인 후보 진단에 각각 적용</p>
+                <p class="line">진단 결과가 이상 등급과 운영 설정을 변경하지 않도록 판단 권한 분리</p>
+              </div>
+            </div>
+
+            <div class="tab-section">
+              <div class="tab-head"><span class="num">03</span>운영 안전장치</div>
+              <div class="tab-body">
+                <p class="line">운영 TimescaleDB 5개 테이블의 읽기 전용 조회 및 별도 QA 영역에 검토 결과 기록</p>
+                <p class="line">S1과 S2는 품질 플래그 기록, S3는 LangGraph 사람 승인 대기 분기</p>
+                <p class="line">22시 30분 야간 배치 및 S3 사건 발생 시 메일 검토 요청 경로 구성</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="agent-screen-stack" aria-label="실제 Agent 분석 화면">
+            <figure class="agent-screen-case">
+              <div class="agent-screen-label">
+                <span class="case-type">count_inflation</span>
+                <span class="case-desc">반복 교차 및 계수선 위치 진단</span>
+                <span class="severity">S2</span>
+              </div>
+              <div class="agent-screen-frame count-inflation">
+                <img src="assets/img/ipark-agent-count-inflation-screen.png" alt="이동 궤적과 계수선을 분석해 과다 계수 원인 후보를 제시한 실제 Agent 화면"/>
+              </div>
+              <figcaption>IN/OUT과 고유 궤적의 불일치를 탐지하고 궤적 이미지로 반복 교차 원인을 검토</figcaption>
+            </figure>
+
+            <figure class="agent-screen-case">
+              <div class="agent-screen-label">
+                <span class="case-type">traffic_spike</span>
+                <span class="case-desc">이동 궤적 기반 원인 추정</span>
+                <span class="severity">S2</span>
+              </div>
+              <div class="agent-screen-frame traffic-spike">
+                <img src="assets/img/ipark-agent-traffic-spike-screen.png" alt="방문객 급증과 이동 궤적을 분석해 원인 후보를 제시한 실제 Agent 화면"/>
+              </div>
+              <figcaption>기준선 대비 방문객 급증을 탐지하고 궤적의 집중과 단절 패턴을 원인 후보로 분석</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="footer-brand"><img src="assets/img/footer-hdc.png" alt="HDC LABS"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 03 Title -->
+  <section class="stage" data-slide="9">
+    <div class="slide">
+      <div class="pad project-title">
+        <p class="eyebrow">PROJECT 03</p>
         <h1 class="h1">엘리베이터 내부 상황 분석 시스템</h1>
         <p class="lead">엘리베이터 현장 적용을 목표로 데이터 구축부터 모델 검증, 배포 자동화까지 수행</p>
         <p class="meta-line">HDC LABS 2025.01 – 2026.02</p>
@@ -1140,7 +3398,7 @@
   </section>
 
   <!-- Slide 4: Project 01 Detail -->
-  <section class="stage" data-slide="4">
+  <section class="stage" data-slide="10">
     <div class="slide">
       <div class="pad">
         <div class="project-header project-header-row">
@@ -1214,7 +3472,7 @@
   </section>
 
   <!-- Slide 5: Project 01 Outcomes -->
-  <section class="stage" data-slide="5">
+  <section class="stage" data-slide="11">
     <div class="slide">
       <div class="pad">
         <div class="project-header-row">
@@ -1267,10 +3525,10 @@
   </section>
 
   <!-- Slide 6: Project 02 Title -->
-  <section class="stage" data-slide="6">
+  <section class="stage" data-slide="12">
     <div class="slide">
       <div class="pad project-title">
-        <p class="eyebrow">PROJECT 02</p>
+        <p class="eyebrow">PROJECT 04</p>
         <h1 class="h1">지하주차장 화재 감지 보조 시스템</h1>
         <p class="lead">지하주차장 CCTV 환경에 맞춰 PoC 설계부터 현장 배포까지 전 과정 수행</p>
         <p class="meta-line">HDC LABS 2024.10 – 2025.10</p>
@@ -1287,7 +3545,7 @@
   </section>
 
   <!-- Slide 7: Project 02 Detail -->
-  <section class="stage" data-slide="7">
+  <section class="stage" data-slide="13">
     <div class="slide">
       <div class="pad">
         <div class="project-header project-header-row">
@@ -1360,7 +3618,7 @@
   </section>
 
   <!-- Slide 8: Project 02 Outcomes -->
-  <section class="stage" data-slide="8">
+  <section class="stage" data-slide="14">
     <div class="slide">
       <div class="pad">
         <div class="project-header-row">
@@ -1417,10 +3675,10 @@
   </section>
 
   <!-- Slide 9: Project 03 Title -->
-  <section class="stage" data-slide="9">
+  <section class="stage" data-slide="15">
     <div class="slide">
       <div class="pad project-title">
-        <p class="eyebrow">PROJECT 03</p>
+        <p class="eyebrow">PROJECT 05</p>
         <h1 class="h1">콘텐츠 제작을 위한 생성형 AI 기능 개발</h1>
         <p class="lead">버추얼 인플루언서 이미지 생성, Face Re-Aging, 화자 변환 음성 AI</p>
         <p class="meta-line">METAVERSE ENTERTAINMENT 2023.01 – 2024.05</p>
@@ -1437,7 +3695,7 @@
   </section>
 
   <!-- Slide 10: Project 03 Detail -->
-  <section class="stage" data-slide="10">
+  <section class="stage" data-slide="16">
     <div class="slide">
       <div class="pad">
         <div class="project-header">
@@ -1505,7 +3763,7 @@
   </section>
 
   <!-- Slide 11: Publications & Patents -->
-  <section class="stage" data-slide="11">
+  <section class="stage" data-slide="17">
     <div class="slide">
       <div class="pad">
         <p class="pub-header">PUBLICATIONS &amp; PATENTS</p>
@@ -1567,7 +3825,7 @@
   </section>
 
   <!-- Slide 12: Research Highlights -->
-  <section class="stage" data-slide="12">
+  <section class="stage" data-slide="18">
     <div class="slide">
       <div class="pad" style="padding:48px 80px;">
         <p class="eyebrow">Publications</p>
@@ -1640,7 +3898,7 @@
   </section>
 
   <!-- Slide 13: Thank You -->
-  <section class="stage" data-slide="13">
+  <section class="stage" data-slide="19">
     <div class="slide">
       <div class="thanks">
         <div class="h1">Thank You</div>
@@ -1680,9 +3938,9 @@
   });
 
   // Inject page indicator at bottom-right of each slide
-  // (Slide 11 — Publications & Patents — intentionally omits the indicator.)
+  // (Slide 17 - Publications & Patents - intentionally omits the indicator.)
   stages.forEach((stage, i) => {
-    if (stage.dataset.slide === '11') return;
+    if (stage.dataset.slide === '17') return;
     const slide = stage.querySelector('.slide');
     const ind = document.createElement('div');
     ind.className = 'page-indicator';
@@ -1704,6 +3962,107 @@
     stages.forEach((s, i) => s.style.display = (i === index) ? 'grid' : 'none');
     Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('active', i === index));
     fit();
+  }
+
+  const privacyMosaics = {
+    counting: {
+      blockSize: 5,
+      objectY: 0.5,
+      polygons: [
+        [[0, 0], [.10, 0], [.10, .24], [.07, .34], [0, .34]],
+        [[.46, .07], [.56, .07], [.58, .66], [.50, .73], [.45, .58]],
+        [[.59, .05], [.69, .06], [.71, .58], [.63, .62], [.58, .38]],
+        [[.27, .43], [.40, .43], [.43, 1], [.27, 1], [.22, .71]],
+        [[.80, .27], [.91, .27], [.92, .78], [.81, .80], [.77, .51]]
+      ]
+    },
+    demographic: {
+      blockSize: 5,
+      objectY: 0,
+      polygons: [
+        [[.18, .14], [.47, .14], [.49, 1], [.18, 1]],
+        [[.42, .28], [.72, .28], [.73, 1], [.43, 1]]
+      ]
+    }
+  };
+
+  function waitForImage(image) {
+    if (image.complete && image.naturalWidth) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+      image.addEventListener('load', resolve, { once: true });
+      image.addEventListener('error', reject, { once: true });
+    });
+  }
+
+  function drawCover(ctx, image, width, height, objectY, objectX = 0.5) {
+    const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+    const sourceWidth = width / scale;
+    const sourceHeight = height / scale;
+    const sourceX = (image.naturalWidth - sourceWidth) * objectX;
+    const sourceY = (image.naturalHeight - sourceHeight) * objectY;
+    ctx.drawImage(
+      image,
+      sourceX, sourceY, sourceWidth, sourceHeight,
+      0, 0, width, height
+    );
+  }
+
+  async function initPrivacyMosaics() {
+    const canvases = Array.from(document.querySelectorAll('.privacy-mosaic-canvas'));
+    await Promise.all(canvases.map(async canvas => {
+      const definition = privacyMosaics[canvas.dataset.mosaic];
+      const frame = canvas.closest('.ipark-report-frame');
+      const image = frame.querySelector(':scope > img');
+      await waitForImage(image);
+
+      const width = frame.clientWidth;
+      const height = frame.clientHeight;
+      canvas.width = width;
+      canvas.height = height;
+
+      const base = document.createElement('canvas');
+      base.width = width;
+      base.height = height;
+      drawCover(base.getContext('2d'), image, width, height, definition.objectY, definition.objectX);
+
+      const source = document.createElement('canvas');
+      source.width = width;
+      source.height = height;
+      const sourceContext = source.getContext('2d');
+      if (definition.scale) {
+        sourceContext.translate(0, definition.translateY || 0);
+        sourceContext.translate(0, height * 0.5);
+        sourceContext.scale(definition.scale, definition.scale);
+        sourceContext.translate(0, -height * 0.5);
+      }
+      sourceContext.drawImage(base, 0, 0);
+
+      const reduced = document.createElement('canvas');
+      reduced.width = Math.max(1, Math.ceil(width / definition.blockSize));
+      reduced.height = Math.max(1, Math.ceil(height / definition.blockSize));
+      const reducedContext = reduced.getContext('2d');
+      reducedContext.imageSmoothingEnabled = true;
+      reducedContext.drawImage(source, 0, 0, reduced.width, reduced.height);
+
+      const context = canvas.getContext('2d');
+      context.imageSmoothingEnabled = false;
+      definition.polygons.forEach(points => {
+        context.save();
+        context.beginPath();
+        points.forEach(([x, y], pointIndex) => {
+          const draw = pointIndex === 0 ? 'moveTo' : 'lineTo';
+          context[draw](x * width, y * height);
+        });
+        context.closePath();
+        context.clip();
+        context.drawImage(
+          reduced,
+          0, 0, reduced.width, reduced.height,
+          0, 0, width, height
+        );
+        context.restore();
+      });
+    }));
   }
 
   function go(i) {
@@ -1767,7 +4126,12 @@
   });
 
   window.addEventListener('resize', fit);
-  render();
+  initPrivacyMosaics()
+    .catch(error => console.error('Privacy mosaic initialization failed', error))
+    .finally(() => {
+      document.documentElement.dataset.privacyReady = 'true';
+      render();
+    });
 })();
 </script>
 </body>
