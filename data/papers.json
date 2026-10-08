@@ -36,7 +36,7 @@
         "intro": "Nuni treats a confirmed distress cue as a reason to ask, not a reason to alert. A finite-state controller escalates only when the person stays silent:",
         "bullets": [
           "A confirmed cue moves the robot to Ask1: a 2.5 s text prompt followed by an 8 s response window (Wait1).",
-          "No response leads to a second prompt and window (Ask2, Wait2); a valid response or a wave in either window leads to stand-down.",
+          "No response leads to a second prompt and window (Ask2, Wait2); a valid response or a wave in either window leads to\u00a0stand-down.",
           "Silence through both prompts produces a single alert (nominal 21 s) and the robot stays with the person; a 15 s cooldown suppresses duplicate alerts."
         ],
         "figures": []

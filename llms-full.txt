@@ -728,7 +728,7 @@ Responsibilities
 
 - 기능별 KPI와 평가 기준 수립, AI 엔지니어 3명의 실행 항목과 완료 기준 구조화
 
-- 성별과 연령 예측 모델 학습용 공개 데이터셋 RAPv2 고해상도 증강 Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 84,928장 생성, 5종 지표 자동 검수로 10,413장 재생성
+- 성별과 연령 예측 모델 학습용 공개 데이터셋 RAPv2 고해상도 증강 Qwen-Image-Edit로 자세와 의복은 유지하고 디테일만 복원 84,928장 생성, 5종 지표 자동 검수로 10,413장 재생성
 
 - Designed CCTV data processing for on-premises and privacy constraints
 
@@ -885,7 +885,7 @@ Key role
 AI 시스템 개발 주도 (데이터, 모델 학습, 판단 로직, 배포)
 Led AI system development (data, model training, decision logic, deployment)
 
-협업하드웨어(팀 엔지니어 2명, 내부 IoT팀), E/V 제어(현대엘리베이터)
+협업하드웨어(팀 엔지니어 2명, 내부 IoT팀), E/V 제어(현대엘리베이터)
 Withhardware (2 team engineers, internal IoT team), E/V control (Hyundai Elevator)
 
 1

@@ -65,6 +65,9 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
+/* Korean wraps between words (not inside them); avoid one-word last lines */
+body { word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
+h1, h2, h3, .paper-card-title, .paper-mini-title { text-wrap: balance; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; display: block; }
