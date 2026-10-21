@@ -2301,7 +2301,7 @@ Service
 
 Reviewer (peer-review)
 
-ICIP(26), ICBINB @ ICLR(26)
+ICIP 2026; ICBINB @ ICLR 2026; TAG @ CoRL 2026
 
 Instructor, K-Digital Training | HDC LABS
 
