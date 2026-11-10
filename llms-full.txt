@@ -34,9 +34,6 @@ EN
 # 윤동식 AI Engineer
 Dongsik Yoon AI Engineer
 
-신세계아이앤씨 AX센터 AI기술팀
-SHINSEGAE I&C · AX Center, AI Technology Team
-
 연구부터 현장 배포까지, 실서비스에서 동작하는 영상 인식 AI 개발
 
 Building real-world vision AI, from research to field deployment
@@ -74,7 +71,8 @@ Scholar
 Click a card to view the details
 
 신세계아이앤씨
-SHINSEGAE I&C
+SHINSEGAE
+I&C
 
 AX센터 AI기술팀
 AX Center, AI Technology Team
@@ -209,7 +207,6 @@ Research
 - PUBLICATIONS -> https://stillrot.github.io/#publications
 - NEWS -> https://stillrot.github.io/#news
 - RESEARCH -> https://stillrot.github.io/#research
-- 신세계아이앤씨 AX센터 AI기술팀SHINSEGAE I&C · AX Center, AI Technology Team -> https://stillrot.github.io/career/shinsegae-inc/
 - Portfolio -> https://stillrot.github.io/portfolio2026/
 - AI Works -> https://stillrot.github.io/ai-works/deck/
 - CV -> https://stillrot.github.io/cv/
