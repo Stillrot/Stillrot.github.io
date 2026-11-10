@@ -105,6 +105,8 @@ section.hero { padding: 56px 0 32px; }
   grid-template-columns: 1fr 220px;
 }
 .hero h1 { font-size: 34px; margin: 0 0 6px; font-weight: 700; }
+.hero-affiliation { margin: 0 0 14px; color: var(--fg-muted); font-size: 14px; font-weight: 600; }
+.hero-affiliation a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .hero .subtitle { color: var(--fg-muted); margin: 0 0 16px; font-size: 16px; }
 .hero .lead { color: var(--fg); font-weight: 600; margin: 0 0 12px; font-size: 18px; line-height: 1.5; max-width: 620px; }
 
@@ -277,6 +279,14 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 }
 .career-card .role { color: var(--fg-muted); font-size: 13px; }
 .career-card .period { color: var(--fg-muted); font-size: 12px; margin-top: 4px; }
+.career-card.current { grid-column: 1 / -1; }
+.career-card.current .ci-row { min-height: 0; margin-bottom: 0; }
+.career-card.current .ci-mark-wrap { height: 52px; }
+.career-card.current .ci-name { letter-spacing: 0; }
+@media (min-width: 600px) {
+  .career-card.current { flex-direction: row; align-items: center; justify-content: space-between; }
+  .career-card.current .period { margin-top: 0; }
+}
 
 
 /* ----- Publication lists ----- */
@@ -616,7 +626,18 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 /* Metaent mark is taller (icon stacked on text); give it a larger card. */
 .career-hero.meta .logo-wrap { width: 120px; height: 120px; padding: 8px; }
 .career-hero .logo-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.career-card .ci-mark-wrap img.shinsegae-mark,
+.career-hero .logo-wrap img.shinsegae-mark { width: 52px; height: 48px; object-fit: cover; object-position: left; }
+.career-hero.shinsegae { background: var(--bg-soft); }
+.career-hero.shinsegae::after { content: none; }
 .career-hero .head h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.career-hero.shinsegae .head { min-width: 0; }
+.career-hero.shinsegae .head h1 { letter-spacing: 0; }
+@media (max-width: 600px) {
+  .career-hero.shinsegae { padding: 20px 16px; gap: 12px; }
+  .career-hero.shinsegae .logo-wrap { width: 64px; height: 64px; padding: 6px; }
+  .career-hero.shinsegae .head h1 { font-size: 22px; }
+}
 .career-hero .head .meta { color: var(--fg-muted); font-size: 14px; margin: 0; }
 .career-hero .head .badge-row { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
 .career-hero .head .role-badge {

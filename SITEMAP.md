@@ -9,6 +9,7 @@ All paths are relative to the site root (`/`) so the deploy works at any GitHub 
 | ---- | ------- |
 | `/` | Home: profile, career list, publications, patents |
 | `/news/` | Press/news clippings |
+| `/career/shinsegae-inc/` | SHINSEGAE I&C career detail |
 | `/career/hdclabs/` | HDC LABS career detail |
 | `/career/metaent/` | Metaverse Entertainment career detail |
 | `/career/ku/` | Korea University M.S. career detail |

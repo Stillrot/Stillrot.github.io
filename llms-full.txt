@@ -6,6 +6,7 @@ Source of truth: the repository at github.com/Stillrot/Stillrot.github.io . Rege
 
 ## Site map
 - https://stillrot.github.io/ — Home: Profile, career overview, and tabbed publications / patents / news / research
+- https://stillrot.github.io/career/shinsegae-inc/ — Career — SHINSEGAE I&C: Current role in the AX Center, AI Technology Team
 - https://stillrot.github.io/career/hdclabs/ — Career — HDC LABS: Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)
 - https://stillrot.github.io/career/metaent/ — Career — Metaverse Entertainment: TD Team, AI Part
 - https://stillrot.github.io/career/ku/ — Career — Korea University: M.S. in Electrical Engineering
@@ -32,6 +33,9 @@ EN
 
 # 윤동식 AI Engineer
 Dongsik Yoon AI Engineer
+
+신세계아이앤씨 AX센터 AI기술팀
+SHINSEGAE I&C · AX Center, AI Technology Team
 
 연구부터 현장 배포까지, 실서비스에서 동작하는 영상 인식 AI 개발
 
@@ -69,13 +73,23 @@ Scholar
 
 Click a card to view the details
 
+신세계아이앤씨
+SHINSEGAE I&C
+
+AX센터 AI기술팀
+AX Center, AI Technology Team
+
+2026.11 ~
+현재
+Present
+
 [image: HDC LABS]
 
 HDC LABS
 
 R&D Center AI LAB
 
-2024.05 ~ Present
+2024.05 ~ 2026
 
 [image: Metaverse Entertainment]
 
@@ -195,11 +209,13 @@ Research
 - PUBLICATIONS -> https://stillrot.github.io/#publications
 - NEWS -> https://stillrot.github.io/#news
 - RESEARCH -> https://stillrot.github.io/#research
+- 신세계아이앤씨 AX센터 AI기술팀SHINSEGAE I&C · AX Center, AI Technology Team -> https://stillrot.github.io/career/shinsegae-inc/
 - Portfolio -> https://stillrot.github.io/portfolio2026/
 - AI Works -> https://stillrot.github.io/ai-works/deck/
 - CV -> https://stillrot.github.io/cv/
 - Resume -> https://stillrot.github.io/resume/
-- HDC LABS R&D Center AI LAB 2024.05 ~ Present -> https://stillrot.github.io/career/hdclabs/
+- 신세계아이앤씨SHINSEGAE I&C AX센터 AI기술팀AX Center, AI Technology Team 2026.11 ~ 현재Present -> https://stillrot.github.io/career/shinsegae-inc/
+- HDC LABS R&D Center AI LAB 2024.05 ~ 2026 -> https://stillrot.github.io/career/hdclabs/
 - Metaverse Entertainment TD Team AI Part 2023.01 ~ 2024.05 -> https://stillrot.github.io/career/metaent/
 - Korea University M.S. in Electrical Engineering 2021.03 ~ 2023.02 -> https://stillrot.github.io/career/ku/
 - Baekseok University B.S. in Multimedia Engineering 2015.03 ~ 2021.02 -> https://stillrot.github.io/career/bu/
@@ -214,6 +230,48 @@ Research
 - GitHub -> https://github.com/Stillrot/RGINP
 - LinkedIn -> https://www.linkedin.com/in/%EB%8F%99%EC%8B%9D-%EC%9C%A4-30366223b/
 - Scholar -> https://scholar.google.co.kr/citations?user=-EfCFGAAAAAJ&hl=ko
+
+======================================================================
+## Page: Career — SHINSEGAE I&C  (https://stillrot.github.io/career/shinsegae-inc/)
+_Current role in the AX Center, AI Technology Team_
+
+Dongsik Yoon
+
+HOME
+CAREER
+PUBLICATIONS
+NEWS
+RESEARCH
+
+KR
+EN
+
+# 신세계아이앤씨
+SHINSEGAE I&C
+
+AX센터 AI기술팀
+AX Center, AI Technology Team
+
+2026.11 ~
+현재
+Present
+
+신세계아이앤씨 공식 홈페이지
+SHINSEGAE I&C Official Website
+
+© Dongsik Yoon Home
+
+### Internal links
+- Dongsik Yoon -> https://stillrot.github.io/
+- HOME -> https://stillrot.github.io/
+- CAREER -> https://stillrot.github.io/#career
+- PUBLICATIONS -> https://stillrot.github.io/#publications
+- NEWS -> https://stillrot.github.io/#news
+- RESEARCH -> https://stillrot.github.io/#research
+- Home -> https://stillrot.github.io/
+
+### External links
+- 신세계아이앤씨 공식 홈페이지SHINSEGAE I&C Official Website -> https://shinsegae-inc.com/
 
 ======================================================================
 ## Page: Career — HDC LABS  (https://stillrot.github.io/career/hdclabs/)
@@ -234,9 +292,7 @@ EN
 
 # HDC LABS
 
-R&D Center AI LAB Computer Vision Part 2024.05 ~ (재직중)
-
-R&D Center AI LAB Computer Vision Part 2024.05 ~ Present
+R&D Center AI LAB Computer Vision Part 2024.05 ~ 2026
 
 Computer Vision
 Edge Deployment
