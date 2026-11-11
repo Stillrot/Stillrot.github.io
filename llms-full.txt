@@ -68,8 +68,6 @@ Scholar
 
 ## Career
 
-Click a card to view the details
-
 신세계아이앤씨
 SHINSEGAE
 I&C
@@ -247,14 +245,19 @@ EN
 SHINSEGAE I&C
 
 AX센터 AI기술팀
-AX Center, AI Technology Team
-
-2026.11 ~
+AX Center, AI Technology Team 2026.11 ~
 현재
 Present
 
-신세계아이앤씨 공식 홈페이지
-SHINSEGAE I&C Official Website
+## Work & Activities
+
+- 2026.11
+
+신세계아이앤씨 입사
+Joined SHINSEGAE I&C
+
+공식 홈페이지 ↗
+Official website ↗
 
 © Dongsik Yoon Home
 
@@ -268,7 +271,7 @@ SHINSEGAE I&C Official Website
 - Home -> https://stillrot.github.io/
 
 ### External links
-- 신세계아이앤씨 공식 홈페이지SHINSEGAE I&C Official Website -> https://shinsegae-inc.com/
+- 공식 홈페이지 ↗Official website ↗ -> https://shinsegae-inc.com/
 
 ======================================================================
 ## Page: Career — HDC LABS  (https://stillrot.github.io/career/hdclabs/)

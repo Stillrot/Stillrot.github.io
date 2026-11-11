@@ -563,10 +563,40 @@
     window.addEventListener('hashchange', activateFromHash);
   }
 
+  function initCareerRail() {
+    const track = document.getElementById('career-cards');
+    const nav = document.querySelector('.career-nav');
+    if (!track || !nav || track.children.length < 2) return;
+
+    const [prev, next] = nav.querySelectorAll('[data-career-step]');
+    function update() {
+      const max = track.scrollWidth - track.clientWidth;
+      nav.hidden = max <= 1;
+      prev.setAttribute('aria-disabled', String(track.scrollLeft <= 1));
+      next.setAttribute('aria-disabled', String(track.scrollLeft >= max - 1));
+    }
+    function move(button) {
+      if (button.getAttribute('aria-disabled') === 'true') return;
+      const step = track.children[1].getBoundingClientRect().left - track.children[0].getBoundingClientRect().left;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      track.scrollBy({ left: Number(button.dataset.careerStep) * step, behavior: reducedMotion ? 'auto' : 'smooth' });
+    }
+    [prev, next].forEach((button) => button.addEventListener('click', () => move(button)));
+    track.addEventListener('keydown', (event) => {
+      if (event.target !== track || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+      event.preventDefault();
+      move(event.key === 'ArrowLeft' ? prev : next);
+    });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   function autoInit() {
     autoInitLanguageToggle();
     initProjectSelector();
     initDocRail();
+    initCareerRail();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', autoInit);

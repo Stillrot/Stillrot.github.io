@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="./assets/css/style.css?v=20261111c">
+<link rel="stylesheet" href="./assets/css/style.css?v=20261111d">
 </head>
 <body data-root="./">
 
@@ -102,12 +102,21 @@
 
   <section class="block" id="career">
     <div class="container">
-      <h2>Career</h2>
-      <p style="color:var(--fg-muted);margin-top:-12px;">Click a card to view the details</p>
-      <div class="career-grid">
+      <div class="career-heading">
+        <h2 id="career-title">Career</h2>
+        <div class="career-nav" hidden>
+          <button type="button" data-career-step="-1" aria-controls="career-cards" aria-label="Previous career card" title="Previous career card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-career-step="1" aria-controls="career-cards" aria-label="Next career card" title="Next career card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="career-grid" id="career-cards" role="region" aria-labelledby="career-title" tabindex="0">
         <a class="career-card shinsegae" href="./career/shinsegae-inc/">
           <div class="ci-row">
-            <div class="ci-mark-wrap"><img class="shinsegae-mark" src="./assets/img/ci/shinsegae-inc.png" alt=""></div>
+            <div class="ci-mark-wrap"><img src="./assets/img/ci/shinsegae-inc-square.png" width="340" height="340" alt=""></div>
             <span class="ci-name"><span class="ko-only">신세계아이앤씨</span><span class="en-only">SHINSEGAE<br>I&amp;C</span></span>
           </div>
           <div class="role"><span class="ko-only">AX센터 AI기술팀</span><span class="en-only">AX Center, AI Technology Team</span></div>
@@ -235,7 +244,7 @@
   <div class="container">© Dongsik Yoon</div>
 </footer>
 
-<script src="./assets/js/main.js?v=20260605e"></script>
+<script src="./assets/js/main.js?v=20261111d"></script>
 <script>Portfolio.bootHome();</script>
 </body>
 </html>
