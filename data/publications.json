@@ -67,9 +67,10 @@
     {
       "idx": 12,
       "authors": "Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang",
-      "title": "Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition",
-      "venue": "Under review",
+      "title": "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
+      "venue": "Conference on Robot Learning Workshop (CoRL G2A)",
       "year": 2026,
+      "month": 11,
       "note": "",
       "link": "./papers/ntu60-audio/",
       "link_type": "project_page",
