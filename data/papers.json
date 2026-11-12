@@ -1,5 +1,20 @@
 [
   {
+    "slug": "ntu60-audio",
+    "title": "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
+    "short_title": "NTU60-AUDIO",
+    "venue": "Conference on Robot Learning Workshop (CoRLW)",
+    "venue_short": "CoRLW 2026",
+    "year": 2026,
+    "month": "November",
+    "note": "",
+    "authors": ["Dongsik Yoon", "Jongeun Kim", "Bogyung Park", "Sukyung Kim", "Suntae Hwang"],
+    "affiliation": "HDC LABS",
+    "links": [],
+    "external": true,
+    "list_thumb": "https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel5_regeneration.png"
+  },
+  {
     "slug": "irosw2026",
     "title": "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot",
     "short_title": "Ask Before It Tells",
@@ -91,21 +106,6 @@
       }
     ],
     "bibtex": "@inproceedings{yoon2026askbefore,\n  title     = {Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot},\n  author    = {Yoon, Dongsik},\n  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems Workshops (IROSW), Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence},\n  year      = {2026},\n  note      = {arXiv:2609.24099}\n}"
-  },
-  {
-    "slug": "ntu60-audio",
-    "title": "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
-    "short_title": "NTU60-AUDIO",
-    "venue": "Conference on Robot Learning Workshop (CoRLW)",
-    "venue_short": "CoRLW 2026",
-    "year": 2026,
-    "month": "November",
-    "note": "",
-    "authors": ["Dongsik Yoon", "Jongeun Kim", "Bogyung Park", "Sukyung Kim", "Suntae Hwang"],
-    "affiliation": "HDC LABS",
-    "links": [],
-    "external": true,
-    "list_thumb": "https://huggingface.co/datasets/2bcountingu/NTU60-AUDIO/resolve/main/homepages/panel5_regeneration.png"
   },
   {
     "slug": "wacvw2026",

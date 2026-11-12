@@ -1097,15 +1097,15 @@ Results
 
 - Named inventor on 3 related patents
 
-arXiv
-
-엣지 배포용 경량 RGB 행동 인식
-Lightweight RGB Action Recognition for Edge Deployment
-
 CoRLW 2026
 
 합성 오디오의 행동 인식 효과 검증
 Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?
+
+arXiv
+
+엣지 배포용 경량 RGB 행동 인식
+Lightweight RGB Action Recognition for Edge Deployment
 
 ### 지하주차장 화재 감지 보조 시스템
 
@@ -2230,6 +2230,10 @@ Publications
 
 International Conference
 
+D. Yoon, J. Kim, B. Park, S. Kim, S. Hwang,
+"Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
+Conference on Robot Learning Workshop (CoRLW), 2026
+
 D. Yoon,
 "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot",
 IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW), 2026
@@ -2237,10 +2241,6 @@ IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IR
 H. Park, J. Kim, J. Kim, D. Yoon,
 "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",
 arXiv preprint, 2026
-
-D. Yoon, J. Kim, B. Park, S. Kim, S. Hwang,
-"Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
-Conference on Robot Learning Workshop (CoRLW), 2026
 
 D. Yoon *, J. Kim *, D. Lee *,
 "Resource-Efficient RGB-Only Action Recognition for Edge Deployment",
@@ -2760,11 +2760,11 @@ AI 기반 엘리베이터 내부 상황 실시간 분석 시스템 개발
 
 Technical Exploration
 
-엣지 배포형 RGB-only 행동 인식 (arXiv)
+합성 오디오의 행동 인식 효과 검증 (CoRLW 2026)
 
 Technical Exploration
 
-합성 오디오의 행동 인식 효과 검증 (CoRLW 2026)
+엣지 배포형 RGB-only 행동 인식 (arXiv)
 
 Dataset Generation
 
@@ -3054,13 +3054,13 @@ Patents Applications (3 KR / 1 US) 4
 
 직무 연관 주요 연구
 
-로봇 시점 행동 인지 전이 평가
-
-Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer (IROSW 2026) 1st Author
-
 합성 오디오의 행동 인식 효과 검증
 
 Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label? (CoRLW 2026) 1st Author
+
+로봇 시점 행동 인지 전이 평가
+
+Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer (IROSW 2026) 1st Author
 
 엣지 배포용 경량 RGB 행동인식
 
@@ -3211,9 +3211,9 @@ PDF 다운로드
 - Dongsik Yoon, Yuanming Li, Bonwha Ku, Hanseok Ko. "Estimation of magnitude and epicentral distance from seismic waves using deeper CRNN." IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 [SCI-E] (IF=5.3) — https://stillrot.github.io/papers/grsl2023/
 
 ### Conferences (14)
+- Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?." Conference on Robot Learning Workshop (CoRLW), 2026 — https://stillrot.github.io/papers/ntu60-audio/
 - Dongsik Yoon. "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot." IEEE/RSJ International Conference on Intelligent Robots and Systems Workshop (IROSW), 2026 — https://stillrot.github.io/papers/irosw2026/
 - Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon. "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents." arXiv, 2026 — https://arxiv.org/abs/2604.15802
-- Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang. "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?." Conference on Robot Learning Workshop (CoRLW), 2026 — https://stillrot.github.io/papers/ntu60-audio/
 - Dongsik Yoon*, Jongeun Kim*, Dayeon Lee*. "Resource-Efficient RGB-Only Action Recognition for Edge Deployment." arXiv, 2026 — https://arxiv.org/abs/2602.10818
 - Dongsik Yoon, Jongeun Kim. "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models." IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026 — https://stillrot.github.io/papers/wacvw2026/
 - Dongsik Yoon, Jongeun Kim. "Your Super Resolution Model is not Enough for Tackling Real-World Scenarios." International Conference on Computer Vision Workshop (ICCVW), 2025 — https://stillrot.github.io/papers/iccvw2025/
@@ -3281,11 +3281,11 @@ PDF 다운로드
 ======================================================================
 ## Research / Papers (11)
 
+- "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?" (NTU60-AUDIO) — CoRLW 2026, 2026
+  - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
 - "Ask Before It Tells: Benchmark-to-Robot Body-Cue Transfer for a Question-First Bedside Robot" (Ask Before It Tells) — IROSW 2026, 2026
   - Authors: Dongsik Yoon
   - Body-cue recognition can support assistive robots, but benchmark accuracy does not guarantee reliable behavior under a robot-camera viewpoint. We present Nuni, a bedside robot prototype that treats a detected distress cue as a reason to ask rather than a reason to alert. We compare two X3D-UGT RGB appearance classifiers, which reach 97.7% and 94.8% six-way accuracy on NTU RGB+D, with a pose-centric hybrid pipeline on 28 single-actor scripted clips recorded from the robot camera. The hybrid path achieved 0.71 six-way macro recall, versus 0.25 and 0.29 for the fine-tuned and from-scratch RGB variants. More importantly for interaction, it produced a question-triggering distress cue in 12/16 distress clips and would have prompted unnecessarily in 2/8 normal clips; the RGB variants yielded a question-triggering cue in only 2/16 and 3/16 distress clips. We separately tested the question-first controller through event injection. All 13 state-transition trials passed: valid responses caused stand-down, two unanswered prompts produced one alert, and three boundary conditions were handled correctly. These results are a preliminary technical evaluation, not a user study or medical validation, but they show how interaction policy can limit the consequences of uncertain perception.
-- "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?" (NTU60-AUDIO) — CoRLW 2026, 2026
-  - Authors: Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang
 - "From Prompts to Deployment: Auto-Curated Domain-Specific Dataset Generation via Diffusion Models" (From Prompts to Deployment) — WACVW 2026, 2026
   - Authors: Dongsik Yoon, Jongeun Kim
   - In this paper, we present an automated pipeline for generating domain-specific synthetic datasets with diffusion models, addressing the distribution shift between pre-trained models and real-world deployment environments. Our three-stage framework first synthesizes target objects within domain-specific backgrounds through controlled inpainting. The generated outputs are then validated via a multi-modal assessment that integrates object detection, aesthetic scoring, and vision-language alignment. Finally, a user-preference classifier is employed to capture subjective selection criteria. This pipeline enables the efficient construction of high-quality, deployable datasets while reducing reliance on extensive real-world data collection.
