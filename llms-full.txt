@@ -68,12 +68,9 @@ Scholar
 
 ## Career
 
-신세계아이앤씨
-SHINSEGAE
-I&C
+SHINSEGAE I&C
 
-AX센터 AI기술팀
-AX Center, AI Technology Team
+AX Center AI Tech. Team
 
 2026.11 ~
 현재
@@ -209,7 +206,7 @@ Research
 - AI Works -> https://stillrot.github.io/ai-works/deck/
 - CV -> https://stillrot.github.io/cv/
 - Resume -> https://stillrot.github.io/resume/
-- 신세계아이앤씨SHINSEGAE I&C AX센터 AI기술팀AX Center, AI Technology Team 2026.11 ~ 현재Present -> https://stillrot.github.io/career/shinsegae-inc/
+- SHINSEGAE I&C AX Center AI Tech. Team 2026.11 ~ 현재Present -> https://stillrot.github.io/career/shinsegae-inc/
 - HDC LABS R&D Center AI LAB 2024.05 ~ 2026 -> https://stillrot.github.io/career/hdclabs/
 - Metaverse Entertainment TD Team AI Part 2023.01 ~ 2024.05 -> https://stillrot.github.io/career/metaent/
 - Korea University M.S. in Electrical Engineering 2021.03 ~ 2023.02 -> https://stillrot.github.io/career/ku/
