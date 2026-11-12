@@ -246,14 +246,6 @@ Present
 
 ## Work & Activities
 
-- 2026.11
-
-SHINSEGAE I&C 입사
-Joined SHINSEGAE I&C
-
-공식 홈페이지 ↗
-Official website ↗
-
 © Dongsik Yoon Home
 
 ### Internal links
@@ -264,9 +256,6 @@ Official website ↗
 - NEWS -> https://stillrot.github.io/#news
 - RESEARCH -> https://stillrot.github.io/#research
 - Home -> https://stillrot.github.io/
-
-### External links
-- 공식 홈페이지 ↗Official website ↗ -> https://shinsegae-inc.com/
 
 ======================================================================
 ## Page: Career — HDC LABS  (https://stillrot.github.io/career/hdclabs/)

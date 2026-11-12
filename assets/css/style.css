@@ -642,6 +642,7 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
 .career-hero .logo-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .career-hero.shinsegae { background: #fff6f6; }
 .career-hero.shinsegae::after { content: none; }
+.career-hero.shinsegae .logo-wrap img { transform: scale(1.42); }
 .career-hero .head h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.4px; }
 .career-hero.shinsegae .head { min-width: 0; }
 .career-hero.shinsegae .head h1 { letter-spacing: 0; }
