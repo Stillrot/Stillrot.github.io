@@ -283,6 +283,10 @@ section.block .sub-h { margin: 22px 0 12px; font-size: 15px; color: var(--fg-mut
   object-fit: contain;
   display: block;
 }
+.career-card.shinsegae .ci-mark-wrap img {
+  /* Compensate for the transparent padding without resizing the logo slot. */
+  transform: scale(1.32);
+}
 .career-card .ci-name {
   font-weight: 700;
   font-size: 16px;
