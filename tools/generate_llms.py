@@ -29,7 +29,7 @@ PAGES = [
     ("index.html", "/", "Home",
      "Profile, career overview, and tabbed publications / patents / news / research"),
     ("career/shinsegae-inc/index.html", "/career/shinsegae-inc/", "Career — SHINSEGAE I&C",
-     "Current role in the AX Center, AI Technology Team"),
+     "Current role in the AX Center AI Tech. Team"),
     ("career/hdclabs/index.html", "/career/hdclabs/", "Career — HDC LABS",
      "Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)"),
     ("career/metaent/index.html", "/career/metaent/", "Career — Metaverse Entertainment",

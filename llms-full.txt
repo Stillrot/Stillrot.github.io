@@ -6,7 +6,7 @@ Source of truth: the repository at github.com/Stillrot/Stillrot.github.io . Rege
 
 ## Site map
 - https://stillrot.github.io/ — Home: Profile, career overview, and tabbed publications / patents / news / research
-- https://stillrot.github.io/career/shinsegae-inc/ — Career — SHINSEGAE I&C: Current role in the AX Center, AI Technology Team
+- https://stillrot.github.io/career/shinsegae-inc/ — Career — SHINSEGAE I&C: Current role in the AX Center AI Tech. Team
 - https://stillrot.github.io/career/hdclabs/ — Career — HDC LABS: Work & Activities + a year timeline of six projects (vision data agent, care robot, IPARK Mall visitor analytics, elevator, fire detection, IP/research)
 - https://stillrot.github.io/career/metaent/ — Career — Metaverse Entertainment: TD Team, AI Part
 - https://stillrot.github.io/career/ku/ — Career — Korea University: M.S. in Electrical Engineering
@@ -225,7 +225,7 @@ Research
 
 ======================================================================
 ## Page: Career — SHINSEGAE I&C  (https://stillrot.github.io/career/shinsegae-inc/)
-_Current role in the AX Center, AI Technology Team_
+_Current role in the AX Center AI Tech. Team_
 
 Dongsik Yoon
 
@@ -238,11 +238,9 @@ RESEARCH
 KR
 EN
 
-# 신세계아이앤씨
-SHINSEGAE I&C
+# SHINSEGAE I&C
 
-AX센터 AI기술팀
-AX Center, AI Technology Team 2026.11 ~
+AX Center AI Tech. Team 2026.11 ~
 현재
 Present
 
@@ -250,7 +248,7 @@ Present
 
 - 2026.11
 
-신세계아이앤씨 입사
+SHINSEGAE I&C 입사
 Joined SHINSEGAE I&C
 
 공식 홈페이지 ↗
