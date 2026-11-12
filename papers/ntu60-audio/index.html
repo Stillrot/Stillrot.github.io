@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NTU60-AUDIO: Audio-Augmented Benchmark for 3D Indoor Action Recognition</title>
+  <title>NTU60-AUDIO | CoRL 2026 G2A Workshop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -82,6 +82,8 @@
       color: var(--muted);
       font-style: italic;
     }
+    .header .authors { margin-top: 0.75rem; }
+    .header .affiliation { color: var(--muted); font-size: 0.84rem; }
     .header .venue {
       margin-top: 0.5rem;
       font-size: 0.85rem;
@@ -304,9 +306,9 @@
     /* DEMO GRID */
     .demo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-bottom: 0.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin: 1.4rem 0 0.4rem;
     }
     .demo-card {
       border: 1px solid var(--border);
@@ -336,22 +338,6 @@
       color: var(--muted);
       line-height: 1.5;
     }
-
-    /* DOWNLOAD */
-    .download-list { list-style: none; }
-    .download-list li {
-      display: flex;
-      align-items: baseline;
-      gap: 0.6rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-    }
-    .download-list li:last-child { border-bottom: none; }
-    .dl-icon { font-size: 0.9rem; flex-shrink: 0; }
-    .dl-label { font-weight: 600; min-width: 170px; flex-shrink: 0; }
-    .dl-desc { color: var(--muted); font-size: 0.84rem; }
-    .dl-link { margin-left: auto; font-size: 0.82rem; flex-shrink: 0; }
 
     /* CITATION */
     .bibtex {
@@ -392,11 +378,10 @@
     .footer a { color: var(--muted); }
 
     @media (max-width: 640px) {
+      .topbar-inner { flex-wrap: wrap; gap: 0.25rem 0.75rem; }
       .stats-row { grid-template-columns: repeat(2, 1fr); }
       .metrics-grid { grid-template-columns: 1fr; }
       .demo-grid { grid-template-columns: 1fr; }
-      .download-list li { flex-wrap: wrap; }
-      .dl-link { margin-left: 0; }
     }
   </style>
 </head>
@@ -409,8 +394,6 @@
       <a href="#pipeline">Pipeline</a>
       <span class="topbar-sep">·</span>
       <a href="#distributions">Distributions</a>
-      <span class="topbar-sep">·</span>
-      <a href="#download">Data Availability</a>
     </span>
   </div>
 </div>
@@ -419,27 +402,27 @@
 
   <div class="header">
     <h1>NTU60-AUDIO: Audio-Augmented Benchmark<br>for 3D Indoor Action Recognition</h1>
-    <div class="subtitle">Real-World Videos Are Not Silent: Synthesized Audio Dataset Augmentation for Multimodal Action Recognition</div>
-    <div class="venue">Under Review — Anonymous Submission</div>
+    <div class="subtitle">Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?</div>
+    <div class="authors">Dongsik Yoon, Jongeun Kim, Bogyung Park, Sukyung Kim, Suntae Hwang</div>
+    <div class="affiliation">HDC LABS</div>
+    <div class="venue">CoRL 2026 Workshop &middot; G2A: From Generative Models to Robot Actions</div>
   </div>
 
   <div class="nav-pills">
-    <a href="#download">Dataset Availability</a>
-    <a href="#">📄 Paper (arXiv)</a>
-    <a href="#" style="color:var(--muted); border-color:var(--border); cursor:default; pointer-events:none;">
-      <svg height="13" width="13" viewBox="0 0 16 16" style="vertical-align:middle;margin-right:3px;fill:currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-      Code (WIP)
-    </a>
+    <a class="primary" href="https://openreview.net/forum?id=IQPS2BYcbD">Paper (OpenReview)</a>
+    <a href="https://actiongapworkshop.github.io/">G2A Workshop</a>
   </div>
 
   <div class="abstract">
     <div class="abstract-label">About the Dataset</div>
-    <strong>NTU60-AUDIO</strong> is a large-scale synthesized audio extension of <a href="https://rose1.ntu.edu.sg/dataset/actionRecognition/">NTU RGB+D 60</a>, providing quality-controlled audio tracks for all silent RGB videos across 60 indoor action classes. Audio is synthesized through a two-stage pipeline: action-aware textual descriptions are first generated from video frames using <strong>Qwen3-VL-8B-Instruct</strong>, then used alongside the video to condition <strong>MMAudio</strong> for temporally grounded waveform synthesis. Each generated track is automatically evaluated by three complementary quality metrics and regenerated up to three times if any metric falls below its P5 threshold. NTU60-AUDIO is the first large-scale audio augmentation of a fixed-viewpoint 3D indoor action recognition benchmark, designed to enable systematic audio-visual research in a domain previously limited to egocentric and in-the-wild settings.
+    <p><strong>NTU60-AUDIO</strong> adds quality-checked synthetic audio to <a href="https://rose1.ntu.edu.sg/dataset/actionRecognition/">NTU RGB+D 60</a>. <strong>Qwen3-VL-8B-Instruct</strong> proposes action labels and plausible sounds from video frames, and <strong>MMAudio</strong> synthesizes audio from the video and the generated description. Three quality metrics determine whether a clip needs another synthesis attempt.</p>
+    <div class="abstract-label">Study Findings</div>
+    <p>Adding synthesized audio improved cross-subject accuracy over a reproduced RGB-only baseline. However, a control using only the generator's predicted action label in place of the waveform scored 95.89% versus 95.78% on X-Sub and 98.23% versus 98.18% on X-View. Neither difference was statistically significant (p = 0.43 and 0.66, respectively). The experiment did not detect an accuracy gain from the waveform beyond the predicted label.</p>
   </div>
 
   <h2 id="demo">Sample Clips</h2>
 
-  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; margin:1.4rem 0 0.4rem;">
+  <div class="demo-grid">
 
     <div>
       <video controls style="width:100%; display:block; background:#000;">
@@ -602,7 +585,7 @@
       <span class="step-num">03</span>
       <div class="step-content">
         <strong>Quality-Aware Regeneration Loop</strong>
-        <p>Tracks failing any threshold are regenerated up to three times. If all attempts fail, the candidate with the highest aggregated (normalized + averaged) score is selected. 85.9% of samples pass on the first attempt; 9.8% require one regeneration; 2.4% require two; 1.9% fall back to best-of-3 selection.</p>
+        <p>Tracks failing any threshold are regenerated, with up to three attempts in total. If all attempts fail, the candidate with the highest normalized average score is selected. 85.9% of samples pass on the first attempt; 9.8% require one regeneration; 2.4% require two; 1.9% fall back to best-of-3 selection.</p>
       </div>
     </div>
   </div>
@@ -626,7 +609,7 @@
   <p>
     Each of the 56,578 synthesized audio tracks is evaluated by three independent quality metrics.
     Tracks failing any threshold (set at the 5th percentile, P5, of a stratified 10% subset) are automatically
-    regenerated up to three times. The distributions below reflect the <em>final accepted</em> dataset after
+    regenerated, with up to three attempts in total. The distributions below reflect the <em>final accepted</em> dataset after
     all regeneration attempts.
   </p>
   <p style="font-size:0.84rem; color:var(--muted);">
@@ -683,36 +666,6 @@
 
   </div>
 
-  <h2 id="download">Data Availability</h2>
-  <p>NTU60-AUDIO is not publicly distributed pending permission from ROSE Lab. Any future release is subject to the <a href="https://rose1.ntu.edu.sg/dataset/actionRecognition/">NTU RGB+D terms</a>.</p>
-
-  <ul class="download-list">
-    <li>
-      <span class="dl-icon">🔊</span>
-      <span class="dl-label">NTU60-AUDIO</span>
-      <span class="dl-desc">56,578 synthesized audio tracks for research evaluation.</span>
-      <span class="dl-link">Not publicly distributed</span>
-    </li>
-    <li style="opacity:0.5;">
-      <span class="dl-icon">🔊</span>
-      <span class="dl-label">NTU120-AUDIO</span>
-      <span class="dl-desc">Synthesized audio extension of NTU RGB+D 120 (120 classes, ~114K tracks).</span>
-      <span class="dl-link" style="font-family:var(--mono); font-size:0.72rem; color:var(--muted);">WIP</span>
-    </li>
-    <li style="opacity:0.5;">
-      <span class="dl-icon">💾</span>
-      <span class="dl-label">Model Checkpoint</span>
-      <span class="dl-desc">Best X-Sub checkpoint. X3D+TSM + EfficientAT MN04 + gate. PyTorch (.pth). ~10 MB.</span>
-      <span class="dl-link" style="font-family:var(--mono); font-size:0.72rem; color:var(--muted);">WIP</span>
-    </li>
-    <li>
-      <span class="dl-icon">📄</span>
-      <span class="dl-label">Paper</span>
-      <span class="dl-desc">Under review anonymous submission. PDF.</span>
-      <a href="#" class="dl-link">arXiv →</a>
-    </li>
-  </ul>
-
   <h2>Acknowledgments</h2>
   <p>
     NTU60-AUDIO is built upon the <a href="https://rose1.ntu.edu.sg/dataset/actionRecognition/">NTU RGB+D dataset</a> and uses
@@ -722,11 +675,10 @@
   </p>
 
   <div class="footer">
-    <span>NTU60-AUDIO &nbsp;/&nbsp; Under review &nbsp;/&nbsp; Anonymous submission</span>
+    <span>NTU60-AUDIO &nbsp;/&nbsp; CoRL 2026 G2A Workshop</span>
     <span>
       <a href="../../">← Back to portfolio</a> ·
-      <a href="#download">Data availability</a> ·
-      Last updated February 2026
+      Last updated November 2026
     </span>
   </div>
 
