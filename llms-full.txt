@@ -82,7 +82,7 @@ HDC LABS
 
 R&D Center AI LAB
 
-2024.05 ~ 2026
+2024.05 ~ 2026.11
 
 [image: Metaverse Entertainment]
 
@@ -207,7 +207,7 @@ Research
 - CV -> https://stillrot.github.io/cv/
 - Resume -> https://stillrot.github.io/resume/
 - SHINSEGAE I&C AX Center AI Tech. Team 2026.11 ~ 현재Present -> https://stillrot.github.io/career/shinsegae-inc/
-- HDC LABS R&D Center AI LAB 2024.05 ~ 2026 -> https://stillrot.github.io/career/hdclabs/
+- HDC LABS R&D Center AI LAB 2024.05 ~ 2026.11 -> https://stillrot.github.io/career/hdclabs/
 - Metaverse Entertainment TD Team AI Part 2023.01 ~ 2024.05 -> https://stillrot.github.io/career/metaent/
 - Korea University M.S. in Electrical Engineering 2021.03 ~ 2023.02 -> https://stillrot.github.io/career/ku/
 - Baekseok University B.S. in Multimedia Engineering 2015.03 ~ 2021.02 -> https://stillrot.github.io/career/bu/
@@ -287,7 +287,7 @@ EN
 
 # HDC LABS
 
-R&D Center AI LAB Computer Vision Part 2024.05 ~ 2026
+R&D Center AI LAB Computer Vision Part 2024.05 ~ 2026.11
 
 Computer Vision
 Edge Deployment
@@ -2211,7 +2211,7 @@ HDC LABS, Seoul, Korea
 
 Research on CCTV-based vision systems for indoor safety (fire detection, elevator analytics)
 
-May 2024 - Present
+May 2024 - Nov 2026
 
 AI Research Engineer
 
@@ -2452,7 +2452,7 @@ HDC LABS
 
 R&D Center AI LAB, Computer Vision Part
 
-2024.05 – 현재
+2024.05 – 2026.11
 
 [image: HDC LABS]
 
