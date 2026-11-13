@@ -110,37 +110,6 @@
     },
     {
       "idx": 13,
-      "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
-      "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
-      "country": "KR",
-      "patent_no": "10-3008578",
-      "application_no": "10-2026-0008565",
-      "reference_no": "DP250659",
-      "filed_date": "2026-01-16",
-      "granted_date": "2026-08-19"
-    }
-  ],
-  "application": [
-    {
-      "idx": 1,
-      "title": "Systems and methods for diverse image inpainting",
-      "title_en": "Systems and methods for diverse image inpainting",
-      "country": "US",
-      "application_no": "18/625,052",
-      "publication_no": "US20240338802A1",
-      "published_date": "2024-10-10"
-    },
-    {
-      "idx": 2,
-      "title": "객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체",
-      "title_en": "Behavior-prediction method, system, and computer-readable medium that leverages topology data produced via per-object action recognition and behavior-pattern normalization",
-      "country": "KR",
-      "application_no": "10-2025-0098513",
-      "reference_no": "DP250258",
-      "filed_date": "2025-07-21"
-    },
-    {
-      "idx": 3,
       "title": "실시간 혼잡도 및 대기인원 기반의 지능형 승강기 관제방법 및 시스템",
       "title_en": "The Method and System That Control an Intelligent Elevator Based on Real-time Congestion and Number of Waiting Passengers",
       "country": "KR",
@@ -164,10 +133,45 @@
         "Mi Jeong Park",
         "Dae Ryung Ahn",
         "Moon Su Kim"
-      ]
+      ],
+      "patent_no": "10-2985575",
+      "granted_date": "2026-06-29"
     },
     {
-      "idx": 4,
+      "idx": 14,
+      "title": "메인분석단말 및 엘리베이터 엣지단말을 이용한 지능형 승강기 시스템 및 이의 제어방법",
+      "title_en": "Intelligent elevator system using a main-analysis terminal together with an elevator edge terminal, and its control method",
+      "country": "KR",
+      "patent_no": "10-3008578",
+      "application_no": "10-2026-0008565",
+      "reference_no": "DP250659",
+      "filed_date": "2026-01-16",
+      "granted_date": "2026-08-19"
+    },
+    {
+      "idx": 15,
+      "title": "객체별 행동인식 및 행동패턴 정규화를 통해 생성한 토폴로지데이터를 활용한 행동예측방법, 시스템, 및 컴퓨터-판독가능 기록매체",
+      "title_en": "Behavior-prediction method, system, and computer-readable medium that leverages topology data produced via per-object action recognition and behavior-pattern normalization",
+      "country": "KR",
+      "application_no": "10-2025-0098513",
+      "reference_no": "DP250258",
+      "filed_date": "2025-07-21",
+      "patent_no": "10-3010467",
+      "granted_date": "2026-08-24"
+    }
+  ],
+  "application": [
+    {
+      "idx": 1,
+      "title": "Systems and methods for diverse image inpainting",
+      "title_en": "Systems and methods for diverse image inpainting",
+      "country": "US",
+      "application_no": "18/625,052",
+      "publication_no": "US20240338802A1",
+      "published_date": "2024-10-10"
+    },
+    {
+      "idx": 2,
       "title": "사용자 주차이력 기반의 주차공간추천방법 및 시스템",
       "title_en": "Method and System for Recommending Parking Space Based on User Parking History",
       "country": "KR",
