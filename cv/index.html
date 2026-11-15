@@ -173,8 +173,17 @@
   @media print {
     body { padding: 0; max-width: none; font-size: 10pt; }
     .row { margin-top: 10px; }
+    .item-head .sub, .item-head .desc, .print-balance {
+      display: inline-block;
+      max-width: 100%;
+      text-wrap: balance;
+    }
+    .print-keep { white-space: nowrap; }
+    .proj-head .title, .award .title, .award .desc { text-wrap: balance; }
+    .pub, .proj .desc { text-wrap: pretty; }
     .pub { margin-bottom: 5px; }
     .pub-section-title { break-after: avoid; }
+    .pub-start { break-inside: avoid; }
     .proj { break-inside: avoid; margin-bottom: 8px; }
     .proj .desc { line-height: 1.4; }
     .award { margin-bottom: 4px; }
@@ -230,7 +239,7 @@
           <span class="title">M.S.</span>, Electrical Engineering<br>
           <span class="org">Korea University</span>, Seoul, Korea<br>
           <span class="desc">Dissertation: Deep Learning Framework Design via Condition Guided Learning</span><br>
-          <span class="sub">Advisor: Prof. Hanseok Ko (Intelligent Signal Processing Laboratory, ISPL)</span>
+          <span class="sub"><span class="print-keep">Advisor: Prof. Hanseok Ko</span> <span class="print-keep">(Intelligent Signal Processing Laboratory, ISPL)</span></span>
         </div>
         <div class="date">Mar. 2021 - Feb. 2023</div>
       </div>
@@ -282,7 +291,7 @@
         <div>
           <span class="title">AI Engineer</span><br>
           <span class="org">Metaverse Entertainment</span>, Seoul, Korea<br>
-          Generative AI for virtual-influencer content (image editing, voice synthesis)
+          <span class="print-balance">Generative AI for <span class="print-keep">virtual-influencer content</span> <span class="print-keep">(image editing, voice synthesis)</span></span>
         </div>
         <div class="date">Jan. 2023 - May 2024</div>
       </div>
@@ -313,12 +322,14 @@
       <span class="venue">IEEE Geoscience and Remote Sensing Letters (GRSL)</span>, 2023 (IF 5.3, SCI-E)
     </div>
 
-    <div class="pub-section-title" style="margin-top:16px;">International Conference</div>
+    <div class="pub-start">
+      <div class="pub-section-title" style="margin-top:16px;">International Conference</div>
 
-    <div class="pub">
-      <span class="me">D. Yoon</span>, J. Kim, B. Park, S. Kim, S. Hwang,
-      "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
-      <span class="venue">Conference on Robot Learning Workshop (CoRLW)</span>, 2026
+      <div class="pub">
+        <span class="me">D. Yoon</span>, J. Kim, B. Park, S. Kim, S. Hwang,
+        "Does Synthesized Audio Help Action Recognition Beyond Its Predicted Label?",
+        <span class="venue">Conference on Robot Learning Workshop (CoRLW)</span>, 2026
+      </div>
     </div>
 
     <div class="pub">
@@ -447,7 +458,7 @@
     </div>
     <div class="proj">
       <div class="proj-head">
-        <div class="title">Generative virtual earthquake scenarios for the Korean Peninsula</div>
+        <div class="title">Generative virtual <span class="print-keep">earthquake scenarios</span> <span class="print-keep">for the Korean Peninsula</span></div>
         <div class="date">Jan. 2021 - Dec. 2021</div>
       </div>
       <div class="desc">Built a GAN-based generator and verification pipeline producing M ≥ 3.0 seismic waveforms; delivered a scenario-authoring software to KMA.</div>
