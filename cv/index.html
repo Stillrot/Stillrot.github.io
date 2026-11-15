@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap">
 <style>
   /* Academic CV — LaTeX-like two-column layout */
-  @page { size: A4; margin: 0.8in 0.7in; }
+  @page { size: A4; margin: 0.6in 0.7in; }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -172,6 +172,9 @@
 
   @media print {
     body { padding: 0; max-width: none; font-size: 10pt; }
+    .row { margin-top: 12px; }
+    .pub { margin-bottom: 6px; }
+    .proj { break-inside: avoid; }
     .print-bar { display: none; }
     a { color: var(--ink); }
     a[href^="http"]::after { content: ""; }
@@ -198,7 +201,7 @@
 <div class="cv-header">
   <div class="left">
     <span class="label">Curriculum Vitae</span>
-    Last updated October 2026
+    Last updated November 2026
   </div>
   <div class="right">
     <a href="mailto:kevinds1106@korea.ac.kr">kevinds1106@korea.ac.kr</a><br>
@@ -249,9 +252,18 @@
     <div class="item">
       <div class="item-head">
         <div>
+          <span class="title">AX Center AI Tech. Team</span><br>
+          <span class="org">SHINSEGAE I&amp;C</span>
+        </div>
+        <div class="date">Nov. 2026 - Present</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <div>
           <span class="title">AI Research Engineer</span><br>
           <span class="org">HDC LABS</span>, Seoul, Korea<br>
-          Research on CCTV-based vision systems for indoor safety (fire detection, elevator analytics)
+          Research and development of CCTV-based vision systems for indoor safety (fire detection, elevator analytics) and visitor analytics at Yongsan IPARK Mall.
         </div>
         <div class="date">May 2024 - Nov 2026</div>
       </div>
@@ -385,6 +397,14 @@
   <div class="content">
     <div class="proj">
       <div class="proj-head">
+        <div class="title">Yongsan IPARK Mall AI Visitor Analytics</div>
+        <div class="date">Mar. 2026 - Jul. 2026</div>
+      </div>
+      <div class="desc">Led the visitor analytics PoC as technical PM, defining KPIs and coordinating field validation. The on-site PoC processed over 2.5 million visit records across 22 CCTV cameras. Validated a monitoring agent that used visitor metrics and trajectory images to diagnose anomalies.</div>
+      <div class="funding">Affiliation: HDC LABS</div>
+    </div>
+    <div class="proj">
+      <div class="proj-head">
         <div class="title">In-elevator situational awareness</div>
         <div class="date">Jan. 2025 - Feb. 2026</div>
       </div>
@@ -406,14 +426,6 @@
       </div>
       <div class="desc">Curated Stable Diffusion LoRA workflows and a Gradio-based internal UI used for MAVE: / rina.8k content. Researched a two-stage StyleGAN-based face re-aging framework, published in IEEE Access.</div>
       <div class="funding">Affiliation: Metaverse Entertainment</div>
-    </div>
-    <div class="proj">
-      <div class="proj-head">
-        <div class="title">Expressive multi-speaker TTS</div>
-        <div class="date">Jan. 2022 - Dec. 2022</div>
-      </div>
-      <div class="desc">Built reference-audio-conditioned emotion control model for reading-style / dialog-style TTS (MOS +5%, Similarity-MOS +11% over baseline, n=30).</div>
-      <div class="funding">Funding: Deep Machine Laboratory (DMLAB)</div>
     </div>
     <div class="proj">
       <div class="proj-head">

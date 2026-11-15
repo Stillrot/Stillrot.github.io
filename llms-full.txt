@@ -2154,7 +2154,7 @@ Download PDF
 # Dongsik Yoon
 
 Curriculum Vitae
-Last updated October 2026
+Last updated November 2026
 
 kevinds1106@korea.ac.kr
 
@@ -2194,11 +2194,17 @@ Mar. 2015 - Feb. 2021
 Industry
 Experience
 
+AX Center AI Tech. Team
+
+SHINSEGAE I&C
+
+Nov. 2026 - Present
+
 AI Research Engineer
 
 HDC LABS, Seoul, Korea
 
-Research on CCTV-based vision systems for indoor safety (fire detection, elevator analytics)
+Research and development of CCTV-based vision systems for indoor safety (fire detection, elevator analytics) and visitor analytics at Yongsan IPARK Mall.
 
 May 2024 - Nov 2026
 
@@ -2286,6 +2292,14 @@ IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 5.3, SCI-E)
 
 Projects
 
+Yongsan IPARK Mall AI Visitor Analytics
+
+Mar. 2026 - Jul. 2026
+
+Led the visitor analytics PoC as technical PM, defining KPIs and coordinating field validation. The on-site PoC processed over 2.5 million visit records across 22 CCTV cameras. Validated a monitoring agent that used visitor metrics and trajectory images to diagnose anomalies.
+
+Affiliation: HDC LABS
+
 In-elevator situational awareness
 
 Jan. 2025 - Feb. 2026
@@ -2309,14 +2323,6 @@ Jan. 2023 - May 2024
 Curated Stable Diffusion LoRA workflows and a Gradio-based internal UI used for MAVE: / rina.8k content. Researched a two-stage StyleGAN-based face re-aging framework, published in IEEE Access.
 
 Affiliation: Metaverse Entertainment
-
-Expressive multi-speaker TTS
-
-Jan. 2022 - Dec. 2022
-
-Built reference-audio-conditioned emotion control model for reading-style / dialog-style TTS (MOS +5%, Similarity-MOS +11% over baseline, n=30).
-
-Funding: Deep Machine Laboratory (DMLAB)
 
 Generative virtual earthquake scenarios for the Korean Peninsula
 
