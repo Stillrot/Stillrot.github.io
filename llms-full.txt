@@ -2296,6 +2296,14 @@ British Machine Vision Conference (BMVC), 2021
 
 Projects
 
+Nuni: Vision-Based Bedside Care Robot
+
+Jun. 2026 - Oct. 2026
+
+Built a bedside robot prototype that detects visual signs of distress and checks with the user before raising an alert. Compared RGB- and pose-based perception on 28 robot-camera clips and validated the ROS 2 interaction logic in 13 event-injection tests.
+
+Affiliation: Independent Research
+
 Yongsan IPARK Mall AI Visitor Analytics
 
 Mar. 2026 - Jul. 2026

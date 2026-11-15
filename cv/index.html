@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap">
 <style>
   /* Academic CV — LaTeX-like two-column layout */
-  @page { size: A4; margin: 0.6in 0.7in; }
+  @page { size: A4; margin: 0.45in 0.6in; }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -172,10 +172,12 @@
 
   @media print {
     body { padding: 0; max-width: none; font-size: 10pt; }
-    .row { margin-top: 12px; }
-    .pub { margin-bottom: 6px; }
+    .row { margin-top: 10px; }
+    .pub { margin-bottom: 5px; }
     .pub-section-title { break-after: avoid; }
-    .proj { break-inside: avoid; }
+    .proj { break-inside: avoid; margin-bottom: 8px; }
+    .proj .desc { line-height: 1.4; }
+    .award { margin-bottom: 4px; }
     .print-bar { display: none; }
     a { color: var(--ink); }
     a[href^="http"]::after { content: ""; }
@@ -403,6 +405,14 @@
 <div class="row">
   <div class="label">Projects</div>
   <div class="content">
+    <div class="proj">
+      <div class="proj-head">
+        <div class="title">Nuni: Vision-Based Bedside Care Robot</div>
+        <div class="date">Jun. 2026 - Oct. 2026</div>
+      </div>
+      <div class="desc">Built a bedside robot prototype that detects visual signs of distress and checks with the user before raising an alert. Compared RGB- and pose-based perception on 28 robot-camera clips and validated the ROS 2 interaction logic in 13 event-injection tests.</div>
+      <div class="funding">Affiliation: Independent Research</div>
+    </div>
     <div class="proj">
       <div class="proj-head">
         <div class="title">Yongsan IPARK Mall AI Visitor Analytics</div>
