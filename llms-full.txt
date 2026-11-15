@@ -2194,13 +2194,13 @@ Mar. 2015 - Feb. 2021
 Industry
 Experience
 
-AX Center AI Tech. Team
+AI Engineer
 
-SHINSEGAE I&C
+SHINSEGAE I&C, Seoul, Korea
 
 Nov. 2026 - Present
 
-AI Research Engineer
+AI Engineer
 
 HDC LABS, Seoul, Korea
 
@@ -2208,7 +2208,7 @@ Research and development of CCTV-based vision systems for indoor safety (fire de
 
 May 2024 - Nov 2026
 
-AI Research Engineer
+AI Engineer
 
 Metaverse Entertainment, Seoul, Korea
 
@@ -2217,6 +2217,20 @@ Generative AI for virtual-influencer content (image editing, voice synthesis)
 Jan. 2023 - May 2024
 
 Publications
+
+International Journal
+
+Y. Li, D. Yoon, B. Ku, H. Ko,
+"ConSeisGen: Controllable Synthetic Seismic Waveform Generation",
+IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 4.8, SCI-E)
+
+D. Yoon, J. Kim, V. Lorant, S. Kang,
+"Manipulation of Age Variation Using StyleGAN Inversion and Fine-Tuning",
+IEEE Access, 2023 (IF 3.9, SCI-E)
+
+D. Yoon, Y. Li, B. Ku, H. Ko,
+"Estimation of Magnitude and Epicentral Distance from Seismic Waves using Deeper CRNN",
+IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 5.3, SCI-E)
 
 International Conference
 
@@ -2275,20 +2289,6 @@ British Machine Vision Conference (BMVC), 2021
 Y. Li, Y. Jin, J. Kwak, D. Yoon, D. Han, H. Ko,
 "Adaptive Content Feature Enhancement GAN for Multimodal Selfie to Anime Translation",
 British Machine Vision Conference (BMVC), 2021
-
-International Journal
-
-Y. Li, D. Yoon, B. Ku, H. Ko,
-"ConSeisGen: Controllable Synthetic Seismic Waveform Generation",
-IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 4.8, SCI-E)
-
-D. Yoon, J. Kim, V. Lorant, S. Kang,
-"Manipulation of Age Variation Using StyleGAN Inversion and Fine-Tuning",
-IEEE Access, 2023 (IF 3.9, SCI-E)
-
-D. Yoon, Y. Li, B. Ku, H. Ko,
-"Estimation of Magnitude and Epicentral Distance from Seismic Waves using Deeper CRNN",
-IEEE Geoscience and Remote Sensing Letters (GRSL), 2023 (IF 5.3, SCI-E)
 
 Projects
 
