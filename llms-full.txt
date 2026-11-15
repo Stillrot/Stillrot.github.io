@@ -2349,6 +2349,8 @@ Reviewer (peer-review)
 
 ICIP 2026; ICBINB @ ICLR 2026; TAG @ CoRL 2026
 
+TEA-OS @ AAAI 2027 (invitation accepted)
+
 Instructor, K-Digital Training | HDC LABS
 
 Generative AI for Analytics and Service Development
