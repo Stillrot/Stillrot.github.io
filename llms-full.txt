@@ -2204,9 +2204,9 @@ AI Engineer
 
 HDC LABS, Seoul, Korea
 
-Research and development of CCTV-based vision systems for indoor safety (fire detection, elevator analytics) and visitor analytics at Yongsan IPARK Mall.
-
 May 2024 - Nov 2026
+
+CCTV-based computer vision for fire detection, elevator and visitor analytics.
 
 AI Engineer
 
@@ -2349,7 +2349,7 @@ Reviewer (peer-review)
 
 ICIP 2026; ICBINB @ ICLR 2026; TAG @ CoRL 2026
 
-TEA-OS @ AAAI 2027 (invitation accepted)
+TEA-OS @ AAAI 2027
 
 Instructor, K-Digital Training | HDC LABS
 
